@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Mar 19 15:55:04 2019
+//Date        : Fri Apr 12 17:33:15 2019
 //Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -25,6 +25,8 @@ module m3_for_arty_a7_wrapper
     reset,
     rgb_led_tri_io,
     sys_clock,
+    temp_sensor_scl_io,
+    temp_sensor_sda_io,
     usb_uart_rxd,
     usb_uart_txd);
   inout [15:0]DAPLink_tri_o;
@@ -42,6 +44,8 @@ module m3_for_arty_a7_wrapper
   input reset;
   inout [5:0]rgb_led_tri_io;
   input sys_clock;
+  inout temp_sensor_scl_io;
+  inout temp_sensor_sda_io;
   input usb_uart_rxd;
   output usb_uart_txd;
 
@@ -113,6 +117,14 @@ module m3_for_arty_a7_wrapper
   wire [4:4]rgb_led_tri_t_4;
   wire [5:5]rgb_led_tri_t_5;
   wire sys_clock;
+  wire temp_sensor_scl_i;
+  wire temp_sensor_scl_io;
+  wire temp_sensor_scl_o;
+  wire temp_sensor_scl_t;
+  wire temp_sensor_sda_i;
+  wire temp_sensor_sda_io;
+  wire temp_sensor_sda_o;
+  wire temp_sensor_sda_t;
   wire usb_uart_rxd;
   wire usb_uart_txd;
 
@@ -166,6 +178,12 @@ module m3_for_arty_a7_wrapper
         .rgb_led_tri_o({rgb_led_tri_o_5,rgb_led_tri_o_4,rgb_led_tri_o_3,rgb_led_tri_o_2,rgb_led_tri_o_1,rgb_led_tri_o_0}),
         .rgb_led_tri_t({rgb_led_tri_t_5,rgb_led_tri_t_4,rgb_led_tri_t_3,rgb_led_tri_t_2,rgb_led_tri_t_1,rgb_led_tri_t_0}),
         .sys_clock(sys_clock),
+        .temp_sensor_scl_i(temp_sensor_scl_i),
+        .temp_sensor_scl_o(temp_sensor_scl_o),
+        .temp_sensor_scl_t(temp_sensor_scl_t),
+        .temp_sensor_sda_i(temp_sensor_sda_i),
+        .temp_sensor_sda_o(temp_sensor_sda_o),
+        .temp_sensor_sda_t(temp_sensor_sda_t),
         .usb_uart_rxd(usb_uart_rxd),
         .usb_uart_txd(usb_uart_txd));
   IOBUF qspi_flash_io0_iobuf
@@ -223,4 +241,14 @@ module m3_for_arty_a7_wrapper
         .IO(rgb_led_tri_io[5]),
         .O(rgb_led_tri_i_5),
         .T(rgb_led_tri_t_5));
+  IOBUF temp_sensor_scl_iobuf
+       (.I(temp_sensor_scl_o),
+        .IO(temp_sensor_scl_io),
+        .O(temp_sensor_scl_i),
+        .T(temp_sensor_scl_t));
+  IOBUF temp_sensor_sda_iobuf
+       (.I(temp_sensor_sda_o),
+        .IO(temp_sensor_sda_io),
+        .O(temp_sensor_sda_i),
+        .T(temp_sensor_sda_t));
 endmodule

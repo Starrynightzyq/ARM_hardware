@@ -98,3 +98,5 @@
 !/m3_for_arty_a7/m3_for_arty_a7/*.mmi
 !/m3_for_arty_a7/m3_for_arty_a7/*.mcs
 !/m3_for_arty_a7/m3_for_arty_a7/*.bat
+
+!*.md

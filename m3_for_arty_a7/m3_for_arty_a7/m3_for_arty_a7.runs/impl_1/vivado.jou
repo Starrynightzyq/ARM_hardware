@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Apr 11 20:22:27 2019
-# Process ID: 11216
-# Current directory: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1
+# Start of session at: Fri Apr 12 17:46:08 2019
+# Process ID: 8368
+# Current directory: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1
 # Command line: vivado.exe -log m3_for_arty_a7_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source m3_for_arty_a7_wrapper.tcl -notrace
-# Log file: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper.vdi
-# Journal file: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1\vivado.jou
+# Log file: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper.vdi
+# Journal file: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source m3_for_arty_a7_wrapper.tcl -notrace

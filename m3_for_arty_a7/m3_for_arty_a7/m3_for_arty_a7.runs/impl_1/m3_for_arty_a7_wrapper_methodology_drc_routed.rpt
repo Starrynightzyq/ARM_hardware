@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Apr 11 20:28:58 2019
+| Date         : Fri Apr 12 17:52:31 2019
 | Host         : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 | Command      : report_methodology -file m3_for_arty_a7_wrapper_methodology_drc_routed.rpt -pb m3_for_arty_a7_wrapper_methodology_drc_routed.pb -rpx m3_for_arty_a7_wrapper_methodology_drc_routed.rpx
 | Design       : m3_for_arty_a7_wrapper
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 58
+             Violations found: 61
 +-----------+----------+---------------------------------------------+------------+
 | Rule      | Severity | Description                                 | Violations |
 +-----------+----------+---------------------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert                | 10         |
+| LUTAR-1   | Warning  | LUT drives async reset alert                | 13         |
 | TIMING-9  | Warning  | Unknown CDC Logic                           | 1          |
 | TIMING-10 | Warning  | Missing property on synchronizer            | 1          |
 | TIMING-18 | Warning  | Missing input or output delay               | 6          |
@@ -44,47 +44,62 @@ Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/airc_sysresetreq_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/airc_sysresetreq_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/mm_bf_far_reg[28]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/mm_bf_far_reg[5]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/scr_deepsleep_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/trap_dfsr_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/actv_state[3]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_cancel_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[11]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[12]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[13]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[14]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[15]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[17]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[18]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[19]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[20]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[21]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_ia_reg[22]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/base_addr[15]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/mpu_unalign_lookup_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/split_trans_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/aligned_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/rgn_byte_wr_reg_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/rgn_byte_wr_reg_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/rgn_byte_wr_reg_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/rgn_byte_wr_reg_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[11]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[12]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[13]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[14]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[15]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[17]/CLR (the first 15 of 119 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/airc_sysresetreq_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_intstat_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_etmintf/etm_intstat_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_pc_lr_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/airc_sysresetreq_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/scr_deepsleep_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/trap_dfsr_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/base_addr[23]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[22]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[23]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[24]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[25]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[26]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[27]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[28]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[29]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[30]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[31]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/region_attrs_ap_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/region_attrs_ap_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/region_attrs_ap_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/region_attrs_xn_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_1/base_addr_reg[22]/CLR (the first 15 of 119 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/base_addr[7]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[11]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[12]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[13]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[14]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[15]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[17]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[18]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[19]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[20]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[21]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[22]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[23]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[24]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/base_addr[5]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_icore_to_sys_valid_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[2]_rep/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/dcore_fpb_pend_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/suppress_buff_write_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/unalign_2nd_lookup_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_ppb_accept_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_sys_accept_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/def_output_port_data_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_icore/icore_to_icode_accept_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_icore/output_port_addr_reg_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_icore/output_port_addr_reg_reg[1]/CLR (the first 15 of 119 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/dbg_halted_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/bkpt_stall_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/dbg_halted_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/fault_detected_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/fault_detected_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/fault_fetch_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/fault_fetch_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/fault_ici_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_16_mul_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_advance_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_barrier_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_barrier_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_bkpt_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_br_t_changer_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_cps_ctl_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/instr_cps_ctl_ex_reg[1]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#6 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/base_addr[7]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[11]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[12]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[13]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[14]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[15]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[17]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[18]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[19]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[20]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[21]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[6]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[7]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_0/base_addr_reg[8]/CLR (the first 15 of 119 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/dbg_restarted_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_ppb_accept_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_sys_accept_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_icore_to_sys_valid_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/unalign_2nd_lookup_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_icore/data_valid_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/data_valid_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_status/instr_itflgscc_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_exec/fault_state_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ctl/FSM_onehot_state_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ctl/FSM_onehot_state_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ctl/allow_pc_write_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ahbintf/fe_address_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ahbintf/int_vector_fault_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[14]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[3]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#7 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/dbg_halted_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/alu_rf_rd_c_addr_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/alu_rf_rd_c_addr_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/alu_rf_rd_c_addr_ex_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/alu_rf_rd_c_addr_ex_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_ex_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_ex_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_ex_reg[4]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_ex_reg[5]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_reg_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_cnt_reg_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_srt_init_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_srt_init_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/div_srt_sign_ex_reg/CLR (the first 15 of 532 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/fault_pending_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[11]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[12]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[13]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[14]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[15]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[17]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[18]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[19]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[20]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[21]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[22]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[23]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/aligned_addr_reg[24]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#8 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/dbg_restarted_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/in_pop_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_fmask_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_invoke_reg_rep__0/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_invoke_reg_rep__1/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_non_actv_exit_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_nxt_isr_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_nxt_isr_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_nxt_isr_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_nxt_isr_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_nxt_isr_reg[4]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_ret_to_base_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/slp_sleeponexit_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/u_cm3_nvic_int_state/actv_state_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/u_cm3_nvic_int_state/actv_state_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/u_cm3_nvic_int_state/actv_state_reg[11]/CLR (the first 15 of 118 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/fsr_min[12]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[17]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[18]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[19]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[20]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[21]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[22]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[23]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[5]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[6]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/base_addr_reg[7]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/region_attrs_ap_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/region_attrs_ap_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/region_attrs_ap_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_7/region_attrs_scb_reg[0]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#9 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/prev_int_pend[17]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ahb_ctl/d_fault_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ahb_ctl/i_fault_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ahb_ctl/hreadyoutd_err_reg/PRE, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ahb_ctl/hreadyouti_err_reg/PRE, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/ahb_rd_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[4]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[5]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/ppb_fault_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/ppb_hreadyout_reg/PRE, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_align/mask_cancel_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/data_valid_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_curr_isr_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_main/int_curr_isr_reg[1]/CLR (the first 15 of 117 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/i_fault_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_dec/u_cm3_dpu_br_dec/instr_br_ilock_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_dec/u_cm3_dpu_br_dec/instr_det_erly_br_trk_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_dec/u_cm3_dpu_br_dec/instr_ex_br_det_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_dec/u_cm3_dpu_br_dec/instr_lsu_br_det_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsm_baseinlist_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[11]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[12]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[13]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[5]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[6]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_lsu_ctl_ex_reg[9]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_rf_rd_c_addr_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_rf_rd_c_addr_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ctl/instr_rf_rd_c_addr_ex_reg[2]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#10 Warning
 LUT drives async reset alert  
-LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/prev_int_pend[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_slave_sel_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_slave_sel_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_unalign_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_unalign_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_unalign_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/icore_fpb_pend_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/unalign_cancel_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/write_buff_hold_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_dcode_accept_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/def_output_port_data_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/def_output_port_data_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/def_output_port_data_reg[3]/CLR (the first 15 of 119 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/lockup[0]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_slave_sel_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_slave_sel_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_unalign_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_unalign_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_unalign_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/dcore_fpb_pend_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/icore_fpb_pend_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/suppress_buff_write_reg/CLR (the first 15 of 124 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/prev_int_pend[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/instr_alu_ctl_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/instr_rf_wr_d_en_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/mul_input_sel_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/mul_input_sel_ex_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_ctl/mul_input_sel_ex_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_ctl_ex_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[10]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[11]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[12]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[13]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[14]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[15]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_lsu/u_cm3_dpu_lsu_ahbintf/addr_adder_in1_ex_reg[17]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/prev_int_pend[17]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_icore/icore_to_icode_accept_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/mpu_unalign_lookup_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_icore/mpu_canceli_reg_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ahb_ctl/hreadyouti_err_reg/PRE, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/ahb_rd_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[3]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[4]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/haddr_reg_reg[5]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/ppb_fault_reg/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_ppb_intf/ppb_hreadyout_reg/PRE, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ahbintf/fe_address_reg[28]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ahbintf/fe_address_reg[29]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ahbintf/fe_address_reg[30]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_fetch/u_cm3_dpu_fetch_ahbintf/fe_address_reg[31]/CLR (the first 15 of 123 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_nvic/u_cm3_nvic_reg/region_srd[3]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[16]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[17]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[18]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[19]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[20]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[21]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[22]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[23]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[5]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[6]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/base_addr_reg[7]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/region_size_reg[0]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/region_size_reg[1]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/region_size_reg[2]/CLR, m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_mpu/u_cm3_mpu_full/u_cm3_mpu_regions/u_cm3_mpu_region_2/region_size_reg[3]/CLR (the first 15 of 125 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -130,279 +145,279 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-source : [get_pins -hierarchical -filter {NAME =~ *axi_single_spi_0/sck_o}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '14' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 113)
+Current XDC: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 113)
 Related violations: <none>
 
 XDCB-5#2 Warning
 Runtime inefficient way to find pin objects  
 The option '-source : [get_pins -hierarchical -filter {NAME =~ *axi_xip_quad_spi_0/sck_o}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '13' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 110)
+Current XDC: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 110)
 Related violations: <none>
 
 XDCH-2#1 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'DAPLink_tri_o[12]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[12]}]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 254)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 254)
 Related violations: <none>
 
 XDCH-2#2 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'DAPLink_tri_o[13]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[13]}]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 270)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 270)
 Related violations: <none>
 
 XDCH-2#3 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'DAPLink_tri_o[8]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[8]}]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 268)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 268)
 Related violations: <none>
 
 XDCH-2#4 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'dip_switches_4bits_tri_i[0]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports dip_switches*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#5 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'dip_switches_4bits_tri_i[1]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports dip_switches*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#6 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'dip_switches_4bits_tri_i[2]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports dip_switches*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#7 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'dip_switches_4bits_tri_i[3]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports dip_switches*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#8 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'led_4bits_tri_io[0]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
 Related violations: <none>
 
 XDCH-2#9 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'led_4bits_tri_io[1]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
 Related violations: <none>
 
 XDCH-2#10 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'led_4bits_tri_io[2]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
 Related violations: <none>
 
 XDCH-2#11 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'led_4bits_tri_io[3]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 273)
 Related violations: <none>
 
 XDCH-2#12 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'push_buttons_4bits_tri_i[0]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports push_buttons*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
 Related violations: <none>
 
 XDCH-2#13 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'push_buttons_4bits_tri_i[1]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports push_buttons*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
 Related violations: <none>
 
 XDCH-2#14 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'push_buttons_4bits_tri_i[2]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports push_buttons*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
 Related violations: <none>
 
 XDCH-2#15 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'push_buttons_4bits_tri_i[3]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports push_buttons*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 260)
 Related violations: <none>
 
 XDCH-2#16 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'reset' relative to clock cpu_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks cpu_clk] -add_delay 0.500 [get_ports reset*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 263)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 263)
 Related violations: <none>
 
 XDCH-2#17 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'rgb_led_tri_io[0]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
 Related violations: <none>
 
 XDCH-2#18 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'rgb_led_tri_io[1]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
 Related violations: <none>
 
 XDCH-2#19 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'rgb_led_tri_io[2]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
 Related violations: <none>
 
 XDCH-2#20 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'rgb_led_tri_io[3]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
 Related violations: <none>
 
 XDCH-2#21 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'rgb_led_tri_io[4]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
 Related violations: <none>
 
 XDCH-2#22 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'rgb_led_tri_io[5]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 274)
 Related violations: <none>
 
 XDCH-2#23 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'usb_uart_rxd' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports usb_uart_rxd]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 253)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 253)
 Related violations: <none>
 
 XDCH-2#24 Warning
 Same min and max delay values on IO port  
 The same input delay of 5.000 ns has been defined on port 'TDI' relative to clock SWCLK for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports TDI]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 241)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 241)
 Related violations: <none>
 
 XDCH-2#25 Warning
 Same min and max delay values on IO port  
 The same input delay of 5.000 ns has been defined on port 'nTRST' relative to clock SWCLK for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports nTRST]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 242)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 242)
 Related violations: <none>
 
 XDCH-2#26 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'DAPLink_tri_o[11]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[11]}]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 256)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 256)
 Related violations: <none>
 
 XDCH-2#27 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'led_4bits_tri_io[0]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
 Related violations: <none>
 
 XDCH-2#28 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'led_4bits_tri_io[1]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
 Related violations: <none>
 
 XDCH-2#29 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'led_4bits_tri_io[2]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
 Related violations: <none>
 
 XDCH-2#30 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'led_4bits_tri_io[3]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 275)
 Related violations: <none>
 
 XDCH-2#31 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'rgb_led_tri_io[0]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
 Related violations: <none>
 
 XDCH-2#32 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'rgb_led_tri_io[1]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
 Related violations: <none>
 
 XDCH-2#33 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'rgb_led_tri_io[2]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
 Related violations: <none>
 
 XDCH-2#34 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'rgb_led_tri_io[3]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
 Related violations: <none>
 
 XDCH-2#35 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'rgb_led_tri_io[4]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
 Related violations: <none>
 
 XDCH-2#36 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'rgb_led_tri_io[5]' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 276)
 Related violations: <none>
 
 XDCH-2#37 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.500 ns has been defined on port 'usb_uart_txd' relative to clock slow_out_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports usb_uart_txd]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 255)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 255)
 Related violations: <none>
 
 XDCH-2#38 Warning
 Same min and max delay values on IO port  
 The same output delay of 5.000 ns has been defined on port 'TDO[0]' relative to clock SWCLK for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports TDO*]
-C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 243)
+C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc (Line: 243)
 Related violations: <none>
 
 

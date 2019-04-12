@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.xpr">
+<Project Version="7" Minor="38" Path="C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="77819a256541433f8004e1f4f878ad6e"/>
@@ -75,11 +75,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_iic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_Cortex_M3_0_0"/>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_xlconcat_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_single_spi_0_0/m3_for_arty_a7_axi_single_spi_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_axi_single_spi_0_0"/>
@@ -87,29 +84,29 @@
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_quad_spi_0_1/m3_for_arty_a7_axi_quad_spi_0_1.xci">
           <Proxy FileSetName="m3_for_arty_a7_axi_quad_spi_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_xip_quad_spi_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_uartlite_0_0/m3_for_arty_a7_axi_uartlite_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_axi_uartlite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_Cortex_M3_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_xip_quad_spi_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_tri_io_buf_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_xlconcat_0_0"/>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_xbar_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../block_diagram/hdl/m3_for_arty_a7_wrapper.v">
@@ -288,12 +285,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="m3_for_arty_a7_axi_iic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_axi_iic_0_0">
-      <Config>
-        <Option Name="TopModule" Val="m3_for_arty_a7_axi_iic_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="m3_for_arty_a7_Cortex_M3_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_Cortex_M3_0_0">
       <Config>
         <Option Name="TopModule" Val="m3_for_arty_a7_Cortex_M3_0_0"/>
@@ -344,9 +335,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_uartlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_axi_uartlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_uartlite_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_axi_uartlite_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -355,9 +344,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_tri_io_buf_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_tri_io_buf_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_tri_io_buf_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_tri_io_buf_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -366,9 +353,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_single_spi_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_axi_single_spi_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_single_spi_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_axi_single_spi_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -377,9 +362,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_quad_spi_0_1_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_axi_quad_spi_0_1" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_quad_spi_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_axi_quad_spi_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -388,9 +371,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_xip_quad_spi_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_axi_xip_quad_spi_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_xip_quad_spi_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_axi_xip_quad_spi_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -399,9 +380,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_gpio_0_1_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_axi_gpio_0_1" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_gpio_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_axi_gpio_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -410,9 +389,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -421,9 +398,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_xbar_1" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_xbar_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_xbar_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -432,20 +407,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_xbar_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_xbar_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="m3_for_arty_a7_axi_iic_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_axi_iic_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_iic_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_axi_iic_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -454,9 +416,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_Cortex_M3_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_Cortex_M3_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_Cortex_M3_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_Cortex_M3_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -465,9 +425,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_xlconcat_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_xlconcat_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_xlconcat_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -495,9 +453,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_uartlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_uartlite_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_axi_uartlite_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -513,9 +469,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_tri_io_buf_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_tri_io_buf_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_tri_io_buf_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -531,9 +485,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_single_spi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_single_spi_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_axi_single_spi_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -549,9 +501,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_quad_spi_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_quad_spi_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_axi_quad_spi_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -567,9 +517,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_xip_quad_spi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_xip_quad_spi_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_axi_xip_quad_spi_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -585,9 +533,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_axi_gpio_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_gpio_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_axi_gpio_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -603,9 +549,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -621,9 +565,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_xbar_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_xbar_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -639,27 +581,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_xbar_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="m3_for_arty_a7_axi_iic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_iic_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_axi_iic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -675,9 +597,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_Cortex_M3_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_Cortex_M3_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_Cortex_M3_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -693,9 +613,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_xlconcat_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_xlconcat_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

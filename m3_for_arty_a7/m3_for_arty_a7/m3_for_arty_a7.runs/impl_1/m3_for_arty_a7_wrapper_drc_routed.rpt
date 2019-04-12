@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Apr 11 20:28:47 2019
+| Date         : Fri Apr 12 17:52:19 2019
 | Host         : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 | Command      : report_drc -file m3_for_arty_a7_wrapper_drc_routed.rpt -pb m3_for_arty_a7_wrapper_drc_routed.pb -rpx m3_for_arty_a7_wrapper_drc_routed.rpx
 | Design       : m3_for_arty_a7_wrapper
@@ -24,22 +24,19 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 63
-+-----------+----------+------------------------------------------------+------------+
-| Rule      | Severity | Description                                    | Violations |
-+-----------+----------+------------------------------------------------+------------+
-| BUFC-1    | Warning  | Input Buffer Connections                       | 2          |
-| CHECK-3   | Warning  | Report rule limit reached                      | 1          |
-| DPIP-1    | Warning  | Input pipelining                               | 6          |
-| DPOP-1    | Warning  | PREG Output pipelining                         | 3          |
-| DPOP-2    | Warning  | MREG Output pipelining                         | 3          |
-| PLIO-6    | Warning  | Placement Constraints Check for IO constraints | 1          |
-| REQP-1571 | Warning  | connects_D                                     | 1          |
-| REQP-1617 | Warning  | use_IOB_register                               | 9          |
-| REQP-1839 | Warning  | RAMB36 async control check                     | 20         |
-| REQP-1840 | Warning  | RAMB18 async control check                     | 1          |
-| RPBF-3    | Warning  | IO port buffering is incomplete                | 16         |
-+-----------+----------+------------------------------------------------+------------+
+             Violations found: 47
++-----------+----------+---------------------------------+------------+
+| Rule      | Severity | Description                     | Violations |
++-----------+----------+---------------------------------+------------+
+| BUFC-1    | Warning  | Input Buffer Connections        | 2          |
+| CHECK-3   | Warning  | Report rule limit reached       | 1          |
+| DPIP-1    | Warning  | Input pipelining                | 6          |
+| DPOP-1    | Warning  | PREG Output pipelining          | 3          |
+| DPOP-2    | Warning  | MREG Output pipelining          | 3          |
+| REQP-1839 | Warning  | RAMB36 async control check      | 20         |
+| REQP-1840 | Warning  | RAMB18 async control check      | 1          |
+| RPBF-3    | Warning  | IO port buffering is incomplete | 11         |
++-----------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -118,159 +115,104 @@ MREG Output pipelining
 DSP m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_dp/mul_res_ex__1 multiplier stage m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dpu/u_cm3_dpu_alu/u_cm3_dpu_alu_dp/mul_res_ex__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
-PLIO-6#1 Warning
-Placement Constraints Check for IO constraints  
-Invalid constraint on register m3_for_arty_a7_i/daplink_if_0/axi_single_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
-Related violations: <none>
-
-REQP-1571#1 Warning
-connects_D  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_single_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
-Related violations: <none>
-
-REQP-1617#1 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#2 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO1_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#3 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO2_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#4 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO3_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#5 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_single_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#6 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#7 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO1_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#8 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO2_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
-REQP-1617#9 Warning
-use_IOB_register  
-The FDRE cell m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO3_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
-Related violations: <none>
-
 REQP-1839#1 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/dap_ahb_htrans_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_icore_to_sys_valid_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#2 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#3 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#4 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_master_sel_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#5 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_slave_sel_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#6 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_slave_sel_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#7 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#8 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#9 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#10 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/bm_state_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#11 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/dcore_fpb_pend_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#12 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/suppress_buff_write_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#13 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/unalign_2nd_lookup_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#14 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/unalign_cancel_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#15 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dap/dap_to_dcode_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#16 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dap/dap_to_ppb_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#17 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_haddr_reg_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_dcode_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#18 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_hsize_reg_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_ppb_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#19 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_hsize_reg_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/buffered_write_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#20 Warning
 RAMB36 async control check  
-The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_mst/slv_hwrite_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/mpu_canceld_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#1 Warning
@@ -305,55 +247,30 @@ Related violations: <none>
 
 RPBF-3#6 Warning
 IO port buffering is incomplete  
-Device port DAPLink_tri_o[14] expects both input and output buffering but the buffers are incomplete.
+Device port DAPLink_tri_o[15] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#7 Warning
 IO port buffering is incomplete  
-Device port DAPLink_tri_o[15] expects both input and output buffering but the buffers are incomplete.
+Device port DAPLink_tri_o[1] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#8 Warning
 IO port buffering is incomplete  
-Device port DAPLink_tri_o[1] expects both input and output buffering but the buffers are incomplete.
+Device port DAPLink_tri_o[2] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#9 Warning
 IO port buffering is incomplete  
-Device port DAPLink_tri_o[2] expects both input and output buffering but the buffers are incomplete.
+Device port DAPLink_tri_o[3] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#10 Warning
 IO port buffering is incomplete  
-Device port DAPLink_tri_o[3] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#11 Warning
-IO port buffering is incomplete  
-Device port DAPLink_tri_o[4] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#12 Warning
-IO port buffering is incomplete  
-Device port DAPLink_tri_o[5] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#13 Warning
-IO port buffering is incomplete  
-Device port DAPLink_tri_o[6] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#14 Warning
-IO port buffering is incomplete  
-Device port DAPLink_tri_o[7] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#15 Warning
-IO port buffering is incomplete  
 Device port DAPLink_tri_o[8] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
-RPBF-3#16 Warning
+RPBF-3#11 Warning
 IO port buffering is incomplete  
 Device port DAPLink_tri_o[9] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
