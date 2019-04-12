@@ -1,0 +1,670 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Apr 11 20:21:35 2019
+# Process ID: 9256
+# Current directory: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1
+# Command line: vivado.exe -log m3_for_arty_a7_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source m3_for_arty_a7_wrapper.tcl
+# Log file: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/m3_for_arty_a7_wrapper.vds
+# Journal file: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source m3_for_arty_a7_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 305.125 ; gain = 57.844
+Command: synth_design -top m3_for_arty_a7_wrapper -part xc7a100tcsg324-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3616 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 414.996 ; gain = 102.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_wrapper' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/hdl/m3_for_arty_a7_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2379]
+INFO: [Synth 8-6157] synthesizing module 'Clocks_and_Resets_imp_1WLR2TP' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_clk_wiz_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_clk_wiz_0_0' (2#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_i_interconnect_aresetn_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_interconnect_aresetn_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_i_interconnect_aresetn_0' (3#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_interconnect_aresetn_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_i_inv_dbgresetn_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_inv_dbgresetn_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_i_inv_dbgresetn_0' (4#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_inv_dbgresetn_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_i_inv_sysresetn1_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_inv_sysresetn1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_i_inv_sysresetn1_0' (5#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_inv_sysresetn1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_i_peripheral_aresetn1_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_peripheral_aresetn1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_i_peripheral_aresetn1_0' (6#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_peripheral_aresetn1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_i_sysresetn_or_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_sysresetn_or_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_i_sysresetn_or_0' (7#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_i_sysresetn_or_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_proc_sys_reset_DAPLink_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_proc_sys_reset_DAPLink_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_proc_sys_reset_DAPLink_0' (8#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_proc_sys_reset_DAPLink_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_DAPLink' of module 'm3_for_arty_a7_proc_sys_reset_DAPLink_0' requires 10 connections, but only 8 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:88]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_proc_sys_reset_base_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_proc_sys_reset_base_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_proc_sys_reset_base_0' (9#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_proc_sys_reset_base_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_base' of module 'm3_for_arty_a7_proc_sys_reset_base_0' requires 10 connections, but only 8 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:97]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_xlconstant_1_1' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconstant_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_xlconstant_1_1' (10#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconstant_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Clocks_and_Resets_imp_1WLR2TP' (11#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_Cortex_M3_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_Cortex_M3_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_Cortex_M3_0_0' (12#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_Cortex_M3_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'Cortex_M3_0' of module 'm3_for_arty_a7_Cortex_M3_0_0' requires 92 connections, but only 80 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2761]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_bram_ctrl_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_bram_ctrl_0_0' (13#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_gpio_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_gpio_0_0' (14#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_gpio_1_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_gpio_1_0' (15#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_iic_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_iic_0_0' (16#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_iic_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_iic_0' of module 'm3_for_arty_a7_axi_iic_0_0' requires 27 connections, but only 26 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2921]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_interconnect_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:3280]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JNWG9E' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1030]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JNWG9E' (17#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1030]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1JHKYGL' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1162]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1JHKYGL' (18#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1162]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_18D5QAL' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1426]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_18D5QAL' (19#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1426]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_8J5MKA' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1822]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_8J5MKA' (20#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1822]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_D9WIKT' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1968]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_D9WIKT' (21#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1968]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1CJX44Q' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2100]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1CJX44Q' (22#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2100]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1WI4A9U' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2246]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1WI4A9U' (23#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2246]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11BAHIF' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:5200]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_auto_pc_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_auto_pc_0' (24#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11BAHIF' (25#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:5200]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_xbar_1' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_xbar_1' (26#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xbar_1_stub.v:6]
+WARNING: [Synth 8-689] width (18) of port connection 'm_axi_arprot' does not match port width (21) of module 'm3_for_arty_a7_xbar_1' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:4455]
+WARNING: [Synth 8-689] width (18) of port connection 'm_axi_awprot' does not match port width (21) of module 'm3_for_arty_a7_xbar_1' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:4459]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_interconnect_0_0' (27#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:3280]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_quad_spi_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_quad_spi_0_0' (28#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_quad_spi_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_quad_spi_0' of module 'm3_for_arty_a7_axi_quad_spi_0_0' requires 40 connections, but only 36 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:3121]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_uartlite_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_uartlite_0_0' (29#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_blk_mem_gen_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_blk_mem_gen_0_0' (30#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'daplink_if_0_imp_5IHHOQ' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:110]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_DAPLink_to_Arty_shield_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_DAPLink_to_Arty_shield_0_0' (31#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_gpio_0_1' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_gpio_0_1' (32#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_gpio_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_gpio_0' of module 'm3_for_arty_a7_axi_gpio_0_1' requires 22 connections, but only 21 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:566]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_interconnect_0_1' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:4494]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_13L60SF' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:898]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_13L60SF' (33#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:898]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_4B5460' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1294]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_4B5460' (34#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1294]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_OAWDIO' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1558]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_OAWDIO' (35#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1558]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1NKLPAV' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1690]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1NKLPAV' (36#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:1690]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_LNGPOQ' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:5472]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_LNGPOQ' (37#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:5472]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_xbar_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_xbar_0' (38#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'm3_for_arty_a7_xbar_0' requires 40 connections, but only 38 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:5159]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_interconnect_0_1' (39#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:4494]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_protocol_convert_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_protocol_convert_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_protocol_convert_0_0' (40#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_protocol_convert_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_protocol_convert_0' of module 'm3_for_arty_a7_axi_protocol_convert_0_0' requires 70 connections, but only 66 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:688]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_quad_spi_0_1' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_quad_spi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_quad_spi_0_1' (41#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_quad_spi_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_quad_spi_0' of module 'm3_for_arty_a7_axi_quad_spi_0_1' requires 39 connections, but only 37 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:755]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_single_spi_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_single_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_single_spi_0_0' (42#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_single_spi_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_single_spi_0' of module 'm3_for_arty_a7_axi_single_spi_0_0' requires 33 connections, but only 31 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:793]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_axi_xip_quad_spi_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_xip_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_axi_xip_quad_spi_0_0' (43#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_axi_xip_quad_spi_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_xip_quad_spi_0' of module 'm3_for_arty_a7_axi_xip_quad_spi_0_0' requires 72 connections, but only 70 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:825]
+INFO: [Synth 8-6155] done synthesizing module 'daplink_if_0_imp_5IHHOQ' (44#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:110]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_tri_io_buf_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_tri_io_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_tri_io_buf_0_0' (45#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_tri_io_buf_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'tri_io_buf_0' of module 'm3_for_arty_a7_tri_io_buf_0_0' requires 4 connections, but only 3 given [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:3257]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_xlconcat_0_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_xlconcat_0_0' (46#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_xlconcat_1_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconcat_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_xlconcat_1_0' (47#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconcat_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_xlconstant_1_0' [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconstant_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_xlconstant_1_0' (48#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/.Xil/Vivado-9256-ZYQ-Mac-Win/realtime/m3_for_arty_a7_xlconstant_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7' (49#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/synth/m3_for_arty_a7.v:2379]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_wrapper' (50#1) [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/hdl/m3_for_arty_a7_wrapper.v:12]
+WARNING: [Synth 8-3331] design s00_couplers_imp_LNGPOQ has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_LNGPOQ has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_LNGPOQ has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_LNGPOQ has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1NKLPAV has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1NKLPAV has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1NKLPAV has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1NKLPAV has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_OAWDIO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_OAWDIO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_OAWDIO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_OAWDIO has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_4B5460 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_4B5460 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_4B5460 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_4B5460 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_13L60SF has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_13L60SF has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_13L60SF has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_13L60SF has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_11BAHIF has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_11BAHIF has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_1WI4A9U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_1WI4A9U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_1WI4A9U has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_1WI4A9U has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_1CJX44Q has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_1CJX44Q has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_1CJX44Q has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_1CJX44Q has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_D9WIKT has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_D9WIKT has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_D9WIKT has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_D9WIKT has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_8J5MKA has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_8J5MKA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_8J5MKA has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_8J5MKA has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_18D5QAL has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_18D5QAL has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_18D5QAL has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_18D5QAL has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1JHKYGL has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1JHKYGL has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1JHKYGL has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1JHKYGL has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_JNWG9E has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_JNWG9E has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_JNWG9E has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_JNWG9E has unconnected port S_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 470.867 ; gain = 158.824
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 470.867 ; gain = 158.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 470.867 ; gain = 158.824
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_bram_ctrl_0_0/m3_for_arty_a7_axi_bram_ctrl_0_0/m3_for_arty_a7_axi_bram_ctrl_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_bram_ctrl_0_0/m3_for_arty_a7_axi_bram_ctrl_0_0/m3_for_arty_a7_axi_bram_ctrl_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_bram_ctrl_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_gpio_0_0/m3_for_arty_a7_axi_gpio_0_0/m3_for_arty_a7_axi_gpio_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_gpio_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_gpio_0_0/m3_for_arty_a7_axi_gpio_0_0/m3_for_arty_a7_axi_gpio_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_gpio_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_gpio_1_0/m3_for_arty_a7_axi_gpio_1_0/m3_for_arty_a7_axi_gpio_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_gpio_1'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_gpio_1_0/m3_for_arty_a7_axi_gpio_1_0/m3_for_arty_a7_axi_gpio_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_gpio_1'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_0/m3_for_arty_a7_axi_quad_spi_0_0/m3_for_arty_a7_axi_quad_spi_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_quad_spi_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_0/m3_for_arty_a7_axi_quad_spi_0_0/m3_for_arty_a7_axi_quad_spi_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_quad_spi_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_uartlite_0_0/m3_for_arty_a7_axi_uartlite_0_0/m3_for_arty_a7_axi_uartlite_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_uartlite_0_0/m3_for_arty_a7_axi_uartlite_0_0/m3_for_arty_a7_axi_uartlite_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_uartlite_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_blk_mem_gen_0_0/m3_for_arty_a7_blk_mem_gen_0_0/m3_for_arty_a7_blk_mem_gen_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/blk_mem_gen_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_blk_mem_gen_0_0/m3_for_arty_a7_blk_mem_gen_0_0/m3_for_arty_a7_blk_mem_gen_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/blk_mem_gen_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/tri_io_buf_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/tri_io_buf_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/xlconcat_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/xlconcat_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconcat_1_0/m3_for_arty_a7_xlconcat_1_0/m3_for_arty_a7_xlconcat_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/xlconcat_1'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconcat_1_0/m3_for_arty_a7_xlconcat_1_0/m3_for_arty_a7_xlconcat_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/xlconcat_1'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconstant_1_0/m3_for_arty_a7_xlconstant_1_0/m3_for_arty_a7_xlconstant_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/xlconstant_1'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconstant_1_0/m3_for_arty_a7_xlconstant_1_0/m3_for_arty_a7_xlconstant_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/xlconstant_1'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Cortex_M3_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Cortex_M3_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_single_spi_0_0/m3_for_arty_a7_axi_single_spi_0_0/m3_for_arty_a7_axi_single_spi_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_single_spi_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_single_spi_0_0/m3_for_arty_a7_axi_single_spi_0_0/m3_for_arty_a7_axi_single_spi_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_single_spi_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_1/m3_for_arty_a7_axi_quad_spi_0_1/m3_for_arty_a7_axi_quad_spi_0_1_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_1/m3_for_arty_a7_axi_quad_spi_0_1/m3_for_arty_a7_axi_quad_spi_0_1_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_gpio_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_gpio_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_protocol_convert_0_0/m3_for_arty_a7_axi_protocol_convert_0_0/m3_for_arty_a7_axi_protocol_convert_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_protocol_convert_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_protocol_convert_0_0/m3_for_arty_a7_axi_protocol_convert_0_0/m3_for_arty_a7_axi_protocol_convert_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_protocol_convert_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/DAPLink_to_Arty_shield_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/DAPLink_to_Arty_shield_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_proc_sys_reset_DAPLink_0/m3_for_arty_a7_proc_sys_reset_DAPLink_0/m3_for_arty_a7_proc_sys_reset_DAPLink_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/proc_sys_reset_DAPLink'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_proc_sys_reset_DAPLink_0/m3_for_arty_a7_proc_sys_reset_DAPLink_0/m3_for_arty_a7_proc_sys_reset_DAPLink_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/proc_sys_reset_DAPLink'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_proc_sys_reset_base_0/m3_for_arty_a7_proc_sys_reset_base_0/m3_for_arty_a7_proc_sys_reset_base_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/proc_sys_reset_base'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_proc_sys_reset_base_0/m3_for_arty_a7_proc_sys_reset_base_0/m3_for_arty_a7_proc_sys_reset_base_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/proc_sys_reset_base'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_interconnect_aresetn_0/m3_for_arty_a7_i_interconnect_aresetn_0/m3_for_arty_a7_i_interconnect_aresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_interconnect_aresetn'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_interconnect_aresetn_0/m3_for_arty_a7_i_interconnect_aresetn_0/m3_for_arty_a7_i_interconnect_aresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_interconnect_aresetn'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_peripheral_aresetn1_0/m3_for_arty_a7_i_peripheral_aresetn1_0/m3_for_arty_a7_i_interconnect_aresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_peripheral_aresetn1'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_peripheral_aresetn1_0/m3_for_arty_a7_i_peripheral_aresetn1_0/m3_for_arty_a7_i_interconnect_aresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_peripheral_aresetn1'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_sysresetn_or_0/m3_for_arty_a7_i_sysresetn_or_0/m3_for_arty_a7_i_sysresetn_or_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_sysresetn_or'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_sysresetn_or_0/m3_for_arty_a7_i_sysresetn_or_0/m3_for_arty_a7_i_sysresetn_or_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_sysresetn_or'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_inv_dbgresetn_0/m3_for_arty_a7_i_inv_dbgresetn_0/m3_for_arty_a7_i_inv_dbgresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_inv_dbgresetn'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_inv_dbgresetn_0/m3_for_arty_a7_i_inv_dbgresetn_0/m3_for_arty_a7_i_inv_dbgresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_inv_dbgresetn'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_inv_sysresetn1_0/m3_for_arty_a7_i_inv_sysresetn1_0/m3_for_arty_a7_i_inv_dbgresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_inv_sysresetn1'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_i_inv_sysresetn1_0/m3_for_arty_a7_i_inv_sysresetn1_0/m3_for_arty_a7_i_inv_dbgresetn_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/i_inv_sysresetn1'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconstant_1_1/m3_for_arty_a7_xlconstant_1_1/m3_for_arty_a7_xlconstant_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/xlconstant_1'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconstant_1_1/m3_for_arty_a7_xlconstant_1_1/m3_for_arty_a7_xlconstant_1_0_in_context.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/xlconstant_1'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_interconnect_0/xbar'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_interconnect_0/xbar'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0_in_context.xdc] for cell 'm3_for_arty_a7_i/daplink_if_0/axi_interconnect_0/xbar'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_iic_0'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_iic_0'
+Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0_in_context.xdc] for cell 'm3_for_arty_a7_i/axi_interconnect_0/s00_couplers/auto_pc'
+Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc]
+WARNING: [Vivado 12-180] No cells matched '.*daplink.*quad.*SCK_O_NE_4_FDRE_INST'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:77]
+WARNING: [Vivado 12-508] No pins matched 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:91]
+WARNING: [Vivado 12-508] No pins matched 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:92]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter {NAME =~ m3_for_arty_a7_i/axi_quad_spi_0/sck_o}'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'qspi_flash_sck*'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:107]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'slow_out_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:118]
+WARNING: [Vivado 12-507] No nets matched '*qspi_sel'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:156]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:212]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:212]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:213]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:213]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:214]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:214]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:215]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:215]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:217]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:217]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:218]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:218]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:219]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:219]
+WARNING: [Vivado 12-627] No clocks matched 'base_qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:220]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:220]
+WARNING: [Vivado 12-627] No clocks matched 'cpu_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:263]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:263]
+WARNING: [Vivado 12-627] No clocks matched 'qspi_clk'. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:265]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:265]
+Finished Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/m3_for_arty_a7_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/m3_for_arty_a7_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/m3_for_arty_a7_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/new/nexys4.xdc]
+Finished Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/new/nexys4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/new/nexys4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/m3_for_arty_a7_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/m3_for_arty_a7_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 17 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 793.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 793.410 ; gain = 481.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 793.410 ; gain = 481.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for TDO[0]. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TDO[0]. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_bram_ctrl_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_interconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_quad_spi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_uartlite_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/tri_io_buf_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/xlconcat_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/xlconstant_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Cortex_M3_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_interconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_single_spi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_protocol_convert_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/DAPLink_to_Arty_shield_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/proc_sys_reset_DAPLink. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/proc_sys_reset_base. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/i_interconnect_aresetn. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/i_peripheral_aresetn1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/i_sysresetn_or. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/i_inv_dbgresetn. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/i_inv_sysresetn1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/Clocks_and_Resets/xlconstant_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_iic_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 793.410 ; gain = 481.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 793.410 ; gain = 481.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_1 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M05_ARESETN
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M06_ACLK
+WARNING: [Synth 8-3331] design m3_for_arty_a7_axi_interconnect_0_0 has unconnected port M06_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 793.410 ; gain = 481.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'm3_for_arty_a7_i/axi_bram_ctrl_0/bram_clk_a' to pin 'm3_for_arty_a7_i/axi_bram_ctrl_0/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/clk_out1' to pin 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/clk_out2' to pin 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/bbstub_clk_out2/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'm3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/sck_o' to 'm3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/bbstub_sck_o/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'm3_for_arty_a7_i/daplink_if_0/axi_single_spi_0/sck_o' to 'm3_for_arty_a7_i/daplink_if_0/axi_single_spi_0/bbstub_sck_o/O'
+INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 797.695 ; gain = 485.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 797.918 ; gain = 485.875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------------------+----------+
+|      |BlackBox name                             |Instances |
++------+------------------------------------------+----------+
+|1     |m3_for_arty_a7_xbar_1                     |         1|
+|2     |m3_for_arty_a7_auto_pc_0                  |         1|
+|3     |m3_for_arty_a7_Cortex_M3_0_0              |         1|
+|4     |m3_for_arty_a7_axi_bram_ctrl_0_0          |         1|
+|5     |m3_for_arty_a7_axi_gpio_0_0               |         1|
+|6     |m3_for_arty_a7_axi_gpio_1_0               |         1|
+|7     |m3_for_arty_a7_axi_iic_0_0                |         1|
+|8     |m3_for_arty_a7_axi_quad_spi_0_0           |         1|
+|9     |m3_for_arty_a7_axi_uartlite_0_0           |         1|
+|10    |m3_for_arty_a7_blk_mem_gen_0_0            |         1|
+|11    |m3_for_arty_a7_tri_io_buf_0_0             |         1|
+|12    |m3_for_arty_a7_xlconcat_0_0               |         1|
+|13    |m3_for_arty_a7_xlconcat_1_0               |         1|
+|14    |m3_for_arty_a7_xlconstant_1_0             |         1|
+|15    |m3_for_arty_a7_clk_wiz_0_0                |         1|
+|16    |m3_for_arty_a7_i_interconnect_aresetn_0   |         1|
+|17    |m3_for_arty_a7_i_inv_dbgresetn_0          |         1|
+|18    |m3_for_arty_a7_i_inv_sysresetn1_0         |         1|
+|19    |m3_for_arty_a7_i_peripheral_aresetn1_0    |         1|
+|20    |m3_for_arty_a7_i_sysresetn_or_0           |         1|
+|21    |m3_for_arty_a7_proc_sys_reset_DAPLink_0   |         1|
+|22    |m3_for_arty_a7_proc_sys_reset_base_0      |         1|
+|23    |m3_for_arty_a7_xlconstant_1_1             |         1|
+|24    |m3_for_arty_a7_xbar_0                     |         1|
+|25    |m3_for_arty_a7_DAPLink_to_Arty_shield_0_0 |         1|
+|26    |m3_for_arty_a7_axi_gpio_0_1               |         1|
+|27    |m3_for_arty_a7_axi_protocol_convert_0_0   |         1|
+|28    |m3_for_arty_a7_axi_quad_spi_0_1           |         1|
+|29    |m3_for_arty_a7_axi_single_spi_0_0         |         1|
+|30    |m3_for_arty_a7_axi_xip_quad_spi_0_0       |         1|
++------+------------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------------+------+
+|      |Cell                                      |Count |
++------+------------------------------------------+------+
+|1     |m3_for_arty_a7_Cortex_M3_0_0              |     1|
+|2     |m3_for_arty_a7_DAPLink_to_Arty_shield_0_0 |     1|
+|3     |m3_for_arty_a7_auto_pc_0                  |     1|
+|4     |m3_for_arty_a7_axi_bram_ctrl_0_0          |     1|
+|5     |m3_for_arty_a7_axi_gpio_0_0               |     1|
+|6     |m3_for_arty_a7_axi_gpio_0_1               |     1|
+|7     |m3_for_arty_a7_axi_gpio_1_0               |     1|
+|8     |m3_for_arty_a7_axi_iic_0_0                |     1|
+|9     |m3_for_arty_a7_axi_protocol_convert_0_0   |     1|
+|10    |m3_for_arty_a7_axi_quad_spi_0_0           |     1|
+|11    |m3_for_arty_a7_axi_quad_spi_0_1           |     1|
+|12    |m3_for_arty_a7_axi_single_spi_0_0         |     1|
+|13    |m3_for_arty_a7_axi_uartlite_0_0           |     1|
+|14    |m3_for_arty_a7_axi_xip_quad_spi_0_0       |     1|
+|15    |m3_for_arty_a7_blk_mem_gen_0_0            |     1|
+|16    |m3_for_arty_a7_clk_wiz_0_0                |     1|
+|17    |m3_for_arty_a7_i_interconnect_aresetn_0   |     1|
+|18    |m3_for_arty_a7_i_inv_dbgresetn_0          |     1|
+|19    |m3_for_arty_a7_i_inv_sysresetn1_0         |     1|
+|20    |m3_for_arty_a7_i_peripheral_aresetn1_0    |     1|
+|21    |m3_for_arty_a7_i_sysresetn_or_0           |     1|
+|22    |m3_for_arty_a7_proc_sys_reset_DAPLink_0   |     1|
+|23    |m3_for_arty_a7_proc_sys_reset_base_0      |     1|
+|24    |m3_for_arty_a7_tri_io_buf_0_0             |     1|
+|25    |m3_for_arty_a7_xbar_0                     |     1|
+|26    |m3_for_arty_a7_xbar_1                     |     1|
+|27    |m3_for_arty_a7_xlconcat_0_0               |     1|
+|28    |m3_for_arty_a7_xlconcat_1_0               |     1|
+|29    |m3_for_arty_a7_xlconstant_1_0             |     1|
+|30    |m3_for_arty_a7_xlconstant_1_1             |     1|
+|31    |IBUF                                      |    12|
+|32    |IOBUF                                     |    17|
+|33    |OBUF                                      |     1|
++------+------------------------------------------+------+
+
+Report Instance Areas: 
++------+-------------------------+------------------------------------+------+
+|      |Instance                 |Module                              |Cells |
++------+-------------------------+------------------------------------+------+
+|1     |top                      |                                    |  2724|
+|2     |  m3_for_arty_a7_i       |m3_for_arty_a7                      |  2694|
+|3     |    axi_interconnect_0   |m3_for_arty_a7_axi_interconnect_0_0 |   971|
+|4     |      s00_couplers       |s00_couplers_imp_11BAHIF            |   153|
+|5     |    Clocks_and_Resets    |Clocks_and_Resets_imp_1WLR2TP       |    19|
+|6     |    daplink_if_0         |daplink_if_0_imp_5IHHOQ             |  1012|
+|7     |      axi_interconnect_0 |m3_for_arty_a7_axi_interconnect_0_1 |   485|
++------+-------------------------+------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 799.734 ; gain = 165.148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 799.734 ; gain = 487.691
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 17 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+135 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 825.590 ; gain = 520.465
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/m3_for_arty_a7_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file m3_for_arty_a7_wrapper_utilization_synth.rpt -pb m3_for_arty_a7_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 825.590 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 20:22:20 2019...

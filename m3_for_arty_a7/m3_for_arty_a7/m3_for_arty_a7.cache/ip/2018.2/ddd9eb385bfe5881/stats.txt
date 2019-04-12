@@ -1,0 +1,4 @@
+NumberHits:3
+Timestamp: Thu Apr 11 11:31:32 UTC 2019
+VLNV: xilinx.com:ip:util_vector_logic:2.0
+SynthRuntime: 58
