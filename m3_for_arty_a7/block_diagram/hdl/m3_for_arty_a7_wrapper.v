@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Apr 12 17:33:15 2019
+//Date        : Sat Apr 13 14:15:34 2019
 //Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -13,6 +13,8 @@ module m3_for_arty_a7_wrapper
    (DAPLink_tri_o,
     TDI,
     TDO,
+    cmos_iic_scl_io,
+    cmos_iic_sda_io,
     dip_switches_4bits_tri_i,
     led_4bits_tri_io,
     nTRST,
@@ -32,6 +34,8 @@ module m3_for_arty_a7_wrapper
   inout [15:0]DAPLink_tri_o;
   input TDI;
   inout [0:0]TDO;
+  inout cmos_iic_scl_io;
+  inout cmos_iic_sda_io;
   input [3:0]dip_switches_4bits_tri_i;
   inout [3:0]led_4bits_tri_io;
   input nTRST;
@@ -52,6 +56,14 @@ module m3_for_arty_a7_wrapper
   wire [15:0]DAPLink_tri_o;
   wire TDI;
   wire [0:0]TDO;
+  wire cmos_iic_scl_i;
+  wire cmos_iic_scl_io;
+  wire cmos_iic_scl_o;
+  wire cmos_iic_scl_t;
+  wire cmos_iic_sda_i;
+  wire cmos_iic_sda_io;
+  wire cmos_iic_sda_o;
+  wire cmos_iic_sda_t;
   wire [3:0]dip_switches_4bits_tri_i;
   wire [0:0]led_4bits_tri_i_0;
   wire [1:1]led_4bits_tri_i_1;
@@ -128,6 +140,16 @@ module m3_for_arty_a7_wrapper
   wire usb_uart_rxd;
   wire usb_uart_txd;
 
+  IOBUF cmos_iic_scl_iobuf
+       (.I(cmos_iic_scl_o),
+        .IO(cmos_iic_scl_io),
+        .O(cmos_iic_scl_i),
+        .T(cmos_iic_scl_t));
+  IOBUF cmos_iic_sda_iobuf
+       (.I(cmos_iic_sda_o),
+        .IO(cmos_iic_sda_io),
+        .O(cmos_iic_sda_i),
+        .T(cmos_iic_sda_t));
   IOBUF led_4bits_tri_iobuf_0
        (.I(led_4bits_tri_o_0),
         .IO(led_4bits_tri_io[0]),
@@ -152,6 +174,12 @@ module m3_for_arty_a7_wrapper
        (.DAPLink_tri_o(DAPLink_tri_o),
         .TDI(TDI),
         .TDO(TDO),
+        .cmos_iic_scl_i(cmos_iic_scl_i),
+        .cmos_iic_scl_o(cmos_iic_scl_o),
+        .cmos_iic_scl_t(cmos_iic_scl_t),
+        .cmos_iic_sda_i(cmos_iic_sda_i),
+        .cmos_iic_sda_o(cmos_iic_sda_o),
+        .cmos_iic_sda_t(cmos_iic_sda_t),
         .dip_switches_4bits_tri_i(dip_switches_4bits_tri_i),
         .led_4bits_tri_i({led_4bits_tri_i_3,led_4bits_tri_i_2,led_4bits_tri_i_1,led_4bits_tri_i_0}),
         .led_4bits_tri_o({led_4bits_tri_o_3,led_4bits_tri_o_2,led_4bits_tri_o_1,led_4bits_tri_o_0}),

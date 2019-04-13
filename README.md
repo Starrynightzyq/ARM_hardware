@@ -127,16 +127,16 @@ ArmCortex-M3 DesignStart处理器；
 | JC9: J4     | D5    |
 | JC10: E6    | D3    |
 
-| **Pmod JD** |         |
-| ----------- | ------- |
-| JD1: H4     | D2      |
-| JD2: H1     | D0      |
-| JD3: G1     | CAM_SDA |
-| JD4: G3     | CAM_SCL |
-| JD7: H2     | D1      |
-| JD8: G4     | RST     |
-| JD9: G2     | HREF    |
-| JD10: F3    | VSYNC   |
+| **Pmod JD** |                   |
+| ----------- | ----------------- |
+| JD1: H4     | D2                |
+| JD2: H1     | D0                |
+| JD3: G1     | CAM_SDA（PULLUP） |
+| JD4: G3     | CAM_SCL           |
+| JD7: H2     | D1                |
+| JD8: G4     | RST               |
+| JD9: G2     | HREF              |
+| JD10: F3    | VSYNC             |
 
 ## 修改
 

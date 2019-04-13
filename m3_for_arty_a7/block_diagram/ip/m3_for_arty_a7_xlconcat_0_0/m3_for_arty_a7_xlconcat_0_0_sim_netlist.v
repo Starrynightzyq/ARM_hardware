@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Apr 11 20:14:50 2019
+// Date        : Sat Apr 13 13:38:20 2019
 // Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top m3_for_arty_a7_xlconcat_0_0 -prefix
-//               m3_for_arty_a7_xlconcat_0_0_ m3_for_arty_a7_xlconcat_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0_sim_netlist.v
 // Design      : m3_for_arty_a7_xlconcat_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,6 +24,8 @@ module m3_for_arty_a7_xlconcat_0_0
     In6,
     In7,
     In8,
+    In9,
+    In10,
     dout);
   input [0:0]In0;
   input [0:0]In1;
@@ -34,10 +36,13 @@ module m3_for_arty_a7_xlconcat_0_0
   input [0:0]In6;
   input [0:0]In7;
   input [0:0]In8;
-  output [8:0]dout;
+  input [0:0]In9;
+  input [0:0]In10;
+  output [10:0]dout;
 
   wire [0:0]In0;
   wire [0:0]In1;
+  wire [0:0]In10;
   wire [0:0]In2;
   wire [0:0]In3;
   wire [0:0]In4;
@@ -45,7 +50,10 @@ module m3_for_arty_a7_xlconcat_0_0
   wire [0:0]In6;
   wire [0:0]In7;
   wire [0:0]In8;
+  wire [0:0]In9;
 
+  assign dout[10] = In10;
+  assign dout[9] = In9;
   assign dout[8] = In8;
   assign dout[7] = In7;
   assign dout[6] = In6;
