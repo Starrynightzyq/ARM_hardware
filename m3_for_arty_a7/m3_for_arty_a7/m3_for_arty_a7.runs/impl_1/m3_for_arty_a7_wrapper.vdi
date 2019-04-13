@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr 13 14:29:18 2019
-# Process ID: 6952
+# Start of session at: Sat Apr 13 19:47:30 2019
+# Process ID: 13068
 # Current directory: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1
 # Command line: vivado.exe -log m3_for_arty_a7_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source m3_for_arty_a7_wrapper.tcl -notrace
 # Log file: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper.vdi
@@ -14,7 +14,7 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/MyFiles/ARM_CP/workspace/vivado/Arm_ipi_repository'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/MyFiles/FPGA_Learning/ZYNQ_img/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 306.871 ; gain = 55.773
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 306.430 ; gain = 54.672
 Command: link_design -top m3_for_arty_a7_wrapper -part xc7a100tcsg324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
@@ -70,7 +70,7 @@ Finished Parsing XDC File [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/b
 Parsing XDC File [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1289.063 ; gain = 559.898
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.645 ; gain = 560.430
 WARNING: [Vivado 12-2489] -input_jitter contains time 0.833330 which will be rounded to 0.833 to ensure it is an integer multiple of 1 picosecond [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0.xdc:57]
 Finished Parsing XDC File [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_clk_wiz_0_0/m3_for_arty_a7_clk_wiz_0_0.xdc] for cell 'm3_for_arty_a7_i/Clocks_and_Resets/clk_wiz_0/inst'
 Parsing XDC File [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0_board.xdc] for cell 'm3_for_arty_a7_i/axi_iic_0/U0'
@@ -244,7 +244,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 22 Infos, 16 Warnings, 11 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1361.188 ; gain = 1054.316
+link_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1361.160 ; gain = 1054.730
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 Command: opt_design
@@ -268,62 +268,62 @@ WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port DAPLink_tri_o
 INFO: [Project 1-461] DRC finished with 0 Errors, 11 Warnings
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1361.160 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'slow_out_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:118]
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 2199594d1
+Ending Cache Timing Information Task | Checksum: 18910e365
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1361.160 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 4 inverter(s) to 18 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 11a39d067
+Phase 1 Retarget | Checksum: 1756bd2d4
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1361.160 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 4 load pin(s).
-Phase 2 Constant propagation | Checksum: 1997adcdc
+Phase 2 Constant propagation | Checksum: 1ca27d949
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1361.160 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 159 cells and removed 417 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1c271b911
+Phase 3 Sweep | Checksum: 12c047353
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1361.160 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1597 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1c271b911
+Phase 4 BUFG optimization | Checksum: 12c047353
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1361.160 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 6744e523
+Phase 5 Shift Register Optimization | Checksum: cd60885e
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1361.160 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 6744e523
+Phase 6 Post Processing Netlist | Checksum: cd60885e
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1361.160 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 1361.188 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 6744e523
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 1361.160 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: cd60885e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1361.188 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1361.160 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -344,21 +344,21 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 1 newly gated: 2 Total Ports: 54
 Number of Flops added for Enable Generation: 6
 
-Ending PowerOpt Patch Enables Task | Checksum: 12236197d
+Ending PowerOpt Patch Enables Task | Checksum: e01536d9
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.274 . Memory (MB): peak = 1670.473 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 12236197d
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 1675.465 ; gain = 0.000
+Ending Power Optimization Task | Checksum: e01536d9
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 1670.473 ; gain = 309.285
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:16 . Memory (MB): peak = 1675.465 ; gain = 314.305
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 12236197d
+Ending Final Cleanup Task | Checksum: e01536d9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 48 Infos, 27 Warnings, 11 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:26 . Memory (MB): peak = 1670.473 ; gain = 309.285
+opt_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:27 . Memory (MB): peak = 1675.465 ; gain = 314.305
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 INFO: [Timing 38-480] Writing timing data to binary archive.
@@ -366,9 +366,9 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1670.473 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file m3_for_arty_a7_wrapper_drc_opted.rpt -pb m3_for_arty_a7_wrapper_drc_opted.pb -rpx m3_for_arty_a7_wrapper_drc_opted.rpx
 Command: report_drc -file m3_for_arty_a7_wrapper_drc_opted.rpt -pb m3_for_arty_a7_wrapper_drc_opted.pb -rpx m3_for_arty_a7_wrapper_drc_opted.rpx
 INFO: [DRC 23-27] Running DRC with 4 threads
@@ -399,8 +399,8 @@ WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/unalign_cancel_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dap/dap_to_dcode_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dap/dap_to_ppb_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_dcode_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_ppb_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/buffered_write_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/buffered_write_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/mpu_canceld_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_RECEIVE_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg has an input control pin m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_RECEIVE_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/ENARDEN (net: m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_RECEIVE_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/enb) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_c_AhbSToAxi/uA11AhbLiteMToAxi/iRREADY_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -424,47 +424,47 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1675.465 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6aca99ad
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'slow_out_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:118]
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'slow_out_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:118]
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1315d3d93
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
 Phase 1.3 Build Placer Netlist Model | Checksum: 1fd4f95a8
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
 Phase 1.4 Constrain Clocks/Macros | Checksum: 1fd4f95a8
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 1675.465 ; gain = 0.000
 Phase 1 Placer Initialization | Checksum: 1fd4f95a8
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1960a6009
+Phase 2.1 Floorplanning | Checksum: 19ecd9d9c
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:17 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:17 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 2.2 Physical Synthesis In Placer
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -478,62 +478,62 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2 Physical Synthesis In Placer | Checksum: 1efa514e5
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1a3066e1b
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1670.473 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 208313129
+Time (s): cpu = 00:01:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1675.465 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1a1745bbc
 
-Time (s): cpu = 00:01:54 ; elapsed = 00:00:54 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 208313129
+Phase 3.1 Commit Multi Column Macros | Checksum: 1a1745bbc
 
-Time (s): cpu = 00:01:54 ; elapsed = 00:00:54 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:01:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 8047b6fe
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 15b45a1dc
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:00:59 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:03 ; elapsed = 00:00:59 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 130662831
+Phase 3.3 Area Swap Optimization | Checksum: 1abae30c1
 
-Time (s): cpu = 00:02:06 ; elapsed = 00:00:59 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:00 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 175f0610f
+Phase 3.4 Pipeline Register Optimization | Checksum: 103284f17
 
-Time (s): cpu = 00:02:07 ; elapsed = 00:00:59 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:00 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 175f0610f
+Phase 3.5 Timing Path Optimizer | Checksum: 103284f17
 
-Time (s): cpu = 00:02:07 ; elapsed = 00:01:00 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:00 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 118b1b8dd
+Phase 3.6 Fast Optimization | Checksum: 1c6cdc43d
 
-Time (s): cpu = 00:02:09 ; elapsed = 00:01:02 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:03 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 14d5daf00
+Phase 3.7 Small Shape Detail Placement | Checksum: 1d2c7a7ef
 
-Time (s): cpu = 00:02:27 ; elapsed = 00:01:17 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:19 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 6850d823
+Phase 3.8 Re-assign LUT pins | Checksum: 174f1193d
 
-Time (s): cpu = 00:02:29 ; elapsed = 00:01:20 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:22 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: c43f8fdc
+Phase 3.9 Pipeline Register Optimization | Checksum: 11ee1e9d3
 
-Time (s): cpu = 00:02:29 ; elapsed = 00:01:20 . Memory (MB): peak = 1670.473 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: c43f8fdc
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:22 . Memory (MB): peak = 1675.465 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 11ee1e9d3
 
-Time (s): cpu = 00:02:29 ; elapsed = 00:01:20 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:22 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -542,45 +542,45 @@ INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as o
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 116d0b735
+Post Placement Optimization Initialization | Checksum: 1b12f030a
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 116d0b735
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1b12f030a
 
-Time (s): cpu = 00:02:43 ; elapsed = 00:01:25 . Memory (MB): peak = 1670.473 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.521. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 14fc247ce
+Time (s): cpu = 00:02:41 ; elapsed = 00:01:28 . Memory (MB): peak = 1675.465 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.513. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: d0c97a0e
 
-Time (s): cpu = 00:02:48 ; elapsed = 00:01:29 . Memory (MB): peak = 1670.473 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 14fc247ce
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:32 . Memory (MB): peak = 1675.465 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: d0c97a0e
 
-Time (s): cpu = 00:02:48 ; elapsed = 00:01:29 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:32 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 14fc247ce
+Phase 4.2 Post Placement Cleanup | Checksum: d0c97a0e
 
-Time (s): cpu = 00:02:49 ; elapsed = 00:01:30 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:32 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 14fc247ce
+Phase 4.3 Placer Reporting | Checksum: d0c97a0e
 
-Time (s): cpu = 00:02:49 ; elapsed = 00:01:30 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:32 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 13c0c6742
+Phase 4.4 Final Placement Cleanup | Checksum: bd139982
 
-Time (s): cpu = 00:02:50 ; elapsed = 00:01:30 . Memory (MB): peak = 1670.473 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13c0c6742
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:33 . Memory (MB): peak = 1675.465 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: bd139982
 
-Time (s): cpu = 00:02:50 ; elapsed = 00:01:30 . Memory (MB): peak = 1670.473 ; gain = 0.000
-Ending Placer Task | Checksum: 89e1883f
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:33 . Memory (MB): peak = 1675.465 ; gain = 0.000
+Ending Placer Task | Checksum: 9e8223fb
 
-Time (s): cpu = 00:02:50 ; elapsed = 00:01:30 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:33 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 75 Infos, 60 Warnings, 11 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:02:56 ; elapsed = 00:01:33 . Memory (MB): peak = 1670.473 ; gain = 0.000
+place_design: Time (s): cpu = 00:02:52 ; elapsed = 00:01:35 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 INFO: [Timing 38-480] Writing timing data to binary archive.
@@ -588,15 +588,15 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 1670.473 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file m3_for_arty_a7_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1670.473 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file m3_for_arty_a7_wrapper_utilization_placed.rpt -pb m3_for_arty_a7_wrapper_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.346 . Memory (MB): peak = 1670.473 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.354 . Memory (MB): peak = 1675.465 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file m3_for_arty_a7_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1670.473 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.142 . Memory (MB): peak = 1675.465 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -608,139 +608,139 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
-Checksum: PlaceDB: 585bd87f ConstDB: 0 ShapeSum: 3185afc0 RouteDB: 0
+Checksum: PlaceDB: 6cfc743b ConstDB: 0 ShapeSum: 3185afc0 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 13e3f4832
+Phase 1 Build RT Design | Checksum: 5231601a
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:37 . Memory (MB): peak = 1670.473 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 947164c5 NumContArr: a9cde36d Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:42 . Memory (MB): peak = 1675.465 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 20955a25 NumContArr: 319c05f5 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 13e3f4832
+Phase 2.1 Create Timer | Checksum: 5231601a
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:43 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 13e3f4832
+Phase 2.2 Fix Topology Constraints | Checksum: 5231601a
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:38 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:43 . Memory (MB): peak = 1675.465 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 13e3f4832
+Phase 2.3 Pre Route Cleanup | Checksum: 5231601a
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:38 . Memory (MB): peak = 1670.473 ; gain = 0.000
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:43 . Memory (MB): peak = 1675.465 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1a1d88c33
+Phase 2.4 Update Timing | Checksum: 7410b523
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:45 . Memory (MB): peak = 1670.473 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.577  | TNS=0.000  | WHS=-4.850 | THS=-450.546|
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:52 . Memory (MB): peak = 1675.465 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.692  | TNS=0.000  | WHS=-4.753 | THS=-463.327|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 186fe6808
+Phase 2.5.1 Update Timing | Checksum: d8ba33f2
 
-Time (s): cpu = 00:01:18 ; elapsed = 00:00:49 . Memory (MB): peak = 1673.434 ; gain = 2.961
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.577  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:56 . Memory (MB): peak = 1675.465 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.692  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 1f1f4f0fe
+Phase 2.5 Update Timing for Bus Skew | Checksum: 668444d3
 
-Time (s): cpu = 00:01:18 ; elapsed = 00:00:50 . Memory (MB): peak = 1678.605 ; gain = 8.133
-Phase 2 Router Initialization | Checksum: 19a86b4a5
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:56 . Memory (MB): peak = 1679.211 ; gain = 3.746
+Phase 2 Router Initialization | Checksum: e10ed550
 
-Time (s): cpu = 00:01:18 ; elapsed = 00:00:50 . Memory (MB): peak = 1678.605 ; gain = 8.133
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:56 . Memory (MB): peak = 1679.211 ; gain = 3.746
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1c177005b
+Phase 3 Initial Routing | Checksum: 1db0c3956
 
-Time (s): cpu = 00:02:14 ; elapsed = 00:01:07 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:15 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 10137
- Number of Nodes with overlaps = 3675
- Number of Nodes with overlaps = 1467
- Number of Nodes with overlaps = 640
- Number of Nodes with overlaps = 310
- Number of Nodes with overlaps = 115
- Number of Nodes with overlaps = 36
- Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 10262
+ Number of Nodes with overlaps = 3673
+ Number of Nodes with overlaps = 1546
+ Number of Nodes with overlaps = 695
+ Number of Nodes with overlaps = 297
+ Number of Nodes with overlaps = 120
+ Number of Nodes with overlaps = 50
+ Number of Nodes with overlaps = 12
  Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.613 | TNS=-1.715 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.010 | TNS=-1.837 | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1cdc5ad49
+Phase 4.1 Global Iteration 0 | Checksum: 16b279bcb
 
-Time (s): cpu = 00:05:58 ; elapsed = 00:02:25 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:06:21 ; elapsed = 00:02:42 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1320
- Number of Nodes with overlaps = 534
+ Number of Nodes with overlaps = 1690
+ Number of Nodes with overlaps = 622
  Number of Nodes with overlaps = 186
- Number of Nodes with overlaps = 106
- Number of Nodes with overlaps = 35
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 90
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.261  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.360  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 10605de5a
+Phase 4.2 Global Iteration 1 | Checksum: 18b64cebf
 
-Time (s): cpu = 00:06:55 ; elapsed = 00:02:49 . Memory (MB): peak = 1758.832 ; gain = 88.359
-Phase 4 Rip-up And Reroute | Checksum: 10605de5a
+Time (s): cpu = 00:07:30 ; elapsed = 00:03:15 . Memory (MB): peak = 1759.535 ; gain = 84.070
+Phase 4 Rip-up And Reroute | Checksum: 18b64cebf
 
-Time (s): cpu = 00:06:55 ; elapsed = 00:02:49 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:31 ; elapsed = 00:03:15 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 10605de5a
+Phase 5.1 Delay CleanUp | Checksum: 18b64cebf
 
-Time (s): cpu = 00:06:56 ; elapsed = 00:02:50 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:31 ; elapsed = 00:03:15 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 10605de5a
+Phase 5.2 Clock Skew Optimization | Checksum: 18b64cebf
 
-Time (s): cpu = 00:06:56 ; elapsed = 00:02:50 . Memory (MB): peak = 1758.832 ; gain = 88.359
-Phase 5 Delay and Skew Optimization | Checksum: 10605de5a
+Time (s): cpu = 00:07:31 ; elapsed = 00:03:15 . Memory (MB): peak = 1759.535 ; gain = 84.070
+Phase 5 Delay and Skew Optimization | Checksum: 18b64cebf
 
-Time (s): cpu = 00:06:56 ; elapsed = 00:02:50 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:31 ; elapsed = 00:03:15 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 152b3d104
+Phase 6.1.1 Update Timing | Checksum: 1643eeb14
 
-Time (s): cpu = 00:07:01 ; elapsed = 00:02:51 . Memory (MB): peak = 1758.832 ; gain = 88.359
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.268  | TNS=0.000  | WHS=0.019  | THS=0.000  |
+Time (s): cpu = 00:07:36 ; elapsed = 00:03:17 . Memory (MB): peak = 1759.535 ; gain = 84.070
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.367  | TNS=0.000  | WHS=0.035  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: f03858cb
+Phase 6.1 Hold Fix Iter | Checksum: c4f680d4
 
-Time (s): cpu = 00:07:01 ; elapsed = 00:02:52 . Memory (MB): peak = 1758.832 ; gain = 88.359
-Phase 6 Post Hold Fix | Checksum: f03858cb
+Time (s): cpu = 00:07:36 ; elapsed = 00:03:17 . Memory (MB): peak = 1759.535 ; gain = 84.070
+Phase 6 Post Hold Fix | Checksum: c4f680d4
 
-Time (s): cpu = 00:07:01 ; elapsed = 00:02:52 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:36 ; elapsed = 00:03:17 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 7.34844 %
-  Global Horizontal Routing Utilization  = 9.34143 %
+  Global Vertical Routing Utilization    = 7.24629 %
+  Global Horizontal Routing Utilization  = 8.82253 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -749,38 +749,38 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: b83e1b68
+Phase 7 Route finalize | Checksum: 11c04b800
 
-Time (s): cpu = 00:07:02 ; elapsed = 00:02:52 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:37 ; elapsed = 00:03:18 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: b83e1b68
+Phase 8 Verifying routed nets | Checksum: 11c04b800
 
-Time (s): cpu = 00:07:02 ; elapsed = 00:02:52 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:37 ; elapsed = 00:03:18 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1779962af
+Phase 9 Depositing Routes | Checksum: 14ff627e6
 
-Time (s): cpu = 00:07:05 ; elapsed = 00:02:56 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:41 ; elapsed = 00:03:22 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.268  | TNS=0.000  | WHS=0.019  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.367  | TNS=0.000  | WHS=0.035  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1779962af
+Phase 10 Post Router Timing | Checksum: 14ff627e6
 
-Time (s): cpu = 00:07:05 ; elapsed = 00:02:56 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:42 ; elapsed = 00:03:22 . Memory (MB): peak = 1759.535 ; gain = 84.070
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:07:05 ; elapsed = 00:02:56 . Memory (MB): peak = 1758.832 ; gain = 88.359
+Time (s): cpu = 00:07:42 ; elapsed = 00:03:22 . Memory (MB): peak = 1759.535 ; gain = 84.070
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 95 Infos, 60 Warnings, 11 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:07:14 ; elapsed = 00:02:59 . Memory (MB): peak = 1758.832 ; gain = 88.359
+route_design: Time (s): cpu = 00:07:51 ; elapsed = 00:03:25 . Memory (MB): peak = 1759.535 ; gain = 84.070
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 INFO: [Timing 38-480] Writing timing data to binary archive.
@@ -788,15 +788,15 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1758.832 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 1759.535 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 1758.832 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 1759.535 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file m3_for_arty_a7_wrapper_drc_routed.rpt -pb m3_for_arty_a7_wrapper_drc_routed.pb -rpx m3_for_arty_a7_wrapper_drc_routed.rpx
 Command: report_drc -file m3_for_arty_a7_wrapper_drc_routed.rpt -pb m3_for_arty_a7_wrapper_drc_routed.pb -rpx m3_for_arty_a7_wrapper_drc_routed.rpx
 INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1758.832 ; gain = 0.000
+report_drc: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 1759.535 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_methodology -file m3_for_arty_a7_wrapper_methodology_drc_routed.rpt -pb m3_for_arty_a7_wrapper_methodology_drc_routed.pb -rpx m3_for_arty_a7_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file m3_for_arty_a7_wrapper_methodology_drc_routed.rpt -pb m3_for_arty_a7_wrapper_methodology_drc_routed.pb -rpx m3_for_arty_a7_wrapper_methodology_drc_routed.rpx
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'slow_out_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.srcs/constrs_2/m3_for_arty_a7.xdc:118]
@@ -806,7 +806,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 4 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/impl_1/m3_for_arty_a7_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:41 ; elapsed = 00:00:16 . Memory (MB): peak = 1758.832 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:41 ; elapsed = 00:00:15 . Memory (MB): peak = 1759.535 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file m3_for_arty_a7_wrapper_power_routed.rpt -pb m3_for_arty_a7_wrapper_power_summary_routed.pb -rpx m3_for_arty_a7_wrapper_power_routed.rpx
 Command: report_power -file m3_for_arty_a7_wrapper_power_routed.rpt -pb m3_for_arty_a7_wrapper_power_summary_routed.pb -rpx m3_for_arty_a7_wrapper_power_routed.rpx
 INFO: [Power 33-23] Power model is not available for STARTUP_7SERIES_GEN.STARTUP2_7SERIES_inst
@@ -817,7 +817,7 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 112 Infos, 60 Warnings, 11 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:31 ; elapsed = 00:00:15 . Memory (MB): peak = 1796.391 ; gain = 37.559
+report_power: Time (s): cpu = 00:00:31 ; elapsed = 00:00:15 . Memory (MB): peak = 1803.633 ; gain = 44.098
 INFO: [runtcl-4] Executing : report_route_status -file m3_for_arty_a7_wrapper_route_status.rpt -pb m3_for_arty_a7_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file m3_for_arty_a7_wrapper_timing_summary_routed.rpt -pb m3_for_arty_a7_wrapper_timing_summary_routed.pb -rpx m3_for_arty_a7_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
@@ -874,8 +874,8 @@ WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_bit_master/unalign_cancel_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dap/dap_to_dcode_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dap/dap_to_ppb_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_dcode_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_decode_dcore/dcore_to_ppb_accept_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/buffered_write_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/buffered_write_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0 has an input control pin m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/genblk3[1].ram_block_reg_0_0/ADDRARDADDR[14] (net: m3_for_arty_a7_i/Cortex_M3_0/inst/u_x_dtcm/buf_addr_reg[12][12]) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_bus_matrix/u_cm3_mtx_input_stage_dcore/mpu_canceld_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_RECEIVE_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg has an input control pin m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_RECEIVE_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/ENARDEN (net: m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_RECEIVE_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/enb) which is driven by a register (m3_for_arty_a7_i/Cortex_M3_0/inst/u_c_AhbSToAxi/uA11AhbLiteMToAxi/iRREADY_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -895,5 +895,5 @@ INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK 
 INFO: [Common 17-83] Releasing license: Implementation
 139 Infos, 97 Warnings, 11 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:58 ; elapsed = 00:00:31 . Memory (MB): peak = 2261.691 ; gain = 465.301
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 14:36:44 2019...
+write_bitstream: Time (s): cpu = 00:00:59 ; elapsed = 00:00:33 . Memory (MB): peak = 2281.469 ; gain = 477.836
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 19:55:32 2019...

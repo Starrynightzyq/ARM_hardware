@@ -56,13 +56,13 @@
         <spirit:abstractionType spirit:library="interface" spirit:name="uart_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>temp_sensor</spirit:name>
+        <spirit:name>cmos_iic</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="iic" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="iic_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>cmos_iic</spirit:name>
+        <spirit:name>temp_sensor</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="iic" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="iic_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -360,7 +360,7 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_axi_iic_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USE_BOARD_FLOW">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="IIC_BOARD_INTERFACE">temp_sensor</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IIC_BOARD_INTERFACE">Custom</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -369,7 +369,7 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_axi_iic_1_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USE_BOARD_FLOW">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="IIC_BOARD_INTERFACE">Custom</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IIC_BOARD_INTERFACE">temp_sensor</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -685,10 +685,10 @@
       <spirit:hierConnection spirit:interfaceRef="usb_uart/V2C_DAPLink_interface_UART_out">
         <spirit:activeInterface spirit:busRef="UART_out" spirit:componentRef="daplink_if_0"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="temp_sensor/axi_iic_0_IIC">
+      <spirit:hierConnection spirit:interfaceRef="cmos_iic/axi_iic_0_IIC">
         <spirit:activeInterface spirit:busRef="IIC" spirit:componentRef="axi_iic_0"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="cmos_iic/axi_iic_1_IIC">
+      <spirit:hierConnection spirit:interfaceRef="temp_sensor/axi_iic_1_IIC">
         <spirit:activeInterface spirit:busRef="IIC" spirit:componentRef="axi_iic_1"/>
       </spirit:hierConnection>
     </spirit:hierConnections>

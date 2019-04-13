@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr 13 14:15:45 2019
-# Process ID: 13548
+# Start of session at: Sat Apr 13 19:15:16 2019
+# Process ID: 8888
 # Current directory: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1
 # Command line: vivado.exe -log m3_for_arty_a7_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source m3_for_arty_a7_wrapper.tcl
 # Log file: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/m3_for_arty_a7_wrapper.vds
@@ -14,15 +14,15 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/MyFiles/ARM_CP/workspace/vivado/Arm_ipi_repository'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/MyFiles/FPGA_Learning/ZYNQ_img/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 305.301 ; gain = 58.707
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 304.996 ; gain = 57.988
 Command: synth_design -top m3_for_arty_a7_wrapper -part xc7a100tcsg324-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13908 
+INFO: Helper process launched with PID 8052 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 439.016 ; gain = 126.797
+Starting RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 440.676 ; gain = 128.762
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ipshared/df5e/hdl/axi_iic_v2_0_vh_rfs.vhd:1139]
 INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_wrapper' [C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/hdl/m3_for_arty_a7_wrapper.v:12]
@@ -5607,7 +5607,7 @@ WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected p
 WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[12]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:03:03 ; elapsed = 00:03:13 . Memory (MB): peak = 1126.234 ; gain = 814.016
+Finished RTL Elaboration : Time (s): cpu = 00:03:06 ; elapsed = 00:03:15 . Memory (MB): peak = 1129.660 ; gain = 817.746
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -5624,13 +5624,13 @@ INFO: [Synth 8-3295] tying undriven pin FIFO_EXISTS.CLK_CROSS_I:Mst_N_Slv_mode_c
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:08 ; elapsed = 00:03:17 . Memory (MB): peak = 1126.234 ; gain = 814.016
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:10 ; elapsed = 00:03:20 . Memory (MB): peak = 1129.660 ; gain = 817.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:08 ; elapsed = 00:03:17 . Memory (MB): peak = 1126.234 ; gain = 814.016
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:10 ; elapsed = 00:03:20 . Memory (MB): peak = 1129.660 ; gain = 817.746
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1027 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -5865,9 +5865,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MUXCY_L => MUXCY: 24 instances
   SRL16 => SRL16E: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.267 . Memory (MB): peak = 1295.770 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.248 . Memory (MB): peak = 1290.684 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:49 ; elapsed = 00:03:56 . Memory (MB): peak = 1295.770 ; gain = 983.551
+Finished Constraint Validation : Time (s): cpu = 00:03:53 ; elapsed = 00:03:59 . Memory (MB): peak = 1290.684 ; gain = 978.770
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
@@ -5875,7 +5875,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:49 ; elapsed = 00:03:57 . Memory (MB): peak = 1295.770 ; gain = 983.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:53 ; elapsed = 00:03:59 . Memory (MB): peak = 1290.684 ; gain = 978.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -6012,7 +6012,7 @@ Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_sin
 Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_single_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for m3_for_arty_a7_i/daplink_if_0/axi_xip_quad_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\XIP_MODE_GEN.AXI_QSPI_XIP_I /XIP_RECEIVE_FIFO_II/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:50 ; elapsed = 00:03:57 . Memory (MB): peak = 1295.770 ; gain = 983.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:53 ; elapsed = 00:04:00 . Memory (MB): peak = 1290.684 ; gain = 978.770
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "ABurstNxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ALOCK2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -6662,7 +6662,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'RATIO_OF_2_GENERATE.XIP_QUAD_MODE_SP_MEM_GEN.qspi_cntrl_ps_reg' using encoding 'one-hot' in module 'axi_qspi_xip_if'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:30 ; elapsed = 00:04:45 . Memory (MB): peak = 1295.770 ; gain = 983.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:34 ; elapsed = 00:04:45 . Memory (MB): peak = 1290.684 ; gain = 978.770
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -14108,7 +14108,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (m3_for_ar
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (m3_for_arty_a7_i/i_0/axi_interconnect_0/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][4] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:10:03 ; elapsed = 00:10:32 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:10:03 ; elapsed = 00:10:18 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -14193,13 +14193,13 @@ INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'daplink_if_0/axi
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'daplink_if_0/axi_single_spi_0/sck_o' to 'm3_for_arty_a7_i/i_0/DAPLink_tri_o[3]'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:10:23 ; elapsed = 00:10:53 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:10:20 ; elapsed = 00:10:36 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:11:25 ; elapsed = 00:12:01 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Timing Optimization : Time (s): cpu = 00:11:05 ; elapsed = 00:11:22 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -14257,7 +14257,7 @@ INFO: [Synth 8-4480] The timing for the instance m3_for_arty_a7_i/Cortex_M3_0/in
 INFO: [Synth 8-4480] The timing for the instance m3_for_arty_a7_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I/QSPI_LOOK_UP_MODE_2_MEMORY_2.xpm_mem_gen_QSPI_LOOK_UP_MODE_2_MEMORY_2.xpm_memory_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance m3_for_arty_a7_i/daplink_if_0/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I/QSPI_LOOK_UP_MODE_2_MEMORY_1.xpm_mem_gen_QSPI_LOOK_UP_MODE_2_MEMORY_1.xpm_memory_inst/xpm_memory_base_inst/gen_rd_a.douta_reg_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:11:55 ; elapsed = 00:12:32 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Technology Mapping : Time (s): cpu = 00:11:30 ; elapsed = 00:11:47 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -14292,7 +14292,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:11:59 ; elapsed = 00:12:36 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished IO Insertion : Time (s): cpu = 00:11:33 ; elapsed = 00:11:51 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -14305,7 +14305,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:11:59 ; elapsed = 00:12:36 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:11:34 ; elapsed = 00:11:51 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -14317,25 +14317,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:12:02 ; elapsed = 00:12:39 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:11:37 ; elapsed = 00:11:54 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:12:03 ; elapsed = 00:12:40 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:11:37 ; elapsed = 00:11:55 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:12:03 ; elapsed = 00:12:40 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:11:37 ; elapsed = 00:11:55 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:12:03 ; elapsed = 00:12:40 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:11:38 ; elapsed = 00:11:55 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -15087,11 +15087,11 @@ Report Instance Areas:
 |657   |            \XIP_MODE_GEN.XIP_SR_I                                                                      |xip_status_reg                                                     |     6|
 +------+--------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:12:03 ; elapsed = 00:12:40 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:11:38 ; elapsed = 00:11:55 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 200 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:08:20 ; elapsed = 00:12:08 . Memory (MB): peak = 2082.617 ; gain = 1600.863
-Synthesis Optimization Complete : Time (s): cpu = 00:12:04 ; elapsed = 00:12:42 . Memory (MB): peak = 2082.617 ; gain = 1770.398
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:50 ; elapsed = 00:11:22 . Memory (MB): peak = 2085.414 ; gain = 1612.477
+Synthesis Optimization Complete : Time (s): cpu = 00:11:38 ; elapsed = 00:11:57 . Memory (MB): peak = 2085.414 ; gain = 1773.500
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1350 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -15109,12 +15109,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 1333 Infos, 473 Warnings, 9 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:12:17 ; elapsed = 00:12:57 . Memory (MB): peak = 2082.617 ; gain = 1777.316
+synth_design: Time (s): cpu = 00:11:50 ; elapsed = 00:12:10 . Memory (MB): peak = 2085.414 ; gain = 1780.418
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/synth_1/m3_for_arty_a7_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2082.617 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2085.414 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file m3_for_arty_a7_wrapper_utilization_synth.rpt -pb m3_for_arty_a7_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.680 . Memory (MB): peak = 2082.617 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 14:29:05 2019...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.283 . Memory (MB): peak = 2085.414 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 19:27:46 2019...

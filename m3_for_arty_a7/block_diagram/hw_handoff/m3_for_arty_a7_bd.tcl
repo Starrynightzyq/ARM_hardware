@@ -543,14 +543,14 @@ proc create_root_design { parentCell } {
   # Create instance: axi_iic_0, and set properties
   set axi_iic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_0 ]
   set_property -dict [ list \
-   CONFIG.IIC_BOARD_INTERFACE {temp_sensor} \
+   CONFIG.IIC_BOARD_INTERFACE {Custom} \
    CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_iic_0
 
   # Create instance: axi_iic_1, and set properties
   set axi_iic_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_1 ]
   set_property -dict [ list \
-   CONFIG.IIC_BOARD_INTERFACE {Custom} \
+   CONFIG.IIC_BOARD_INTERFACE {temp_sensor} \
    CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_iic_1
 
@@ -653,8 +653,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_gpio_0_GPIO2 [get_bd_intf_ports dip_switches_4bits] [get_bd_intf_pins axi_gpio_0/GPIO2]
   connect_bd_intf_net -intf_net axi_gpio_1_GPIO [get_bd_intf_ports rgb_led] [get_bd_intf_pins axi_gpio_1/GPIO]
   connect_bd_intf_net -intf_net axi_gpio_1_GPIO2 [get_bd_intf_ports push_buttons_4bits] [get_bd_intf_pins axi_gpio_1/GPIO2]
-  connect_bd_intf_net -intf_net axi_iic_0_IIC [get_bd_intf_ports temp_sensor] [get_bd_intf_pins axi_iic_0/IIC]
-  connect_bd_intf_net -intf_net axi_iic_1_IIC [get_bd_intf_ports cmos_iic] [get_bd_intf_pins axi_iic_1/IIC]
+  connect_bd_intf_net -intf_net axi_iic_0_IIC [get_bd_intf_ports cmos_iic] [get_bd_intf_pins axi_iic_0/IIC]
+  connect_bd_intf_net -intf_net axi_iic_1_IIC [get_bd_intf_ports temp_sensor] [get_bd_intf_pins axi_iic_1/IIC]
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins axi_uartlite_0/S_AXI]
   connect_bd_intf_net -intf_net axi_interconnect_0_M01_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins axi_interconnect_0/M01_AXI]
   connect_bd_intf_net -intf_net axi_interconnect_0_M02_AXI [get_bd_intf_pins axi_gpio_1/S_AXI] [get_bd_intf_pins axi_interconnect_0/M02_AXI]

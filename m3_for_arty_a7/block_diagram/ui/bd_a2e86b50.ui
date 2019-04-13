@@ -1,10 +1,10 @@
 {
    ExpandedHierarchyInLayout: "",
-   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
 #  -string -flagsOSRD
 preplace port DAPLink -pg 1 -y 240 -defaultsOSRD
 preplace port nTRST -pg 1 -y 430 -defaultsOSRD
-preplace port temp_sensor -pg 1 -y 1030 -defaultsOSRD
+preplace port temp_sensor -pg 1 -y 1190 -defaultsOSRD
 preplace port qspi_flash -pg 1 -y 850 -defaultsOSRD
 preplace port sys_clock -pg 1 -y 300 -defaultsOSRD
 preplace port usb_uart -pg 1 -y 220 -defaultsOSRD
@@ -12,7 +12,7 @@ preplace port push_buttons_4bits -pg 1 -y 1490 -defaultsOSRD
 preplace port TDI -pg 1 -y 410 -defaultsOSRD
 preplace port rgb_led -pg 1 -y 1470 -defaultsOSRD
 preplace port led_4bits -pg 1 -y 1330 -defaultsOSRD
-preplace port cmos_iic -pg 1 -y 1190 -defaultsOSRD
+preplace port cmos_iic -pg 1 -y 1030 -defaultsOSRD
 preplace port reset -pg 1 -y 340 -defaultsOSRD
 preplace port dip_switches_4bits -pg 1 -y 1350 -defaultsOSRD
 preplace portBus TDO -pg 1 -y 760 -defaultsOSRD
@@ -95,5 +95,5 @@ levelinfo -pg 1 0 100 420 900 1330 1770 2130 2270 -top 0 -bot 1730
 }
 {
    da_axi4_cnt: "3",
-   da_board_cnt: "2",
+   da_board_cnt: "4",
 }

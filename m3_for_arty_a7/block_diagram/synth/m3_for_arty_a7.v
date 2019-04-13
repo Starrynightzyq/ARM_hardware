@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Apr 13 14:15:33 2019
+//Date        : Sat Apr 13 18:13:44 2019
 //Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7.bd
 //Design      : m3_for_arty_a7
@@ -2639,7 +2639,7 @@ module m08_couplers_imp_15AL04S
   assign m08_couplers_to_m08_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=51,numReposBlks=32,numNonXlnxBlks=2,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
+(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=51,numReposBlks=32,numNonXlnxBlks=2,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,synth_mode=Global}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
 module m3_for_arty_a7
    (DAPLink_tri_o,
     TDI,
@@ -3035,19 +3035,19 @@ module m3_for_arty_a7
   assign axi_gpio_0_GPIO_TRI_I = led_4bits_tri_i[3:0];
   assign axi_gpio_1_GPIO2_TRI_I = push_buttons_4bits_tri_i[3:0];
   assign axi_gpio_1_GPIO_TRI_I = rgb_led_tri_i[5:0];
-  assign axi_iic_0_IIC_SCL_I = temp_sensor_scl_i;
-  assign axi_iic_0_IIC_SDA_I = temp_sensor_sda_i;
-  assign axi_iic_1_IIC_SCL_I = cmos_iic_scl_i;
-  assign axi_iic_1_IIC_SDA_I = cmos_iic_sda_i;
+  assign axi_iic_0_IIC_SCL_I = cmos_iic_scl_i;
+  assign axi_iic_0_IIC_SDA_I = cmos_iic_sda_i;
+  assign axi_iic_1_IIC_SCL_I = temp_sensor_scl_i;
+  assign axi_iic_1_IIC_SDA_I = temp_sensor_sda_i;
   assign axi_quad_spi_0_SPI_0_IO0_I = qspi_flash_io0_i;
   assign axi_quad_spi_0_SPI_0_IO1_I = qspi_flash_io1_i;
   assign axi_quad_spi_0_SPI_0_IO2_I = qspi_flash_io2_i;
   assign axi_quad_spi_0_SPI_0_IO3_I = qspi_flash_io3_i;
   assign axi_quad_spi_0_SPI_0_SS_I = qspi_flash_ss_i;
-  assign cmos_iic_scl_o = axi_iic_1_IIC_SCL_O;
-  assign cmos_iic_scl_t = axi_iic_1_IIC_SCL_T;
-  assign cmos_iic_sda_o = axi_iic_1_IIC_SDA_O;
-  assign cmos_iic_sda_t = axi_iic_1_IIC_SDA_T;
+  assign cmos_iic_scl_o = axi_iic_0_IIC_SCL_O;
+  assign cmos_iic_scl_t = axi_iic_0_IIC_SCL_T;
+  assign cmos_iic_sda_o = axi_iic_0_IIC_SDA_O;
+  assign cmos_iic_sda_t = axi_iic_0_IIC_SDA_T;
   assign led_4bits_tri_o[3:0] = axi_gpio_0_GPIO_TRI_O;
   assign led_4bits_tri_t[3:0] = axi_gpio_0_GPIO_TRI_T;
   assign nTRST_1 = nTRST;
@@ -3065,10 +3065,10 @@ module m3_for_arty_a7
   assign rgb_led_tri_o[5:0] = axi_gpio_1_GPIO_TRI_O;
   assign rgb_led_tri_t[5:0] = axi_gpio_1_GPIO_TRI_T;
   assign sys_clock_1 = sys_clock;
-  assign temp_sensor_scl_o = axi_iic_0_IIC_SCL_O;
-  assign temp_sensor_scl_t = axi_iic_0_IIC_SCL_T;
-  assign temp_sensor_sda_o = axi_iic_0_IIC_SDA_O;
-  assign temp_sensor_sda_t = axi_iic_0_IIC_SDA_T;
+  assign temp_sensor_scl_o = axi_iic_1_IIC_SCL_O;
+  assign temp_sensor_scl_t = axi_iic_1_IIC_SCL_T;
+  assign temp_sensor_sda_o = axi_iic_1_IIC_SDA_O;
+  assign temp_sensor_sda_t = axi_iic_1_IIC_SDA_T;
   assign usb_uart_txd = V2C_DAPLink_interface_UART_out_TxD;
   Clocks_and_Resets_imp_1WLR2TP Clocks_and_Resets
        (.aux_reset_in(daplink_if_0_nSRST),

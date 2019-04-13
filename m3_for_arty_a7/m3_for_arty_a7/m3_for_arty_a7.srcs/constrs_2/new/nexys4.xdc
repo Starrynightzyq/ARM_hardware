@@ -25,8 +25,11 @@ set_property PACKAGE_PIN M18 [get_ports {push_buttons_4bits_tri_i[2]}]
 set_property PACKAGE_PIN P18 [get_ports {push_buttons_4bits_tri_i[1]}]
 set_property PACKAGE_PIN N17 [get_ports {push_buttons_4bits_tri_i[0]}]
 
-set_property PACKAGE_PIN G3 [get_ports cmos_iic_scl_io]
 set_property IOSTANDARD LVCMOS33 [get_ports cmos_iic_scl_io]
 set_property PACKAGE_PIN G1 [get_ports cmos_iic_sda_io]
 set_property IOSTANDARD LVCMOS33 [get_ports cmos_iic_sda_io]
 set_property PULLUP true [get_ports cmos_iic_sda_io]
+
+set_property PACKAGE_PIN G3 [get_ports cmos_iic_scl_io]
+set_property PULLUP true [get_ports cmos_iic_scl_io]
+

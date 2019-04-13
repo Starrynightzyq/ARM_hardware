@@ -59,7 +59,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_SDA_INERTIAL_DELAY">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_SDA_LEVEL">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">m3_for_arty_a7_axi_iic_1_0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.IIC_BOARD_INTERFACE">Custom</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.IIC_BOARD_INTERFACE">temp_sensor</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.IIC_FREQ_KHZ">100</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.TEN_BIT_ADR">7_bit</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.USE_BOARD_FLOW">true</spirit:configurableElementValue>

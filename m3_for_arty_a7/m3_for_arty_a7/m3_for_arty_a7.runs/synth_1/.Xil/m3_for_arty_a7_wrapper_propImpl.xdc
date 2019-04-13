@@ -85,10 +85,10 @@ set_property src_info {type:XDC file:3 line:25 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN P18 [get_ports {push_buttons_4bits_tri_i[1]}]
 set_property src_info {type:XDC file:3 line:26 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N17 [get_ports {push_buttons_4bits_tri_i[0]}]
-set_property src_info {type:XDC file:3 line:28 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN G3 [get_ports cmos_iic_scl_io]
-set_property src_info {type:XDC file:3 line:30 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN G1 [get_ports cmos_iic_sda_io]
+set_property src_info {type:XDC file:3 line:29 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN G3 [get_ports cmos_iic_sda_io]
+set_property src_info {type:XDC file:3 line:33 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F3 [get_ports cmos_iic_scl_io]
 current_instance m3_for_arty_a7_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:4 line:16 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_gray_ff_reg*] -to [get_cells {dest_graysync_ff_reg[0]*}] 20.000

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date                      : Sat Apr 13 14:32:24 2019
+| Date                      : Sat Apr 13 19:50:41 2019
 | Host                      : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 | Command                   : report_io -file m3_for_arty_a7_wrapper_io_placed.rpt
 | Design                    : m3_for_arty_a7_wrapper
@@ -145,7 +145,7 @@ Table of Contents
 | F18        | DAPLink_tri_o[6]            | High Range | IO_L22N_T3_A16_15            | BIDIR       | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G1         | cmos_iic_sda_io             | High Range | IO_L17N_T2_35                | BIDIR       | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLUP    |          |      | NONE             |              |                   |              |
 | G2         |                             | High Range | IO_L15N_T2_DQS_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| G3         | cmos_iic_scl_io             | High Range | IO_L20N_T3_35                | BIDIR       | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| G3         | cmos_iic_scl_io             | High Range | IO_L20N_T3_35                | BIDIR       | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLUP    |          |      | NONE             |              |                   |              |
 | G4         |                             | High Range | IO_L20P_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G5         |                             | High Range | VCCO_35                      | VCCO        |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | G6         |                             | High Range | IO_L19P_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
