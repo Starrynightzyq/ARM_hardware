@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param general.maxThreads 8
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a100tcsg324-1

@@ -100,8 +100,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_
 # IP: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_xbar_0 || ORIG_REF_NAME==m3_for_arty_a7_xbar_0} -quiet] -quiet
 
-# IP: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0.xci
+# IP: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_axi_iic_0_0 || ORIG_REF_NAME==m3_for_arty_a7_axi_iic_0_0} -quiet] -quiet
+
+# IP: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_1_0/m3_for_arty_a7_axi_iic_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_axi_iic_1_0 || ORIG_REF_NAME==m3_for_arty_a7_axi_iic_1_0} -quiet] -quiet
+
+# IP: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_timer_0_0/m3_for_arty_a7_axi_timer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_axi_timer_0_0 || ORIG_REF_NAME==m3_for_arty_a7_axi_timer_0_0} -quiet] -quiet
 
 # IP: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_auto_pc_0 || ORIG_REF_NAME==m3_for_arty_a7_auto_pc_0} -quiet] -quiet
@@ -226,6 +232,16 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_axi_iic_0_0 || ORIG_REF_NAME==m3_for_arty_a7_axi_iic_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0_ooc.xdc
+
+# XDC: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_1_0/m3_for_arty_a7_axi_iic_1_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_axi_iic_1_0 || ORIG_REF_NAME==m3_for_arty_a7_axi_iic_1_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_1_0/m3_for_arty_a7_axi_iic_1_0_ooc.xdc
+
+# XDC: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_timer_0_0/m3_for_arty_a7_axi_timer_0_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_axi_timer_0_0 || ORIG_REF_NAME==m3_for_arty_a7_axi_timer_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_timer_0_0/m3_for_arty_a7_axi_timer_0_0_ooc.xdc
 
 # XDC: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0_ooc.xdc
 

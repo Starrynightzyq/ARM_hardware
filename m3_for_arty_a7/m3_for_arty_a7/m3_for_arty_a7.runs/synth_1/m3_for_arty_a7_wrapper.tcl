@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param general.maxThreads 8
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,7 +31,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_repo_paths c:/MyFiles/ARM_CP/workspace/vivado/Arm_ipi_repository [current_project]
+set_property ip_repo_paths {
+  c:/MyFiles/ARM_CP/workspace/vivado/Arm_ipi_repository
+  c:/MyFiles/FPGA_Learning/ZYNQ_img/repo
+} [current_project]
 set_property ip_output_repo c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_mem C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/bram_a7.hex
@@ -85,6 +89,10 @@ set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/work
 set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/m3_for_arty_a7_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_1_0/m3_for_arty_a7_axi_iic_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_iic_1_0/m3_for_arty_a7_axi_iic_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_timer_0_0/m3_for_arty_a7_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_timer_0_0/m3_for_arty_a7_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/m3_for_arty_a7_ooc.xdc]
 
