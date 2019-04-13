@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1554984830">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1555161995">
   <File Type="PA-TCL" Name="m3_for_arty_a7_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="m3_for_arty_a7_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="m3_for_arty_a7_wrapper_reports.tcl"/>
@@ -70,12 +70,12 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design">
-      <Option Id="ResourceSharing">2</Option>
-      <Option Id="NoCombineLuts">1</Option>
-      <Option Id="FsmExtraction">1</Option>
-      <Option Id="KeepEquivalentRegisters">1</Option>
       <Option Id="ShregMinSize">5</Option>
+      <Option Id="ResourceSharing">2</Option>
       <Option Id="RepFanoutThreshold">400</Option>
+      <Option Id="FsmExtraction">1</Option>
+      <Option Id="NoCombineLuts">1</Option>
+      <Option Id="KeepEquivalentRegisters">1</Option>
     </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="m3_for_arty_a7_axi_xip_quad_spi_0_0"/>
@@ -87,7 +87,6 @@
   <BlockFileSet Type="BlockSrcs" Name="m3_for_arty_a7_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="m3_for_arty_a7_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="m3_for_arty_a7_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="m3_for_arty_a7_Cortex_M3_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="m3_for_arty_a7_xlconcat_0_0"/>
 </GenRun>

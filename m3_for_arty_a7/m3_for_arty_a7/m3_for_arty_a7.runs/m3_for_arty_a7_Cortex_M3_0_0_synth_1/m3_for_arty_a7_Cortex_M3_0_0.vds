@@ -2,26 +2,26 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Apr 11 20:14:10 2019
-# Process ID: 14556
-# Current directory: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1
+# Start of session at: Sat Apr 13 13:37:30 2019
+# Process ID: 14160
+# Current directory: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1
 # Command line: vivado.exe -log m3_for_arty_a7_Cortex_M3_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source m3_for_arty_a7_Cortex_M3_0_0.tcl
-# Log file: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/m3_for_arty_a7_Cortex_M3_0_0.vds
-# Journal file: C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1\vivado.jou
+# Log file: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/m3_for_arty_a7_Cortex_M3_0_0.vds
+# Journal file: C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source m3_for_arty_a7_Cortex_M3_0_0.tcl -notrace
-config_ip_cache: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 276.418 ; gain = 0.477
+config_ip_cache: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 276.922 ; gain = 0.457
 Command: synth_design -top m3_for_arty_a7_Cortex_M3_0_0 -part xc7a100tcsg324-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9376 
+INFO: Helper process launched with PID 9924 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 407.313 ; gain = 119.801
+Starting RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 407.246 ; gain = 119.215
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_Cortex_M3_0_0' [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/synth/m3_for_arty_a7_Cortex_M3_0_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_Cortex_M3_0_0' (123#1) [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/synth/m3_for_arty_a7_Cortex_M3_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'm3_for_arty_a7_Cortex_M3_0_0' [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/synth/m3_for_arty_a7_Cortex_M3_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'm3_for_arty_a7_Cortex_M3_0_0' (123#1) [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/synth/m3_for_arty_a7_Cortex_M3_0_0.v:57]
 WARNING: [Synth 8-3331] design cm3_rom_table has unconnected port PENABLE
 WARNING: [Synth 8-3331] design cm3_cdc_connect__parameterized0 has unconnected port clk_launch
 WARNING: [Synth 8-3331] design cm3_cdc_connect__parameterized0 has unconnected port clk_capture
@@ -124,7 +124,7 @@ WARNING: [Synth 8-3331] design cm3_etm_fifo has unconnected port fifo_in_i[47]
 WARNING: [Synth 8-3331] design cm3_etm_fifo has unconnected port fifo_in_i[46]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 655.086 ; gain = 367.574
+Finished RTL Elaboration : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 655.910 ; gain = 367.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -137,28 +137,28 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 655.086 ; gain = 367.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 655.910 ; gain = 367.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 655.086 ; gain = 367.574
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 655.910 ; gain = 367.879
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc] for cell 'inst'
-Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc] for cell 'inst'
+Parsing XDC File [C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.622 . Memory (MB): peak = 1058.887 ; gain = 16.219
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.643 . Memory (MB): peak = 1059.902 ; gain = 16.891
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:00:54 . Memory (MB): peak = 1058.887 ; gain = 771.375
+Finished Constraint Validation : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1059.902 ; gain = 771.871
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
@@ -166,46 +166,46 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:00:54 . Memory (MB): peak = 1058.887 ; gain = 771.375
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1059.902 ; gain = 771.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusAbort/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusReq/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGPWRUPACK/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGRSTACK/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCSYSPWRUPACK/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uSyncBusAck/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusAbort/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusReq/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGPWRUPACK/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGRSTACK/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCSYSPWRUPACK/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uSyncBusAck/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_end_trans/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_habort/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_htrans/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_idle/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_tra/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_trans_rtn/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_sync_dbg_en/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dappwrup/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dbgen/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_hclken/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_end_trans/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_habort/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_htrans/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_idle/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_tra/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_trans_rtn/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_sync_dbg_en/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dappwrup/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dbgen/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_hclken/q_reg. (constraint file  c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
-Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusAbort/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusReq/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGPWRUPACK/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGRSTACK/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCSYSPWRUPACK/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uSyncBusAck/sync_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 3).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusAbort/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPDpApbSync/uSyncBusReq/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGPWRUPACK/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCDBGRSTACK/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uCSYSPWRUPACK/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPSwDpSync/uSyncBusAck/sync2_reg_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 4).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_end_trans/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_habort/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_htrans/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_idle/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_tra/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_trans_rtn/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_sync_dbg_en/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dappwrup/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dbgen/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_hclken/d_sync1_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 6).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_end_trans/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_habort/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_htrans/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_idle/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_tra/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_dap_ahb_ap/u_cm3_dap_ahb_ap_sync_trans_rtn/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/uCORTEXM3/u_cm3_sync_dbg_en/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dappwrup/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_dbgen/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property ASYNC_REG = true for inst/u_CORTEXM3INTEGRATION/u_cm3_sync_hclken/q_reg. (constraint file  c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xdc, line 7).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:54 . Memory (MB): peak = 1058.887 ; gain = 771.375
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1059.902 ; gain = 771.871
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "ABurstNxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ALOCK2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -504,14 +504,14 @@ INFO: [Synth 8-3354] encoded FSM with state register 'serial_state_reg' using en
 INFO: [Synth 8-3971] The signal genblk3[1].ram_block_reg was recognized as a true dual port RAM template.
 INFO: [Synth 8-3971] The signal genblk3[1].ram_block_reg was recognized as a true dual port RAM template.
 Block RAM genblk3[1].ram_block_reg originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.address width (13) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimalBlock RAM genblk3[1].ram_block_reg originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.address width (13) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 1058.887 ; gain = 771.375
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:38 . Memory (MB): peak = 1059.902 ; gain = 771.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------------+------------+----------+
 |      |RTL Partition            |Replication |Instances |
 +------+-------------------------+------------+----------+
-|1     |CORTEXM3__GB0            |           1|     42782|
+|1     |CORTEXM3__GB0            |           1|     42999|
 |2     |CORTEXM3__GB1            |           1|     38721|
 |3     |CORTEXM3INTEGRATION__GC0 |           1|      5822|
 |4     |CortexM3DbgAXI__GC0      |           1|      2184|
@@ -561,22 +561,24 @@ Detailed RTL Component Info :
 	               48 Bit    Registers := 1     
 	               40 Bit    Registers := 1     
 	               35 Bit    Registers := 2     
+	               33 Bit    Registers := 1     
 	               32 Bit    Registers := 52    
 	               31 Bit    Registers := 3     
 	               30 Bit    Registers := 2     
-	               27 Bit    Registers := 10    
+	               27 Bit    Registers := 9     
 	               25 Bit    Registers := 1     
 	               24 Bit    Registers := 2     
 	               23 Bit    Registers := 1     
 	               21 Bit    Registers := 2     
+	               20 Bit    Registers := 3     
 	               19 Bit    Registers := 1     
-	               18 Bit    Registers := 4     
+	               18 Bit    Registers := 1     
 	               16 Bit    Registers := 2     
 	               13 Bit    Registers := 3     
 	               12 Bit    Registers := 3     
-	               11 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
 	               10 Bit    Registers := 5     
-	                9 Bit    Registers := 17    
+	                9 Bit    Registers := 16    
 	                8 Bit    Registers := 74    
 	                7 Bit    Registers := 5     
 	                6 Bit    Registers := 12    
@@ -593,6 +595,7 @@ Detailed RTL Component Info :
 	   4 Input     35 Bit        Muxes := 1     
 	  34 Input     34 Bit        Muxes := 1     
 	   2 Input     34 Bit        Muxes := 36    
+	   2 Input     33 Bit        Muxes := 1     
 	 144 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 107   
 	   6 Input     32 Bit        Muxes := 3     
@@ -606,7 +609,7 @@ Detailed RTL Component Info :
 	  12 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 6     
 	  45 Input     31 Bit        Muxes := 1     
-	   2 Input     27 Bit        Muxes := 2     
+	   2 Input     27 Bit        Muxes := 1     
 	   2 Input     25 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 2     
 	  32 Input     24 Bit        Muxes := 1     
@@ -667,7 +670,7 @@ Detailed RTL Component Info :
 	  24 Input      2 Bit        Muxes := 1     
 	   8 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 184   
-	   4 Input      1 Bit        Muxes := 49    
+	   4 Input      1 Bit        Muxes := 53    
 	   3 Input      1 Bit        Muxes := 9     
 	   5 Input      1 Bit        Muxes := 12    
 	   8 Input      1 Bit        Muxes := 5     
@@ -707,20 +710,20 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
+	               33 Bit    Registers := 1     
 	               32 Bit    Registers := 3     
-	               27 Bit    Registers := 1     
 	               25 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
 	               19 Bit    Registers := 1     
-	                9 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
 	                7 Bit    Registers := 1     
 	                3 Bit    Registers := 10    
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 62    
 +---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     27 Bit        Muxes := 1     
 	   2 Input     25 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 8     
@@ -728,10 +731,10 @@ Detailed RTL Component Info :
 Module cm3_nvic_int_state 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 3     
+	               20 Bit    Registers := 3     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input      1 Bit        Muxes := 36    
+	   4 Input      1 Bit        Muxes := 40    
 Module cm3_nvic_cell__255 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -4412,7 +4415,7 @@ WARNING: [Synth 8-3332] Sequential element (etm_stall_reg) is unused and will be
 INFO: [Synth 8-3886] merging instance 'inst/u_CORTEXM3INTEGRATIONi_3/refreset_n_q_reg' (FDC) to 'inst/u_CORTEXM3INTEGRATIONi_3/u_cm3_sync_dbgen/d_sync1_reg'
 INFO: [Synth 8-3886] merging instance 'inst/u_CORTEXM3INTEGRATIONi_3/refreset_n_qq_reg' (FDC) to 'inst/u_CORTEXM3INTEGRATIONi_3/u_cm3_sync_dbgen/q_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:38 ; elapsed = 00:05:48 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:17 ; elapsed = 00:06:34 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4462,7 +4465,7 @@ Report RTL Partitions:
 +------+-------------------------+------------+----------+
 |      |RTL Partition            |Replication |Instances |
 +------+-------------------------+------------+----------+
-|1     |CORTEXM3__GB0            |           1|     16409|
+|1     |CORTEXM3__GB0            |           1|     16977|
 |2     |CORTEXM3__GB1            |           1|     28943|
 |3     |CORTEXM3INTEGRATION__GC0 |           1|      3513|
 |4     |CortexM3DbgAXI__GC0      |           1|      1181|
@@ -4471,13 +4474,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:52 ; elapsed = 00:06:04 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:33 ; elapsed = 00:06:51 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:52 ; elapsed = 00:06:04 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Timing Optimization : Time (s): cpu = 00:06:33 ; elapsed = 00:06:51 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4499,7 +4502,7 @@ Report RTL Partitions:
 +------+-------------------------+------------+----------+
 |      |RTL Partition            |Replication |Instances |
 +------+-------------------------+------------+----------+
-|1     |CORTEXM3__GB0            |           1|     16409|
+|1     |CORTEXM3__GB0            |           1|     16977|
 |2     |CORTEXM3__GB1            |           1|     28943|
 |3     |CORTEXM3INTEGRATION__GC0 |           1|      3513|
 |4     |CortexM3DbgAXI__GC0      |           1|      1181|
@@ -4526,7 +4529,7 @@ INFO: [Synth 8-4480] The timing for the instance inst/u_x_dtcm/genblk3[1].ram_bl
 INFO: [Synth 8-4480] The timing for the instance inst/u_x_dtcm/genblk3[1].ram_block_reg_3_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance inst/u_x_dtcm/genblk3[1].ram_block_reg_3_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:02 ; elapsed = 00:06:14 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Technology Mapping : Time (s): cpu = 00:06:43 ; elapsed = 00:07:02 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4551,7 +4554,7 @@ INFO: [Synth 8-5365] Flop u_CORTEXM3INTEGRATION/uDAPSWJDP/uDAPJtagDpProtocol/TDO
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:04 ; elapsed = 00:06:16 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished IO Insertion : Time (s): cpu = 00:06:46 ; elapsed = 00:07:05 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4564,7 +4567,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:05 ; elapsed = 00:06:17 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:46 ; elapsed = 00:07:05 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4576,25 +4579,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:07 ; elapsed = 00:06:19 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:48 ; elapsed = 00:07:07 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:07 ; elapsed = 00:06:19 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:49 ; elapsed = 00:07:07 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:08 ; elapsed = 00:06:20 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:49 ; elapsed = 00:07:08 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:08 ; elapsed = 00:06:20 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:50 ; elapsed = 00:07:08 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -4612,15 +4615,15 @@ Report Cell Usage:
 +------+---------+------+
 |1     |CARRY4   |   243|
 |2     |DSP48E1  |     3|
-|3     |LUT1     |   131|
-|4     |LUT2     |  1058|
-|5     |LUT3     |  1586|
-|6     |LUT4     |  1833|
-|7     |LUT5     |  2882|
-|8     |LUT6     |  6552|
-|9     |MUXF7    |   289|
+|3     |LUT1     |   132|
+|4     |LUT2     |  1045|
+|5     |LUT3     |  1623|
+|6     |LUT4     |  1815|
+|7     |LUT5     |  2927|
+|8     |LUT6     |  6611|
+|9     |MUXF7    |   277|
 |10    |RAMB36E1 |    16|
-|11    |FDCE     |  2582|
+|11    |FDCE     |  2597|
 |12    |FDPE     |    80|
 |13    |FDRE     |  1917|
 |14    |FDSE     |    19|
@@ -4630,12 +4633,12 @@ Report Instance Areas:
 +------+------------------------------------------+-----------------------------------------------+------+
 |      |Instance                                  |Module                                         |Cells |
 +------+------------------------------------------+-----------------------------------------------+------+
-|1     |top                                       |                                               | 19191|
-|2     |  inst                                    |CortexM3DbgAXI                                 | 19191|
-|3     |    u_CORTEXM3INTEGRATION                 |CORTEXM3INTEGRATION                            | 18666|
-|4     |      uCORTEXM3                           |CORTEXM3                                       | 17065|
-|5     |        u_cm3_bus_matrix                  |cm3_bus_matrix                                 |  1427|
-|6     |          u_cm3_mtx_bit_master            |cm3_mtx_bit_master                             |  1154|
+|1     |top                                       |                                               | 19305|
+|2     |  inst                                    |CortexM3DbgAXI                                 | 19305|
+|3     |    u_CORTEXM3INTEGRATION                 |CORTEXM3INTEGRATION                            | 18780|
+|4     |      uCORTEXM3                           |CORTEXM3                                       | 17179|
+|5     |        u_cm3_bus_matrix                  |cm3_bus_matrix                                 |  1477|
+|6     |          u_cm3_mtx_bit_master            |cm3_mtx_bit_master                             |  1156|
 |7     |          u_cm3_mtx_decode_dap            |cm3_mtx_decode_dap                             |    77|
 |8     |          u_cm3_mtx_decode_dcore          |cm3_mtx_decode_dcore                           |     8|
 |9     |          u_cm3_mtx_decode_icore          |cm3_mtx_decode_icore                           |     8|
@@ -4643,10 +4646,10 @@ Report Instance Areas:
 |11    |          u_cm3_mtx_input_stage_dcore     |cm3_mtx_input_stage_dcore                      |    15|
 |12    |          u_cm3_mtx_input_stage_icore     |cm3_mtx_input_stage_icore                      |     4|
 |13    |          u_cm3_mtx_output_stage_dcode    |cm3_mtx_output_stage_dcode                     |     5|
-|14    |          u_cm3_mtx_output_stage_ppb      |cm3_mtx_output_stage_ppb                       |   149|
+|14    |          u_cm3_mtx_output_stage_ppb      |cm3_mtx_output_stage_ppb                       |   197|
 |15    |          u_cm3_mtx_output_stage_sys      |cm3_mtx_output_stage_sys                       |     6|
-|16    |        u_cm3_dap_ahb_ap                  |cm3_dap_ahb_ap                                 |   398|
-|17    |          u_cm3_dap_ahb_ap_mst            |cm3_dap_ahb_ap_mst                             |   210|
+|16    |        u_cm3_dap_ahb_ap                  |cm3_dap_ahb_ap                                 |   393|
+|17    |          u_cm3_dap_ahb_ap_mst            |cm3_dap_ahb_ap_mst                             |   205|
 |18    |          u_cm3_dap_ahb_ap_slv            |cm3_dap_ahb_ap_slv                             |   162|
 |19    |          u_cm3_dap_ahb_ap_sync_end_trans |cm3_dap_ahb_ap_sync__parameterized0__xdcDup__1 |     3|
 |20    |          u_cm3_dap_ahb_ap_sync_habort    |cm3_dap_ahb_ap_sync__xdcDup__1                 |    15|
@@ -4654,24 +4657,24 @@ Report Instance Areas:
 |22    |          u_cm3_dap_ahb_ap_sync_idle      |cm3_dap_ahb_ap_sync__xdcDup__2                 |     2|
 |23    |          u_cm3_dap_ahb_ap_sync_tra       |cm3_dap_ahb_ap_sync                            |     2|
 |24    |          u_cm3_dap_ahb_ap_sync_trans_rtn |cm3_dap_ahb_ap_sync__parameterized0            |     1|
-|25    |        u_cm3_dpu                         |cm3_dpu                                        |  8700|
+|25    |        u_cm3_dpu                         |cm3_dpu                                        |  8710|
 |26    |          u_cm3_dpu_alu                   |cm3_dpu_alu                                    |  2194|
 |27    |            u_cm3_dpu_alu_ctl             |cm3_dpu_alu_ctl                                |  1820|
 |28    |            u_cm3_dpu_alu_dp              |cm3_dpu_alu_dp                                 |   374|
 |29    |          u_cm3_dpu_dec                   |cm3_dpu_dec                                    |   122|
 |30    |            u_cm3_dpu_br_dec              |cm3_dpu_br_dec                                 |   106|
 |31    |          u_cm3_dpu_etmintf               |cm3_dpu_etmintf                                |    87|
-|32    |          u_cm3_dpu_exec                  |cm3_dpu_exec                                   |   305|
-|33    |          u_cm3_dpu_fetch                 |cm3_dpu_fetch                                  |  2032|
-|34    |            u_cm3_dpu_fetch_ahbintf       |cm3_dpu_fetch_ahbintf                          |  1658|
+|32    |          u_cm3_dpu_exec                  |cm3_dpu_exec                                   |   315|
+|33    |          u_cm3_dpu_fetch                 |cm3_dpu_fetch                                  |  2031|
+|34    |            u_cm3_dpu_fetch_ahbintf       |cm3_dpu_fetch_ahbintf                          |  1657|
 |35    |            u_cm3_dpu_fetch_ctl           |cm3_dpu_fetch_ctl                              |   374|
-|36    |          u_cm3_dpu_lsu                   |cm3_dpu_lsu                                    |  2440|
-|37    |            u_cm3_dpu_lsu_ahbintf         |cm3_dpu_lsu_ahbintf                            |   758|
-|38    |            u_cm3_dpu_lsu_ctl             |cm3_dpu_lsu_ctl                                |  1681|
+|36    |          u_cm3_dpu_lsu                   |cm3_dpu_lsu                                    |  2443|
+|37    |            u_cm3_dpu_lsu_ahbintf         |cm3_dpu_lsu_ahbintf                            |   755|
+|38    |            u_cm3_dpu_lsu_ctl             |cm3_dpu_lsu_ctl                                |  1687|
 |39    |          u_cm3_dpu_regbank               |cm3_dpu_regbank                                |  1338|
 |40    |            u_cm3_dpu_regfile             |cm3_dpu_regfile                                |  1090|
-|41    |          u_cm3_dpu_status                |cm3_dpu_status                                 |   182|
-|42    |        u_cm3_dwt                         |cm3_dwt                                        |  1166|
+|41    |          u_cm3_dpu_status                |cm3_dpu_status                                 |   180|
+|42    |        u_cm3_dwt                         |cm3_dwt                                        |  1167|
 |43    |          u_cm3_dwt_comp0                 |cm3_dwt_comp                                   |    11|
 |44    |          u_cm3_dwt_comp1                 |cm3_dwt_comp_46                                |    10|
 |45    |          u_cm3_dwt_comp2                 |cm3_dwt_comp_47                                |     9|
@@ -4682,8 +4685,8 @@ Report Instance Areas:
 |50    |            u_dwt_state_int_trace         |cm3_dwt_packet_state_50                        |    15|
 |51    |            u_dwt_state_pc_periodic       |cm3_dwt_packet_state_51                        |    10|
 |52    |            u_dwt_state_pc_sample         |cm3_dwt_packet_state_52                        |    42|
-|53    |          u_dwt_apb_if                    |cm3_dwt_apb_if                                 |   880|
-|54    |        u_cm3_fpb                         |cm3_fpb                                        |   628|
+|53    |          u_dwt_apb_if                    |cm3_dwt_apb_if                                 |   881|
+|54    |        u_cm3_fpb                         |cm3_fpb                                        |   629|
 |55    |        u_cm3_itm                         |cm3_itm                                        |   918|
 |56    |          u_itm_arb                       |cm3_itm_arb                                    |   111|
 |57    |          u_itm_emit                      |cm3_itm_emit                                   |   146|
@@ -4695,11 +4698,11 @@ Report Instance Areas:
 |63    |            u_itm_fifo_byte_4             |cm3_itm_fifo_byte_45                           |    57|
 |64    |          u_itm_if                        |cm3_itm_if                                     |   242|
 |65    |          u_itm_ts                        |cm3_itm_ts                                     |    76|
-|66    |        u_cm3_mpu                         |cm3_mpu                                        |  1823|
-|67    |          u_cm3_mpu_full                  |cm3_mpu_full                                   |  1823|
+|66    |        u_cm3_mpu                         |cm3_mpu                                        |  1824|
+|67    |          u_cm3_mpu_full                  |cm3_mpu_full                                   |  1824|
 |68    |            u_cm3_mpu_ahb_ctl             |cm3_mpu_ahb_ctl                                |    15|
 |69    |            u_cm3_mpu_align               |cm3_mpu_align                                  |    76|
-|70    |            u_cm3_mpu_ppb_intf            |cm3_mpu_ppb_intf                               |   179|
+|70    |            u_cm3_mpu_ppb_intf            |cm3_mpu_ppb_intf                               |   180|
 |71    |            u_cm3_mpu_regions             |cm3_mpu_regions                                |  1553|
 |72    |              u_cm3_mpu_region_0          |cm3_mpu_region                                 |   188|
 |73    |                u_cm3_mpu_dcomp           |cm3_mpu_comp_39                                |    34|
@@ -4733,13 +4736,13 @@ Report Instance Areas:
 |101   |                u_cm3_mpu_dcomp           |cm3_mpu_comp                                   |    35|
 |102   |                u_cm3_mpu_icomp           |cm3_mpu_comp_20                                |    35|
 |103   |                u_cm3_mpu_maskgen         |cm3_mpu_maskgen                                |    26|
-|104   |        u_cm3_nvic                        |cm3_nvic                                       |  1893|
-|105   |          u_cm3_nvic_main                 |cm3_nvic_main                                  |   484|
-|106   |            u_cm3_nvic_int_state          |cm3_nvic_int_state                             |   363|
-|107   |          u_cm3_nvic_ppb_intf             |cm3_nvic_ppb_intf                              |   576|
-|108   |          u_cm3_nvic_reg                  |cm3_nvic_reg                                   |   833|
+|104   |        u_cm3_nvic                        |cm3_nvic                                       |  1952|
+|105   |          u_cm3_nvic_main                 |cm3_nvic_main                                  |   511|
+|106   |            u_cm3_nvic_int_state          |cm3_nvic_int_state                             |   398|
+|107   |          u_cm3_nvic_ppb_intf             |cm3_nvic_ppb_intf                              |   571|
+|108   |          u_cm3_nvic_reg                  |cm3_nvic_reg                                   |   870|
 |109   |        u_cm3_ppb_ahb_to_apb              |cm3_ppb_ahb_to_apb                             |    34|
-|110   |        u_cm3_ppb_decoder                 |cm3_ppb_decoder                                |    78|
+|110   |        u_cm3_ppb_decoder                 |cm3_ppb_decoder                                |    75|
 |111   |      uDAPSWJDP                           |DAPSWJDP                                       |  1110|
 |112   |        uDAPDpApbSync                     |DAPDpApbSync                                   |     4|
 |113   |          uSyncBusAbort                   |DAPDpEnSync__xdcDup__1                         |     2|
@@ -4789,13 +4792,13 @@ Report Instance Areas:
 |157   |    u_x_itcm                              |X_TCMDBG                                       |     8|
 +------+------------------------------------------+-----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:08 ; elapsed = 00:06:20 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:50 ; elapsed = 00:07:08 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 99 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:05:18 ; elapsed = 00:06:03 . Memory (MB): peak = 1832.715 ; gain = 1141.402
-Synthesis Optimization Complete : Time (s): cpu = 00:06:08 ; elapsed = 00:06:21 . Memory (MB): peak = 1832.715 ; gain = 1545.203
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:48 ; elapsed = 00:06:48 . Memory (MB): peak = 1818.316 ; gain = 1126.293
+Synthesis Optimization Complete : Time (s): cpu = 00:06:50 ; elapsed = 00:07:09 . Memory (MB): peak = 1818.316 ; gain = 1530.285
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 551 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 539 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -4805,16 +4808,16 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 254 Infos, 198 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:15 ; elapsed = 00:06:28 . Memory (MB): peak = 1832.715 ; gain = 1556.297
+synth_design: Time (s): cpu = 00:06:57 ; elapsed = 00:07:16 . Memory (MB): peak = 1818.316 ; gain = 1541.395
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/m3_for_arty_a7_Cortex_M3_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xci
-config_ip_cache: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1832.715 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/m3_for_arty_a7_Cortex_M3_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0.xci
+config_ip_cache: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1818.316 ; gain = 0.000
 INFO: [Coretcl 2-1174] Renamed 156 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/AT426-BU-98000-r0p0-00rel0/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/m3_for_arty_a7_Cortex_M3_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/m3_for_arty_a7_Cortex_M3_0_0_synth_1/m3_for_arty_a7_Cortex_M3_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file m3_for_arty_a7_Cortex_M3_0_0_utilization_synth.rpt -pb m3_for_arty_a7_Cortex_M3_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1832.715 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 20:21:33 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1818.316 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 13:45:50 2019...
