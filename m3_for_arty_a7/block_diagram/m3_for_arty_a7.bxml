@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="m3_for_arty_a7" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1555150426"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1555150426"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1555150426"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1555150426"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1555159711"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1555159711"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1555159711"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1555159711"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\m3_for_arty_a7_axi_bram_ctrl_0_0\m3_for_arty_a7_axi_bram_ctrl_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_bram_ctrl_0"/>
@@ -276,6 +276,14 @@
       </File>
       <File Name="ip\m3_for_arty_a7_axi_timer_0_0\m3_for_arty_a7_axi_timer_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_timer_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_OV_Sensor_0_0\m3_for_arty_a7_OV_Sensor_0_0.xci" Type="IP">
+        <Instance HierarchyPath="OV_Sensor_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -33,11 +33,9 @@
 # JTAG connected to PMOD connector JC (nearest to device)
 # Pin-out is detailed below
 # JC1_P.  JC[1]
-set_property PACKAGE_PIN F6 [get_ports {TDO[0]}]
+set_property PACKAGE_PIN G16 [get_ports {TDO[0]}]
 # JC1_N.  JC[2]
-set_property PACKAGE_PIN J2 [get_ports TDI]
 # JC2_P.  JC[3]
-set_property PACKAGE_PIN K1 [get_ports nTRST]
 # Note TCK is shared with SWCLK.  Therefore to drive JTAG, besides the pins above
 # the user must also connect to shield pin IO41 = connector IOH pin 16.
 
@@ -77,19 +75,6 @@ set_property PACKAGE_PIN D4 [get_ports usb_uart_txd]
 #  <pin index="88" name ="shield_dp26_dp41_tri_i_14" iostandard="LVCMOS33" loc="P18"/>
 #  <pin index="89" name ="shield_dp26_dp41_tri_i_15" iostandard="LVCMOS33" loc="N17"/>
 
-set_property PACKAGE_PIN C17 [get_ports {DAPLink_tri_o[0]}]
-set_property PACKAGE_PIN D18 [get_ports {DAPLink_tri_o[1]}]
-set_property PACKAGE_PIN E18 [get_ports {DAPLink_tri_o[2]}]
-set_property PACKAGE_PIN G17 [get_ports {DAPLink_tri_o[3]}]
-set_property PACKAGE_PIN R11 [get_ports {DAPLink_tri_o[4]}]
-set_property PACKAGE_PIN E17 [get_ports {DAPLink_tri_o[5]}]
-set_property PACKAGE_PIN F18 [get_ports {DAPLink_tri_o[6]}]
-set_property PACKAGE_PIN G18 [get_ports {DAPLink_tri_o[7]}]
-set_property PACKAGE_PIN D14 [get_ports {DAPLink_tri_o[8]}]
-set_property PACKAGE_PIN N16 [get_ports {DAPLink_tri_o[9]}]
-set_property PACKAGE_PIN G16 [get_ports {DAPLink_tri_o[10]}]
-set_property PACKAGE_PIN H14 [get_ports {DAPLink_tri_o[11]}]
-set_property PACKAGE_PIN E16 [get_ports {DAPLink_tri_o[12]}]
 set_property PACKAGE_PIN F13 [get_ports {DAPLink_tri_o[13]}]
 set_property PACKAGE_PIN G13 [get_ports {DAPLink_tri_o[14]}]
 set_property PACKAGE_PIN H16 [get_ports {DAPLink_tri_o[15]}]
@@ -125,5 +110,6 @@ set_property CONFIG_VOLTAGE 3.3 [current_design]
 # Bitstream generation
 # --------------------------------------------------
 set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+
 
 

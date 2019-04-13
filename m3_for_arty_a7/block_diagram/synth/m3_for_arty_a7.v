@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Apr 13 18:13:44 2019
+//Date        : Sat Apr 13 20:48:27 2019
 //Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7.bd
 //Design      : m3_for_arty_a7
@@ -11,6 +11,7 @@
 
 module Clocks_and_Resets_imp_1WLR2TP
    (aux_reset_in,
+    clk_24M,
     clk_cpu,
     clk_qspi,
     dbgresetn,
@@ -22,6 +23,7 @@ module Clocks_and_Resets_imp_1WLR2TP
     sysresetn,
     sysresetreq);
   input aux_reset_in;
+  output clk_24M;
   output clk_cpu;
   output clk_qspi;
   output [0:0]dbgresetn;
@@ -34,6 +36,7 @@ module Clocks_and_Resets_imp_1WLR2TP
   input sysresetreq;
 
   wire aux_reset_in_1;
+  wire clk_wiz_0_clk_24M;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
   wire dcm_locked_1;
@@ -54,6 +57,7 @@ module Clocks_and_Resets_imp_1WLR2TP
   wire [0:0]xlconstant_0_dout;
 
   assign aux_reset_in_1 = aux_reset_in;
+  assign clk_24M = clk_wiz_0_clk_24M;
   assign clk_cpu = clk_wiz_0_clk_out1;
   assign clk_qspi = clk_wiz_0_clk_out2;
   assign dbgresetn[0] = i_inv_dbgresetn_Res;
@@ -63,7 +67,8 @@ module Clocks_and_Resets_imp_1WLR2TP
   assign sys_clock_1 = sys_clock;
   assign sysresetn[0] = i_inv_sysresetn1_Res;
   m3_for_arty_a7_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(sys_clock_1),
+       (.clk_24M(clk_wiz_0_clk_24M),
+        .clk_in1(sys_clock_1),
         .clk_out1(clk_wiz_0_clk_out1),
         .clk_out2(clk_wiz_0_clk_out2),
         .locked(dcm_locked_1));
@@ -2639,23 +2644,28 @@ module m08_couplers_imp_15AL04S
   assign m08_couplers_to_m08_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=51,numReposBlks=32,numNonXlnxBlks=2,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,synth_mode=Global}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
+(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=52,numReposBlks=33,numNonXlnxBlks=3,numHierBlks=19,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,synth_mode=Global}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
 module m3_for_arty_a7
    (DAPLink_tri_o,
     TDI,
     TDO,
+    cmos_data,
+    cmos_href,
     cmos_iic_scl_i,
     cmos_iic_scl_o,
     cmos_iic_scl_t,
     cmos_iic_sda_i,
     cmos_iic_sda_o,
     cmos_iic_sda_t,
+    cmos_pclk,
+    cmos_pwdn_tri_o,
+    cmos_rst_tri_o,
+    cmos_vsync,
     dip_switches_4bits_tri_i,
     led_4bits_tri_i,
     led_4bits_tri_o,
     led_4bits_tri_t,
     nTRST,
-    push_buttons_4bits_tri_i,
     qspi_flash_io0_i,
     qspi_flash_io0_o,
     qspi_flash_io0_t,
@@ -2672,9 +2682,6 @@ module m3_for_arty_a7
     qspi_flash_ss_o,
     qspi_flash_ss_t,
     reset,
-    rgb_led_tri_i,
-    rgb_led_tri_o,
-    rgb_led_tri_t,
     sys_clock,
     temp_sensor_scl_i,
     temp_sensor_scl_o,
@@ -2687,18 +2694,23 @@ module m3_for_arty_a7
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 DAPLink TRI_O" *) inout [15:0]DAPLink_tri_o;
   input TDI;
   inout [0:0]TDO;
+  input [7:0]cmos_data;
+  input cmos_href;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmos_iic " *) input cmos_iic_scl_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmos_iic " *) output cmos_iic_scl_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmos_iic " *) output cmos_iic_scl_t;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmos_iic " *) input cmos_iic_sda_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmos_iic " *) output cmos_iic_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmos_iic " *) output cmos_iic_sda_t;
+  input cmos_pclk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cmos_pwdn " *) output [0:0]cmos_pwdn_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cmos_rst " *) output [0:0]cmos_rst_tri_o;
+  input cmos_vsync;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 dip_switches_4bits TRI_I" *) input [3:0]dip_switches_4bits_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_4bits TRI_I" *) input [3:0]led_4bits_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_4bits TRI_O" *) output [3:0]led_4bits_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_4bits TRI_T" *) output [3:0]led_4bits_tri_t;
   input nTRST;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 push_buttons_4bits TRI_I" *) input [3:0]push_buttons_4bits_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 qspi_flash IO0_I" *) input qspi_flash_io0_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 qspi_flash IO0_O" *) output qspi_flash_io0_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 qspi_flash IO0_T" *) output qspi_flash_io0_t;
@@ -2715,9 +2727,6 @@ module m3_for_arty_a7
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 qspi_flash SS_O" *) output qspi_flash_ss_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 qspi_flash SS_T" *) output qspi_flash_ss_t;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, POLARITY ACTIVE_LOW" *) input reset;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rgb_led TRI_I" *) input [5:0]rgb_led_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rgb_led TRI_O" *) output [5:0]rgb_led_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rgb_led TRI_T" *) output [5:0]rgb_led_tri_t;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN m3_for_arty_a7_sys_clock, FREQ_HZ 100000000, PHASE 0.000" *) input sys_clock;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 temp_sensor SCL_I" *) input temp_sensor_scl_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 temp_sensor SCL_O" *) output temp_sensor_scl_o;
@@ -2728,6 +2737,7 @@ module m3_for_arty_a7
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart RxD" *) input usb_uart_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart TxD" *) output usb_uart_txd;
 
+  wire Clocks_and_Resets_clk_24M;
   wire [0:0]Clocks_and_Resets_dbgresetn;
   wire [0:0]Clocks_and_Resets_peripheral_aresetn1;
   wire [0:0]Clocks_and_Resets_sysresetn;
@@ -2839,10 +2849,8 @@ module m3_for_arty_a7
   wire [3:0]axi_gpio_0_GPIO_TRI_O;
   wire [3:0]axi_gpio_0_GPIO_TRI_T;
   wire axi_gpio_0_ip2intc_irpt;
-  wire [3:0]axi_gpio_1_GPIO2_TRI_I;
-  wire [5:0]axi_gpio_1_GPIO_TRI_I;
-  wire [5:0]axi_gpio_1_GPIO_TRI_O;
-  wire [5:0]axi_gpio_1_GPIO_TRI_T;
+  wire [0:0]axi_gpio_1_GPIO2_TRI_O;
+  wire [0:0]axi_gpio_1_GPIO_TRI_O;
   wire axi_gpio_1_ip2intc_irpt;
   wire axi_iic_0_IIC_SCL_I;
   wire axi_iic_0_IIC_SCL_O;
@@ -3016,6 +3024,10 @@ module m3_for_arty_a7
   wire axi_uartlite_0_interrupt;
   wire axi_uartlite_0_tx;
   wire clk_wiz_0_clk_out1;
+  wire [7:0]cmos_data_i_0_1;
+  wire cmos_href_i_0_1;
+  wire cmos_pclk_i_0_1;
+  wire cmos_vsync_i_0_1;
   wire daplink_if_0_SWCLK;
   wire daplink_if_0_SWDI;
   wire daplink_if_0_nSRST;
@@ -3033,8 +3045,6 @@ module m3_for_arty_a7
   assign V2C_DAPLink_interface_UART_out_RxD = usb_uart_rxd;
   assign axi_gpio_0_GPIO2_TRI_I = dip_switches_4bits_tri_i[3:0];
   assign axi_gpio_0_GPIO_TRI_I = led_4bits_tri_i[3:0];
-  assign axi_gpio_1_GPIO2_TRI_I = push_buttons_4bits_tri_i[3:0];
-  assign axi_gpio_1_GPIO_TRI_I = rgb_led_tri_i[5:0];
   assign axi_iic_0_IIC_SCL_I = cmos_iic_scl_i;
   assign axi_iic_0_IIC_SDA_I = cmos_iic_sda_i;
   assign axi_iic_1_IIC_SCL_I = temp_sensor_scl_i;
@@ -3044,10 +3054,16 @@ module m3_for_arty_a7
   assign axi_quad_spi_0_SPI_0_IO2_I = qspi_flash_io2_i;
   assign axi_quad_spi_0_SPI_0_IO3_I = qspi_flash_io3_i;
   assign axi_quad_spi_0_SPI_0_SS_I = qspi_flash_ss_i;
+  assign cmos_data_i_0_1 = cmos_data[7:0];
+  assign cmos_href_i_0_1 = cmos_href;
   assign cmos_iic_scl_o = axi_iic_0_IIC_SCL_O;
   assign cmos_iic_scl_t = axi_iic_0_IIC_SCL_T;
   assign cmos_iic_sda_o = axi_iic_0_IIC_SDA_O;
   assign cmos_iic_sda_t = axi_iic_0_IIC_SDA_T;
+  assign cmos_pclk_i_0_1 = cmos_pclk;
+  assign cmos_pwdn_tri_o[0] = axi_gpio_1_GPIO_TRI_O;
+  assign cmos_rst_tri_o[0] = axi_gpio_1_GPIO2_TRI_O;
+  assign cmos_vsync_i_0_1 = cmos_vsync;
   assign led_4bits_tri_o[3:0] = axi_gpio_0_GPIO_TRI_O;
   assign led_4bits_tri_t[3:0] = axi_gpio_0_GPIO_TRI_T;
   assign nTRST_1 = nTRST;
@@ -3062,8 +3078,6 @@ module m3_for_arty_a7
   assign qspi_flash_ss_o = axi_quad_spi_0_SPI_0_SS_O;
   assign qspi_flash_ss_t = axi_quad_spi_0_SPI_0_SS_T;
   assign reset_1 = reset;
-  assign rgb_led_tri_o[5:0] = axi_gpio_1_GPIO_TRI_O;
-  assign rgb_led_tri_t[5:0] = axi_gpio_1_GPIO_TRI_T;
   assign sys_clock_1 = sys_clock;
   assign temp_sensor_scl_o = axi_iic_1_IIC_SCL_O;
   assign temp_sensor_scl_t = axi_iic_1_IIC_SCL_T;
@@ -3072,6 +3086,7 @@ module m3_for_arty_a7
   assign usb_uart_txd = V2C_DAPLink_interface_UART_out_TxD;
   Clocks_and_Resets_imp_1WLR2TP Clocks_and_Resets
        (.aux_reset_in(daplink_if_0_nSRST),
+        .clk_24M(Clocks_and_Resets_clk_24M),
         .clk_cpu(clk_wiz_0_clk_out1),
         .clk_qspi(ext_spi_clk_1),
         .dbgresetn(Clocks_and_Resets_dbgresetn),
@@ -3163,6 +3178,12 @@ module m3_for_arty_a7
         .WVALIDS(Cortex_M3_0_CM3_SYS_AXI3_WVALID),
         .nTDOEN(CortexM3DbgAXI_0_nTDOEN),
         .nTRST(nTRST_1));
+  m3_for_arty_a7_OV_Sensor_0_0 OV_Sensor_0
+       (.CLK_i(Clocks_and_Resets_clk_24M),
+        .cmos_data_i(cmos_data_i_0_1),
+        .cmos_href_i(cmos_href_i_0_1),
+        .cmos_pclk_i(cmos_pclk_i_0_1),
+        .cmos_vsync_i(cmos_vsync_i_0_1));
   m3_for_arty_a7_axi_bram_ctrl_0_0 axi_bram_ctrl_0
        (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
         .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
@@ -3218,10 +3239,8 @@ module m3_for_arty_a7
         .s_axi_wstrb(axi_interconnect_0_M01_AXI_WSTRB),
         .s_axi_wvalid(axi_interconnect_0_M01_AXI_WVALID));
   m3_for_arty_a7_axi_gpio_1_0 axi_gpio_1
-       (.gpio2_io_i(axi_gpio_1_GPIO2_TRI_I),
-        .gpio_io_i(axi_gpio_1_GPIO_TRI_I),
+       (.gpio2_io_o(axi_gpio_1_GPIO2_TRI_O),
         .gpio_io_o(axi_gpio_1_GPIO_TRI_O),
-        .gpio_io_t(axi_gpio_1_GPIO_TRI_T),
         .ip2intc_irpt(axi_gpio_1_ip2intc_irpt),
         .s_axi_aclk(clk_wiz_0_clk_out1),
         .s_axi_araddr(axi_interconnect_0_M02_AXI_ARADDR[8:0]),

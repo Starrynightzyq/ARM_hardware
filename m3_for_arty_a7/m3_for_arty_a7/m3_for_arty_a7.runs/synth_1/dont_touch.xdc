@@ -109,6 +109,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_
 # IP: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_timer_0_0/m3_for_arty_a7_axi_timer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_axi_timer_0_0 || ORIG_REF_NAME==m3_for_arty_a7_axi_timer_0_0} -quiet] -quiet
 
+# IP: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_OV_Sensor_0_0/m3_for_arty_a7_OV_Sensor_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_OV_Sensor_0_0 || ORIG_REF_NAME==m3_for_arty_a7_OV_Sensor_0_0} -quiet] -quiet
+
 # IP: c:/MyFiles/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_auto_pc_0/m3_for_arty_a7_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==m3_for_arty_a7_auto_pc_0 || ORIG_REF_NAME==m3_for_arty_a7_auto_pc_0} -quiet] -quiet
 

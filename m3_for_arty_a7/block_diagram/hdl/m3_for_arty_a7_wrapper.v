@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Apr 13 18:13:44 2019
+//Date        : Sat Apr 13 20:48:27 2019
 //Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -13,19 +13,23 @@ module m3_for_arty_a7_wrapper
    (DAPLink_tri_o,
     TDI,
     TDO,
+    cmos_data,
+    cmos_href,
     cmos_iic_scl_io,
     cmos_iic_sda_io,
+    cmos_pclk,
+    cmos_pwdn_tri_o,
+    cmos_rst_tri_o,
+    cmos_vsync,
     dip_switches_4bits_tri_i,
     led_4bits_tri_io,
     nTRST,
-    push_buttons_4bits_tri_i,
     qspi_flash_io0_io,
     qspi_flash_io1_io,
     qspi_flash_io2_io,
     qspi_flash_io3_io,
     qspi_flash_ss_io,
     reset,
-    rgb_led_tri_io,
     sys_clock,
     temp_sensor_scl_io,
     temp_sensor_sda_io,
@@ -34,19 +38,23 @@ module m3_for_arty_a7_wrapper
   inout [15:0]DAPLink_tri_o;
   input TDI;
   inout [0:0]TDO;
+  input [7:0]cmos_data;
+  input cmos_href;
   inout cmos_iic_scl_io;
   inout cmos_iic_sda_io;
+  input cmos_pclk;
+  output [0:0]cmos_pwdn_tri_o;
+  output [0:0]cmos_rst_tri_o;
+  input cmos_vsync;
   input [3:0]dip_switches_4bits_tri_i;
   inout [3:0]led_4bits_tri_io;
   input nTRST;
-  input [3:0]push_buttons_4bits_tri_i;
   inout qspi_flash_io0_io;
   inout qspi_flash_io1_io;
   inout qspi_flash_io2_io;
   inout qspi_flash_io3_io;
   inout qspi_flash_ss_io;
   input reset;
-  inout [5:0]rgb_led_tri_io;
   input sys_clock;
   inout temp_sensor_scl_io;
   inout temp_sensor_sda_io;
@@ -56,6 +64,8 @@ module m3_for_arty_a7_wrapper
   wire [15:0]DAPLink_tri_o;
   wire TDI;
   wire [0:0]TDO;
+  wire [7:0]cmos_data;
+  wire cmos_href;
   wire cmos_iic_scl_i;
   wire cmos_iic_scl_io;
   wire cmos_iic_scl_o;
@@ -64,6 +74,10 @@ module m3_for_arty_a7_wrapper
   wire cmos_iic_sda_io;
   wire cmos_iic_sda_o;
   wire cmos_iic_sda_t;
+  wire cmos_pclk;
+  wire [0:0]cmos_pwdn_tri_o;
+  wire [0:0]cmos_rst_tri_o;
+  wire cmos_vsync;
   wire [3:0]dip_switches_4bits_tri_i;
   wire [0:0]led_4bits_tri_i_0;
   wire [1:1]led_4bits_tri_i_1;
@@ -82,7 +96,6 @@ module m3_for_arty_a7_wrapper
   wire [2:2]led_4bits_tri_t_2;
   wire [3:3]led_4bits_tri_t_3;
   wire nTRST;
-  wire [3:0]push_buttons_4bits_tri_i;
   wire qspi_flash_io0_i;
   wire qspi_flash_io0_io;
   wire qspi_flash_io0_o;
@@ -104,30 +117,6 @@ module m3_for_arty_a7_wrapper
   wire qspi_flash_ss_o;
   wire qspi_flash_ss_t;
   wire reset;
-  wire [0:0]rgb_led_tri_i_0;
-  wire [1:1]rgb_led_tri_i_1;
-  wire [2:2]rgb_led_tri_i_2;
-  wire [3:3]rgb_led_tri_i_3;
-  wire [4:4]rgb_led_tri_i_4;
-  wire [5:5]rgb_led_tri_i_5;
-  wire [0:0]rgb_led_tri_io_0;
-  wire [1:1]rgb_led_tri_io_1;
-  wire [2:2]rgb_led_tri_io_2;
-  wire [3:3]rgb_led_tri_io_3;
-  wire [4:4]rgb_led_tri_io_4;
-  wire [5:5]rgb_led_tri_io_5;
-  wire [0:0]rgb_led_tri_o_0;
-  wire [1:1]rgb_led_tri_o_1;
-  wire [2:2]rgb_led_tri_o_2;
-  wire [3:3]rgb_led_tri_o_3;
-  wire [4:4]rgb_led_tri_o_4;
-  wire [5:5]rgb_led_tri_o_5;
-  wire [0:0]rgb_led_tri_t_0;
-  wire [1:1]rgb_led_tri_t_1;
-  wire [2:2]rgb_led_tri_t_2;
-  wire [3:3]rgb_led_tri_t_3;
-  wire [4:4]rgb_led_tri_t_4;
-  wire [5:5]rgb_led_tri_t_5;
   wire sys_clock;
   wire temp_sensor_scl_i;
   wire temp_sensor_scl_io;
@@ -174,18 +163,23 @@ module m3_for_arty_a7_wrapper
        (.DAPLink_tri_o(DAPLink_tri_o),
         .TDI(TDI),
         .TDO(TDO),
+        .cmos_data(cmos_data),
+        .cmos_href(cmos_href),
         .cmos_iic_scl_i(cmos_iic_scl_i),
         .cmos_iic_scl_o(cmos_iic_scl_o),
         .cmos_iic_scl_t(cmos_iic_scl_t),
         .cmos_iic_sda_i(cmos_iic_sda_i),
         .cmos_iic_sda_o(cmos_iic_sda_o),
         .cmos_iic_sda_t(cmos_iic_sda_t),
+        .cmos_pclk(cmos_pclk),
+        .cmos_pwdn_tri_o(cmos_pwdn_tri_o),
+        .cmos_rst_tri_o(cmos_rst_tri_o),
+        .cmos_vsync(cmos_vsync),
         .dip_switches_4bits_tri_i(dip_switches_4bits_tri_i),
         .led_4bits_tri_i({led_4bits_tri_i_3,led_4bits_tri_i_2,led_4bits_tri_i_1,led_4bits_tri_i_0}),
         .led_4bits_tri_o({led_4bits_tri_o_3,led_4bits_tri_o_2,led_4bits_tri_o_1,led_4bits_tri_o_0}),
         .led_4bits_tri_t({led_4bits_tri_t_3,led_4bits_tri_t_2,led_4bits_tri_t_1,led_4bits_tri_t_0}),
         .nTRST(nTRST),
-        .push_buttons_4bits_tri_i(push_buttons_4bits_tri_i),
         .qspi_flash_io0_i(qspi_flash_io0_i),
         .qspi_flash_io0_o(qspi_flash_io0_o),
         .qspi_flash_io0_t(qspi_flash_io0_t),
@@ -202,9 +196,6 @@ module m3_for_arty_a7_wrapper
         .qspi_flash_ss_o(qspi_flash_ss_o),
         .qspi_flash_ss_t(qspi_flash_ss_t),
         .reset(reset),
-        .rgb_led_tri_i({rgb_led_tri_i_5,rgb_led_tri_i_4,rgb_led_tri_i_3,rgb_led_tri_i_2,rgb_led_tri_i_1,rgb_led_tri_i_0}),
-        .rgb_led_tri_o({rgb_led_tri_o_5,rgb_led_tri_o_4,rgb_led_tri_o_3,rgb_led_tri_o_2,rgb_led_tri_o_1,rgb_led_tri_o_0}),
-        .rgb_led_tri_t({rgb_led_tri_t_5,rgb_led_tri_t_4,rgb_led_tri_t_3,rgb_led_tri_t_2,rgb_led_tri_t_1,rgb_led_tri_t_0}),
         .sys_clock(sys_clock),
         .temp_sensor_scl_i(temp_sensor_scl_i),
         .temp_sensor_scl_o(temp_sensor_scl_o),
@@ -239,36 +230,6 @@ module m3_for_arty_a7_wrapper
         .IO(qspi_flash_ss_io),
         .O(qspi_flash_ss_i),
         .T(qspi_flash_ss_t));
-  IOBUF rgb_led_tri_iobuf_0
-       (.I(rgb_led_tri_o_0),
-        .IO(rgb_led_tri_io[0]),
-        .O(rgb_led_tri_i_0),
-        .T(rgb_led_tri_t_0));
-  IOBUF rgb_led_tri_iobuf_1
-       (.I(rgb_led_tri_o_1),
-        .IO(rgb_led_tri_io[1]),
-        .O(rgb_led_tri_i_1),
-        .T(rgb_led_tri_t_1));
-  IOBUF rgb_led_tri_iobuf_2
-       (.I(rgb_led_tri_o_2),
-        .IO(rgb_led_tri_io[2]),
-        .O(rgb_led_tri_i_2),
-        .T(rgb_led_tri_t_2));
-  IOBUF rgb_led_tri_iobuf_3
-       (.I(rgb_led_tri_o_3),
-        .IO(rgb_led_tri_io[3]),
-        .O(rgb_led_tri_i_3),
-        .T(rgb_led_tri_t_3));
-  IOBUF rgb_led_tri_iobuf_4
-       (.I(rgb_led_tri_o_4),
-        .IO(rgb_led_tri_io[4]),
-        .O(rgb_led_tri_i_4),
-        .T(rgb_led_tri_t_4));
-  IOBUF rgb_led_tri_iobuf_5
-       (.I(rgb_led_tri_o_5),
-        .IO(rgb_led_tri_io[5]),
-        .O(rgb_led_tri_i_5),
-        .T(rgb_led_tri_t_5));
   IOBUF temp_sensor_scl_iobuf
        (.I(temp_sensor_scl_o),
         .IO(temp_sensor_scl_io),

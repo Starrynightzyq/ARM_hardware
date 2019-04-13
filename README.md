@@ -105,16 +105,16 @@ ArmCortex-M3 DesignStart处理器；
 | JA9: F18    |      |
 | JA10: G18   |      |
 
-| **Pmod JB** |                    |
-| ----------- | ------------------ |
-| JB1: D14    |                    |
-| JB2: F16    | nTRST              |
-| JB3: G16    | TDO                |
-| JB4: H14    | TDI                |
-| JB7: E16    |                    |
-| JB8: F13    | nSRST              |
-| JB9: G13    | SWDIO（PULLUP）    |
-| JB10: H16   | SWCLKTCK（PULLUP） |
+| **Pmod JB** |                           |
+| ----------- | ------------------------- |
+| JB1: D14    |                           |
+| JB2: F16    | nTRST                     |
+| JB3: G16    | TDO                       |
+| JB4: H14    | TDI                       |
+| JB7: E16    |                           |
+| JB8: F13    | nSRST(dap13)              |
+| JB9: G13    | SWDIO(dap14)（PULLUP）    |
+| JB10: H16   | SWCLKTCK(dap15)（PULLUP） |
 
 | **Pmod JC** |       |
 | ----------- | ----- |
@@ -138,5 +138,7 @@ ArmCortex-M3 DesignStart处理器；
 | JD9: G2     | HREF               |          |
 | JD10: F3    | VSYNC              | SCL      |
 
-## 修改
+## OV5640
+
+这里需要特别注意的地方是：OV5640的上电时序比较特殊，我们初始化PWDN和RST应该特别小心，初始化先控制RST为低电平，PWDN为高电平，使摄像头处于待机模式，延时10ms后控制PWDN为低电平，再延时10ms后控制RST为高电平，OV5640模组启动。
 

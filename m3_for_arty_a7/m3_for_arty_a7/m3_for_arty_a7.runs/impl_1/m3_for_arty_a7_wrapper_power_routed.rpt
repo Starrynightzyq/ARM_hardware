@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Apr 13 19:54:52 2019
+| Date             : Sat Apr 13 21:35:01 2019
 | Host             : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 | Command          : report_power -file m3_for_arty_a7_wrapper_power_routed.rpt -pb m3_for_arty_a7_wrapper_power_summary_routed.pb -rpx m3_for_arty_a7_wrapper_power_routed.rpx
 | Design           : m3_for_arty_a7_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.294        |
+| Total On-Chip Power (W)  | 0.273        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.195        |
+| Dynamic (W)              | 0.174        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 83.7         |
-| Junction Temperature (C) | 26.3         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.024 |       10 |       --- |             --- |
-| Slice Logic             |     0.015 |    30222 |       --- |             --- |
-|   LUT as Logic          |     0.014 |    18688 |     63400 |           29.48 |
+| Slice Logic             |     0.015 |    30103 |       --- |             --- |
+|   LUT as Logic          |     0.014 |    18648 |     63400 |           29.41 |
 |   CARRY4                |    <0.001 |      383 |     15850 |            2.42 |
-|   Register              |    <0.001 |     9809 |    126800 |            7.74 |
+|   Register              |    <0.001 |     9733 |    126800 |            7.68 |
 |   F7/F8 Muxes           |    <0.001 |      227 |     63400 |            0.36 |
 |   LUT as Shift Register |    <0.001 |       70 |     19000 |            0.37 |
-|   Others                |     0.000 |      677 |       --- |             --- |
-| Signals                 |     0.023 |    24422 |       --- |             --- |
+|   Others                |     0.000 |      678 |       --- |             --- |
+| Signals                 |     0.024 |    24318 |       --- |             --- |
 | Block RAM               |     0.011 |     22.5 |       135 |           16.67 |
-| MMCM                    |     0.106 |        1 |         6 |           16.67 |
+| MMCM                    |     0.085 |        1 |         6 |           16.67 |
 | DSPs                    |    <0.001 |        3 |       240 |            1.25 |
-| I/O                     |     0.016 |       50 |       210 |           23.81 |
+| I/O                     |     0.015 |       42 |       210 |           20.00 |
 | Static Power            |     0.099 |          |           |                 |
-| Total                   |     0.294 |          |           |                 |
+| Total                   |     0.273 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,8 +76,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.089 |       0.073 |      0.016 |
-| Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
+| Vccint    |       1.000 |     0.091 |       0.074 |      0.016 |
+| Vccaux    |       1.800 |     0.066 |       0.047 |      0.018 |
 | Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -151,17 +151,17 @@ Table of Contents
 +-------------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                                  | Power (W) |
 +-------------------------------------------------------------------------------------------------------+-----------+
-| m3_for_arty_a7_wrapper                                                                                |     0.195 |
+| m3_for_arty_a7_wrapper                                                                                |     0.174 |
 |   cmos_iic_scl_iobuf                                                                                  |     0.000 |
 |   cmos_iic_sda_iobuf                                                                                  |     0.000 |
 |   led_4bits_tri_iobuf_0                                                                               |    <0.001 |
 |   led_4bits_tri_iobuf_1                                                                               |    <0.001 |
 |   led_4bits_tri_iobuf_2                                                                               |    <0.001 |
 |   led_4bits_tri_iobuf_3                                                                               |    <0.001 |
-|   m3_for_arty_a7_i                                                                                    |     0.180 |
-|     Clocks_and_Resets                                                                                 |     0.107 |
-|       clk_wiz_0                                                                                       |     0.107 |
-|         inst                                                                                          |     0.107 |
+|   m3_for_arty_a7_i                                                                                    |     0.160 |
+|     Clocks_and_Resets                                                                                 |     0.086 |
+|       clk_wiz_0                                                                                       |     0.086 |
+|         inst                                                                                          |     0.086 |
 |       i_interconnect_aresetn                                                                          |    <0.001 |
 |       i_inv_dbgresetn                                                                                 |     0.000 |
 |       i_inv_sysresetn1                                                                                |     0.000 |
@@ -181,10 +181,10 @@ Table of Contents
 |             ACTIVE_LOW_EXT.ACT_LO_EXT                                                                 |    <0.001 |
 |           SEQ                                                                                         |    <0.001 |
 |             SEQ_COUNTER                                                                               |    <0.001 |
-|     Cortex_M3_0                                                                                       |     0.054 |
-|       inst                                                                                            |     0.054 |
-|         u_CORTEXM3INTEGRATION                                                                         |     0.044 |
-|           uCORTEXM3                                                                                   |     0.042 |
+|     Cortex_M3_0                                                                                       |     0.055 |
+|       inst                                                                                            |     0.055 |
+|         u_CORTEXM3INTEGRATION                                                                         |     0.045 |
+|           uCORTEXM3                                                                                   |     0.043 |
 |             u_cm3_bus_matrix                                                                          |     0.004 |
 |               u_cm3_mtx_bit_master                                                                    |     0.003 |
 |               u_cm3_mtx_decode_dap                                                                    |    <0.001 |
@@ -205,7 +205,7 @@ Table of Contents
 |               u_cm3_dap_ahb_ap_sync_idle                                                              |    <0.001 |
 |               u_cm3_dap_ahb_ap_sync_tra                                                               |    <0.001 |
 |               u_cm3_dap_ahb_ap_sync_trans_rtn                                                         |    <0.001 |
-|             u_cm3_dpu                                                                                 |     0.028 |
+|             u_cm3_dpu                                                                                 |     0.029 |
 |               u_cm3_dpu_alu                                                                           |     0.006 |
 |                 u_cm3_dpu_alu_ctl                                                                     |     0.003 |
 |                 u_cm3_dpu_alu_dp                                                                      |     0.003 |
@@ -218,7 +218,7 @@ Table of Contents
 |                 u_cm3_dpu_fetch_ctl                                                                   |     0.002 |
 |               u_cm3_dpu_lsu                                                                           |     0.011 |
 |                 u_cm3_dpu_lsu_ahbintf                                                                 |     0.004 |
-|                 u_cm3_dpu_lsu_ctl                                                                     |     0.007 |
+|                 u_cm3_dpu_lsu_ctl                                                                     |     0.008 |
 |               u_cm3_dpu_regbank                                                                       |     0.004 |
 |                 u_cm3_dpu_regfile                                                                     |     0.003 |
 |               u_cm3_dpu_status                                                                        |     0.001 |
@@ -684,9 +684,9 @@ Table of Contents
 |               RESET_SYNC_AXI_SPI_CLK_INST                                                             |    <0.001 |
 |               SOFT_RESET_I                                                                            |    <0.001 |
 |               STATUS_REG_MODE_12_GEN.STATUS_SLAVE_SEL_REG_I                                           |    <0.001 |
-|       axi_single_spi_0                                                                                |     0.002 |
-|         U0                                                                                            |     0.002 |
-|           NO_DUAL_QUAD_MODE.QSPI_NORMAL                                                               |     0.002 |
+|       axi_single_spi_0                                                                                |     0.003 |
+|         U0                                                                                            |     0.003 |
+|           NO_DUAL_QUAD_MODE.QSPI_NORMAL                                                               |     0.003 |
 |             QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I                                                        |    <0.001 |
 |               I_SLAVE_ATTACHMENT                                                                      |    <0.001 |
 |                 I_DECODER                                                                             |    <0.001 |
@@ -804,12 +804,6 @@ Table of Contents
 |   qspi_flash_io2_iobuf                                                                                |    <0.001 |
 |   qspi_flash_io3_iobuf                                                                                |    <0.001 |
 |   qspi_flash_ss_iobuf                                                                                 |    <0.001 |
-|   rgb_led_tri_iobuf_0                                                                                 |    <0.001 |
-|   rgb_led_tri_iobuf_1                                                                                 |    <0.001 |
-|   rgb_led_tri_iobuf_2                                                                                 |    <0.001 |
-|   rgb_led_tri_iobuf_3                                                                                 |    <0.001 |
-|   rgb_led_tri_iobuf_4                                                                                 |    <0.001 |
-|   rgb_led_tri_iobuf_5                                                                                 |    <0.001 |
 |   temp_sensor_scl_iobuf                                                                               |     0.000 |
 |   temp_sensor_sda_iobuf                                                                               |     0.000 |
 +-------------------------------------------------------------------------------------------------------+-----------+
