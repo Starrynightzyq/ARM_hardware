@@ -105,16 +105,16 @@ ArmCortex-M3 DesignStart处理器；
 | JA9: F18    |      |
 | JA10: G18   |      |
 
-| **Pmod JB** |                           |
-| ----------- | ------------------------- |
-| JB1: D14    |                           |
-| JB2: F16    | nTRST                     |
-| JB3: G16    | TDO                       |
-| JB4: H14    | TDI                       |
-| JB7: E16    |                           |
-| JB8: F13    | nSRST(dap13)              |
-| JB9: G13    | SWDIO(dap14)（PULLUP）    |
-| JB10: H16   | SWCLKTCK(dap15)（PULLUP） |
+| **Pmod JB** |                        |
+| ----------- | ---------------------- |
+| JB1: D14    |                        |
+| JB2: F16    | nTRST                  |
+| JB3: G16    | TDO                    |
+| JB4: H14    | TDI                    |
+| JB7: E16    |                        |
+| JB8: F13    | nSRST(dap13)（PULLUP） |
+| JB9: G13    | SWDIO(dap14)（PULLUP） |
+| JB10: H16   | SWCLKTCK(dap15)        |
 
 | **Pmod JC** |       |
 | ----------- | ----- |

@@ -76,29 +76,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_xip_quad_spi_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_quad_spi_0_1/m3_for_arty_a7_axi_quad_spi_0_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_quad_spi_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_uartlite_0_0/m3_for_arty_a7_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_uartlite_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_tri_io_buf_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_gpio_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xlconcat_0_0/m3_for_arty_a7_xlconcat_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_xlconcat_0_0"/>
@@ -108,6 +87,27 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_single_spi_0_0/m3_for_arty_a7_axi_single_spi_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_axi_single_spi_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_quad_spi_0_1/m3_for_arty_a7_axi_quad_spi_0_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_quad_spi_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_xip_quad_spi_0_0/m3_for_arty_a7_axi_xip_quad_spi_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_xip_quad_spi_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_uartlite_0_0/m3_for_arty_a7_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_uartlite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0/m3_for_arty_a7_DAPLink_to_Arty_shield_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_DAPLink_to_Arty_shield_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_xbar_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../block_diagram/hdl/m3_for_arty_a7_wrapper.v">
@@ -320,14 +320,12 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_2" Description="Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2018">
-          <Desc>Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold</Desc>
-        </StratHandle>
+        <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ResourceSharing">2</Option>
           <Option Id="ShregMinSize">5</Option>
-          <Option Id="FsmExtraction">1</Option>
           <Option Id="RepFanoutThreshold">400</Option>
+          <Option Id="FsmExtraction">1</Option>
           <Option Id="NoCombineLuts">1</Option>
           <Option Id="KeepEquivalentRegisters">1</Option>
         </Step>
@@ -437,9 +435,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_2" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

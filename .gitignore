@@ -93,6 +93,8 @@
 /m3_for_arty_a7/m3_for_arty_a7/*.log
 /m3_for_arty_a7/m3_for_arty_a7/*.jou
 /m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.cache/
+/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.runs/
+/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.sim/
 
 !/m3_for_arty_a7/m3_for_arty_a7/*.elf
 !/m3_for_arty_a7/m3_for_arty_a7/*.hex
