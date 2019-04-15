@@ -68,7 +68,7 @@ module m3_for_arty_a7_OV_Sensor_0_0 (
   vid_active_video
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk_24M, PHASE 0.0, CLK_DOMAIN /Clocks_and_Resets/clk_wiz_0_clk_out1" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk_24M, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_wiz_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk_24M CLK" *)
 input wire CLK_i;
 input wire cmos_vsync_i;
