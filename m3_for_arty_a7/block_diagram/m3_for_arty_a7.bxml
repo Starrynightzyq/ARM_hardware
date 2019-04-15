@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="m3_for_arty_a7" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1555258429"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1555258429"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1555258429"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1555258429"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1555323309"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1555323309"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1555323309"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1555323309"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\m3_for_arty_a7_axi_bram_ctrl_0_0\m3_for_arty_a7_axi_bram_ctrl_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_bram_ctrl_0"/>
@@ -370,6 +370,60 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip\m3_for_arty_a7_ila_0_0\m3_for_arty_a7_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/ila_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_ila_1_0\m3_for_arty_a7_ila_1_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/ila_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="hw_handoff\m3_for_arty_a7.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="hw_handoff\m3_for_arty_a7_bd.tcl">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="synth\m3_for_arty_a7.hwdef">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_proc_sys_reset_0_0\m3_for_arty_a7_proc_sys_reset_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/proc_sys_reset_25M"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_proc_sys_reset_1_0\m3_for_arty_a7_proc_sys_reset_1_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/proc_sys_reset_200M"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="m3_for_arty_a7_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+      </File>
       <File Name="ip\m3_for_arty_a7_auto_pc_9\m3_for_arty_a7_auto_pc_9.xci" Type="IP">
         <Instance HierarchyPath="axi_interconnect_0/m09_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -457,28 +511,6 @@
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="m3_for_arty_a7_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
-      </File>
-      <File Name="hw_handoff\m3_for_arty_a7.hwh" Type="HwHandoff">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="hw_handoff\m3_for_arty_a7_bd.tcl">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="synth\m3_for_arty_a7.hwdef">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
       </File>
     </FileCollection>
   </CompositeFile>

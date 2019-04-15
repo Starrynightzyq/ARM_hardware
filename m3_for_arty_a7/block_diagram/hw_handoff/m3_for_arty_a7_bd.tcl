@@ -266,6 +266,25 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
  ] $clk_wiz_0
 
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_DATA_DEPTH {2048} \
+   CONFIG.C_NUM_OF_PROBES {9} \
+   CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
+ ] $ila_0
+
+  # Create instance: ila_1, and set properties
+  set ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_1 ]
+  set_property -dict [ list \
+   CONFIG.C_DATA_DEPTH {2048} \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_PROBE0_WIDTH {24} \
+   CONFIG.C_PROBE1_WIDTH {1} \
+ ] $ila_1
+
   # Create instance: mig_7series_0, and set properties
   set mig_7series_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.1 mig_7series_0 ]
   set_property -dict [ list \
@@ -323,6 +342,12 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
    CONFIG.C_HAS_ASYNC_CLK {1} \
  ] $v_vid_in_axi4s_0
 
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+ ] $xlconstant_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins S_AXI_LITE] [get_bd_intf_pins axi_vdma_0/S_AXI_LITE]
   connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins DDR2_0] [get_bd_intf_pins mig_7series_0/DDR2]
@@ -335,9 +360,9 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
   connect_bd_intf_net -intf_net OV_Sensor_0_video_o [get_bd_intf_pins OV_Sensor_0/video_o] [get_bd_intf_pins v_vid_in_axi4s_0/vid_io_in]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins mig_7series_0/S_AXI]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets axi_vdma_0_M_AXIS_MM2S] [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins ila_0/SLOT_0_AXIS]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_MM2S [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_S2MM [get_bd_intf_pins axi_smc/S01_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM]
-  connect_bd_intf_net -intf_net v_axi4s_vid_out_0_vid_io_out [get_bd_intf_pins rgb2vga_0/vid_in] [get_bd_intf_pins v_axi4s_vid_out_0/vid_io_out]
   connect_bd_intf_net -intf_net v_tc_0_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in] [get_bd_intf_pins v_tc_0/vtiming_out]
   connect_bd_intf_net -intf_net v_vid_in_axi4s_0_video_out [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
 
@@ -347,15 +372,16 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
   connect_bd_net -net axi_gpio_1_ip2intc_irpt [get_bd_pins ip2intc_irpt] [get_bd_pins axi_gpio_1/ip2intc_irpt]
   connect_bd_net -net axi_iic_0_iic2intc_irpt [get_bd_pins iic2intc_irpt] [get_bd_pins axi_iic_0/iic2intc_irpt]
   connect_bd_net -net axi_resetn_1 [get_bd_pins axi_resetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins axi_vdma_0/axi_resetn]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins v_axi4s_vid_out_0/aclken] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_vid_in_axi4s_0/aclken] [get_bd_pins v_vid_in_axi4s_0/aresetn] [get_bd_pins v_vid_in_axi4s_0/axis_enable]
   connect_bd_net -net clk_wiz_clk_24M [get_bd_pins OV_Sensor_0/CLK_i] [get_bd_pins clk_wiz/clk_24M]
-  connect_bd_net -net clk_wiz_clk_25M [get_bd_pins clk_wiz/clk_25M] [get_bd_pins rgb2vga_0/PixelClk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk]
-  connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins v_axi4s_vid_out_0/aclken] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_reset] [get_bd_pins v_tc_0/clken] [get_bd_pins v_tc_0/resetn]
+  connect_bd_net -net clk_wiz_clk_25M [get_bd_pins clk_wiz/clk_25M] [get_bd_pins ila_1/clk] [get_bd_pins rgb2vga_0/PixelClk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk]
+  connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_reset] [get_bd_pins v_tc_0/clken] [get_bd_pins v_tc_0/resetn] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_reset]
   connect_bd_net -net cmos_data_1 [get_bd_pins cmos_data] [get_bd_pins OV_Sensor_0/cmos_data_i]
   connect_bd_net -net cmos_href_1 [get_bd_pins cmos_href] [get_bd_pins OV_Sensor_0/cmos_href_i]
   connect_bd_net -net cmos_pclk_1 [get_bd_pins cmos_pclk] [get_bd_pins OV_Sensor_0/cmos_pclk_i] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_clk]
   connect_bd_net -net cmos_vsync_1 [get_bd_pins cmos_vsync] [get_bd_pins OV_Sensor_0/cmos_vsync_i]
   connect_bd_net -net mig_7series_0_mmcm_locked [get_bd_pins mig_7series_0/mmcm_locked] [get_bd_pins rst_mig_7series_0_81M/dcm_locked]
-  connect_bd_net -net mig_7series_0_ui_addn_clk_0 [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins clk_wiz_0/clk_200M] [get_bd_pins mig_7series_0/sys_clk_i] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_vid_in_axi4s_0/aclk]
+  connect_bd_net -net mig_7series_0_ui_addn_clk_0 [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins clk_wiz_0/clk_200M] [get_bd_pins ila_0/clk] [get_bd_pins mig_7series_0/sys_clk_i] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_vid_in_axi4s_0/aclk]
   connect_bd_net -net mig_7series_0_ui_clk [get_bd_pins axi_smc/aclk] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins mig_7series_0/ui_clk] [get_bd_pins rst_mig_7series_0_81M/slowest_sync_clk]
   connect_bd_net -net mig_7series_0_ui_clk_sync_rst [get_bd_pins mig_7series_0/ui_clk_sync_rst] [get_bd_pins rst_mig_7series_0_81M/ext_reset_in]
   connect_bd_net -net reset_0_1 [get_bd_pins reset_0] [get_bd_pins mig_7series_0/sys_rst]
@@ -367,7 +393,12 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
   connect_bd_net -net rgb2vga_0_vga_pVSync [get_bd_pins vga_pVSync_0] [get_bd_pins rgb2vga_0/vga_pVSync]
   connect_bd_net -net s_axi_lite_aclk_1 [get_bd_pins s_axi_lite_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins axi_smc/aclk1] [get_bd_pins axi_vdma_0/s_axi_lite_aclk]
   connect_bd_net -net sys_clock_0_1 [get_bd_pins sys_clock_0] [get_bd_pins clk_wiz/clk_in1] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_active_video [get_bd_pins ila_1/probe3] [get_bd_pins rgb2vga_0/rgb_pVDE] [get_bd_pins v_axi4s_vid_out_0/vid_active_video]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_pins ila_1/probe0] [get_bd_pins rgb2vga_0/rgb_pData] [get_bd_pins v_axi4s_vid_out_0/vid_data]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_hsync [get_bd_pins ila_1/probe1] [get_bd_pins rgb2vga_0/rgb_pHSync] [get_bd_pins v_axi4s_vid_out_0/vid_hsync]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_vsync [get_bd_pins ila_1/probe2] [get_bd_pins rgb2vga_0/rgb_pVSync] [get_bd_pins v_axi4s_vid_out_0/vid_vsync]
   connect_bd_net -net v_axi4s_vid_out_0_vtg_ce [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins v_axi4s_vid_out_0/fid] [get_bd_pins xlconstant_0/dout]
 
   # Restore current instance
   current_bd_instance $oldCurInst

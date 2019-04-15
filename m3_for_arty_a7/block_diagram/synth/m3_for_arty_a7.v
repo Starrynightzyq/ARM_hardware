@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Mon Apr 15 00:12:46 2019
+//Date        : Mon Apr 15 18:16:26 2019
 //Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7.bd
 //Design      : m3_for_arty_a7
@@ -4638,7 +4638,7 @@ module m10_couplers_imp_1R2RH3W
   assign m10_couplers_to_m10_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=75,numReposBlks=53,numNonXlnxBlks=4,numHierBlks=22,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=19,da_bram_cntlr_cnt=3,da_clkrst_cnt=11,da_mb_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
+(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=79,numReposBlks=57,numNonXlnxBlks=4,numHierBlks=22,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=20,da_bram_cntlr_cnt=3,da_clkrst_cnt=11,da_mb_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
 module m3_for_arty_a7
    (DAPLink_tri_o,
     DDR2_0_addr,
@@ -5963,6 +5963,7 @@ module m3_for_arty_a7
         .ip2intc_irpt(ov_cmos_ip2intc_irpt),
         .reset_0(reset_1),
         .reset_1(reset_1),
+        .reset_2(reset_1),
         .s_axi_lite_aclk(clk_wiz_0_clk_out1),
         .sys_clock_0(sys_clock_0_1),
         .vga_pBlue_0(ov_cmos_vga_pBlue_0),
@@ -9221,6 +9222,7 @@ module ov_cmos_imp_183AGT0
     ip2intc_irpt,
     reset_0,
     reset_1,
+    reset_2,
     s_axi_lite_aclk,
     sys_clock_0,
     vga_pBlue_0,
@@ -9344,6 +9346,7 @@ module ov_cmos_imp_183AGT0
   output ip2intc_irpt;
   input reset_0;
   input reset_1;
+  input reset_2;
   input s_axi_lite_aclk;
   input sys_clock_0;
   output [3:0]vga_pBlue_0;
@@ -9502,6 +9505,7 @@ module ov_cmos_imp_183AGT0
   wire [7:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
   wire [23:0]axi_vdma_0_M_AXIS_MM2S_TDATA;
+  wire [2:0]axi_vdma_0_M_AXIS_MM2S_TKEEP;
   wire axi_vdma_0_M_AXIS_MM2S_TLAST;
   wire axi_vdma_0_M_AXIS_MM2S_TREADY;
   wire [0:0]axi_vdma_0_M_AXIS_MM2S_TUSER;
@@ -9535,6 +9539,7 @@ module ov_cmos_imp_183AGT0
   wire axi_vdma_0_M_AXI_S2MM_WREADY;
   wire [7:0]axi_vdma_0_M_AXI_S2MM_WSTRB;
   wire axi_vdma_0_M_AXI_S2MM_WVALID;
+  wire clk_wiz_0_locked;
   wire clk_wiz_clk_24M;
   wire clk_wiz_clk_25M;
   wire clk_wiz_locked;
@@ -9546,8 +9551,12 @@ module ov_cmos_imp_183AGT0
   wire mig_7series_0_ui_addn_clk_0;
   wire mig_7series_0_ui_clk;
   wire mig_7series_0_ui_clk_sync_rst;
+  wire [0:0]proc_sys_reset_0_peripheral_aresetn;
+  wire [0:0]proc_sys_reset_0_peripheral_reset;
+  wire [0:0]proc_sys_reset_1_peripheral_aresetn;
   wire reset_0_1;
   wire reset_1_1;
+  wire reset_2_1;
   wire [3:0]rgb2vga_0_vga_pBlue;
   wire [3:0]rgb2vga_0_vga_pGreen;
   wire rgb2vga_0_vga_pHSync;
@@ -9555,10 +9564,10 @@ module ov_cmos_imp_183AGT0
   wire rgb2vga_0_vga_pVSync;
   wire s_axi_lite_aclk_1;
   wire sys_clock_0_1;
-  wire v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO;
-  wire [23:0]v_axi4s_vid_out_0_vid_io_out_DATA;
-  wire v_axi4s_vid_out_0_vid_io_out_HSYNC;
-  wire v_axi4s_vid_out_0_vid_io_out_VSYNC;
+  wire v_axi4s_vid_out_0_vid_active_video;
+  wire [23:0]v_axi4s_vid_out_0_vid_data;
+  wire v_axi4s_vid_out_0_vid_hsync;
+  wire v_axi4s_vid_out_0_vid_vsync;
   wire v_axi4s_vid_out_0_vtg_ce;
   wire v_tc_0_vtiming_out_ACTIVE_VIDEO;
   wire v_tc_0_vtiming_out_HBLANK;
@@ -9684,6 +9693,7 @@ module ov_cmos_imp_183AGT0
   assign ip2intc_irpt = axi_gpio_1_ip2intc_irpt;
   assign reset_0_1 = reset_0;
   assign reset_1_1 = reset_1;
+  assign reset_2_1 = reset_2;
   assign s_axi_lite_aclk_1 = s_axi_lite_aclk;
   assign sys_clock_0_1 = sys_clock_0;
   assign vga_pBlue_0[3:0] = rgb2vga_0_vga_pBlue;
@@ -9892,6 +9902,7 @@ module ov_cmos_imp_183AGT0
         .m_axi_s2mm_wvalid(axi_vdma_0_M_AXI_S2MM_WVALID),
         .m_axis_mm2s_aclk(mig_7series_0_ui_addn_clk_0),
         .m_axis_mm2s_tdata(axi_vdma_0_M_AXIS_MM2S_TDATA),
+        .m_axis_mm2s_tkeep(axi_vdma_0_M_AXIS_MM2S_TKEEP),
         .m_axis_mm2s_tlast(axi_vdma_0_M_AXIS_MM2S_TLAST),
         .m_axis_mm2s_tready(axi_vdma_0_M_AXIS_MM2S_TREADY),
         .m_axis_mm2s_tuser(axi_vdma_0_M_AXIS_MM2S_TUSER),
@@ -9929,7 +9940,25 @@ module ov_cmos_imp_183AGT0
   m3_for_arty_a7_clk_wiz_0_1 clk_wiz_0
        (.clk_200M(mig_7series_0_ui_addn_clk_0),
         .clk_in1(sys_clock_0_1),
+        .locked(clk_wiz_0_locked),
         .resetn(reset_1_1));
+  m3_for_arty_a7_ila_0_0 ila_0
+       (.clk(mig_7series_0_ui_addn_clk_0),
+        .probe0(axi_vdma_0_M_AXIS_MM2S_TREADY),
+        .probe1(axi_vdma_0_M_AXIS_MM2S_TDATA),
+        .probe2({1'b1,1'b1,1'b1}),
+        .probe3(axi_vdma_0_M_AXIS_MM2S_TVALID),
+        .probe4(axi_vdma_0_M_AXIS_MM2S_TLAST),
+        .probe5(axi_vdma_0_M_AXIS_MM2S_TUSER),
+        .probe6(axi_vdma_0_M_AXIS_MM2S_TKEEP),
+        .probe7(1'b0),
+        .probe8(1'b0));
+  m3_for_arty_a7_ila_1_0 ila_1
+       (.clk(clk_wiz_clk_25M),
+        .probe0(v_axi4s_vid_out_0_vid_data),
+        .probe1(v_axi4s_vid_out_0_vid_hsync),
+        .probe2(v_axi4s_vid_out_0_vid_vsync),
+        .probe3(v_axi4s_vid_out_0_vid_active_video));
   m3_for_arty_a7_mig_7series_0_1 mig_7series_0
        (.aresetn(aresetn_1),
         .ddr2_addr(Conn2_ADDR),
@@ -9986,12 +10015,27 @@ module ov_cmos_imp_183AGT0
         .sys_rst(reset_0_1),
         .ui_clk(mig_7series_0_ui_clk),
         .ui_clk_sync_rst(mig_7series_0_ui_clk_sync_rst));
+  m3_for_arty_a7_proc_sys_reset_1_0 proc_sys_reset_200M
+       (.aux_reset_in(1'b1),
+        .dcm_locked(clk_wiz_0_locked),
+        .ext_reset_in(reset_2_1),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(proc_sys_reset_1_peripheral_aresetn),
+        .slowest_sync_clk(mig_7series_0_ui_addn_clk_0));
+  m3_for_arty_a7_proc_sys_reset_0_0 proc_sys_reset_25M
+       (.aux_reset_in(1'b1),
+        .dcm_locked(clk_wiz_locked),
+        .ext_reset_in(reset_2_1),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .peripheral_reset(proc_sys_reset_0_peripheral_reset),
+        .slowest_sync_clk(clk_wiz_clk_25M));
   m3_for_arty_a7_rgb2vga_0_0 rgb2vga_0
        (.PixelClk(clk_wiz_clk_25M),
-        .rgb_pData(v_axi4s_vid_out_0_vid_io_out_DATA),
-        .rgb_pHSync(v_axi4s_vid_out_0_vid_io_out_HSYNC),
-        .rgb_pVDE(v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO),
-        .rgb_pVSync(v_axi4s_vid_out_0_vid_io_out_VSYNC),
+        .rgb_pData(v_axi4s_vid_out_0_vid_data),
+        .rgb_pHSync(v_axi4s_vid_out_0_vid_hsync),
+        .rgb_pVDE(v_axi4s_vid_out_0_vid_active_video),
+        .rgb_pVSync(v_axi4s_vid_out_0_vid_vsync),
         .vga_pBlue(rgb2vga_0_vga_pBlue),
         .vga_pGreen(rgb2vga_0_vga_pGreen),
         .vga_pHSync(rgb2vga_0_vga_pHSync),
@@ -10006,21 +10050,21 @@ module ov_cmos_imp_183AGT0
         .slowest_sync_clk(mig_7series_0_ui_clk));
   m3_for_arty_a7_v_axi4s_vid_out_0_0 v_axi4s_vid_out_0
        (.aclk(mig_7series_0_ui_addn_clk_0),
-        .aclken(clk_wiz_locked),
-        .aresetn(clk_wiz_locked),
+        .aclken(1'b1),
+        .aresetn(proc_sys_reset_1_peripheral_aresetn),
         .fid(1'b0),
         .s_axis_video_tdata(axi_vdma_0_M_AXIS_MM2S_TDATA),
         .s_axis_video_tlast(axi_vdma_0_M_AXIS_MM2S_TLAST),
         .s_axis_video_tready(axi_vdma_0_M_AXIS_MM2S_TREADY),
         .s_axis_video_tuser(axi_vdma_0_M_AXIS_MM2S_TUSER),
         .s_axis_video_tvalid(axi_vdma_0_M_AXIS_MM2S_TVALID),
-        .vid_active_video(v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO),
-        .vid_data(v_axi4s_vid_out_0_vid_io_out_DATA),
-        .vid_hsync(v_axi4s_vid_out_0_vid_io_out_HSYNC),
-        .vid_io_out_ce(clk_wiz_locked),
+        .vid_active_video(v_axi4s_vid_out_0_vid_active_video),
+        .vid_data(v_axi4s_vid_out_0_vid_data),
+        .vid_hsync(v_axi4s_vid_out_0_vid_hsync),
+        .vid_io_out_ce(1'b1),
         .vid_io_out_clk(clk_wiz_clk_25M),
-        .vid_io_out_reset(clk_wiz_locked),
-        .vid_vsync(v_axi4s_vid_out_0_vid_io_out_VSYNC),
+        .vid_io_out_reset(proc_sys_reset_0_peripheral_reset),
+        .vid_vsync(v_axi4s_vid_out_0_vid_vsync),
         .vtg_active_video(v_tc_0_vtiming_out_ACTIVE_VIDEO),
         .vtg_ce(v_axi4s_vid_out_0_vtg_ce),
         .vtg_field_id(1'b0),
@@ -10031,18 +10075,18 @@ module ov_cmos_imp_183AGT0
   m3_for_arty_a7_v_tc_0_0 v_tc_0
        (.active_video_out(v_tc_0_vtiming_out_ACTIVE_VIDEO),
         .clk(clk_wiz_clk_25M),
-        .clken(clk_wiz_locked),
+        .clken(1'b1),
         .gen_clken(v_axi4s_vid_out_0_vtg_ce),
         .hblank_out(v_tc_0_vtiming_out_HBLANK),
         .hsync_out(v_tc_0_vtiming_out_HSYNC),
-        .resetn(clk_wiz_locked),
+        .resetn(proc_sys_reset_0_peripheral_aresetn),
         .vblank_out(v_tc_0_vtiming_out_VBLANK),
         .vsync_out(v_tc_0_vtiming_out_VSYNC));
   m3_for_arty_a7_v_vid_in_axi4s_0_0 v_vid_in_axi4s_0
        (.aclk(mig_7series_0_ui_addn_clk_0),
         .aclken(1'b1),
-        .aresetn(1'b1),
-        .axis_enable(1'b1),
+        .aresetn(proc_sys_reset_1_peripheral_aresetn),
+        .axis_enable(clk_wiz_0_locked),
         .m_axis_video_tdata(v_vid_in_axi4s_0_video_out_TDATA),
         .m_axis_video_tlast(v_vid_in_axi4s_0_video_out_TLAST),
         .m_axis_video_tready(v_vid_in_axi4s_0_video_out_TREADY),
@@ -10055,7 +10099,7 @@ module ov_cmos_imp_183AGT0
         .vid_hsync(OV_Sensor_0_video_o_HSYNC),
         .vid_io_in_ce(OV_Sensor_0_vid_clk_ce),
         .vid_io_in_clk(cmos_pclk_1),
-        .vid_io_in_reset(1'b0),
+        .vid_io_in_reset(proc_sys_reset_0_peripheral_reset),
         .vid_vblank(1'b0),
         .vid_vsync(OV_Sensor_0_video_o_VSYNC));
 endmodule

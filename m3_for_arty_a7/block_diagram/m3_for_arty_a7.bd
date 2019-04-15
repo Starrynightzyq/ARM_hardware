@@ -790,6 +790,7 @@
         <spirit:internalPortReference spirit:componentRef="Clocks_and_Resets" spirit:portRef="sys_reset_n"/>
         <spirit:internalPortReference spirit:componentRef="ov_cmos" spirit:portRef="reset_0"/>
         <spirit:internalPortReference spirit:componentRef="ov_cmos" spirit:portRef="reset_1"/>
+        <spirit:internalPortReference spirit:componentRef="ov_cmos" spirit:portRef="reset_2"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_iic_1_iic2intc_irpt</spirit:name>
@@ -1081,6 +1082,24 @@
           </spirit:portMap>
         </spirit:portMaps>
       </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RESET_2</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>reset_2</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+      </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
       <spirit:views>
@@ -1201,6 +1220,12 @@
           <spirit:name>ip2intc_irpt</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reset_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -1358,6 +1383,46 @@
           <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">114.829</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ila_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_ila_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_DATA_DEPTH">2048</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">9</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_AXI_PROTOCOL">AXI4S</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ila_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_ila_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_WIDTH">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_WIDTH">24</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_DATA_DEPTH">2048</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_25M</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_proc_sys_reset_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="USE_BOARD_FLOW">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="RESET_BOARD_INTERFACE">reset</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_200M</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_proc_sys_reset_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="RESET_BOARD_INTERFACE">reset</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -1380,11 +1445,11 @@
         <spirit:activeInterface spirit:busRef="video_in" spirit:componentRef="v_axi4s_vid_out_0"/>
         <spirit:activeInterface spirit:busRef="M_AXIS_MM2S" spirit:componentRef="axi_vdma_0"/>
       </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>v_axi4s_vid_out_0_vid_io_out</spirit:name>
-        <spirit:activeInterface spirit:busRef="vid_io_out" spirit:componentRef="v_axi4s_vid_out_0"/>
-        <spirit:activeInterface spirit:busRef="vid_in" spirit:componentRef="rgb2vga_0"/>
-      </spirit:interconnection>
+      <spirit:monitorInterconnection>
+        <spirit:name>axi_vdma_0_M_AXIS_MM2S</spirit:name>
+        <spirit:monitoredActiveInterface spirit:busRef="video_in" spirit:componentRef="v_axi4s_vid_out_0"/>
+        <spirit:monitorInterface spirit:busRef="SLOT_0_AXIS" spirit:componentRef="ila_0"/>
+      </spirit:monitorInterconnection>
       <spirit:interconnection>
         <spirit:name>axi_smc_M00_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="mig_7series_0"/>
@@ -1451,6 +1516,8 @@
         <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="sys_clk_i"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="m_axis_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_200M" spirit:portRef="slowest_sync_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mig_7series_0_ui_clk</spirit:name>
@@ -1504,6 +1571,8 @@
         <spirit:internalPortReference spirit:componentRef="v_tc_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="PixelClk"/>
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_io_out_clk"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_25M" spirit:portRef="slowest_sync_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rgb2vga_0_vga_pBlue</spirit:name>
@@ -1538,12 +1607,7 @@
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_locked</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz" spirit:portRef="locked"/>
-        <spirit:internalPortReference spirit:componentRef="v_tc_0" spirit:portRef="clken"/>
-        <spirit:internalPortReference spirit:componentRef="v_tc_0" spirit:portRef="resetn"/>
-        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aclken"/>
-        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_io_out_ce"/>
-        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_io_out_reset"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_25M" spirit:portRef="dcm_locked"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_iic_0_iic2intc_irpt</spirit:name>
@@ -1554,6 +1618,59 @@
         <spirit:name>axi_gpio_1_ip2intc_irpt</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="ip2intc_irpt"/>
         <spirit:externalPortReference spirit:portRef="ip2intc_irpt"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>v_axi4s_vid_out_0_vid_active_video</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_active_video"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pVDE"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>v_axi4s_vid_out_0_vid_data</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_data"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pData"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>v_axi4s_vid_out_0_vid_hsync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_hsync"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pHSync"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>v_axi4s_vid_out_0_vid_vsync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_vsync"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pVSync"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_locked</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="locked"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_200M" spirit:portRef="dcm_locked"/>
+        <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="axis_enable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>reset_2_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="reset_2"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_25M" spirit:portRef="ext_reset_in"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_200M" spirit:portRef="ext_reset_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>proc_sys_reset_0_peripheral_reset</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_25M" spirit:portRef="peripheral_reset"/>
+        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="vid_io_out_reset"/>
+        <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="vid_io_in_reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>proc_sys_reset_0_peripheral_aresetn</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_25M" spirit:portRef="peripheral_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="v_tc_0" spirit:portRef="resetn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>proc_sys_reset_1_peripheral_aresetn</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_200M" spirit:portRef="peripheral_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="v_vid_in_axi4s_0" spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aresetn"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
