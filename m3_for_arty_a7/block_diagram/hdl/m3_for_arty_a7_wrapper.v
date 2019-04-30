@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Apr 23 20:38:48 2019
-//Host        : ZYQ-Mac-Win running 64-bit major release  (build 9200)
+//Date        : Mon Apr 29 14:23:07 2019
+//Host        : DESKTOP-A56TUCA running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
 //Purpose     : IP block netlist
@@ -35,6 +35,7 @@ module m3_for_arty_a7_wrapper
     cmos_pwdn_tri_o,
     cmos_rst_tri_o,
     cmos_vsync,
+    cmos_xclk_o_0,
     dip_switches_4bits_tri_i,
     led_4bits_tri_io,
     nTRST,
@@ -79,6 +80,7 @@ module m3_for_arty_a7_wrapper
   output [0:0]cmos_pwdn_tri_o;
   output [0:0]cmos_rst_tri_o;
   input cmos_vsync;
+  output cmos_xclk_o_0;
   input [3:0]dip_switches_4bits_tri_i;
   inout [3:0]led_4bits_tri_io;
   input nTRST;
@@ -130,6 +132,7 @@ module m3_for_arty_a7_wrapper
   wire [0:0]cmos_pwdn_tri_o;
   wire [0:0]cmos_rst_tri_o;
   wire cmos_vsync;
+  wire cmos_xclk_o_0;
   wire [3:0]dip_switches_4bits_tri_i;
   wire [0:0]led_4bits_tri_i_0;
   wire [1:1]led_4bits_tri_i_1;
@@ -246,6 +249,7 @@ module m3_for_arty_a7_wrapper
         .cmos_pwdn_tri_o(cmos_pwdn_tri_o),
         .cmos_rst_tri_o(cmos_rst_tri_o),
         .cmos_vsync(cmos_vsync),
+        .cmos_xclk_o_0(cmos_xclk_o_0),
         .dip_switches_4bits_tri_i(dip_switches_4bits_tri_i),
         .led_4bits_tri_i({led_4bits_tri_i_3,led_4bits_tri_i_2,led_4bits_tri_i_1,led_4bits_tri_i_0}),
         .led_4bits_tri_o({led_4bits_tri_o_3,led_4bits_tri_o_2,led_4bits_tri_o_1,led_4bits_tri_o_0}),

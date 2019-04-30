@@ -108,37 +108,59 @@ ArmCortex-M3 DesignStart处理器；
 | **Pmod JB** |                        |
 | ----------- | ---------------------- |
 | JB1: D14    |                        |
-| JB2: F16    | nTRST                  |
+| JB2: F16    | nTRST（PULLUP）        |
 | JB3: G16    | TDO                    |
-| JB4: H14    | TDI                    |
+| JB4: H14    | TDI（PULLDOWN）        |
 | JB7: E16    |                        |
 | JB8: F13    | nSRST(dap13)（PULLUP） |
 | JB9: G13    | SWDIO(dap14)（PULLUP） |
 | JB10: H16   | SWCLKTCK(dap15)        |
 
-| **Pmod JC** |       |
-| ----------- | ----- |
-| JC1: K1     | PWDN  |
-| JC2: F6     | PCLK  |
-| JC3: J2     | D6    |
-| JC4: G6     | D4    |
-| JC7: E7     | FLASH |
-| JC8: J3     | D7    |
-| JC9: J4     | D5    |
-| JC10: E6    | D3    |
+| **Pmod JC** | 正点原子OV5640 | 微雪OV5640 |
+| ----------- | -------------- | ---------- |
+| JC1: K1     | PWDN           | PWDN       |
+| JC2: F6     | PCLK           | D0         |
+| JC3: J2     | D6             | D2         |
+| JC4: G6     | D4             | D4         |
+| JC7: E7     | FLASH          | RST        |
+| JC8: J3     | D7             | D1         |
+| JC9: J4     | D5             | D3         |
+| JC10: E6    | D3             | D5         |
 
-| **Pmod JD** | (ov5640)           | (ov7725) |
-| ----------- | ------------------ | -------- |
-| JD1: H4     | D2                 |          |
-| JD2: H1     | D0                 |          |
-| JD3: G1     | CAM_SDA（PULLUP）  |          |
-| JD4: G3     | CAM_SCL（PULLUP）* | SDA      |
-| JD7: H2     | D1                 |          |
-| JD8: G4     | RST                |          |
-| JD9: G2     | HREF               |          |
-| JD10: F3    | VSYNC              | SCL      |
+| **Pmod JD** | 正点原子OV5640     | 微雪OV5640 |
+| ----------- | ------------------ | ---------- |
+| JD1: H4     | D2                 | D6         |
+| JD2: H1     | D0                 | XCLK       |
+| JD3: G1     | CAM_SDA（PULLUP）  | HREF       |
+| JD4: G3     | CAM_SCL（PULLUP）* | SDA        |
+| JD7: H2     | D1                 | D7         |
+| JD8: G4     | RST                | PCLK       |
+| JD9: G2     | HREF               | VSYNC      |
+| JD10: F3    | VSYNC              | SCL        |
 
 ## OV5640
 
 这里需要特别注意的地方是：OV5640的上电时序比较特殊，我们初始化PWDN和RST应该特别小心，初始化先控制RST为低电平，PWDN为高电平，使摄像头处于待机模式，延时10ms后控制PWDN为低电平，再延时10ms后控制RST为高电平，OV5640模组启动。
+
+| 正点原子OV5640 | 微雪OV5640 |
+| -------------- | ---------- |
+| GND            | GND        |
+| SCL            | SDA        |
+| SDA            | HRE        |
+| D0             | XCLK       |
+| D2             | D6         |
+| D4             | D4         |
+| D6             | D2         |
+| PCLK           | D0         |
+| PWDN           | PWDN       |
+|                |            |
+| VCC            | VCC        |
+| VSYNC          | SCL        |
+| HREF           | VSYNC      |
+| RST            | PCLK       |
+| D1             | D7         |
+| D3             | D5         |
+| D5             | D3         |
+| D7             | D1         |
+| FLASH          | RST        |
 
