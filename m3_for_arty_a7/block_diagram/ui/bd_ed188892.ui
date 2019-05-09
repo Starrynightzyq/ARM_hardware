@@ -1,0 +1,62 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port clk_cpu -pg 1 -y 250 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 230 -defaultsOSRD
+preplace port resetn -pg 1 -y 820 -defaultsOSRD
+preplace port input_r -pg 1 -y 660 -defaultsOSRD
+preplace port peripheral_aresetn_100M -pg 1 -y 270 -defaultsOSRD
+preplace port clk_200M -pg 1 -y 330 -defaultsOSRD
+preplace port clk -pg 1 -y 760 -defaultsOSRD
+preplace port M_AXIS -pg 1 -y 460 -defaultsOSRD
+preplace port peripheral_aresetn_200M -pg 1 -y 350 -defaultsOSRD
+preplace inst axis_broadcaster_0 -pg 1 -lvl 1 -y 680 -defaultsOSRD
+preplace inst axis_broadcaster_1 -pg 1 -lvl 3 -y 570 -defaultsOSRD
+preplace inst axis_broadcaster_2 -pg 1 -lvl 6 -y 500 -defaultsOSRD
+preplace inst threshold2_1 -pg 1 -lvl 2 -y 550 -defaultsOSRD
+preplace inst axis_switch_1 -pg 1 -lvl 7 -y 550 -defaultsOSRD
+preplace inst axis_switch_4 -pg 1 -lvl 9 -y 580 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 8 -y 610 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 10 -y 670 -defaultsOSRD
+preplace inst display_top_0 -pg 1 -lvl 5 -y 180 -defaultsOSRD
+preplace inst Projection_1 -pg 1 -lvl 4 -y 180 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace netloc Conn1 1 0 1 NJ
+preplace netloc Projection_1_character_num_v 1 4 6 1500 770 NJ 770 NJ 770 NJ 770 NJ 770 3290J
+preplace netloc display_top_0_M_AXIS1 1 5 1 1900
+preplace netloc axis_broadcaster_1_M01_AXIS 1 3 4 N 580 NJ 580 NJ 580 2210J
+preplace netloc axis_broadcaster_0_M00_AXIS 1 1 8 330J 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 2900
+preplace netloc axis_subset_converter_0_M_AXIS 1 8 1 2910
+preplace netloc Projection_1_M_AXI 1 4 6 1510 680 NJ 680 NJ 680 2510J 450 NJ 450 3240J
+preplace netloc ACLK_1 1 0 1 30
+preplace netloc axi_interconnect_0_M02_AXI 1 1 6 NJ 360 750J 370 NJ 370 NJ 370 NJ 370 2230
+preplace netloc Projection_1_character_num_h_valid 1 4 6 1450 360 NJ 360 NJ 360 NJ 360 NJ 360 3260J
+preplace netloc Projection_1_bound_u_p 1 4 6 1480 420 NJ 420 NJ 420 NJ 420 NJ 420 3220J
+preplace netloc ARESETN_1 1 0 1 20
+preplace netloc axis_broadcaster_0_M01_AXIS 1 1 1 340
+preplace netloc Projection_1_hcount 1 4 6 1440 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ
+preplace netloc Projection_1_bound_l_p 1 4 6 1540 410 NJ 410 NJ 410 NJ 410 NJ 410 3280J
+preplace netloc threshold2_1_output_r1 1 2 1 N
+preplace netloc axis_switch_1_M00_AXIS 1 7 1 2530
+preplace netloc threshold2_1_output_r 1 3 7 1100 570 NJ 570 1880J 610 2210J 670 2520J 460 NJ 460 3230J
+preplace netloc input_r_1 1 0 1 NJ
+preplace netloc resetn_1 1 0 10 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ
+preplace netloc clk_1 1 0 10 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 3200J
+preplace netloc Projection_1_bound_d_p 1 4 6 1470 390 NJ 390 NJ 390 NJ 390 NJ 390 3250J
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 370
+preplace netloc axi_resetn_1 1 0 9 20 600 370 640 770 360 1070 10 1550 520 1890 590 2220 700 2550 520 2880
+preplace netloc axi_interconnect_0_M01_AXI 1 1 3 NJ 340 NJ 340 1090
+preplace netloc Projection_1_bound_r_p 1 4 6 1520 400 NJ 400 NJ 400 NJ 400 NJ 400 3290J
+preplace netloc clk_200M_1 1 0 9 30 560 360 650 760 350 1080 20 1530 500 1900 600 2230 730 2540 510 2920
+preplace netloc axis_switch_4_M00_AXIS 1 9 2 3270 460 NJ
+preplace netloc Projection_1_vcount 1 4 6 1430 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ
+preplace netloc axis_broadcaster_2_M01_AXIS 1 6 1 N
+preplace netloc axis_broadcaster_2_M00_AXIS 1 6 4 2200J 720 NJ 720 NJ 720 3230
+preplace netloc axi_interconnect_0_M03_AXI 1 1 8 350J 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 2560J 530 2890
+preplace netloc Projection_1_character_num_h 1 4 6 1460 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ
+preplace netloc Projection_1_character_num_v_valid 1 4 6 1490 750 NJ 750 NJ 750 2560J 700 NJ 700 3210J
+levelinfo -pg 1 0 180 560 920 1270 1740 2050 2370 2720 3060 3390 3530 -top 0 -bot 880
+",
+}
+0
