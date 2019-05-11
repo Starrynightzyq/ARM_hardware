@@ -4361,24 +4361,6 @@ module bd_c8ed_g_inst_0_gigantic_mux # (
      assign m_slot_1_axis_tid = slot_1_axis_tid ;
      assign m_slot_1_axis_tkeep = slot_1_axis_tkeep ;
      assign m_slot_1_axis_tdest = slot_1_axis_tdest ;
-     assign m_slot_2_axis_tvalid = slot_2_axis_tvalid ;
-     assign m_slot_2_axis_tready = slot_2_axis_tready ;
-     assign m_slot_2_axis_tdata = slot_2_axis_tdata ;
-     assign m_slot_2_axis_tstrb = slot_2_axis_tstrb ;
-     assign m_slot_2_axis_tlast = slot_2_axis_tlast ;
-     assign m_slot_2_axis_tuser = slot_2_axis_tuser ;
-     assign m_slot_2_axis_tid = slot_2_axis_tid ;
-     assign m_slot_2_axis_tkeep = slot_2_axis_tkeep ;
-     assign m_slot_2_axis_tdest = slot_2_axis_tdest ;
-     assign m_slot_3_axis_tvalid = slot_3_axis_tvalid ;
-     assign m_slot_3_axis_tready = slot_3_axis_tready ;
-     assign m_slot_3_axis_tdata = slot_3_axis_tdata ;
-     assign m_slot_3_axis_tstrb = slot_3_axis_tstrb ;
-     assign m_slot_3_axis_tlast = slot_3_axis_tlast ;
-     assign m_slot_3_axis_tuser = slot_3_axis_tuser ;
-     assign m_slot_3_axis_tid = slot_3_axis_tid ;
-     assign m_slot_3_axis_tkeep = slot_3_axis_tkeep ;
-     assign m_slot_3_axis_tdest = slot_3_axis_tdest ;
 
     
     
