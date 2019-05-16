@@ -55,18 +55,25 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module m3_for_arty_a7_system_ila_0_0 (
   clk,
+  probe0,
   SLOT_0_VID_IO_data,
   SLOT_0_VID_IO_active_video,
   SLOT_0_VID_IO_hblank,
   SLOT_0_VID_IO_vblank,
   SLOT_0_VID_IO_hsync,
   SLOT_0_VID_IO_vsync,
-  SLOT_0_VID_IO_field
+  SLOT_0_VID_IO_field,
+  SLOT_1_VIDEO_TIMING_active_video,
+  SLOT_1_VIDEO_TIMING_hblank,
+  SLOT_1_VIDEO_TIMING_vblank,
+  SLOT_1_VIDEO_TIMING_hsync,
+  SLOT_1_VIDEO_TIMING_vsync
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 25000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_wiz_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *)
 input wire clk;
+input wire [0 : 0] probe0;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO DATA" *)
 input wire [23 : 0] SLOT_0_VID_IO_data;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO ACTIVE_VIDEO" *)
@@ -81,15 +88,31 @@ input wire SLOT_0_VID_IO_hsync;
 input wire SLOT_0_VID_IO_vsync;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO FIELD" *)
 input wire SLOT_0_VID_IO_field;
+(* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING ACTIVE_VIDEO" *)
+input wire SLOT_1_VIDEO_TIMING_active_video;
+(* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING HBLANK" *)
+input wire SLOT_1_VIDEO_TIMING_hblank;
+(* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING VBLANK" *)
+input wire SLOT_1_VIDEO_TIMING_vblank;
+(* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING HSYNC" *)
+input wire SLOT_1_VIDEO_TIMING_hsync;
+(* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING VSYNC" *)
+input wire SLOT_1_VIDEO_TIMING_vsync;
 
   bd_082c inst (
     .clk(clk),
+    .probe0(probe0),
     .SLOT_0_VID_IO_data(SLOT_0_VID_IO_data),
     .SLOT_0_VID_IO_active_video(SLOT_0_VID_IO_active_video),
     .SLOT_0_VID_IO_hblank(SLOT_0_VID_IO_hblank),
     .SLOT_0_VID_IO_vblank(SLOT_0_VID_IO_vblank),
     .SLOT_0_VID_IO_hsync(SLOT_0_VID_IO_hsync),
     .SLOT_0_VID_IO_vsync(SLOT_0_VID_IO_vsync),
-    .SLOT_0_VID_IO_field(SLOT_0_VID_IO_field)
+    .SLOT_0_VID_IO_field(SLOT_0_VID_IO_field),
+    .SLOT_1_VIDEO_TIMING_active_video(SLOT_1_VIDEO_TIMING_active_video),
+    .SLOT_1_VIDEO_TIMING_hblank(SLOT_1_VIDEO_TIMING_hblank),
+    .SLOT_1_VIDEO_TIMING_vblank(SLOT_1_VIDEO_TIMING_vblank),
+    .SLOT_1_VIDEO_TIMING_hsync(SLOT_1_VIDEO_TIMING_hsync),
+    .SLOT_1_VIDEO_TIMING_vsync(SLOT_1_VIDEO_TIMING_vsync)
   );
 endmodule

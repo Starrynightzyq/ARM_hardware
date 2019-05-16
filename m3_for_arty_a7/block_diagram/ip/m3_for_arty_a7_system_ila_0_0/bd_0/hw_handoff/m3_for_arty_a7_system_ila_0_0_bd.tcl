@@ -157,6 +157,7 @@ proc create_root_design { parentCell } {
 
   # Create interface ports
   set SLOT_0_VID_IO [ create_bd_intf_port -mode Monitor -vlnv xilinx.com:interface:vid_io_rtl:1.0 SLOT_0_VID_IO ]
+  set SLOT_1_VIDEO_TIMING [ create_bd_intf_port -mode Monitor -vlnv xilinx.com:interface:video_timing_rtl:2.0 SLOT_1_VIDEO_TIMING ]
 
   # Create ports
   set clk [ create_bd_port -dir I -type clk clk ]
@@ -164,6 +165,7 @@ proc create_root_design { parentCell } {
    CONFIG.ASSOCIATED_BUSIF {} \
    CONFIG.ASSOCIATED_RESET {} \
  ] $clk
+  set probe0 [ create_bd_port -dir I -from 0 -to 0 probe0 ]
 
   # Create instance: ila_lib, and set properties
   set ila_lib [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_lib ]
@@ -177,13 +179,20 @@ proc create_root_design { parentCell } {
    CONFIG.C_ILA_CLK_FREQ {25000000} \
    CONFIG.C_INPUT_PIPE_STAGES {0} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {7} \
+   CONFIG.C_NUM_OF_PROBES {13} \
+   CONFIG.C_PROBE0_MU_CNT {1} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE0_WIDTH {1} \
+   CONFIG.C_PROBE10_TYPE {0} \
+   CONFIG.C_PROBE10_WIDTH {1} \
+   CONFIG.C_PROBE11_TYPE {0} \
+   CONFIG.C_PROBE11_WIDTH {1} \
+   CONFIG.C_PROBE12_TYPE {0} \
+   CONFIG.C_PROBE12_WIDTH {1} \
    CONFIG.C_PROBE1_TYPE {0} \
-   CONFIG.C_PROBE1_WIDTH {24} \
+   CONFIG.C_PROBE1_WIDTH {1} \
    CONFIG.C_PROBE2_TYPE {0} \
-   CONFIG.C_PROBE2_WIDTH {1} \
+   CONFIG.C_PROBE2_WIDTH {24} \
    CONFIG.C_PROBE3_TYPE {0} \
    CONFIG.C_PROBE3_WIDTH {1} \
    CONFIG.C_PROBE4_TYPE {0} \
@@ -192,6 +201,12 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE5_WIDTH {1} \
    CONFIG.C_PROBE6_TYPE {0} \
    CONFIG.C_PROBE6_WIDTH {1} \
+   CONFIG.C_PROBE7_TYPE {0} \
+   CONFIG.C_PROBE7_WIDTH {1} \
+   CONFIG.C_PROBE8_TYPE {0} \
+   CONFIG.C_PROBE8_WIDTH {1} \
+   CONFIG.C_PROBE9_TYPE {0} \
+   CONFIG.C_PROBE9_WIDTH {1} \
    CONFIG.C_TIME_TAG_WIDTH {32} \
    CONFIG.C_TRIGIN_EN {false} \
    CONFIG.C_TRIGOUT_EN {false} \
@@ -199,14 +214,20 @@ proc create_root_design { parentCell } {
  ] $ila_lib
 
   # Create port connections
-  connect_bd_net -net SLOT_0_VID_IO_active_video_1 [get_bd_ports SLOT_0_VID_IO_active_video] [get_bd_pins ila_lib/probe0]
-  connect_bd_net -net SLOT_0_VID_IO_data_1 [get_bd_ports SLOT_0_VID_IO_data] [get_bd_pins ila_lib/probe1]
-  connect_bd_net -net SLOT_0_VID_IO_field_1 [get_bd_ports SLOT_0_VID_IO_field] [get_bd_pins ila_lib/probe2]
-  connect_bd_net -net SLOT_0_VID_IO_hblank_1 [get_bd_ports SLOT_0_VID_IO_hblank] [get_bd_pins ila_lib/probe3]
-  connect_bd_net -net SLOT_0_VID_IO_hsync_1 [get_bd_ports SLOT_0_VID_IO_hsync] [get_bd_pins ila_lib/probe4]
-  connect_bd_net -net SLOT_0_VID_IO_vblank_1 [get_bd_ports SLOT_0_VID_IO_vblank] [get_bd_pins ila_lib/probe5]
-  connect_bd_net -net SLOT_0_VID_IO_vsync_1 [get_bd_ports SLOT_0_VID_IO_vsync] [get_bd_pins ila_lib/probe6]
+  connect_bd_net -net SLOT_0_VID_IO_active_video_1 [get_bd_ports SLOT_0_VID_IO_active_video] [get_bd_pins ila_lib/probe1]
+  connect_bd_net -net SLOT_0_VID_IO_data_1 [get_bd_ports SLOT_0_VID_IO_data] [get_bd_pins ila_lib/probe2]
+  connect_bd_net -net SLOT_0_VID_IO_field_1 [get_bd_ports SLOT_0_VID_IO_field] [get_bd_pins ila_lib/probe3]
+  connect_bd_net -net SLOT_0_VID_IO_hblank_1 [get_bd_ports SLOT_0_VID_IO_hblank] [get_bd_pins ila_lib/probe4]
+  connect_bd_net -net SLOT_0_VID_IO_hsync_1 [get_bd_ports SLOT_0_VID_IO_hsync] [get_bd_pins ila_lib/probe5]
+  connect_bd_net -net SLOT_0_VID_IO_vblank_1 [get_bd_ports SLOT_0_VID_IO_vblank] [get_bd_pins ila_lib/probe6]
+  connect_bd_net -net SLOT_0_VID_IO_vsync_1 [get_bd_ports SLOT_0_VID_IO_vsync] [get_bd_pins ila_lib/probe7]
+  connect_bd_net -net SLOT_1_VIDEO_TIMING_active_video_1 [get_bd_ports SLOT_1_VIDEO_TIMING_active_video] [get_bd_pins ila_lib/probe8]
+  connect_bd_net -net SLOT_1_VIDEO_TIMING_hblank_1 [get_bd_ports SLOT_1_VIDEO_TIMING_hblank] [get_bd_pins ila_lib/probe9]
+  connect_bd_net -net SLOT_1_VIDEO_TIMING_hsync_1 [get_bd_ports SLOT_1_VIDEO_TIMING_hsync] [get_bd_pins ila_lib/probe10]
+  connect_bd_net -net SLOT_1_VIDEO_TIMING_vblank_1 [get_bd_ports SLOT_1_VIDEO_TIMING_vblank] [get_bd_pins ila_lib/probe11]
+  connect_bd_net -net SLOT_1_VIDEO_TIMING_vsync_1 [get_bd_ports SLOT_1_VIDEO_TIMING_vsync] [get_bd_pins ila_lib/probe12]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins ila_lib/clk]
+  connect_bd_net -net probe0_1 [get_bd_ports probe0] [get_bd_pins ila_lib/probe0]
 
   # Create address segments
 

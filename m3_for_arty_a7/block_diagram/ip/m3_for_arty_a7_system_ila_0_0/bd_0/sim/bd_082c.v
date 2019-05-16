@@ -15,7 +15,13 @@ module bd_082c
     SLOT_0_VID_IO_hsync,
     SLOT_0_VID_IO_vblank,
     SLOT_0_VID_IO_vsync,
-    clk);
+    SLOT_1_VIDEO_TIMING_active_video,
+    SLOT_1_VIDEO_TIMING_hblank,
+    SLOT_1_VIDEO_TIMING_hsync,
+    SLOT_1_VIDEO_TIMING_vblank,
+    SLOT_1_VIDEO_TIMING_vsync,
+    clk,
+    probe0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO ACTIVE_VIDEO" *) input SLOT_0_VID_IO_active_video;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO DATA" *) input [23:0]SLOT_0_VID_IO_data;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO FIELD" *) input SLOT_0_VID_IO_field;
@@ -23,7 +29,13 @@ module bd_082c
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO HSYNC" *) input SLOT_0_VID_IO_hsync;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO VBLANK" *) input SLOT_0_VID_IO_vblank;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 SLOT_0_VID_IO VSYNC" *) input SLOT_0_VID_IO_vsync;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING ACTIVE_VIDEO" *) input SLOT_1_VIDEO_TIMING_active_video;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING HBLANK" *) input SLOT_1_VIDEO_TIMING_hblank;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING HSYNC" *) input SLOT_1_VIDEO_TIMING_hsync;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING VBLANK" *) input SLOT_1_VIDEO_TIMING_vblank;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 SLOT_1_VIDEO_TIMING VSYNC" *) input SLOT_1_VIDEO_TIMING_vsync;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN /ov_cmos/clk_wiz_clk_out1, FREQ_HZ 25000000, PHASE 0.0" *) input clk;
+  input [0:0]probe0;
 
   wire SLOT_0_VID_IO_active_video_1;
   wire [23:0]SLOT_0_VID_IO_data_1;
@@ -32,7 +44,13 @@ module bd_082c
   wire SLOT_0_VID_IO_hsync_1;
   wire SLOT_0_VID_IO_vblank_1;
   wire SLOT_0_VID_IO_vsync_1;
+  wire SLOT_1_VIDEO_TIMING_active_video_1;
+  wire SLOT_1_VIDEO_TIMING_hblank_1;
+  wire SLOT_1_VIDEO_TIMING_hsync_1;
+  wire SLOT_1_VIDEO_TIMING_vblank_1;
+  wire SLOT_1_VIDEO_TIMING_vsync_1;
   wire clk_1;
+  wire [0:0]probe0_1;
 
   assign SLOT_0_VID_IO_active_video_1 = SLOT_0_VID_IO_active_video;
   assign SLOT_0_VID_IO_data_1 = SLOT_0_VID_IO_data[23:0];
@@ -41,14 +59,26 @@ module bd_082c
   assign SLOT_0_VID_IO_hsync_1 = SLOT_0_VID_IO_hsync;
   assign SLOT_0_VID_IO_vblank_1 = SLOT_0_VID_IO_vblank;
   assign SLOT_0_VID_IO_vsync_1 = SLOT_0_VID_IO_vsync;
+  assign SLOT_1_VIDEO_TIMING_active_video_1 = SLOT_1_VIDEO_TIMING_active_video;
+  assign SLOT_1_VIDEO_TIMING_hblank_1 = SLOT_1_VIDEO_TIMING_hblank;
+  assign SLOT_1_VIDEO_TIMING_hsync_1 = SLOT_1_VIDEO_TIMING_hsync;
+  assign SLOT_1_VIDEO_TIMING_vblank_1 = SLOT_1_VIDEO_TIMING_vblank;
+  assign SLOT_1_VIDEO_TIMING_vsync_1 = SLOT_1_VIDEO_TIMING_vsync;
   assign clk_1 = clk;
+  assign probe0_1 = probe0[0];
   bd_082c_ila_lib_0 ila_lib
        (.clk(clk_1),
-        .probe0(SLOT_0_VID_IO_active_video_1),
-        .probe1(SLOT_0_VID_IO_data_1),
-        .probe2(SLOT_0_VID_IO_field_1),
-        .probe3(SLOT_0_VID_IO_hblank_1),
-        .probe4(SLOT_0_VID_IO_hsync_1),
-        .probe5(SLOT_0_VID_IO_vblank_1),
-        .probe6(SLOT_0_VID_IO_vsync_1));
+        .probe0(probe0_1),
+        .probe1(SLOT_0_VID_IO_active_video_1),
+        .probe10(SLOT_1_VIDEO_TIMING_hsync_1),
+        .probe11(SLOT_1_VIDEO_TIMING_vblank_1),
+        .probe12(SLOT_1_VIDEO_TIMING_vsync_1),
+        .probe2(SLOT_0_VID_IO_data_1),
+        .probe3(SLOT_0_VID_IO_field_1),
+        .probe4(SLOT_0_VID_IO_hblank_1),
+        .probe5(SLOT_0_VID_IO_hsync_1),
+        .probe6(SLOT_0_VID_IO_vblank_1),
+        .probe7(SLOT_0_VID_IO_vsync_1),
+        .probe8(SLOT_1_VIDEO_TIMING_active_video_1),
+        .probe9(SLOT_1_VIDEO_TIMING_hblank_1));
 endmodule

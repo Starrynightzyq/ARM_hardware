@@ -97,7 +97,7 @@ wire clk_in2_m3_for_arty_a7_clk_wiz_1;
 
   wire        clk_25M_m3_for_arty_a7_clk_wiz_1;
   wire        clk_24M_m3_for_arty_a7_clk_wiz_1;
-  wire        clk_out3_m3_for_arty_a7_clk_wiz_1;
+  wire        clk_100M_m3_for_arty_a7_clk_wiz_1;
   wire        clk_out4_m3_for_arty_a7_clk_wiz_1;
   wire        clk_out5_m3_for_arty_a7_clk_wiz_1;
   wire        clk_out6_m3_for_arty_a7_clk_wiz_1;

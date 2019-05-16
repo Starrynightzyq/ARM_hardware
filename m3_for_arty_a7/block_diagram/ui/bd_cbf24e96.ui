@@ -2,101 +2,104 @@
    ExpandedHierarchyInLayout: "",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
-preplace port cmos_rst -pg 1 -y 1100 -defaultsOSRD
-preplace port iic2intc_irpt -pg 1 -y 670 -defaultsOSRD
-preplace port S_AXI_LITE -pg 1 -y 390 -defaultsOSRD
-preplace port cmos_vsync -pg 1 -y 1160 -defaultsOSRD
-preplace port S00_AXI -pg 1 -y 330 -defaultsOSRD
-preplace port S02_AXI -pg 1 -y 310 -defaultsOSRD
-preplace port vga_pHSync_0 -pg 1 -y 1400 -defaultsOSRD
-preplace port cmos_href -pg 1 -y 1180 -defaultsOSRD
-preplace port sys_clock_0 -pg 1 -y 930 -defaultsOSRD
-preplace port cmos_pwdn -pg 1 -y 1080 -defaultsOSRD
-preplace port S_AXI -pg 1 -y 650 -defaultsOSRD
-preplace port axi_resetn -pg 1 -y 530 -defaultsOSRD
-preplace port cmos_pclk -pg 1 -y 1200 -defaultsOSRD
-preplace port ip2intc_irpt -pg 1 -y 1120 -defaultsOSRD
-preplace port vga_pVSync_0 -pg 1 -y 1420 -defaultsOSRD
-preplace port reset_0 -pg 1 -y 600 -defaultsOSRD
-preplace port s_axi_lite_aclk -pg 1 -y 430 -defaultsOSRD
-preplace port cmos_iic -pg 1 -y 650 -defaultsOSRD
-preplace port cmos_xclk_o_0 -pg 1 -y 1020 -defaultsOSRD
-preplace port reset_1 -pg 1 -y 910 -defaultsOSRD
-preplace port S_AXI1 -pg 1 -y 1080 -defaultsOSRD
-preplace port reset_2 -pg 1 -y 890 -defaultsOSRD
-preplace port DDR2_0 -pg 1 -y 300 -defaultsOSRD
-preplace portBus vga_pGreen_0 -pg 1 -y 1360 -defaultsOSRD
-preplace portBus vga_pBlue_0 -pg 1 -y 1380 -defaultsOSRD
-preplace portBus vga_pRed_0 -pg 1 -y 1340 -defaultsOSRD
-preplace portBus cmos_data -pg 1 -y 1220 -defaultsOSRD
-preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 6 -y 810 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 7 -y 670 -defaultsOSRD
-preplace inst clk_wiz -pg 1 -lvl 1 -y 970 -defaultsOSRD
-preplace inst v_tc_0 -pg 1 -lvl 5 -y 756 -defaultsOSRD
-preplace inst axi_vdma_0 -pg 1 -lvl 4 -y 460 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 7 -y 350 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 6 -y 320 -defaultsOSRD
-preplace inst rst_mig_7series_0_81M -pg 1 -lvl 5 -y 100 -defaultsOSRD
-preplace inst proc_sys_reset_25M -pg 1 -lvl 2 -y 950 -defaultsOSRD
-preplace inst OV_Sensor_0 -pg 1 -lvl 2 -y 1180 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 7 -y 1100 -defaultsOSRD
-preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 3 -y 920 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 7 -y 1230 -defaultsOSRD
-preplace inst Image_Process -pg 1 -lvl 5 -y 486 -defaultsOSRD
-preplace inst proc_sys_reset_200M -pg 1 -lvl 2 -y 750 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 820 -defaultsOSRD
-preplace inst rgb2vga_0 -pg 1 -lvl 7 -y 1380 -defaultsOSRD
-preplace netloc Conn1 1 0 4 NJ 390 NJ 390 NJ 390 NJ
-preplace netloc clk_wiz_locked 1 1 1 N
-preplace netloc rgb2vga_0_vga_pRed 1 7 1 NJ
-preplace netloc mig_7series_0_mmcm_locked 1 4 4 210 200 720J 170 NJ 170 2410
-preplace netloc Conn2 1 7 1 NJ
-preplace netloc v_vid_in_axi4s_0_video_out 1 3 1 -220
-preplace netloc clk_wiz_0_locked 1 1 2 -910 1050 -520J
-preplace netloc cmos_pclk_1 1 0 3 NJ 1200 -920 1060 -530J
-preplace netloc cmos_vsync_1 1 0 2 NJ 1160 NJ
-preplace netloc Conn3 1 0 7 -1140J 636 NJ 636 NJ 636 NJ 636 NJ 636 NJ 636 2110J
-preplace netloc axi_iic_0_iic2intc_irpt 1 7 1 NJ
-preplace netloc rgb2vga_0_vga_pGreen 1 7 1 NJ
-preplace netloc mig_7series_0_ui_addn_clk_0 1 1 6 -930 650 -520 610 -190 610 160 666 740 200 2100J
-preplace netloc Conn4 1 7 1 NJ
-preplace netloc v_axi4s_vid_out_0_vid_io_out 1 6 1 2080
-preplace netloc axi_vdma_0_M_AXI_MM2S 1 4 2 180J 626 710
-preplace netloc Conn5 1 0 7 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ
-preplace netloc axi_smc_M00_AXI 1 6 1 N
-preplace netloc axi_vdma_0_M_AXIS_MM2S 1 5 1 700
-preplace netloc OV_Sensor_0_video_o 1 2 1 -540
-preplace netloc OV_Sensor_0_cmos_xclk_o 1 2 6 -500J 1060 -200J 1020 NJ 1020 NJ 1020 NJ 1020 NJ
-preplace netloc proc_sys_reset_1_peripheral_aresetn 1 2 4 -550 790 NJ 790 210 846 710J
-preplace netloc cmos_href_1 1 0 2 NJ 1180 NJ
-preplace netloc Conn6 1 7 1 NJ
-preplace netloc Conn7 1 7 1 NJ
-preplace netloc mig_7series_0_ui_clk 1 3 5 -180 230 180 230 750 180 NJ 180 2390
-preplace netloc cmos_data_1 1 0 2 NJ 1220 NJ
-preplace netloc Conn8 1 0 6 NJ 310 NJ 310 NJ 310 NJ 310 NJ 310 NJ
-preplace netloc clk_wiz_clk_24M 1 1 1 -930
-preplace netloc v_axi4s_vid_out_0_vtg_ce 1 4 3 240 950 NJ 950 2070
-preplace netloc Conn9 1 0 5 NJ 330 NJ 330 NJ 330 NJ 330 210J
-preplace netloc axi_vdma_0_M_AXIS_MM2S1 1 4 1 190
-preplace netloc reset_2_1 1 0 2 NJ 890 -920
-preplace netloc axi_gpio_1_ip2intc_irpt 1 7 1 NJ
-preplace netloc rgb2vga_0_vga_pVSync 1 7 1 NJ
-preplace netloc rgb2vga_0_vga_pHSync 1 7 1 NJ
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 3 -570J 1050 NJ 1050 220
-preplace netloc proc_sys_reset_0_peripheral_reset 1 2 4 -560 780 NJ 780 180J 866 710
-preplace netloc mig_7series_0_ui_clk_sync_rst 1 4 4 190 210 710J 160 NJ 160 2400
-preplace netloc aresetn_1 1 5 2 730 190 2110J
-preplace netloc axi_resetn_1 1 0 7 NJ 530 NJ 530 NJ 530 -210 590 200 656 NJ 656 2090
-preplace netloc sys_clock_0_1 1 0 1 -1130
-preplace netloc reset_1_1 1 0 1 -1140
-preplace netloc axi_vdma_0_M_AXI_S2MM 1 4 2 170J 616 720
-preplace netloc v_tc_0_vtiming_out 1 5 1 710
-preplace netloc clk_wiz_clk_25M 1 1 6 -930 850 -570J 770 NJ 770 230 856 740 960 2070
-preplace netloc reset_0_1 1 0 7 -1140J 220 NJ 220 NJ 220 NJ 220 NJ 220 720J 210 2090J
-preplace netloc s_axi_lite_aclk_1 1 0 7 NJ 430 NJ 430 NJ 430 -200 600 190 646 750 646 2100
-preplace netloc OV_Sensor_0_vid_clk_ce 1 2 1 -510
-preplace netloc rgb2vga_0_vga_pBlue 1 7 1 NJ
-levelinfo -pg 1 -1160 -1030 -740 -350 -10 523 1930 2260 2430 -top 0 -bot 1510
+preplace port cmos_rst -pg 1 -y 320 -defaultsOSRD
+preplace port iic2intc_irpt -pg 1 -y 80 -defaultsOSRD
+preplace port cmos_vsync -pg 1 -y 620 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 160 -defaultsOSRD
+preplace port vga_pHSync_0 -pg 1 -y 1070 -defaultsOSRD
+preplace port cmos_href -pg 1 -y 640 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 780 -defaultsOSRD
+preplace port cmos_pwdn -pg 1 -y 300 -defaultsOSRD
+preplace port interconnect_aresetn -pg 1 -y 200 -defaultsOSRD
+preplace port axi_resetn -pg 1 -y 520 -defaultsOSRD
+preplace port cmos_pclk -pg 1 -y 660 -defaultsOSRD
+preplace port ip2intc_irpt -pg 1 -y 340 -defaultsOSRD
+preplace port vga_pVSync_0 -pg 1 -y 1090 -defaultsOSRD
+preplace port s_axi_lite_aclk -pg 1 -y 180 -defaultsOSRD
+preplace port cmos_iic -pg 1 -y 60 -defaultsOSRD
+preplace port cmos_xclk_o_0 -pg 1 -y 790 -defaultsOSRD
+preplace port reset -pg 1 -y 760 -defaultsOSRD
+preplace port DDR2_0 -pg 1 -y 550 -defaultsOSRD
+preplace portBus vga_pGreen_0 -pg 1 -y 1030 -defaultsOSRD
+preplace portBus vga_pBlue_0 -pg 1 -y 1050 -defaultsOSRD
+preplace portBus vga_pRed_0 -pg 1 -y 1010 -defaultsOSRD
+preplace portBus cmos_data -pg 1 -y 680 -defaultsOSRD
+preplace inst proc_sys_reset_100M -pg 1 -lvl 2 -y 850 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 7 -y 1030 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 8 -y 80 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 840 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 6 -y 970 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 4 -y 190 -defaultsOSRD
+preplace inst axi_vdma_1 -pg 1 -lvl 6 -y 480 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -y 1000 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 8 -y 600 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 7 -y 430 -defaultsOSRD
+preplace inst rst_mig_7series_0_81M -pg 1 -lvl 6 -y 730 -defaultsOSRD
+preplace inst proc_sys_reset_25M -pg 1 -lvl 2 -y 1060 -defaultsOSRD
+preplace inst OV_Sensor_0 -pg 1 -lvl 2 -y 640 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 8 -y 320 -defaultsOSRD
+preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 3 -y 690 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 8 -y 880 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 3 -y 320 -defaultsOSRD
+preplace inst Image_Process -pg 1 -lvl 5 -y 500 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 7 -y 700 -defaultsOSRD
+preplace inst rgb2vga_0 -pg 1 -lvl 8 -y 1050 -defaultsOSRD
+preplace netloc Conn1 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc clk_wiz_locked 1 1 2 210 950 630J
+preplace netloc rgb2vga_0_vga_pRed 1 8 1 NJ
+preplace netloc mig_7series_0_mmcm_locked 1 5 4 1820 840 2310 790 NJ 790 2950
+preplace netloc Conn2 1 8 1 NJ
+preplace netloc axi_vdma_1_M_AXI_S2MM 1 6 1 N
+preplace netloc v_vid_in_axi4s_0_video_out 1 3 2 990 470 NJ
+preplace netloc cmos_pclk_1 1 0 3 NJ 660 240 740 610J
+preplace netloc cmos_vsync_1 1 0 2 NJ 620 NJ
+preplace netloc axi_interconnect_1_M05_AXI 1 3 3 1010J 360 1440J 350 1790
+preplace netloc axi_interconnect_1_M01_AXI 1 3 5 960 60 NJ 60 NJ 60 NJ 60 NJ
+preplace netloc axi_iic_0_iic2intc_irpt 1 8 1 NJ
+preplace netloc rgb2vga_0_vga_pGreen 1 8 1 NJ
+preplace netloc Conn4 1 8 1 NJ
+preplace netloc axi_vdma_1_M_AXI_MM2S 1 6 1 N
+preplace netloc v_axi4s_vid_out_0_vid_io_out 1 7 1 2660
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 4 3 NJ 130 NJ 130 2320
+preplace netloc axi_smc_M00_AXI 1 7 1 2660
+preplace netloc OV_Sensor_0_video_o 1 2 1 N
+preplace netloc OV_Sensor_0_cmos_xclk_o 1 2 7 600J 830 NJ 830 NJ 830 NJ 830 2250J 780 NJ 780 2960J
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 2 5 620 840 NJ 840 1460 870 NJ 870 2220J
+preplace netloc cmos_href_1 1 0 2 NJ 640 NJ
+preplace netloc Conn6 1 8 1 NJ
+preplace netloc Conn7 1 8 1 NJ
+preplace netloc axi_interconnect_1_M02_AXI 1 3 5 960J 320 1390J 300 NJ 300 NJ 300 N
+preplace netloc mig_7series_0_ui_clk 1 3 6 1030 50 NJ 50 1810 340 2270 570 2650J 490 2940
+preplace netloc cmos_data_1 1 0 2 NJ 680 NJ
+preplace netloc xlconstant_0_dout 1 5 2 1790 1090 NJ
+preplace netloc clk_wiz_clk_24M 1 1 1 230
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 5 3 1820 1060 2300J 890 2630
+preplace netloc Image_Process_M_AXIS 1 5 1 1790
+preplace netloc S00_AXI_1 1 3 2 NJ 350 1420
+preplace netloc axi_vdma_0_M_AXIS_MM2S1 1 4 3 1470 280 NJ 280 2220
+preplace netloc clk_wiz_1_clk_200M 1 7 1 2660
+preplace netloc clk_wiz_clk_100M 1 1 8 250 540 620 560 1020 370 1410 310 1820 310 2260 630 2630J 710 2940
+preplace netloc axi_gpio_1_ip2intc_irpt 1 8 1 NJ
+preplace netloc rgb2vga_0_vga_pVSync 1 8 1 NJ
+preplace netloc rgb2vga_0_vga_pHSync 1 8 1 NJ
+preplace netloc axi_vdma_0_M_AXIS_MM2S2 1 4 3 1430 290 NJ 290 2280
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 4 660 940 NJ 940 NJ 940 1800J
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 5 640 1080 NJ 1080 NJ 1080 NJ 1080 2270J
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 5 4 1820 610 NJ 610 2640J 720 2960
+preplace netloc aresetn_1 1 6 2 2220 620 2650J
+preplace netloc axi_resetn_1 1 0 8 NJ 520 NJ 520 630J 540 1000 340 1450 330 NJ 330 2290J 560 2630
+preplace netloc axi_interconnect_1_M03_AXI 1 3 4 NJ 330 1400J 320 NJ 320 2300
+preplace netloc M04_ARESETN_1 1 0 3 NJ 200 NJ 200 650
+preplace netloc sys_clock_0_1 1 0 7 30 750 NJ 750 590J 820 NJ 820 NJ 820 1790J 630 2230
+preplace netloc axi_interconnect_1_M00_AXI 1 3 1 970
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 4 3 NJ 150 NJ 150 2310
+preplace netloc v_tc_0_vtiming_out 1 6 2 2320 870 N
+preplace netloc clk_wiz_clk_25M 1 1 7 220 1160 NJ 1160 NJ 1160 NJ 1160 1810 1070 2290 880 2650
+preplace netloc reset_0_1 1 0 8 20 760 240 960 650J 880 NJ 880 NJ 880 NJ 880 2240 590 NJ
+preplace netloc s_axi_lite_aclk_1 1 0 8 NJ 180 NJ 180 640 550 980 380 1460 340 1800 350 2240 580 2640
+preplace netloc OV_Sensor_0_vid_clk_ce 1 2 1 N
+preplace netloc rgb2vga_0_vga_pBlue 1 8 1 NJ
+levelinfo -pg 1 0 120 420 810 1220 1640 2050 2490 2810 2980 -top 0 -bot 1170
 ",
 }
 0
