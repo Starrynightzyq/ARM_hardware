@@ -64,7 +64,7 @@ input                                                                    tlast,
 output [C_M_AXIS_TDEST_WIDTH-1:0] tdest_out
 );
 
-assign tdest_out = {tdest[0:0]};
+assign tdest_out = {1'b0};
 
 endmodule
 

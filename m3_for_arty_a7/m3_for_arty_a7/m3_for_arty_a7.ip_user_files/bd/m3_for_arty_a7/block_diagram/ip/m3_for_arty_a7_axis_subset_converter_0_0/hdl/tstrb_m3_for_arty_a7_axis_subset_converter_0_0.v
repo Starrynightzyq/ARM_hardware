@@ -64,7 +64,7 @@ input                                                                    tlast,
 output [(C_M_AXIS_TDATA_WIDTH/8)-1:0 ] tstrb_out
 );
 
-assign tstrb_out = {2'b11,tstrb[0:0]};
+assign tstrb_out = {tstrb[0:0],tstrb[0:0],tstrb[0:0]};
 
 endmodule
 

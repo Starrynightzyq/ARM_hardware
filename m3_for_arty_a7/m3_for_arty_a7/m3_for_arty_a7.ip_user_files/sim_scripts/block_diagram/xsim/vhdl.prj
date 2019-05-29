@@ -23,5 +23,6 @@ vhdl xil_defaultlib  \
 "../../../../../block_diagram/ip/m3_for_arty_a7_rgb2vga_0_0/sim/m3_for_arty_a7_rgb2vga_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_proc_sys_reset_0_0/sim/m3_for_arty_a7_proc_sys_reset_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_proc_sys_reset_1_0/sim/m3_for_arty_a7_proc_sys_reset_1_0.vhd" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_axi_vdma_1_0/sim/m3_for_arty_a7_axi_vdma_1_0.vhd" \
 
 nosort

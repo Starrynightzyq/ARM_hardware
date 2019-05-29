@@ -48,7 +48,7 @@
 
 
 // IP VLNV: starrynightzyq.com:hls:threshold2:1.2
-// IP Revision: 1904291413
+// IP Revision: 1904291415
 
 `timescale 1ns/1ps
 

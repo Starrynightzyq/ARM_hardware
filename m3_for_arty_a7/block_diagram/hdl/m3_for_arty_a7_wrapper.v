@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Wed May 15 21:56:10 2019
+//Date        : Tue May 28 10:54:06 2019
 //Host        : DESKTOP-A56TUCA running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -45,6 +45,9 @@ module m3_for_arty_a7_wrapper
     qspi_flash_io3_io,
     qspi_flash_ss_io,
     reset,
+    spi_rtl_io0_io,
+    spi_rtl_io1_io,
+    spi_rtl_ss_io,
     sys_clock,
     temp_sensor_scl_io,
     temp_sensor_sda_io,
@@ -90,6 +93,9 @@ module m3_for_arty_a7_wrapper
   inout qspi_flash_io3_io;
   inout qspi_flash_ss_io;
   input reset;
+  inout spi_rtl_io0_io;
+  inout spi_rtl_io1_io;
+  inout [0:0]spi_rtl_ss_io;
   input sys_clock;
   inout temp_sensor_scl_io;
   inout temp_sensor_sda_io;
@@ -172,6 +178,18 @@ module m3_for_arty_a7_wrapper
   wire qspi_flash_ss_o;
   wire qspi_flash_ss_t;
   wire reset;
+  wire spi_rtl_io0_i;
+  wire spi_rtl_io0_io;
+  wire spi_rtl_io0_o;
+  wire spi_rtl_io0_t;
+  wire spi_rtl_io1_i;
+  wire spi_rtl_io1_io;
+  wire spi_rtl_io1_o;
+  wire spi_rtl_io1_t;
+  wire [0:0]spi_rtl_ss_i_0;
+  wire [0:0]spi_rtl_ss_io_0;
+  wire [0:0]spi_rtl_ss_o_0;
+  wire spi_rtl_ss_t;
   wire sys_clock;
   wire temp_sensor_scl_i;
   wire temp_sensor_scl_io;
@@ -271,6 +289,15 @@ module m3_for_arty_a7_wrapper
         .qspi_flash_ss_o(qspi_flash_ss_o),
         .qspi_flash_ss_t(qspi_flash_ss_t),
         .reset(reset),
+        .spi_rtl_io0_i(spi_rtl_io0_i),
+        .spi_rtl_io0_o(spi_rtl_io0_o),
+        .spi_rtl_io0_t(spi_rtl_io0_t),
+        .spi_rtl_io1_i(spi_rtl_io1_i),
+        .spi_rtl_io1_o(spi_rtl_io1_o),
+        .spi_rtl_io1_t(spi_rtl_io1_t),
+        .spi_rtl_ss_i(spi_rtl_ss_i_0),
+        .spi_rtl_ss_o(spi_rtl_ss_o_0),
+        .spi_rtl_ss_t(spi_rtl_ss_t),
         .sys_clock(sys_clock),
         .temp_sensor_scl_i(temp_sensor_scl_i),
         .temp_sensor_scl_o(temp_sensor_scl_o),
@@ -310,6 +337,21 @@ module m3_for_arty_a7_wrapper
         .IO(qspi_flash_ss_io),
         .O(qspi_flash_ss_i),
         .T(qspi_flash_ss_t));
+  IOBUF spi_rtl_io0_iobuf
+       (.I(spi_rtl_io0_o),
+        .IO(spi_rtl_io0_io),
+        .O(spi_rtl_io0_i),
+        .T(spi_rtl_io0_t));
+  IOBUF spi_rtl_io1_iobuf
+       (.I(spi_rtl_io1_o),
+        .IO(spi_rtl_io1_io),
+        .O(spi_rtl_io1_i),
+        .T(spi_rtl_io1_t));
+  IOBUF spi_rtl_ss_iobuf_0
+       (.I(spi_rtl_ss_o_0),
+        .IO(spi_rtl_ss_io[0]),
+        .O(spi_rtl_ss_i_0),
+        .T(spi_rtl_ss_t));
   IOBUF temp_sensor_scl_iobuf
        (.I(temp_sensor_scl_o),
         .IO(temp_sensor_scl_io),

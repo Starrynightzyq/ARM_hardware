@@ -170,9 +170,9 @@ input wire HCLK;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SYSRESETn, POLARITY ACTIVE_LOW" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 SYSRESETn RST" *)
 input wire SYSRESETn;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME IRQ, PortWidth 11" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME IRQ, PortWidth 12" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 IRQ INTERRUPT" *)
-input wire [10 : 0] IRQ;
+input wire [11 : 0] IRQ;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME NMI, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 NMI INTERRUPT" *)
 input wire NMI;
@@ -328,7 +328,7 @@ output wire RREADYC;
 input wire [31 : 0] HRDATAC;
 
   CortexM3DbgAXI #(
-    .NUM_IRQ(11),
+    .NUM_IRQ(12),
     .JTAG_PRESENT(1'B1),
     .ITCM_SIZE(4'B0111),
     .DTCM_SIZE(4'B0110),

@@ -60,23 +60,15 @@ module m3_for_arty_a7_axis_subset_converter_0_0 (
   s_axis_tready,
   s_axis_tdata,
   s_axis_tstrb,
-  s_axis_tkeep,
   s_axis_tlast,
-  s_axis_tid,
-  s_axis_tdest,
-  s_axis_tuser,
   m_axis_tvalid,
   m_axis_tready,
   m_axis_tdata,
   m_axis_tstrb,
-  m_axis_tkeep,
-  m_axis_tlast,
-  m_axis_tid,
-  m_axis_tdest,
-  m_axis_tuser
+  m_axis_tlast
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S_AXIS:M_AXIS, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk, ASSOCIATED_BUSIF S_AXIS:M_AXIS, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIF CLK" *)
 input wire aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *)
@@ -90,19 +82,9 @@ output wire s_axis_tready;
 input wire [7 : 0] s_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TSTRB" *)
 input wire [0 : 0] s_axis_tstrb;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TKEEP" *)
-input wire [0 : 0] s_axis_tkeep;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk, LAYERED_METADATA undef" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *)
 input wire s_axis_tlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TID" *)
-input wire [0 : 0] s_axis_tid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDEST" *)
-input wire [0 : 0] s_axis_tdest;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_wiz_0_clk_out1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {\
-resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {\
-}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8 TUSER_WIDTH 1}" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TUSER" *)
-input wire [0 : 0] s_axis_tuser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
@@ -111,17 +93,9 @@ input wire m_axis_tready;
 output wire [23 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TSTRB" *)
 output wire [2 : 0] m_axis_tstrb;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TKEEP" *)
-output wire [2 : 0] m_axis_tkeep;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk, LAYERED_METADATA undef" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TID" *)
-output wire [0 : 0] m_axis_tid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDEST" *)
-output wire [0 : 0] m_axis_tdest;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 3, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_wiz_0_clk_out1, LAYERED_METADATA undef" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TUSER" *)
-output wire [0 : 0] m_axis_tuser;
 
   top_m3_for_arty_a7_axis_subset_converter_0_0 #(
     .C_FAMILY("artix7"),
@@ -129,11 +103,11 @@ output wire [0 : 0] m_axis_tuser;
     .C_S_AXIS_TID_WIDTH(1),
     .C_S_AXIS_TDEST_WIDTH(1),
     .C_S_AXIS_TUSER_WIDTH(1),
-    .C_S_AXIS_SIGNAL_SET('B00000000000000000000000011111111),
+    .C_S_AXIS_SIGNAL_SET('B00000000000000000000000000010111),
     .C_M_AXIS_TDATA_WIDTH(24),
     .C_M_AXIS_TID_WIDTH(1),
     .C_M_AXIS_TDEST_WIDTH(1),
-    .C_M_AXIS_SIGNAL_SET('B00000000000000000000000011111111),
+    .C_M_AXIS_SIGNAL_SET('B00000000000000000000000000010111),
     .C_M_AXIS_TUSER_WIDTH(1),
     .C_DEFAULT_TLAST(0)
   ) inst (
@@ -144,20 +118,20 @@ output wire [0 : 0] m_axis_tuser;
     .s_axis_tready(s_axis_tready),
     .s_axis_tdata(s_axis_tdata),
     .s_axis_tstrb(s_axis_tstrb),
-    .s_axis_tkeep(s_axis_tkeep),
+    .s_axis_tkeep(1'H1),
     .s_axis_tlast(s_axis_tlast),
-    .s_axis_tid(s_axis_tid),
-    .s_axis_tdest(s_axis_tdest),
-    .s_axis_tuser(s_axis_tuser),
+    .s_axis_tid(1'H0),
+    .s_axis_tdest(1'H0),
+    .s_axis_tuser(1'H0),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tready(m_axis_tready),
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tstrb(m_axis_tstrb),
-    .m_axis_tkeep(m_axis_tkeep),
+    .m_axis_tkeep(),
     .m_axis_tlast(m_axis_tlast),
-    .m_axis_tid(m_axis_tid),
-    .m_axis_tdest(m_axis_tdest),
-    .m_axis_tuser(m_axis_tuser),
+    .m_axis_tid(),
+    .m_axis_tdest(),
+    .m_axis_tuser(),
     .transfer_dropped(),
     .sparse_tkeep_removed()
   );
