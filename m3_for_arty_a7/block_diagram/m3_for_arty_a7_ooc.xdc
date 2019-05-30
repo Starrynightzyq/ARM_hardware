@@ -7,5 +7,6 @@
 # of Vivado)
 ################################################################################
 create_clock -name sys_clock -period 10 [get_ports sys_clock]
+create_clock -name SWCLK -period 10 [get_ports SWCLK]
 
 ################################################################################

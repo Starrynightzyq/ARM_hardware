@@ -60,11 +60,8 @@ module m3_for_arty_a7_Cortex_M3_0_0 (
   LOCKUP,
   HALTED,
   JTAGNSW,
-  JTAGTOP,
   SWDO,
   SWDOEN,
-  TDO,
-  nTDOEN,
   TRCENA,
   TRACECLK,
   TRACEDATA,
@@ -79,8 +76,6 @@ module m3_for_arty_a7_Cortex_M3_0_0 (
   STCLK,
   SWCLKTCK,
   SWDITMS,
-  nTRST,
-  TDI,
   AWADDRS,
   AWLENS,
   AWSIZES,
@@ -154,11 +149,8 @@ output wire DBGRESTARTED;
 output wire LOCKUP;
 output wire HALTED;
 output wire JTAGNSW;
-output wire JTAGTOP;
 output wire SWDO;
 output wire SWDOEN;
-output wire TDO;
-output wire nTDOEN;
 output wire TRCENA;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME TRACECLK, PHASE 0.000, CLK_DOMAIN m3_for_arty_a7_Cortex_M3_0_0_TRACECLK" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 TRACECLK CLK" *)
@@ -183,14 +175,10 @@ input wire DBGRESETn;
 input wire DBGRESTART;
 input wire EDBGRQ;
 input wire STCLK;// System tick enable
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SWCLKTCK, ASSOCIATED_RESET nTRST, PHASE 0.000" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SWCLKTCK, ASSOCIATED_RESET nTRST, PHASE 0.000, CLK_DOMAIN m3_for_arty_a7_SWCLKTCK_0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 SWCLKTCK CLK" *)
 input wire SWCLKTCK;
 input wire SWDITMS;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME nTRST, POLARITY ACTIVE_LOW" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 nTRST RST" *)
-input wire nTRST;
-input wire TDI;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 CM3_SYS_AXI3 AWADDR" *)
 output wire [31 : 0] AWADDRS;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 CM3_SYS_AXI3 AWLEN" *)
@@ -329,7 +317,7 @@ input wire [31 : 0] HRDATAC;
 
   CortexM3DbgAXI #(
     .NUM_IRQ(12),
-    .JTAG_PRESENT(1'B1),
+    .JTAG_PRESENT(1'B0),
     .ITCM_SIZE(4'B0111),
     .DTCM_SIZE(4'B0110),
     .ITCM_INIT_RAM(1'B1),
@@ -355,11 +343,11 @@ input wire [31 : 0] HRDATAC;
     .WAKEUP(),
     .WICENACK(),
     .JTAGNSW(JTAGNSW),
-    .JTAGTOP(JTAGTOP),
+    .JTAGTOP(),
     .SWDO(SWDO),
     .SWDOEN(SWDOEN),
-    .TDO(TDO),
-    .nTDOEN(nTDOEN),
+    .TDO(),
+    .nTDOEN(),
     .TRCENA(TRCENA),
     .TRACECLK(TRACECLK),
     .TRACEDATA(TRACEDATA),
@@ -375,8 +363,8 @@ input wire [31 : 0] HRDATAC;
     .WICENREQ(1'B0),
     .SWCLKTCK(SWCLKTCK),
     .SWDITMS(SWDITMS),
-    .nTRST(nTRST),
-    .TDI(TDI),
+    .nTRST(1'B1),
+    .TDI(1'B0),
     .AWADDRS(AWADDRS),
     .AWLENS(AWLENS),
     .AWSIZES(AWSIZES),

@@ -22,10 +22,10 @@ set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { dip_sw
 #set_property -dict { PACKAGE_PIN U8    IOSTANDARD LVCMOS18 } [get_ports { DAPLink_tri_o[5]  }]; #IO_25_34 Sch=sw[9]
 #set_property -dict { PACKAGE_PIN R16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[6]  }]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=sw[10]
 #set_property -dict { PACKAGE_PIN T13   IOSTANDARD LVCMOS33 } [get_ports { switch_0[ 7]  }]; #IO_L23P_T3_A03_D19_14 Sch=sw[11]
-set_property -dict { PACKAGE_PIN H6    IOSTANDARD LVCMOS33 } [get_ports { switch_0[0]  }]; #IO_L24P_T3_35 Sch=sw[12]
-set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { switch_0[1]  }]; #IO_L20P_T3_A08_D24_14 Sch=sw[13]
-set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { switch_0[2] }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=sw[14]
-set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { switch_0[3] }]; #IO_L21P_T3_DQS_14 Sch=sw[15]
+#set_property -dict { PACKAGE_PIN H6    IOSTANDARD LVCMOS33 } [get_ports { switch_0[0]  }]; #IO_L24P_T3_35 Sch=sw[12]
+#set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { switch_0[1]  }]; #IO_L20P_T3_A08_D24_14 Sch=sw[13]
+#set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { switch_0[2] }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=sw[14]
+#set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { switch_0[3] }]; #IO_L21P_T3_DQS_14 Sch=sw[15]
 
 
 ## LEDs
@@ -34,18 +34,18 @@ set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { led_4b
 set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { led_4bits_tri_io[1] }]; #IO_L24P_T3_RS1_15 Sch=led[1]
 set_property -dict { PACKAGE_PIN J13   IOSTANDARD LVCMOS33 } [get_ports { led_4bits_tri_io[2] }]; #IO_L17N_T2_A25_15 Sch=led[2]
 set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { led_4bits_tri_io[3] }]; #IO_L8P_T1_D11_14 Sch=led[3]
-set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[0]  }]; #IO_L7P_T1_D09_14 Sch=led[4]
-set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[1]  }]; #IO_L18N_T2_A11_D27_14 Sch=led[5]
-set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[2]  }]; #IO_L17P_T2_A14_D30_14 Sch=led[6]
-set_property -dict { PACKAGE_PIN U16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[3]  }]; #IO_L18P_T2_A12_D28_14 Sch=led[7]
-set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[4]  }]; #IO_L16N_T2_A15_D31_14 Sch=led[8]
-set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[5]  }]; #IO_L14N_T2_SRCC_14 Sch=led[9]
-set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[6]  }]; #IO_L22P_T3_A05_D21_14 Sch=led[10]
-set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[7]  }]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=led[11]
-set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[8]  }]; #IO_L16P_T2_CSI_B_14 Sch=led[12]
-set_property -dict { PACKAGE_PIN V14   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[9]  }]; #IO_L22N_T3_A04_D20_14 Sch=led[13]
-set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[10] }]; #IO_L20N_T3_A07_D23_14 Sch=led[14]
-set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[11] }]; #IO_L21N_T3_DQS_A06_D22_14 Sch=led[15]
+#set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[0]  }]; #IO_L7P_T1_D09_14 Sch=led[4]
+#set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[1]  }]; #IO_L18N_T2_A11_D27_14 Sch=led[5]
+#set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[2]  }]; #IO_L17P_T2_A14_D30_14 Sch=led[6]
+#set_property -dict { PACKAGE_PIN U16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[3]  }]; #IO_L18P_T2_A12_D28_14 Sch=led[7]
+#set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[4]  }]; #IO_L16N_T2_A15_D31_14 Sch=led[8]
+#set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[5]  }]; #IO_L14N_T2_SRCC_14 Sch=led[9]
+#set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[6]  }]; #IO_L22P_T3_A05_D21_14 Sch=led[10]
+#set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[7]  }]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=led[11]
+#set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[8]  }]; #IO_L16P_T2_CSI_B_14 Sch=led[12]
+#set_property -dict { PACKAGE_PIN V14   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[9]  }]; #IO_L22N_T3_A04_D20_14 Sch=led[13]
+#set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[10] }]; #IO_L20N_T3_A07_D23_14 Sch=led[14]
+#set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[11] }]; #IO_L21N_T3_DQS_A06_D22_14 Sch=led[15]
 
 #set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { LED16_B }]; #IO_L5P_T0_D06_14 Sch=led16_b
 #set_property -dict { PACKAGE_PIN M16   IOSTANDARD LVCMOS33 } [get_ports { LED16_G }]; #IO_L10P_T1_D14_14 Sch=led16_g
@@ -93,10 +93,10 @@ set_property -dict { PACKAGE_PIN C12   IOSTANDARD LVCMOS33 } [get_ports { reset 
 
 ##Pmod Header JA
 
-#set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { JA[1] }]; #IO_L20N_T3_A19_15 Sch=ja[1]
-#set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { JA[2] }]; #IO_L21N_T3_DQS_A18_15 Sch=ja[2]
-#set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { JA[3] }]; #IO_L21P_T3_DQS_15 Sch=ja[3]
-#set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { JA[4] }]; #IO_L18N_T2_A23_15 Sch=ja[4]
+set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { spi_rtl_io0_io }]; #IO_L20N_T3_A19_15 Sch=ja[1]
+set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { spi_rtl_io1_io }]; #IO_L21N_T3_DQS_A18_15 Sch=ja[2]
+set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { spi_rtl_ss_io[0] }]; #IO_L21P_T3_DQS_15 Sch=ja[3]
+set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { spi_rtl_sck_io }]; #IO_L18N_T2_A23_15 Sch=ja[4]
 #set_property -dict { PACKAGE_PIN D17   IOSTANDARD LVCMOS33 } [get_ports { JA[7] }]; #IO_L16N_T2_A27_15 Sch=ja[7]
 #set_property -dict { PACKAGE_PIN E17   IOSTANDARD LVCMOS33 } [get_ports { JA[8] }]; #IO_L16P_T2_A28_15 Sch=ja[8]
 #set_property -dict { PACKAGE_PIN F18   IOSTANDARD LVCMOS33 } [get_ports { JA[9] }]; #IO_L22N_T3_A16_15 Sch=ja[9]
@@ -106,13 +106,13 @@ set_property -dict { PACKAGE_PIN C12   IOSTANDARD LVCMOS33 } [get_ports { reset 
 ##Pmod Header JB
 
 #set_property -dict { PACKAGE_PIN D14   IOSTANDARD LVCMOS33 } [get_ports { JB[1] }]; #IO_L1P_T0_AD0P_15 Sch=jb[1]
-set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { nTRST }]; #IO_L14N_T2_SRCC_15 Sch=jb[2]
-set_property -dict { PACKAGE_PIN G16   IOSTANDARD LVCMOS33 } [get_ports { TDO[0] }]; #IO_L13N_T2_MRCC_15 Sch=jb[3]
-set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { TDI }]; #IO_L15P_T2_DQS_15 Sch=jb[4]
-set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[12] }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
-set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[13] }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
-set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[14] }]; #IO_0_15 Sch=jb[9]
-set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[15] }]; #IO_L13P_T2_MRCC_15 Sch=jb[10]
+#set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { nTRST }]; #IO_L14N_T2_SRCC_15 Sch=jb[2]
+#set_property -dict { PACKAGE_PIN G16   IOSTANDARD LVCMOS33 } [get_ports { TDO[0] }]; #IO_L13N_T2_MRCC_15 Sch=jb[3]
+#set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { TDI }]; #IO_L15P_T2_DQS_15 Sch=jb[4]
+#set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { DAPLink_tri_o[12] }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
+set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { nSRST }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
+set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { SDWIO[0] }]; #IO_0_15 Sch=jb[9]
+set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { SWCLK }]; #IO_L13P_T2_MRCC_15 Sch=jb[10]
 
 
 ##Pmod Header JC
@@ -196,8 +196,8 @@ set_property -dict { PACKAGE_PIN B12   IOSTANDARD LVCMOS33 } [get_ports { vga_pV
 
 ##Temperature Sensor
 
-set_property -dict { PACKAGE_PIN C14   IOSTANDARD LVCMOS33 } [get_ports { temp_sensor_scl_io }]; #IO_L1N_T0_AD0N_15 Sch=tmp_scl
-set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { temp_sensor_sda_io }]; #IO_L12N_T1_MRCC_15 Sch=tmp_sda
+#set_property -dict { PACKAGE_PIN C14   IOSTANDARD LVCMOS33 } [get_ports { temp_sensor_scl_io }]; #IO_L1N_T0_AD0N_15 Sch=tmp_scl
+#set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { temp_sensor_sda_io }]; #IO_L12N_T1_MRCC_15 Sch=tmp_sda
 #set_property -dict { PACKAGE_PIN D13   IOSTANDARD LVCMOS33 } [get_ports { TMP_INT }]; #IO_L6N_T0_VREF_15 Sch=tmp_int
 #set_property -dict { PACKAGE_PIN B14   IOSTANDARD LVCMOS33 } [get_ports { TMP_CT }]; #IO_L2N_T0_AD8N_15 Sch=tmp_ct
 
@@ -245,11 +245,11 @@ set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { usb_ua
 
 ##Quad SPI Flash
 
-set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io0_io }]; #IO_L1P_T0_D00_MOSI_14 Sch=qspi_dq[0]
-set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io1_io }]; #IO_L1N_T0_D01_DIN_14 Sch=qspi_dq[1]
-set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io2_io }]; #IO_L2P_T0_D02_14 Sch=qspi_dq[2]
-set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io3_io }]; #IO_L2N_T0_D03_14 Sch=qspi_dq[3]
-set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_ss_io }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
+#set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io0_io }]; #IO_L1P_T0_D00_MOSI_14 Sch=qspi_dq[0]
+#set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io1_io }]; #IO_L1N_T0_D01_DIN_14 Sch=qspi_dq[1]
+#set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io2_io }]; #IO_L2P_T0_D02_14 Sch=qspi_dq[2]
+#set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io3_io }]; #IO_L2N_T0_D03_14 Sch=qspi_dq[3]
+#set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_ss_io }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
 
 
 # --------------------------------------------------
@@ -257,8 +257,8 @@ set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { qspi_f
 # --------------------------------------------------
 
 # JTAG connected to PMOD connector JC (nearest to device)
-set_property PULLUP true [get_ports nTRST]
-set_property PULLDOWN true [get_ports TDI]
+#set_property PULLUP true [get_ports nTRST]
+#set_property PULLDOWN true [get_ports TDI]
 
 # --------------------------------------------------
 # SWD ports
@@ -266,25 +266,25 @@ set_property PULLDOWN true [get_ports TDI]
 # 
 # Shield pin 34, (DAPLink[8]), is used to detect of the DAPLink board is fitted, active low
 # To allow the base board to correctly detect when the adaptor board is not fitted, pull this pin high
-set_property PULLUP true [get_ports {DAPLink_tri_o[8]}]
+# set_property PULLUP true [get_ports {DAPLink_tri_o[8]}]
 
 # Shield pin 39, (DAPLink[13]), is used as an auxillary reset, active low
 # To allow the base board to work when the DAPLink adaptor board is not fitted, pull this pin high
-set_property PULLUP true [get_ports {DAPLink_tri_o[13]}]
+set_property PULLUP true [get_ports {nSRST}]
 
 # Shield pin 40, (DAPLink[14]), is the Serial Wire data, which can be tristate.  Needs a pull-up
-set_property PULLUP true [get_ports {DAPLink_tri_o[14]}]
+set_property PULLUP true [get_ports {SDWIO[0]}]
 
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {DAPLink_tri_o_IBUF[15]}]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {SWCLK}]
 
 # Default drive strength is 12mA.  Set higher for QSPI clock.  Signal slugged due to 200R series resistors
 # No great effect as RC network is frequency limiting signal
-set_property DRIVE 16 [get_ports {DAPLink_tri_o[9]}]
-set_property SLEW FAST [get_ports {DAPLink_tri_o[9]}]
+# set_property DRIVE 16 [get_ports {DAPLink_tri_o[9]}]
+# set_property SLEW FAST [get_ports {DAPLink_tri_o[9]}]
 
 # Do same for DAPLink SPI clock
-set_property DRIVE 16 [get_ports {DAPLink_tri_o[3]}]
-set_property SLEW FAST [get_ports {DAPLink_tri_o[3]}]
+# set_property DRIVE 16 [get_ports {DAPLink_tri_o[3]}]
+# set_property SLEW FAST [get_ports {DAPLink_tri_o[3]}]
 
 # --------------------------------------------------
 # Camera ports
@@ -314,7 +314,7 @@ create_generated_clock -name qspi_clk [get_pins m3_for_arty_a7_i/Clocks_and_Rese
 # Input clocks
 # --------------------------------------------------
 # Support upto 20MHz SWD
-create_clock -period 50.000 -name SWCLK [get_ports {DAPLink_tri_o[15]}]
+create_clock -period 50.000 -name SWCLK [get_ports {SWCLK}]
 
 # --------------------------------------------------
 # Output clocks
@@ -322,13 +322,13 @@ create_clock -period 50.000 -name SWCLK [get_ports {DAPLink_tri_o[15]}]
 
 # Base QSPI
 # Need full specification as quad_spi instance in DAPLink has same instance name
-create_generated_clock -name base_qspi_clk -source [get_pins -hierarchical -filter {NAME =~ m3_for_arty_a7_i/axi_quad_spi_0/sck_o}] -divide_by 1 [get_ports qspi_flash_sck*]
+# create_generated_clock -name base_qspi_clk -source [get_pins -hierarchical -filter {NAME =~ m3_for_arty_a7_i/axi_quad_spi_0/sck_o}] -divide_by 1 [get_ports qspi_flash_sck*]
 
 # DAPLink QSPI clock is on shield pin 9.
-create_generated_clock -name dap_qspi_clk -source [get_pins -hierarchical -filter {NAME =~ *axi_xip_quad_spi_0/sck_o}] -divide_by 1 [get_ports {DAPLink_tri_o[9]}]
+# create_generated_clock -name dap_qspi_clk -source [get_pins -hierarchical -filter {NAME =~ *axi_xip_quad_spi_0/sck_o}] -divide_by 1 [get_ports {DAPLink_tri_o[9]}]
 
 # DAPLink SPI clock is on shield pin 3.
-create_generated_clock -name dap_spi_clk -source [get_pins -hierarchical -filter {NAME =~ *axi_single_spi_0/sck_o}] -divide_by 1 [get_ports {DAPLink_tri_o[3]}]
+# create_generated_clock -name dap_spi_clk -source [get_pins -hierarchical -filter {NAME =~ *axi_single_spi_0/sck_o}] -divide_by 1 [get_ports {DAPLink_tri_o[3]}]
 
 # --------------------------------------------------
 # Virtual clocks
@@ -371,7 +371,7 @@ set_max_delay -datapath_only -from [get_clocks SWCLK] -to [get_clocks cpu_clk] 1
 
 # GPIO signal selecting between the two QSPI devices is static, remove timing from it to the outputs
 # Were not able to correctly specify the launch flop as -from, so use the resultant net with -through
-set_false_path -through [get_nets -hierarchical *qspi_sel] -to [get_clocks dap_qspi_clk]
+# set_false_path -through [get_nets -hierarchical *qspi_sel] -to [get_clocks dap_qspi_clk]
 
 
 # --------------------------------------------------
@@ -387,11 +387,11 @@ set_false_path -through [get_nets -hierarchical *qspi_sel] -to [get_clocks dap_q
 
 
 # QSPI Q[3:0] & CS
-set_input_delay -clock [get_clocks dap_qspi_clk] -max -add_delay 8.500 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
-set_input_delay -clock [get_clocks dap_qspi_clk] -min -add_delay 2.000 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
+# set_input_delay -clock [get_clocks dap_qspi_clk] -max -add_delay 8.500 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
+# set_input_delay -clock [get_clocks dap_qspi_clk] -min -add_delay 2.000 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
 
-set_output_delay -clock [get_clocks dap_qspi_clk] -max -add_delay 2.000 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
-set_output_delay -clock [get_clocks dap_qspi_clk] -min -add_delay -2.500 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
+# set_output_delay -clock [get_clocks dap_qspi_clk] -max -add_delay 2.000 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
+# set_output_delay -clock [get_clocks dap_qspi_clk] -min -add_delay -2.500 [get_ports {{DAPLink_tri_o[4]} {DAPLink_tri_o[5]} {DAPLink_tri_o[6]} {DAPLink_tri_o[7]} {DAPLink_tri_o[10]}}]
 
 # --------------------------------------------------
 # DAPLink SPI
@@ -406,16 +406,16 @@ set_output_delay -clock [get_clocks dap_qspi_clk] -min -add_delay -2.500 [get_po
 # SPI CS, MISO & MOSI
 
 # CS
-set_output_delay -clock [get_clocks dap_spi_clk] -max -add_delay 2.000 [get_ports {DAPLink_tri_o[0]}]
-set_output_delay -clock [get_clocks dap_spi_clk] -min -add_delay -2.500 [get_ports {DAPLink_tri_o[0]}]
+# set_output_delay -clock [get_clocks dap_spi_clk] -max -add_delay 2.000 [get_ports {DAPLink_tri_o[0]}]
+# set_output_delay -clock [get_clocks dap_spi_clk] -min -add_delay -2.500 [get_ports {DAPLink_tri_o[0]}]
 
 # MISO
-set_input_delay -clock [get_clocks dap_spi_clk] -max -add_delay 8.500 [get_ports {DAPLink_tri_o[1]}]
-set_input_delay -clock [get_clocks dap_spi_clk] -min -add_delay 2.000 [get_ports {DAPLink_tri_o[1]}]
+# set_input_delay -clock [get_clocks dap_spi_clk] -max -add_delay 8.500 [get_ports {DAPLink_tri_o[1]}]
+# set_input_delay -clock [get_clocks dap_spi_clk] -min -add_delay 2.000 [get_ports {DAPLink_tri_o[1]}]
 
 # MOSI
-set_output_delay -clock [get_clocks dap_spi_clk] -max -add_delay 2.000 [get_ports {DAPLink_tri_o[2]}]
-set_output_delay -clock [get_clocks dap_spi_clk] -min -add_delay -2.500 [get_ports {DAPLink_tri_o[2]}]
+# set_output_delay -clock [get_clocks dap_spi_clk] -max -add_delay 2.000 [get_ports {DAPLink_tri_o[2]}]
+# set_output_delay -clock [get_clocks dap_spi_clk] -min -add_delay -2.500 [get_ports {DAPLink_tri_o[2]}]
 
 # --------------------------------------------------
 # Base QSPI
@@ -426,15 +426,15 @@ set_output_delay -clock [get_clocks dap_spi_clk] -min -add_delay -2.500 [get_por
 # Limiting factor is base QSPI Tco of 7ns.  Add extra 0.5ns for the board
 
 
-set_input_delay  -clock [get_clocks base_qspi_clk] -max -add_delay 7.5 [get_ports qspi_flash_io?_io]
-set_input_delay  -clock [get_clocks base_qspi_clk] -min -add_delay 1.5 [get_ports qspi_flash_io?_io]
-set_input_delay  -clock [get_clocks base_qspi_clk] -max -add_delay 7.5 [get_ports qspi_flash_ss*]
-set_input_delay  -clock [get_clocks base_qspi_clk] -min -add_delay 1.5 [get_ports qspi_flash_ss*]
+# set_input_delay  -clock [get_clocks base_qspi_clk] -max -add_delay 7.5 [get_ports qspi_flash_io?_io]
+# set_input_delay  -clock [get_clocks base_qspi_clk] -min -add_delay 1.5 [get_ports qspi_flash_io?_io]
+# set_input_delay  -clock [get_clocks base_qspi_clk] -max -add_delay 7.5 [get_ports qspi_flash_ss*]
+# set_input_delay  -clock [get_clocks base_qspi_clk] -min -add_delay 1.5 [get_ports qspi_flash_ss*]
 
-set_output_delay -clock [get_clocks base_qspi_clk] -max -add_delay 2.5 [get_ports qspi_flash_io?_io]
-set_output_delay -clock [get_clocks base_qspi_clk] -min -add_delay -3.5 [get_ports qspi_flash_io?_io]
-set_output_delay -clock [get_clocks base_qspi_clk] -max -add_delay 2.5 [get_ports qspi_flash_ss*]
-set_output_delay -clock [get_clocks base_qspi_clk] -min -add_delay -3.5 [get_ports qspi_flash_ss*]
+# set_output_delay -clock [get_clocks base_qspi_clk] -max -add_delay 2.5 [get_ports qspi_flash_io?_io]
+# set_output_delay -clock [get_clocks base_qspi_clk] -min -add_delay -3.5 [get_ports qspi_flash_io?_io]
+# set_output_delay -clock [get_clocks base_qspi_clk] -max -add_delay 2.5 [get_ports qspi_flash_ss*]
+# set_output_delay -clock [get_clocks base_qspi_clk] -min -add_delay -3.5 [get_ports qspi_flash_ss*]
 
 
 # --------------------------------------------------
@@ -448,16 +448,16 @@ set_output_delay -clock [get_clocks base_qspi_clk] -min -add_delay -3.5 [get_por
 # SWDIO is driven at both ends by posedge clk.  The clock is sourced from the DAPLink board
 # For input signals it could be either side of rising edge
 # For output signals need to ensure the whole round trip is less than the period
-set_input_delay -clock [get_clocks SWCLK] -max -add_delay 42.000 [get_ports {DAPLink_tri_o[14]}]
-set_input_delay -clock [get_clocks SWCLK] -min -add_delay -1.000 [get_ports {DAPLink_tri_o[14]}]
-set_output_delay -clock [get_clocks SWCLK] -max -add_delay 5.000 [get_ports {DAPLink_tri_o[14]}]
-set_output_delay -clock [get_clocks SWCLK] -min -add_delay -5.000 [get_ports {DAPLink_tri_o[14]}]
+set_input_delay -clock [get_clocks SWCLK] -max -add_delay 42.000 [get_ports {SDWIO[0]}]
+set_input_delay -clock [get_clocks SWCLK] -min -add_delay -1.000 [get_ports {SDWIO[0]}]
+set_output_delay -clock [get_clocks SWCLK] -max -add_delay 5.000 [get_ports {SDWIO[0]}]
+set_output_delay -clock [get_clocks SWCLK] -min -add_delay -5.000 [get_ports {SDWIO[0]}]
 
 # JTAG
 # Note, these are optional ports and may be removed from the build
-set_input_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports TDI]
-set_input_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports nTRST]
-set_output_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports TDO*]
+# set_input_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports TDI]
+# set_input_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports nTRST]
+# set_output_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports TDO*]
 
 
 # --------------------------------------------------
@@ -469,13 +469,13 @@ set_output_delay -clock [get_clocks SWCLK] -add_delay 5.000 [get_ports TDO*]
 # Use a virtual slow clock for the untimed IO
 # UART
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports usb_uart_rxd]
-set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[12]}]
+# set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[12]}]
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports usb_uart_txd]
-set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[11]}]
+# set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[11]}]
 
 # Switch inputs
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports dip_switches*]
-set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports push_buttons*]
+# set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports push_buttons*]
 
 # Reset
 set_input_delay -clock [get_clocks cpu_clk] -add_delay 0.500 [get_ports reset*]
@@ -483,15 +483,15 @@ set_input_delay -clock [get_clocks cpu_clk] -add_delay 0.500 [get_ports reset*]
 set_false_path -from [get_ports reset*] -to [get_clocks qspi_clk]
 
 # DAPLink_fitted
-set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[8]}]
+# set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[8]}]
 # nSRST
-set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {DAPLink_tri_o[13]}]
+set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports {nSRST}]
 
 # Output LEDs
 set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
+# set_input_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
 set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports led_4bits*]
-set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
+# set_output_delay -clock [get_clocks slow_out_clk] -add_delay 0.500 [get_ports rgb_led*]
 
 
 

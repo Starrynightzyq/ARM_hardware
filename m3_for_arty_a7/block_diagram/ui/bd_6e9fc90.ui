@@ -33,31 +33,31 @@ preplace netloc C_AXI_1 1 0 1 NJ
 preplace netloc S_AXI_1 1 0 1 NJ
 preplace netloc DAPLink_to_Arty_shie_1_shield 1 3 1 NJ
 preplace netloc DAPLink_to_Arty_shie_1_UART 1 3 1 NJ
-preplace netloc axi_protocol_convert_0_M_AXI 1 1 1 410
-preplace netloc axi_xip_quad_spi_0_ip2intc_irpt 1 2 2 700J 630 NJ
+preplace netloc axi_protocol_convert_0_M_AXI 1 1 1 400
+preplace netloc axi_xip_quad_spi_0_ip2intc_irpt 1 2 2 690J 370 1030J
 preplace netloc axi_single_spi_0_ip2intc_irpt 1 2 2 NJ 820 NJ
-preplace netloc s_axi_aclk_1 1 0 2 40 410 390
+preplace netloc s_axi_aclk_1 1 0 2 20 400 380
 preplace netloc axi_single_spi_0_SPI_0 1 2 1 730
 preplace netloc axi_uartlite_0_interrupt 1 2 2 NJ 260 NJ
-preplace netloc s_axi_aresetn_1 1 0 2 20 770 400
+preplace netloc s_axi_aresetn_1 1 0 2 30 200 390
 preplace netloc axi_interconnect_0_M02_AXI 1 1 1 340
 preplace netloc axi_quad_spi_1_ip2intc_irpt 1 2 2 NJ 660 NJ
-preplace netloc axi_xip_quad_spi_0_SPI_0 1 2 1 710
+preplace netloc axi_xip_quad_spi_0_SPI_0 1 2 1 700
 preplace netloc DAPLink_to_Arty_shie_1_DAPLink_fittedn 1 3 1 NJ
-preplace netloc axi_quad_spi_1_SPI_0 1 2 1 710
-preplace netloc axi_uartlite_0_tx 1 2 1 740
+preplace netloc axi_quad_spi_1_SPI_0 1 2 1 700
+preplace netloc axi_uartlite_0_tx 1 2 1 710
 preplace netloc DAPLink_to_Arty_shie_1_SWRSTn 1 3 1 NJ
-preplace netloc DAPLink_to_Arty_shield_0_uart_rxd_axi 1 2 2 NJ 220 1010
-preplace netloc axi_gpio_0_gpio_io_o 1 2 1 750
+preplace netloc DAPLink_to_Arty_shield_0_uart_rxd_axi 1 2 2 NJ 220 1020
+preplace netloc axi_gpio_0_gpio_io_o 1 2 1 720
 preplace netloc DAPLink_to_Arty_shie_1_SWDI 1 3 1 NJ
 preplace netloc axi_interconnect_0_M00_AXI 1 1 1 360
 preplace netloc SWDO_1 1 0 3 NJ 390 370J 560 690J
-preplace netloc ext_spi_clk_1 1 0 3 30J 400 380 540 720
+preplace netloc ext_spi_clk_1 1 0 3 NJ 410 400 540 720
 preplace netloc axi_interconnect_0_M01_AXI 1 1 1 350
 preplace netloc SWDOEN_1 1 0 3 NJ 230 340J 550 NJ
 preplace netloc DAPLink_to_Arty_shie_1_SWCLK 1 3 1 NJ
 preplace netloc axi_interconnect_0_M03_AXI 1 1 1 N
-levelinfo -pg 1 0 190 550 880 1030 -top 0 -bot 900
+levelinfo -pg 1 0 190 550 890 1050 -top 0 -bot 900
 ",
 }
-
+0

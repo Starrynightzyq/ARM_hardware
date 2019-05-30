@@ -3629,7 +3629,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_BUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">WRITE_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -4125,7 +4125,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_WUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">READ_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -4842,7 +4842,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_BUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">READ_WRITE</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -5412,7 +5412,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_BUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">WRITE_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -5908,7 +5908,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_WUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">READ_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
