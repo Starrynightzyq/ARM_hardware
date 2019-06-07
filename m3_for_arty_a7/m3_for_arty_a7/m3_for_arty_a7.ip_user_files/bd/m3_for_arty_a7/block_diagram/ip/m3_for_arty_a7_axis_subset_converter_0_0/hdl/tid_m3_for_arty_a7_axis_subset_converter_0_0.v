@@ -64,7 +64,7 @@ input                                                                    tlast,
 output [(C_M_AXIS_TID_WIDTH   == 0 ? 1 : C_M_AXIS_TID_WIDTH)-1:0       ] tid_out
 );
 
-assign tid_out = {1'b0};
+assign tid_out = {tid[0:0]};
 
 endmodule
 

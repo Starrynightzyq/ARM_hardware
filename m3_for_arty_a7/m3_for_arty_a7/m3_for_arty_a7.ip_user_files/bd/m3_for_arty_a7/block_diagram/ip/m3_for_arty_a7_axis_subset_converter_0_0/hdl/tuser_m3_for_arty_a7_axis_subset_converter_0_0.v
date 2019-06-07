@@ -64,7 +64,7 @@ input                                                                    tlast,
 output [C_M_AXIS_TUSER_WIDTH-1:0] tuser_out
 );
 
-assign tuser_out = {1'b0};
+assign tuser_out = {tuser[0:0]};
 
 endmodule
 

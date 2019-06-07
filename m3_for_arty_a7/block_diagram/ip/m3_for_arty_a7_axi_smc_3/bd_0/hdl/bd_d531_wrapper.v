@@ -144,7 +144,6 @@ module bd_d531_wrapper
     S04_AXI_wstrb,
     S04_AXI_wvalid,
     aclk,
-    aclk1,
     aresetn);
   output [31:0]M00_AXI_araddr;
   output [1:0]M00_AXI_arburst;
@@ -283,7 +282,6 @@ module bd_d531_wrapper
   input [7:0]S04_AXI_wstrb;
   input S04_AXI_wvalid;
   input aclk;
-  input aclk1;
   input aresetn;
 
   wire [31:0]M00_AXI_araddr;
@@ -423,7 +421,6 @@ module bd_d531_wrapper
   wire [7:0]S04_AXI_wstrb;
   wire S04_AXI_wvalid;
   wire aclk;
-  wire aclk1;
   wire aresetn;
 
   bd_d531 bd_d531_i
@@ -564,6 +561,5 @@ module bd_d531_wrapper
         .S04_AXI_wstrb(S04_AXI_wstrb),
         .S04_AXI_wvalid(S04_AXI_wvalid),
         .aclk(aclk),
-        .aclk1(aclk1),
         .aresetn(aresetn));
 endmodule

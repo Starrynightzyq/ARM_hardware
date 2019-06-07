@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x36AAF7CB01FFE1F6" bd:bdsource="SBD" bd:device="xc7a100tcsg324-1" bd:isScoped="true" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="bd_d531" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x2DC6A75BAD31A8A0" bd:bdsource="SBD" bd:device="xc7a100tcsg324-1" bd:isScoped="true" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="bd_d531" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -595,10 +595,10 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
-            <spirit:value>50000000</spirit:value>
+            <spirit:value>81247969</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip_prop"/>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -793,19 +793,19 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>PHASE</spirit:name>
-            <spirit:value>0.0</spirit:value>
+            <spirit:value>0</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip_prop"/>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>CLK_DOMAIN</spirit:name>
-            <spirit:value>/Clocks_and_Resets/clk_wiz_0_clk_out1</spirit:value>
+            <spirit:value>m3_for_arty_a7_mig_7series_0_1_ui_clk</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip_prop"/>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -1728,72 +1728,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M00_AXI:S00_AXI:S01_AXI:S03_AXI:S04_AXI</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="user"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_CLKEN</spirit:name>
-            <spirit:value>m_sc_aclken</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="constant"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.ACLK1</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>aclk1</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>FREQ_HZ</spirit:name>
-            <spirit:value>50000000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip_prop"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>PHASE</spirit:name>
-            <spirit:value>0.0</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip_prop"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CLK_DOMAIN</spirit:name>
-            <spirit:value>/Clocks_and_Resets/clk_wiz_0_clk_out1</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip_prop"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>S02_AXI</spirit:value>
+            <spirit:value>M00_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
                 <bd:configElementInfo bd:valueSource="user"/>
@@ -1852,12 +1787,6 @@
       <spirit:ports>
         <spirit:port>
           <spirit:name>aclk</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>aclk1</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
@@ -2354,11 +2283,6 @@
         <spirit:name>aclk_net</spirit:name>
         <spirit:externalPortReference spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="clk_map" spirit:portRef="aclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>aclk1_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="aclk1"/>
-        <spirit:internalPortReference spirit:componentRef="clk_map" spirit:portRef="aclk1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>aresetn_1</spirit:name>
@@ -3629,7 +3553,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_BUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">WRITE_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -4125,7 +4049,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_WUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">READ_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -4420,7 +4344,7 @@
           <spirit:configurableElementValue spirit:referenceId="ADDR_WIDTH">32</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USER_WIDTH">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_PIPELINE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ACLKEN_CONVERSION">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S00_NUM_BYTES">4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S01_NUM_BYTES">4</spirit:configurableElementValue>
@@ -4472,7 +4396,7 @@
           <spirit:configurableElementValue spirit:referenceId="ADDR_WIDTH">32</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_SEND_PIPELINE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_LATENCY">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ACLKEN_CONVERSION">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S00_NUM_BYTES">8</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S01_NUM_BYTES">8</spirit:configurableElementValue>
@@ -4523,7 +4447,7 @@
           <spirit:configurableElementValue spirit:referenceId="ADDR_WIDTH">32</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USER_WIDTH">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_PIPELINE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ACLKEN_CONVERSION">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S00_NUM_BYTES">4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S01_NUM_BYTES">4</spirit:configurableElementValue>
@@ -4574,7 +4498,7 @@
           <spirit:configurableElementValue spirit:referenceId="PAYLD_WIDTH">88</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ADDR_WIDTH">32</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_PIPELINE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ACLKEN_CONVERSION">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S00_NUM_BYTES">4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S01_NUM_BYTES">4</spirit:configurableElementValue>
@@ -4626,7 +4550,7 @@
           <spirit:configurableElementValue spirit:referenceId="USER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M_SEND_PIPELINE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_LATENCY">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ACLK_RELATIONSHIP">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ACLKEN_CONVERSION">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S00_NUM_BYTES">8</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S01_NUM_BYTES">8</spirit:configurableElementValue>
@@ -4842,7 +4766,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_BUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">READ_WRITE</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -5412,7 +5336,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_BUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">WRITE_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -5908,7 +5832,7 @@
           <spirit:configurableElementValue spirit:referenceId="S_WUSER_WIDTH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="S_PROTOCOL">AXI4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="READ_WRITE_MODE">READ_ONLY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000060000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEG000_BASE_ADDR">0x0000000080000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SIZE">27</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SEP_ROUTE">0b0000000000000000000000000000000000000000000000000000000000000000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEG000_SUPPORTS_READ">1</spirit:configurableElementValue>
@@ -6769,24 +6693,6 @@
           </spirit:portMap>
         </spirit:portMaps>
       </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.ACLK1</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>aclk1</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
       <spirit:views>
@@ -6927,12 +6833,6 @@
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
-        <spirit:port>
-          <spirit:name>aclk1</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -6951,28 +6851,10 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>psr0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">bd_d531_psr0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_AUX_RESET_HIGH">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_AUX_RST_WIDTH">1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>psr_aclk</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">bd_d531_psr_aclk_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_AUX_RESET_HIGH">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_AUX_RST_WIDTH">1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>psr_aclk1</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">bd_d531_psr_aclk1_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_AUX_RESET_HIGH">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_AUX_RST_WIDTH">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -6982,22 +6864,14 @@
       <spirit:adHocConnection>
         <spirit:name>clk_map_aresetn_net</spirit:name>
         <spirit:externalPortReference spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="psr0" spirit:portRef="aux_reset_in"/>
         <spirit:internalPortReference spirit:componentRef="psr_aclk" spirit:portRef="aux_reset_in"/>
-        <spirit:internalPortReference spirit:componentRef="psr_aclk1" spirit:portRef="aux_reset_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>clk_map_aclk1_net</spirit:name>
-        <spirit:externalPortReference spirit:portRef="aclk1"/>
-        <spirit:externalPortReference spirit:portRef="S02_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="psr0" spirit:portRef="slowest_sync_clk"/>
-        <spirit:internalPortReference spirit:componentRef="psr_aclk1" spirit:portRef="slowest_sync_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_map_aclk_net</spirit:name>
         <spirit:externalPortReference spirit:portRef="aclk"/>
         <spirit:externalPortReference spirit:portRef="S00_ACLK"/>
         <spirit:externalPortReference spirit:portRef="S01_ACLK"/>
+        <spirit:externalPortReference spirit:portRef="S02_ACLK"/>
         <spirit:externalPortReference spirit:portRef="S03_ACLK"/>
         <spirit:externalPortReference spirit:portRef="S04_ACLK"/>
         <spirit:externalPortReference spirit:portRef="M00_ACLK"/>
@@ -7005,30 +6879,20 @@
         <spirit:internalPortReference spirit:componentRef="psr_aclk" spirit:portRef="slowest_sync_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>one_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="one" spirit:portRef="dout"/>
-        <spirit:internalPortReference spirit:componentRef="psr0" spirit:portRef="ext_reset_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>psr_aclk_interconnect_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="psr_aclk" spirit:portRef="interconnect_aresetn"/>
         <spirit:externalPortReference spirit:portRef="S00_ARESETN"/>
         <spirit:externalPortReference spirit:portRef="S01_ARESETN"/>
+        <spirit:externalPortReference spirit:portRef="S02_ARESETN"/>
         <spirit:externalPortReference spirit:portRef="S03_ARESETN"/>
         <spirit:externalPortReference spirit:portRef="S04_ARESETN"/>
         <spirit:externalPortReference spirit:portRef="M00_ARESETN"/>
         <spirit:externalPortReference spirit:portRef="swbd_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>psr_aclk1_interconnect_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="psr_aclk1" spirit:portRef="interconnect_aresetn"/>
-        <spirit:externalPortReference spirit:portRef="S02_ARESETN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>psr0_interconnect_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="psr0" spirit:portRef="interconnect_aresetn"/>
+        <spirit:name>one_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="one" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="psr_aclk" spirit:portRef="ext_reset_in"/>
-        <spirit:internalPortReference spirit:componentRef="psr_aclk1" spirit:portRef="ext_reset_in"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

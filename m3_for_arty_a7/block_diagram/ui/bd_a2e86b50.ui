@@ -42,60 +42,60 @@ preplace inst tri_io_buf_0 -pg 1 -lvl 6 -y 420 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 5 -y 300 -defaultsOSRD
 preplace inst axi_quad_spi_0 -pg 1 -lvl 5 -y 740 -defaultsOSRD
 preplace netloc axi_quad_spi_0_SPI_0 1 5 2 NJ 730 NJ
-preplace netloc Clocks_and_Resets_clk_qspi 1 2 3 550J 810 NJ 810 1410
-preplace netloc ov_cmos_ip2intc_irpt 1 1 5 230 1370 NJ 1370 NJ 1370 NJ 1370 1810
-preplace netloc Clocks_and_Resets_dbgresetn 1 2 1 570
-preplace netloc xlconstant_1_dout 1 1 1 200
-preplace netloc axi_protocol_convert_0_M_AXI 1 4 1 1440
-preplace netloc Cortex_M3_0_CM3_CODE_AXI3 1 3 1 1000
-preplace netloc tri_io_buf_0_dout 1 2 5 590 570 1030J 410 1470J 490 NJ 490 2080
+preplace netloc Clocks_and_Resets_clk_qspi 1 2 3 NJ 740 1070J 810 1470
+preplace netloc ov_cmos_ip2intc_irpt 1 1 5 220 1340 NJ 1340 NJ 1340 NJ 1340 1850
+preplace netloc Clocks_and_Resets_dbgresetn 1 2 1 590
+preplace netloc xlconstant_1_dout 1 1 1 180
+preplace netloc axi_protocol_convert_0_M_AXI 1 4 1 1470
+preplace netloc Cortex_M3_0_CM3_CODE_AXI3 1 3 1 1070
+preplace netloc tri_io_buf_0_dout 1 2 5 620 210 NJ 210 1530J 220 NJ 220 2130
 preplace netloc ov_cmos_cmos_xclk_o_0 1 5 2 NJ 1280 NJ
 preplace netloc ov_cmos_vga_pHSync_0 1 5 2 NJ 1180 NJ
-preplace netloc cmos_pclk_1 1 0 5 NJ 1350 NJ 1350 NJ 1350 1060J 1240 1380J
-preplace netloc cmos_vsync_1 1 0 5 NJ 1330 180J 1340 NJ 1340 1030J 1230 1480J
+preplace netloc cmos_pclk_1 1 0 5 NJ 1350 NJ 1350 620J 1140 NJ 1140 NJ
+preplace netloc cmos_vsync_1 1 0 5 NJ 1330 NJ 1330 610J 1100 NJ 1100 NJ
 preplace netloc ov_cmos_cmos_pwdn 1 5 2 NJ 1120 NJ
-preplace netloc axi_uartlite_0_interrupt 1 1 5 230 830 NJ 830 NJ 830 1400J 650 1810
+preplace netloc axi_uartlite_0_interrupt 1 1 5 220 570 NJ 570 1050J 410 1470J 650 1850
 preplace netloc aux_reset_in_0_1 1 0 2 NJ 680 NJ
-preplace netloc ov_cmos_iic2intc_irpt 1 1 5 240 1330 NJ 1330 1000J 1220 1470J 1000 1810
+preplace netloc ov_cmos_iic2intc_irpt 1 1 5 210 1370 NJ 1370 NJ 1370 NJ 1370 1860
 preplace netloc ov_cmos_vga_pGreen_0 1 5 2 NJ 1160 NJ
 preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 5 1 N
 preplace netloc ov_cmos_vga_pVSync_0 1 5 2 NJ 1220 NJ
 preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 5 1 N
-preplace netloc axi_interconnect_0_M02_AXI 1 4 1 1400
-preplace netloc Cortex_M3_0_SWDOEN 1 5 1 1810J
+preplace netloc axi_interconnect_0_M02_AXI 1 4 1 1440
+preplace netloc Cortex_M3_0_SWDOEN 1 5 1 1860J
 preplace netloc SWCLKTCK_0_1 1 0 3 NJ 480 NJ 480 NJ
-preplace netloc cmos_href_1 1 0 5 NJ 880 200J 870 NJ 870 990J 880 1370J
-preplace netloc xlconcat_1_dout 1 2 1 580
-preplace netloc Clocks_and_Resets_sysresetn 1 2 1 550
-preplace netloc proc_sys_reset_1_peripheral_aresetn 1 2 3 NJ 640 1050 1260 NJ
+preplace netloc cmos_href_1 1 0 5 NJ 880 180J 870 NJ 870 1030J 1000 1410J
+preplace netloc xlconcat_1_dout 1 2 1 600
+preplace netloc Clocks_and_Resets_sysresetn 1 2 1 570
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 2 3 NJ 640 1090 960 1400J
 preplace netloc ov_cmos_DDR2_0 1 5 2 NJ 1060 NJ
-preplace netloc Cortex_M3_0_CM3_SYS_AXI3 1 3 1 990
-preplace netloc Cortex_M3_0_SWDO 1 3 3 1020 400 1480J 480 1820J
+preplace netloc Cortex_M3_0_CM3_SYS_AXI3 1 3 1 1060
+preplace netloc Cortex_M3_0_SWDO 1 3 3 1040 400 1500J 480 1870J
 preplace netloc sys_clock_1 1 0 2 NJ 700 NJ
-preplace netloc sys_clock_2 1 2 3 540J 820 NJ 820 1390
+preplace netloc sys_clock_2 1 2 3 NJ 760 1040J 820 1420
 preplace netloc ov_cmos_vga_pRed_0 1 5 2 NJ 1200 NJ
-preplace netloc cmos_data_1 1 0 5 NJ 860 NJ 860 NJ 860 1010J 870 1400J
-preplace netloc axi_interconnect_0_M04_AXI 1 4 1 1390
+preplace netloc cmos_data_1 1 0 5 NJ 860 180J 840 NJ 840 1080J 970 1430J
+preplace netloc axi_interconnect_0_M04_AXI 1 4 1 1450
 preplace netloc ov_cmos_vga_pBlue_0 1 5 2 NJ 1140 NJ
-preplace netloc xlconcat_0_dout 1 2 1 560
+preplace netloc xlconcat_0_dout 1 2 1 580
 preplace netloc axi_gpio_0_GPIO2 1 5 2 NJ 910 NJ
-preplace netloc clk_wiz_0_clk_out1 1 2 3 540 670 1040 390 1450
+preplace netloc clk_wiz_0_clk_out1 1 2 3 550 220 1080 220 1480
 preplace netloc ov_cmos_cmos_rst 1 5 2 NJ 1100 NJ
 preplace netloc axi_uartlite_0_UART 1 5 2 NJ 560 NJ
 preplace netloc axi_gpio_0_GPIO 1 5 2 NJ 890 NJ
-preplace netloc axi_interconnect_0_M00_AXI 1 4 1 1440
-preplace netloc Cortex_M3_0_SWDOEN1 1 3 2 1010 230 1490J
-preplace netloc axi_gpio_0_ip2intc_irpt 1 1 5 240 850 NJ 850 1030J 860 1410J 990 1810
+preplace netloc axi_interconnect_0_M00_AXI 1 4 1 1460
+preplace netloc Cortex_M3_0_SWDOEN1 1 3 2 1030 390 1510J
+preplace netloc axi_gpio_0_ip2intc_irpt 1 1 5 230 860 NJ 860 1050J 990 NJ 990 1850
 preplace netloc ov_cmos_cmos_iic 1 5 2 NJ 1080 NJ
-preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1440
+preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1460
 preplace netloc Net 1 6 1 NJ
-preplace netloc Cortex_M3_0_SYSRESETREQ 1 1 3 240 580 NJ 580 1000
-preplace netloc proc_sys_reset_1_interconnect_aresetn 1 2 3 NJ 660 1070 850 1460
-preplace netloc axi_quad_spi_0_ip2intc_irpt 1 1 5 220 840 NJ 840 NJ 840 1430J 830 1810
-preplace netloc reset_1 1 0 5 NJ 740 190 1360 NJ 1360 1070J 1250 1490J
-preplace netloc axi_interconnect_0_M03_AXI 1 4 1 1420
-preplace netloc axi_timer_0_interrupt 1 1 5 210 220 NJ 220 NJ 220 NJ 220 1820
-levelinfo -pg 1 0 100 390 790 1220 1650 1950 2100 -top 0 -bot 1380
+preplace netloc Cortex_M3_0_SYSRESETREQ 1 1 3 230 830 NJ 830 1020
+preplace netloc proc_sys_reset_1_interconnect_aresetn 1 2 3 560J 230 1090 230 1490
+preplace netloc axi_quad_spi_0_ip2intc_irpt 1 1 5 230 1360 NJ 1360 NJ 1360 NJ 1360 1870
+preplace netloc reset_1 1 0 5 NJ 740 190 850 NJ 850 1070J 980 1390J
+preplace netloc axi_interconnect_0_M03_AXI 1 4 1 1440
+preplace netloc axi_timer_0_interrupt 1 1 5 200 200 NJ 200 NJ 200 1520J 490 1850
+levelinfo -pg 1 0 100 400 820 1240 1690 2000 2150 -top 0 -bot 1380
 ",
 }
 {

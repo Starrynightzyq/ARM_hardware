@@ -1,22 +1,13 @@
 vhdl xil_defaultlib  \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_bram_ctrl_0_0/sim/m3_for_arty_a7_axi_bram_ctrl_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_gpio_0_0/sim/m3_for_arty_a7_axi_gpio_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_gpio_1_0/sim/m3_for_arty_a7_axi_gpio_1_0.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_0/sim/m3_for_arty_a7_axi_quad_spi_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_uartlite_0_0/sim/m3_for_arty_a7_axi_uartlite_0_0.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_single_spi_0_0/sim/m3_for_arty_a7_axi_single_spi_0_0.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_1/sim/m3_for_arty_a7_axi_quad_spi_0_1.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_xip_quad_spi_0_0/sim/m3_for_arty_a7_axi_xip_quad_spi_0_0.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_gpio_0_1/sim/m3_for_arty_a7_axi_gpio_0_1.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_proc_sys_reset_DAPLink_0/sim/m3_for_arty_a7_proc_sys_reset_DAPLink_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_proc_sys_reset_base_0/sim/m3_for_arty_a7_proc_sys_reset_base_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_iic_0_0/sim/m3_for_arty_a7_axi_iic_0_0.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_iic_1_0/sim/m3_for_arty_a7_axi_iic_1_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_timer_0_0/sim/m3_for_arty_a7_axi_timer_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_vdma_0_1/sim/m3_for_arty_a7_axi_vdma_0_1.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_smc_3/bd_0/ip/ip_1/sim/bd_d531_psr0_0.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_smc_3/bd_0/ip/ip_2/sim/bd_d531_psr_aclk_0.vhd" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_axi_smc_3/bd_0/ip/ip_3/sim/bd_d531_psr_aclk1_0.vhd" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_axi_smc_3/bd_0/ip/ip_1/sim/bd_d531_psr_aclk_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_rst_mig_7series_0_81M_3/sim/m3_for_arty_a7_rst_mig_7series_0_81M_3.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_v_tc_0_0/sim/m3_for_arty_a7_v_tc_0_0.vhd" \
 "../../../../../block_diagram/ipshared/69dc/src/rgb2vga.vhd" \
@@ -24,5 +15,7 @@ vhdl xil_defaultlib  \
 "../../../../../block_diagram/ip/m3_for_arty_a7_proc_sys_reset_0_0/sim/m3_for_arty_a7_proc_sys_reset_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_proc_sys_reset_1_0/sim/m3_for_arty_a7_proc_sys_reset_1_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_vdma_1_0/sim/m3_for_arty_a7_axi_vdma_1_0.vhd" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_axi_bram_ctrl_0_0/sim/m3_for_arty_a7_axi_bram_ctrl_0_0.vhd" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_2/sim/m3_for_arty_a7_axi_quad_spi_0_2.vhd" \
 
 nosort
