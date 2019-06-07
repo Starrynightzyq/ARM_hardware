@@ -17,5 +17,6 @@ vhdl xil_defaultlib  \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_vdma_1_0/sim/m3_for_arty_a7_axi_vdma_1_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_bram_ctrl_0_0/sim/m3_for_arty_a7_axi_bram_ctrl_0_0.vhd" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_2/sim/m3_for_arty_a7_axi_quad_spi_0_2.vhd" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_axi_gpio_0_1/sim/m3_for_arty_a7_axi_gpio_0_1.vhd" \
 
 nosort
