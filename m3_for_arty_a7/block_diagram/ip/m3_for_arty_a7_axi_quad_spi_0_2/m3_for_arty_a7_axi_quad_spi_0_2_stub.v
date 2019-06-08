@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Jun  7 12:58:41 2019
+// Date        : Sat Jun  8 01:30:12 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top m3_for_arty_a7_axi_quad_spi_0_2 -prefix
-//               m3_for_arty_a7_axi_quad_spi_0_2_ m3_for_arty_a7_axi_quad_spi_0_2_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               C:/OneDriveLocal/ARM_CP/workspace/hardware_t/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_axi_quad_spi_0_2/m3_for_arty_a7_axi_quad_spi_0_2_stub.v
 // Design      : m3_for_arty_a7_axi_quad_spi_0_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
@@ -22,7 +22,7 @@ module m3_for_arty_a7_axi_quad_spi_0_2(ext_spi_clk, s_axi4_aclk, s_axi4_aresetn,
   s_axi4_arvalid, s_axi4_arready, s_axi4_rdata, s_axi4_rresp, s_axi4_rlast, s_axi4_rvalid, 
   s_axi4_rready, io0_i, io0_o, io0_t, io1_i, io1_o, io1_t, sck_i, sck_o, sck_t, ss_i, ss_o, ss_t, 
   ip2intc_irpt)
-/* synthesis syn_black_box black_box_pad_pin="ext_spi_clk,s_axi4_aclk,s_axi4_aresetn,s_axi4_awaddr[23:0],s_axi4_awlen[7:0],s_axi4_awsize[2:0],s_axi4_awburst[1:0],s_axi4_awlock,s_axi4_awcache[3:0],s_axi4_awprot[2:0],s_axi4_awvalid,s_axi4_awready,s_axi4_wdata[31:0],s_axi4_wstrb[3:0],s_axi4_wlast,s_axi4_wvalid,s_axi4_wready,s_axi4_bresp[1:0],s_axi4_bvalid,s_axi4_bready,s_axi4_araddr[23:0],s_axi4_arlen[7:0],s_axi4_arsize[2:0],s_axi4_arburst[1:0],s_axi4_arlock,s_axi4_arcache[3:0],s_axi4_arprot[2:0],s_axi4_arvalid,s_axi4_arready,s_axi4_rdata[31:0],s_axi4_rresp[1:0],s_axi4_rlast,s_axi4_rvalid,s_axi4_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt" */;
+/* synthesis syn_black_box black_box_pad_pin="ext_spi_clk,s_axi4_aclk,s_axi4_aresetn,s_axi4_awaddr[23:0],s_axi4_awlen[7:0],s_axi4_awsize[2:0],s_axi4_awburst[1:0],s_axi4_awlock,s_axi4_awcache[3:0],s_axi4_awprot[2:0],s_axi4_awvalid,s_axi4_awready,s_axi4_wdata[31:0],s_axi4_wstrb[3:0],s_axi4_wlast,s_axi4_wvalid,s_axi4_wready,s_axi4_bresp[1:0],s_axi4_bvalid,s_axi4_bready,s_axi4_araddr[23:0],s_axi4_arlen[7:0],s_axi4_arsize[2:0],s_axi4_arburst[1:0],s_axi4_arlock,s_axi4_arcache[3:0],s_axi4_arprot[2:0],s_axi4_arvalid,s_axi4_arready,s_axi4_rdata[31:0],s_axi4_rresp[1:0],s_axi4_rlast,s_axi4_rvalid,s_axi4_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,sck_i,sck_o,sck_t,ss_i[1:0],ss_o[1:0],ss_t,ip2intc_irpt" */;
   input ext_spi_clk;
   input s_axi4_aclk;
   input s_axi4_aresetn;
@@ -66,8 +66,8 @@ module m3_for_arty_a7_axi_quad_spi_0_2(ext_spi_clk, s_axi4_aclk, s_axi4_aresetn,
   input sck_i;
   output sck_o;
   output sck_t;
-  input [0:0]ss_i;
-  output [0:0]ss_o;
+  input [1:0]ss_i;
+  output [1:0]ss_o;
   output ss_t;
   output ip2intc_irpt;
 endmodule

@@ -269,11 +269,6 @@ verilog xil_defaultlib --include "../../../../../block_diagram/ipshared/6b77/rtl
 "../../../../../block_diagram/ip/m3_for_arty_a7_mask_0_0/sim/m3_for_arty_a7_mask_0_0.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_xlconstant_0_1/sim/m3_for_arty_a7_xlconstant_0_1.v" \
 "../../../../../block_diagram/sim/m3_for_arty_a7.v" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_8/sim/m3_for_arty_a7_auto_pc_8.v" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_8/sim/m3_for_arty_a7_auto_cc_8.v" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_7/sim/m3_for_arty_a7_auto_pc_7.v" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_6/sim/m3_for_arty_a7_auto_pc_6.v" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_5/sim/m3_for_arty_a7_auto_pc_5.v" \
 "../../../../../block_diagram/ipshared/8b69/hdl/verilog/AXIvideo2Mat.v" \
 "../../../../../block_diagram/ipshared/8b69/hdl/verilog/Block_Mat_exit2817_p.v" \
 "../../../../../block_diagram/ipshared/8b69/hdl/verilog/Duplicate.v" \
@@ -393,6 +388,11 @@ verilog xil_defaultlib --include "../../../../../block_diagram/ipshared/6b77/rtl
 "../../../../../block_diagram/ip/m3_for_arty_a7_resize_ctrl_0_0/sim/m3_for_arty_a7_resize_ctrl_0_0.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_sort_0_0/sim/m3_for_arty_a7_sort_0_0.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_xlconstant_1_4/sim/m3_for_arty_a7_xlconstant_1_4.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_9/sim/m3_for_arty_a7_auto_pc_9.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_8/sim/m3_for_arty_a7_auto_cc_8.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_8/sim/m3_for_arty_a7_auto_pc_8.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_7/sim/m3_for_arty_a7_auto_pc_7.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_6/sim/m3_for_arty_a7_auto_pc_6.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_7/sim/m3_for_arty_a7_auto_cc_7.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_6/sim/m3_for_arty_a7_auto_cc_6.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_5/sim/m3_for_arty_a7_auto_cc_5.v" \
@@ -401,11 +401,12 @@ verilog xil_defaultlib --include "../../../../../block_diagram/ipshared/6b77/rtl
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_2/sim/m3_for_arty_a7_auto_cc_2.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_1/sim/m3_for_arty_a7_auto_cc_1.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_cc_0/sim/m3_for_arty_a7_auto_cc_0.v" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_4/sim/m3_for_arty_a7_auto_pc_4.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_5/sim/m3_for_arty_a7_auto_pc_5.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_3/sim/m3_for_arty_a7_auto_pc_3.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_2/sim/m3_for_arty_a7_auto_pc_2.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_1/sim/m3_for_arty_a7_auto_pc_1.v" \
 "../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_0/sim/m3_for_arty_a7_auto_pc_0.v" \
-"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_3/sim/m3_for_arty_a7_auto_pc_3.v" \
+"../../../../../block_diagram/ip/m3_for_arty_a7_auto_pc_4/sim/m3_for_arty_a7_auto_pc_4.v" \
 
 verilog xil_defaultlib "glbl.v"
 

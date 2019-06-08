@@ -101,8 +101,8 @@ ENTITY m3_for_arty_a7_axi_quad_spi_0_2 IS
     sck_i : IN STD_LOGIC;
     sck_o : OUT STD_LOGIC;
     sck_t : OUT STD_LOGIC;
-    ss_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ss_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    ss_i : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    ss_o : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     ss_t : OUT STD_LOGIC;
     ip2intc_irpt : OUT STD_LOGIC
   );
@@ -227,8 +227,8 @@ ARCHITECTURE m3_for_arty_a7_axi_quad_spi_0_2_arch OF m3_for_arty_a7_axi_quad_spi
       sck_i : IN STD_LOGIC;
       sck_o : OUT STD_LOGIC;
       sck_t : OUT STD_LOGIC;
-      ss_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      ss_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+      ss_i : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+      ss_o : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       ss_t : OUT STD_LOGIC;
       ss_1_i : IN STD_LOGIC;
       ss_1_o : OUT STD_LOGIC;
@@ -319,7 +319,7 @@ BEGIN
       C_FIFO_DEPTH => 16,
       C_SCK_RATIO => 16,
       C_DUAL_QUAD_MODE => 0,
-      C_NUM_SS_BITS => 1,
+      C_NUM_SS_BITS => 2,
       C_NUM_TRANSFER_BITS => 8,
       C_SPI_MODE => 0,
       C_USE_STARTUP => 0,

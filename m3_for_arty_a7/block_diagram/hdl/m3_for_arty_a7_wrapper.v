@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Jun  8 00:45:11 2019
+//Date        : Sat Jun  8 01:28:11 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -24,6 +24,7 @@ module m3_for_arty_a7_wrapper
     DDR2_0_odt,
     DDR2_0_ras_n,
     DDR2_0_we_n,
+    GPIO_lcd,
     SDWIO,
     SWCLK,
     cmos_data,
@@ -65,6 +66,7 @@ module m3_for_arty_a7_wrapper
   output [0:0]DDR2_0_odt;
   output DDR2_0_ras_n;
   output DDR2_0_we_n;
+  output [2:0]GPIO_lcd;
   inout [0:0]SDWIO;
   input SWCLK;
   input [7:0]cmos_data;
@@ -83,7 +85,7 @@ module m3_for_arty_a7_wrapper
   inout spi_rtl_io0_io;
   inout spi_rtl_io1_io;
   inout spi_rtl_sck_io;
-  inout [0:0]spi_rtl_ss_io;
+  inout [1:0]spi_rtl_ss_io;
   input sys_clock;
   input usb_uart_rxd;
   output usb_uart_txd;
@@ -107,6 +109,7 @@ module m3_for_arty_a7_wrapper
   wire [0:0]DDR2_0_odt;
   wire DDR2_0_ras_n;
   wire DDR2_0_we_n;
+  wire [2:0]GPIO_lcd;
   wire [0:0]SDWIO;
   wire SWCLK;
   wire [7:0]cmos_data;
@@ -156,8 +159,11 @@ module m3_for_arty_a7_wrapper
   wire spi_rtl_sck_o;
   wire spi_rtl_sck_t;
   wire [0:0]spi_rtl_ss_i_0;
+  wire [1:1]spi_rtl_ss_i_1;
   wire [0:0]spi_rtl_ss_io_0;
+  wire [1:1]spi_rtl_ss_io_1;
   wire [0:0]spi_rtl_ss_o_0;
+  wire [1:1]spi_rtl_ss_o_1;
   wire spi_rtl_ss_t;
   wire sys_clock;
   wire usb_uart_rxd;
@@ -213,6 +219,7 @@ module m3_for_arty_a7_wrapper
         .DDR2_0_odt(DDR2_0_odt),
         .DDR2_0_ras_n(DDR2_0_ras_n),
         .DDR2_0_we_n(DDR2_0_we_n),
+        .GPIO_lcd(GPIO_lcd),
         .SDWIO(SDWIO),
         .SWCLK(SWCLK),
         .cmos_data(cmos_data),
@@ -243,8 +250,8 @@ module m3_for_arty_a7_wrapper
         .spi_rtl_sck_i(spi_rtl_sck_i),
         .spi_rtl_sck_o(spi_rtl_sck_o),
         .spi_rtl_sck_t(spi_rtl_sck_t),
-        .spi_rtl_ss_i(spi_rtl_ss_i_0),
-        .spi_rtl_ss_o(spi_rtl_ss_o_0),
+        .spi_rtl_ss_i({spi_rtl_ss_i_1,spi_rtl_ss_i_0}),
+        .spi_rtl_ss_o({spi_rtl_ss_o_1,spi_rtl_ss_o_0}),
         .spi_rtl_ss_t(spi_rtl_ss_t),
         .sys_clock(sys_clock),
         .usb_uart_rxd(usb_uart_rxd),
@@ -273,5 +280,10 @@ module m3_for_arty_a7_wrapper
        (.I(spi_rtl_ss_o_0),
         .IO(spi_rtl_ss_io[0]),
         .O(spi_rtl_ss_i_0),
+        .T(spi_rtl_ss_t));
+  IOBUF spi_rtl_ss_iobuf_1
+       (.I(spi_rtl_ss_o_1),
+        .IO(spi_rtl_ss_io[1]),
+        .O(spi_rtl_ss_i_1),
         .T(spi_rtl_ss_t));
 endmodule
