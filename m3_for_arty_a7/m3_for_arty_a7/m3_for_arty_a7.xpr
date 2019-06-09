@@ -8,7 +8,7 @@
   <Configuration>
     <Option Name="Id" Val="77819a256541433f8004e1f4f878ad6e"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
-    <Option Name="CompiledLibDir" Val="$PPRDIR/../../../../../modelsim/Vivado_2018.2_lib"/>
+    <Option Name="CompiledLibDir" Val="C:/modelsim/Vivado_2018.2_lib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
     <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../precompiled_sim_libs"/>
@@ -17,6 +17,7 @@
     <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="TargetSimulator" Val="ModelSim"/>
     <Option Name="BoardPart" Val="digilentinc.com:nexys4_ddr:part0:1.1"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -35,20 +36,20 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="arty"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="8"/>
-    <Option Name="WTModelSimLaunchSim" Val="2"/>
+    <Option Name="WTXSimLaunchSim" Val="13"/>
+    <Option Name="WTModelSimLaunchSim" Val="9"/>
     <Option Name="WTQuestaLaunchSim" Val="47"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="115"/>
-    <Option Name="WTModelSimExportSim" Val="115"/>
-    <Option Name="WTQuestaExportSim" Val="115"/>
-    <Option Name="WTIesExportSim" Val="115"/>
-    <Option Name="WTVcsExportSim" Val="115"/>
-    <Option Name="WTRivieraExportSim" Val="115"/>
-    <Option Name="WTActivehdlExportSim" Val="115"/>
+    <Option Name="WTXSimExportSim" Val="122"/>
+    <Option Name="WTModelSimExportSim" Val="122"/>
+    <Option Name="WTQuestaExportSim" Val="122"/>
+    <Option Name="WTIesExportSim" Val="122"/>
+    <Option Name="WTVcsExportSim" Val="122"/>
+    <Option Name="WTRivieraExportSim" Val="122"/>
+    <Option Name="WTActivehdlExportSim" Val="122"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -97,14 +98,34 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/combine.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/plate_fsm.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../block_diagram/m3_for_arty_a7.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_xbar_1"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_quad_spi_0_2/m3_for_arty_a7_axi_quad_spi_0_2.xci">
           <Proxy FileSetName="m3_for_arty_a7_axi_quad_spi_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_mask_0_0/m3_for_arty_a7_mask_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_mask_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_tri_io_buf_0_0"/>
@@ -112,32 +133,38 @@
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_0/m3_for_arty_a7_xbar_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_threshold2_0_1/m3_for_arty_a7_threshold2_0_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_threshold2_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_mask_0_0/m3_for_arty_a7_mask_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_mask_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_xbar_1/m3_for_arty_a7_xbar_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_xbar_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_1_0/m3_for_arty_a7_axi_gpio_1_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_axi_gpio_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_blk_mem_gen_0_0/m3_for_arty_a7_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_sort_0_0/m3_for_arty_a7_sort_0_0.xci">
-          <Proxy FileSetName="m3_for_arty_a7_sort_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_bound_fsm_0_0/m3_for_arty_a7_bound_fsm_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_bound_fsm_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_1_1/m3_for_arty_a7_axi_gpio_1_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_gpio_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_draw_line_hls_0_0/m3_for_arty_a7_draw_line_hls_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_draw_line_hls_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_0_1/m3_for_arty_a7_axi_gpio_0_1.xci">
+          <Proxy FileSetName="m3_for_arty_a7_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_sort_0_0/m3_for_arty_a7_sort_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_sort_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_resize_ctrl_0_0/m3_for_arty_a7_resize_ctrl_0_0.xci">
           <Proxy FileSetName="m3_for_arty_a7_resize_ctrl_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_axi_gpio_1_1/m3_for_arty_a7_axi_gpio_1_1.xci">
-          <Proxy FileSetName="m3_for_arty_a7_axi_gpio_1_1"/>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_plate_fsm_0_0/m3_for_arty_a7_plate_fsm_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_plate_fsm_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_combine_0_0/m3_for_arty_a7_combine_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_combine_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="m3_for_arty_a7.bd" FileRelPathName="ip/m3_for_arty_a7_system_ila_0_0/m3_for_arty_a7_system_ila_0_0.xci">
+          <Proxy FileSetName="m3_for_arty_a7_system_ila_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../block_diagram/hdl/m3_for_arty_a7_wrapper.v">
@@ -188,8 +215,16 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim/tb_tri_io_buf.sv">
+      <File Path="$PSRCDIR/sim/tb_plate_fsm_1.sv">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim/tb_plate_fsm.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -205,6 +240,14 @@
       </File>
       <File Path="$PPRDIR/../testbench/tb_m3_for_arty.v">
         <FileInfo SFType="SVerilog">
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim/tb_tri_io_buf.sv">
+        <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -248,7 +291,7 @@
       <File Path="$PPRDIR/../testbench/wave_files/wave_no_daplink.do"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="tb_tri_io_buf"/>
+        <Option Name="TopModule" Val="tb_plate_fsm"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="VerilogDir" Val="$PPRDIR/../testbench/Micron_N25Q128A13E"/>
         <Option Name="TransportPathDelay" Val="0"/>
@@ -278,12 +321,6 @@
     <FileSet Name="m3_for_arty_a7_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_xbar_0">
       <Config>
         <Option Name="TopModule" Val="m3_for_arty_a7_xbar_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="m3_for_arty_a7_threshold2_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_threshold2_0_1">
-      <Config>
-        <Option Name="TopModule" Val="m3_for_arty_a7_threshold2_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -329,6 +366,36 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="m3_for_arty_a7_draw_line_hls_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_draw_line_hls_0_0">
+      <Config>
+        <Option Name="TopModule" Val="m3_for_arty_a7_draw_line_hls_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="m3_for_arty_a7_system_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_system_ila_0_0">
+      <Config>
+        <Option Name="TopModule" Val="m3_for_arty_a7_system_ila_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="m3_for_arty_a7_axi_gpio_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_axi_gpio_0_1">
+      <Config>
+        <Option Name="TopModule" Val="m3_for_arty_a7_axi_gpio_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="m3_for_arty_a7_combine_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_combine_0_0">
+      <Config>
+        <Option Name="TopModule" Val="m3_for_arty_a7_combine_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="m3_for_arty_a7_plate_fsm_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/m3_for_arty_a7_plate_fsm_0_0">
+      <Config>
+        <Option Name="TopModule" Val="m3_for_arty_a7_plate_fsm_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -356,11 +423,11 @@
         </StratHandle>
         <Step Id="synth_design">
           <Option Id="ResourceSharing">2</Option>
+          <Option Id="KeepEquivalentRegisters">1</Option>
           <Option Id="FsmExtraction">1</Option>
           <Option Id="RepFanoutThreshold">400</Option>
-          <Option Id="KeepEquivalentRegisters">1</Option>
-          <Option Id="NoCombineLuts">1</Option>
           <Option Id="ShregMinSize">5</Option>
+          <Option Id="NoCombineLuts">1</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -395,15 +462,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="m3_for_arty_a7_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_xbar_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_xbar_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_xbar_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="m3_for_arty_a7_threshold2_0_1_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_threshold2_0_1" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_threshold2_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_threshold2_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -450,9 +508,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_bound_fsm_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_bound_fsm_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_bound_fsm_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_bound_fsm_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -460,6 +516,33 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="m3_for_arty_a7_resize_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_resize_ctrl_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_resize_ctrl_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_resize_ctrl_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_sort_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_sort_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_sort_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_sort_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_draw_line_hls_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_draw_line_hls_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_draw_line_hls_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_draw_line_hls_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_system_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_system_ila_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_system_ila_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_system_ila_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -470,7 +553,29 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="m3_for_arty_a7_sort_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_sort_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_sort_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_sort_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="m3_for_arty_a7_axi_gpio_0_1_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_axi_gpio_0_1" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_gpio_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_axi_gpio_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_combine_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_combine_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_combine_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_combine_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_plate_fsm_0_0_synth_1" Type="Ft3:Synth" SrcSet="m3_for_arty_a7_plate_fsm_0_0" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_plate_fsm_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/m3_for_arty_a7_plate_fsm_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -566,22 +671,6 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="m3_for_arty_a7_threshold2_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_threshold2_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_threshold2_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="m3_for_arty_a7_mask_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_mask_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_mask_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
@@ -648,9 +737,7 @@
     </Run>
     <Run Id="m3_for_arty_a7_bound_fsm_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_bound_fsm_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_bound_fsm_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -665,6 +752,54 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="m3_for_arty_a7_resize_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_resize_ctrl_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_resize_ctrl_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_sort_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_sort_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_sort_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_draw_line_hls_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_draw_line_hls_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_draw_line_hls_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_system_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_system_ila_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_system_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
@@ -682,7 +817,43 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="m3_for_arty_a7_sort_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_sort_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_sort_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="m3_for_arty_a7_axi_gpio_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_axi_gpio_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_axi_gpio_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_combine_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_combine_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_combine_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="m3_for_arty_a7_plate_fsm_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="m3_for_arty_a7_plate_fsm_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="m3_for_arty_a7_plate_fsm_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>

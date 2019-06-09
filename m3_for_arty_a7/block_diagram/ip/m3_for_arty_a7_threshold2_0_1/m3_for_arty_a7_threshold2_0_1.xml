@@ -1120,10 +1120,232 @@
           </spirit:field>
         </spirit:register>
         <spirit:register>
+          <spirit:name>h</spirit:name>
+          <spirit:displayName>h</spirit:displayName>
+          <spirit:description>Data signal of h</spirit:description>
+          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>h</spirit:name>
+            <spirit:description>Bit 7 to 0 Data signal of h</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>8</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>h_ctrl</spirit:name>
+          <spirit:displayName>h_ctrl</spirit:displayName>
+          <spirit:description>Control signal of h</spirit:description>
+          <spirit:addressOffset>20</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>h_ap_vld</spirit:name>
+            <spirit:description>Control signal h_ap_vld</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">31</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>s</spirit:name>
+          <spirit:displayName>s</spirit:displayName>
+          <spirit:description>Data signal of s</spirit:description>
+          <spirit:addressOffset>24</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>s</spirit:name>
+            <spirit:description>Bit 7 to 0 Data signal of s</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>8</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>s_ctrl</spirit:name>
+          <spirit:displayName>s_ctrl</spirit:displayName>
+          <spirit:description>Control signal of s</spirit:description>
+          <spirit:addressOffset>28</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>s_ap_vld</spirit:name>
+            <spirit:description>Control signal s_ap_vld</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">31</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>v</spirit:name>
+          <spirit:displayName>v</spirit:displayName>
+          <spirit:description>Data signal of v</spirit:description>
+          <spirit:addressOffset>32</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>v</spirit:name>
+            <spirit:description>Bit 7 to 0 Data signal of v</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>8</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>v_ctrl</spirit:name>
+          <spirit:displayName>v_ctrl</spirit:displayName>
+          <spirit:description>Control signal of v</spirit:description>
+          <spirit:addressOffset>36</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>v_ap_vld</spirit:name>
+            <spirit:description>Control signal v_ap_vld</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">31</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
           <spirit:name>rows</spirit:name>
           <spirit:displayName>rows</spirit:displayName>
           <spirit:description>Data signal of rows</spirit:description>
-          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:addressOffset>40</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1159,7 +1381,7 @@
           <spirit:name>cols</spirit:name>
           <spirit:displayName>cols</spirit:displayName>
           <spirit:description>Data signal of cols</spirit:description>
-          <spirit:addressOffset>24</spirit:addressOffset>
+          <spirit:addressOffset>48</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1195,7 +1417,7 @@
           <spirit:name>max_h</spirit:name>
           <spirit:displayName>max_h</spirit:displayName>
           <spirit:description>Data signal of max_h</spirit:description>
-          <spirit:addressOffset>32</spirit:addressOffset>
+          <spirit:addressOffset>56</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1231,7 +1453,7 @@
           <spirit:name>min_h</spirit:name>
           <spirit:displayName>min_h</spirit:displayName>
           <spirit:description>Data signal of min_h</spirit:description>
-          <spirit:addressOffset>40</spirit:addressOffset>
+          <spirit:addressOffset>64</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1267,7 +1489,7 @@
           <spirit:name>max_s</spirit:name>
           <spirit:displayName>max_s</spirit:displayName>
           <spirit:description>Data signal of max_s</spirit:description>
-          <spirit:addressOffset>48</spirit:addressOffset>
+          <spirit:addressOffset>72</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1303,7 +1525,7 @@
           <spirit:name>min_s</spirit:name>
           <spirit:displayName>min_s</spirit:displayName>
           <spirit:description>Data signal of min_s</spirit:description>
-          <spirit:addressOffset>56</spirit:addressOffset>
+          <spirit:addressOffset>80</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1339,7 +1561,7 @@
           <spirit:name>max_v</spirit:name>
           <spirit:displayName>max_v</spirit:displayName>
           <spirit:description>Data signal of max_v</spirit:description>
-          <spirit:addressOffset>64</spirit:addressOffset>
+          <spirit:addressOffset>88</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1375,7 +1597,7 @@
           <spirit:name>min_v</spirit:name>
           <spirit:displayName>min_v</spirit:displayName>
           <spirit:description>Data signal of min_v</spirit:description>
-          <spirit:addressOffset>72</spirit:addressOffset>
+          <spirit:addressOffset>96</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1424,11 +1646,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jun 07 13:29:34 UTC 2019</spirit:value>
+            <spirit:value>Sat Jun 08 17:53:36 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:cfef6845</spirit:value>
+            <spirit:value>8:0282fd0b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1444,11 +1666,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jun 07 13:29:34 UTC 2019</spirit:value>
+            <spirit:value>Sat Jun 08 17:53:36 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:cfef6845</spirit:value>
+            <spirit:value>8:0282fd0b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1464,11 +1686,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jun 07 13:29:34 UTC 2019</spirit:value>
+            <spirit:value>Sat Jun 08 17:53:36 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7a70d539</spirit:value>
+            <spirit:value>8:3329e81d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1484,11 +1706,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jun 07 13:29:34 UTC 2019</spirit:value>
+            <spirit:value>Sat Jun 08 17:53:36 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7a70d539</spirit:value>
+            <spirit:value>8:3329e81d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1502,11 +1724,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jun 07 14:53:53 UTC 2019</spirit:value>
+            <spirit:value>Sat Jun 08 17:55:41 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:cfef6845</spirit:value>
+            <spirit:value>8:0282fd0b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2129,179 +2351,187 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/And_3.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/And_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/apply_3_3_s.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/apply_3_3_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/AXIvideo2Mat.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/AXIvideo2Mat.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Block_Mat_exit841_pr.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Block_Mat_exit1243_p.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/CvtColor.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/CvtColor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Dilate.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Dilate.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Erode.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Erode.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w8_d6_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w8_d7_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d5_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d5_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d6_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d7_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d7_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d8_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d9_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d10_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d10_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d11_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Filter2D.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Filter2D.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Filter2D_k_buf_0_bkb.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Filter2D_k_buf_0_bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/GaussianBlur.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/GaussianBlur.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Mat2AXIvideo.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Get_hsv.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Split.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Mat2AXIvideo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_And_3_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Split.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_CvtColovdy.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_And_3_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Dilate_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_CvtColovdy.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Erode_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Dilate_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_GaussiaAem.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Erode_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Mat2AXIzec.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_GaussiaBew.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Split_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Get_hsvwdI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_ThreshowdI.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Mat2AXIAem.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_ThreshoxdS.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Split_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Threshoyd2.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_ThreshoxdS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_ama_admb6.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Threshoyd2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_AXILiteS_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Threshozec.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mac_muncg.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_ama_admb6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mac_muocq.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_AXILiteS_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mac_muqcK.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mac_muncg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mul_mulbW.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mac_muocq.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mul_murcU.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mac_muqcK.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mux_32kbM.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mul_mulbW.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_udiv_2pcA.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mul_murcU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Threshold_l.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mux_32kbM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Threshold_l223.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_udiv_2pcA.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Threshold_l224.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Threshold_l.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Threshold_l227.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Threshold_l228.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2316,222 +2546,232 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/And_3.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/And_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/apply_3_3_s.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/apply_3_3_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/AXIvideo2Mat.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/AXIvideo2Mat.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Block_Mat_exit841_pr.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Block_Mat_exit1243_p.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/CvtColor.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/CvtColor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Dilate.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Dilate.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Erode.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Erode.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w8_d6_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w8_d7_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d5_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d5_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d6_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d7_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d7_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d8_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d9_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d10_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/fifo_w16_d10_A.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/fifo_w16_d11_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Filter2D.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Filter2D.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Filter2D_k_buf_0_bkb.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Filter2D_k_buf_0_bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/GaussianBlur.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/GaussianBlur.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Mat2AXIvideo.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Get_hsv.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Split.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Mat2AXIvideo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_And_3_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Split.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_CvtColovdy.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_And_3_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Dilate_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_CvtColovdy.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Erode_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Dilate_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_GaussiaAem.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Erode_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Mat2AXIzec.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_GaussiaBew.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Split_U0.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Get_hsvwdI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_ThreshowdI.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Mat2AXIAem.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_ThreshoxdS.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Split_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/start_for_Threshoyd2.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_ThreshoxdS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_ama_admb6.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Threshoyd2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_AXILiteS_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/start_for_Threshozec.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mac_muncg.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_ama_admb6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mac_muocq.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_AXILiteS_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mac_muqcK.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mac_muncg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mul_mulbW.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mac_muocq.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mul_murcU.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mac_muqcK.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_mux_32kbM.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mul_mulbW.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2_udiv_2pcA.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mul_murcU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Threshold_l.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_mux_32kbM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Threshold_l223.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2_udiv_2pcA.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/Threshold_l224.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Threshold_l.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ad3d/hdl/verilog/threshold2.v</spirit:name>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Threshold_l227.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/Threshold_l228.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/e4d4/hdl/verilog/threshold2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2647,7 +2887,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>threshold2</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1906072057</xilinx:coreRevision>
+      <xilinx:coreRevision>1906090127</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
@@ -2700,11 +2940,11 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f84bbf26"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="9f5bddd2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8736ba7a"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="5a9a104f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a489b296"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="288a5194"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="423cc893"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ba349081"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="dce33233"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="m3_for_arty_a7" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1559977835"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1559977835"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1559977835"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1559977835"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1560089436"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1560089436"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1560089436"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1560089436"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\m3_for_arty_a7_axi_gpio_0_0\m3_for_arty_a7_axi_gpio_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_0"/>
@@ -532,6 +532,30 @@
       </File>
       <File Name="ip\m3_for_arty_a7_axi_gpio_1_1\m3_for_arty_a7_axi_gpio_1_1.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_system_ila_0_0\m3_for_arty_a7_system_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="system_ila_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_combine_0_0\m3_for_arty_a7_combine_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/combine_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_plate_fsm_0_0\m3_for_arty_a7_plate_fsm_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/plate_fsm_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

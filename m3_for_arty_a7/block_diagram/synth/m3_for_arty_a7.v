@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Jun  8 15:10:13 2019
+//Date        : Sun Jun  9 22:10:07 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7.bd
 //Design      : m3_for_arty_a7
@@ -154,6 +154,13 @@ module Image_Process_imp_1FI7WQV
     S00_AXI_wready,
     S00_AXI_wstrb,
     S00_AXI_wvalid,
+    bound_x_min_addr,
+    char_diff,
+    char_index,
+    char_index_c,
+    char_index_c_o,
+    char_valid_c,
+    char_valid_c_o_0,
     clk_100M,
     clk_cpu,
     cpu_aresetn_100M,
@@ -208,6 +215,13 @@ module Image_Process_imp_1FI7WQV
   output [0:0]S00_AXI_wready;
   input [3:0]S00_AXI_wstrb;
   input [0:0]S00_AXI_wvalid;
+  output [2:0]bound_x_min_addr;
+  output [15:0]char_diff;
+  output [3:0]char_index;
+  output [31:0]char_index_c;
+  output [31:0]char_index_c_o;
+  output char_valid_c;
+  output char_valid_c_o_0;
   input clk_100M;
   input clk_cpu;
   input cpu_aresetn_100M;
@@ -429,6 +443,9 @@ module Image_Process_imp_1FI7WQV
   wire [15:0]bound_x_min1_doutb;
   wire [15:0]bound_x_min_doutb;
   wire clk_200M_1;
+  wire [127:0]combine_0_char_diff_c;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]combine_0_char_index_c;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire combine_0_char_valid_c;
   wire [15:0]contrast_hls_rom_0_diff_sum_0;
   wire contrast_hls_rom_0_diff_sum_0_ap_vld;
   wire [15:0]contrast_hls_rom_0_diff_sum_1;
@@ -451,6 +468,7 @@ module Image_Process_imp_1FI7WQV
   wire contrast_hls_rom_0_diff_sum_8_ap_vld;
   wire [15:0]contrast_hls_rom_0_diff_sum_9;
   wire contrast_hls_rom_0_diff_sum_9_ap_vld;
+  wire contrast_hls_rom_0_input_r_TREADY;
   wire contrast_hls_rom_0_interrupt;
   wire [2:0]draw_line_hls_0_bound_max_address0;
   wire draw_line_hls_0_bound_max_ce0;
@@ -480,6 +498,8 @@ module Image_Process_imp_1FI7WQV
   wire [0:0]mask_0_output_r_TSTRB;
   wire [0:0]mask_0_output_r_TUSER;
   wire mask_0_output_r_TVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]plate_fsm_0_char_index_c_o;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire plate_fsm_0_char_valid_c_o;
   wire [15:0]projection1_hls_0_bound_x_max;
   wire projection1_hls_0_bound_x_max_ap_vld;
   wire [15:0]projection1_hls_0_bound_x_min;
@@ -516,7 +536,7 @@ module Image_Process_imp_1FI7WQV
   wire projection_mul_hls_0_output_r_TVALID;
   wire [2:0]resize_ctrl_0_bound_x_max_addr;
   wire [15:0]resize_ctrl_0_bound_x_max_o;
-  wire [2:0]resize_ctrl_0_bound_x_min_addr;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]resize_ctrl_0_bound_x_min_addr;
   wire [15:0]resize_ctrl_0_bound_x_min_o;
   wire [15:0]resize_ctrl_0_bound_y_max_o;
   wire [15:0]resize_ctrl_0_bound_y_min_o;
@@ -526,13 +546,12 @@ module Image_Process_imp_1FI7WQV
   wire [0:0]resize_hls_axis_0_output_r_TID;
   wire [0:0]resize_hls_axis_0_output_r_TKEEP;
   wire [0:0]resize_hls_axis_0_output_r_TLAST;
-  wire resize_hls_axis_0_output_r_TREADY;
   wire [0:0]resize_hls_axis_0_output_r_TSTRB;
   wire [0:0]resize_hls_axis_0_output_r_TUSER;
   wire resize_hls_axis_0_output_r_TVALID;
-  wire [15:0]sort_0_char_diff;
-  wire [3:0]sort_0_char_index;
-  wire sort_0_interrupt;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]sort_0_char_diff;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [3:0]sort_0_char_index;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire sort_0_interrupt;
   wire [7:0]threshold2_0_output_r_TDATA;
   wire [0:0]threshold2_0_output_r_TDEST;
   wire [0:0]threshold2_0_output_r_TID;
@@ -589,6 +608,13 @@ module Image_Process_imp_1FI7WQV
   assign S00_AXI_wready[0] = Conn1_WREADY;
   assign axi_resetn_1 = peripheral_aresetn_100M;
   assign axis_data_fifo_0_M_AXIS_TREADY = M_AXIS_tready;
+  assign bound_x_min_addr[2:0] = resize_ctrl_0_bound_x_min_addr;
+  assign char_diff[15:0] = sort_0_char_diff;
+  assign char_index[3:0] = sort_0_char_index;
+  assign char_index_c[31:0] = combine_0_char_index_c;
+  assign char_index_c_o[31:0] = plate_fsm_0_char_index_c_o;
+  assign char_valid_c = combine_0_char_valid_c;
+  assign char_valid_c_o_0 = plate_fsm_0_char_valid_c_o;
   assign clk_200M_1 = clk_100M;
   assign input_r_1_TDATA = input_r_tdata[23:0];
   assign input_r_1_TKEEP = input_r_tkeep[2:0];
@@ -600,8 +626,7 @@ module Image_Process_imp_1FI7WQV
   assign interrupt1 = resize_hls_axis_0_interrupt;
   assign interrupt2 = sort_0_interrupt;
   m3_for_arty_a7_axi_gpio_0_1 axi_gpio_0
-       (.gpio2_io_i(sort_0_char_diff),
-        .gpio_io_i(sort_0_char_index),
+       (.gpio_io_i(plate_fsm_0_char_index_c_o),
         .s_axi_aclk(clk_200M_1),
         .s_axi_araddr(axi_interconnect_0_M07_AXI_ARADDR),
         .s_axi_aresetn(axi_resetn_1),
@@ -925,6 +950,16 @@ module Image_Process_imp_1FI7WQV
         .doutb(bound_x_min1_doutb),
         .ena(projection_mul_hls_0_bound_min_ce0),
         .wea(projection_mul_hls_0_bound_min_we0));
+  m3_for_arty_a7_combine_0_0 combine_0
+       (.char_addr(resize_ctrl_0_bound_x_min_addr),
+        .char_diff(sort_0_char_diff),
+        .char_diff_c(combine_0_char_diff_c),
+        .char_index(sort_0_char_index),
+        .char_index_c(combine_0_char_index_c),
+        .char_valid(sort_0_interrupt),
+        .char_valid_c(combine_0_char_valid_c),
+        .clk(clk_200M_1),
+        .rst_n(axi_resetn_1));
   m3_for_arty_a7_contrast_hls_rom_0_0 contrast_hls_rom_0
        (.ap_clk(clk_200M_1),
         .ap_rst_n(axi_resetn_1),
@@ -955,7 +990,7 @@ module Image_Process_imp_1FI7WQV
         .input_r_TID(resize_hls_axis_0_output_r_TID),
         .input_r_TKEEP(resize_hls_axis_0_output_r_TKEEP),
         .input_r_TLAST(resize_hls_axis_0_output_r_TLAST),
-        .input_r_TREADY(resize_hls_axis_0_output_r_TREADY),
+        .input_r_TREADY(contrast_hls_rom_0_input_r_TREADY),
         .input_r_TSTRB(resize_hls_axis_0_output_r_TSTRB),
         .input_r_TUSER(resize_hls_axis_0_output_r_TUSER),
         .input_r_TVALID(resize_hls_axis_0_output_r_TVALID),
@@ -1071,6 +1106,14 @@ module Image_Process_imp_1FI7WQV
         .s_axi_AXILiteS_WREADY(axi_interconnect_0_M01_AXI_WREADY),
         .s_axi_AXILiteS_WSTRB(axi_interconnect_0_M01_AXI_WSTRB),
         .s_axi_AXILiteS_WVALID(axi_interconnect_0_M01_AXI_WVALID));
+  m3_for_arty_a7_plate_fsm_0_0 plate_fsm_0
+       (.char_diff_c_i(combine_0_char_diff_c),
+        .char_index_c_i(combine_0_char_index_c),
+        .char_index_c_o(plate_fsm_0_char_index_c_o),
+        .char_valid_c_i(combine_0_char_valid_c),
+        .char_valid_c_o(plate_fsm_0_char_valid_c_o),
+        .clk(clk_200M_1),
+        .rst_n(axi_resetn_1));
   m3_for_arty_a7_projection1_hls_0_1 projection1_hls_0
        (.ap_clk(clk_200M_1),
         .ap_rst_n(axi_resetn_1),
@@ -1177,7 +1220,7 @@ module Image_Process_imp_1FI7WQV
         .bound_y_min_i(bound_fsm_0_bound_y_min_o),
         .bound_y_min_o(resize_ctrl_0_bound_y_min_o),
         .clk(clk_200M_1),
-        .resize_interrupt(resize_hls_axis_0_interrupt),
+        .resize_interrupt(resize_hls_axis_0_output_r_TUSER),
         .resize_o_addr(xlconstant_1_dout[9:0]),
         .resize_o_ce(xlconstant_1_dout[0]),
         .resize_o_d(xlconstant_1_dout[0]),
@@ -1209,7 +1252,7 @@ module Image_Process_imp_1FI7WQV
         .output_r_TID(resize_hls_axis_0_output_r_TID),
         .output_r_TKEEP(resize_hls_axis_0_output_r_TKEEP),
         .output_r_TLAST(resize_hls_axis_0_output_r_TLAST),
-        .output_r_TREADY(resize_hls_axis_0_output_r_TREADY),
+        .output_r_TREADY(contrast_hls_rom_0_input_r_TREADY),
         .output_r_TSTRB(resize_hls_axis_0_output_r_TSTRB),
         .output_r_TUSER(resize_hls_axis_0_output_r_TUSER),
         .output_r_TVALID(resize_hls_axis_0_output_r_TVALID),
@@ -6604,7 +6647,7 @@ module m09_couplers_imp_1DJNCMI
   assign m09_couplers_to_m09_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=112,numReposBlks=81,numNonXlnxBlks=10,numHierBlks=31,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=7,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=27,da_board_cnt=22,da_bram_cntlr_cnt=3,da_clkrst_cnt=30,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
+(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=115,numReposBlks=84,numNonXlnxBlks=10,numHierBlks=31,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=7,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=27,da_board_cnt=22,da_bram_cntlr_cnt=3,da_clkrst_cnt=30,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
 module m3_for_arty_a7
    (DDR2_0_addr,
     DDR2_0_ba,
@@ -7010,6 +7053,13 @@ module m3_for_arty_a7
   wire [0:0]ov_cmos_DDR2_0_ODT;
   wire ov_cmos_DDR2_0_RAS_N;
   wire ov_cmos_DDR2_0_WE_N;
+  (* DEBUG = "true" *) wire [2:0]ov_cmos_bound_x_min_addr;
+  (* DEBUG = "true" *) wire [15:0]ov_cmos_char_diff;
+  (* DEBUG = "true" *) wire [3:0]ov_cmos_char_index;
+  (* DEBUG = "true" *) wire [31:0]ov_cmos_char_index_c;
+  (* DEBUG = "true" *) wire [31:0]ov_cmos_char_index_c_o;
+  (* DEBUG = "true" *) wire ov_cmos_char_valid_c;
+  (* DEBUG = "true" *) wire ov_cmos_char_valid_c_o_0;
   wire ov_cmos_cmos_iic_SCL_I;
   wire ov_cmos_cmos_iic_SCL_O;
   wire ov_cmos_cmos_iic_SCL_T;
@@ -7022,7 +7072,8 @@ module m3_for_arty_a7
   wire ov_cmos_iic2intc_irpt;
   wire ov_cmos_interrupt;
   wire ov_cmos_interrupt1;
-  wire ov_cmos_interrupt2;
+  (* DEBUG = "true" *) wire ov_cmos_interrupt2;
+  wire ov_cmos_ui_addn_clk_0;
   wire [3:0]ov_cmos_vga_pBlue_0;
   wire [3:0]ov_cmos_vga_pGreen_0;
   wire ov_cmos_vga_pHSync_0;
@@ -7679,6 +7730,13 @@ module m3_for_arty_a7
         .S00_AXI_wstrb(axi_interconnect_0_M03_AXI_WSTRB),
         .S00_AXI_wvalid(axi_interconnect_0_M03_AXI_WVALID),
         .axi_resetn(proc_sys_reset_1_interconnect_aresetn),
+        .bound_x_min_addr(ov_cmos_bound_x_min_addr),
+        .char_diff(ov_cmos_char_diff),
+        .char_index(ov_cmos_char_index),
+        .char_index_c(ov_cmos_char_index_c),
+        .char_index_c_o(ov_cmos_char_index_c_o),
+        .char_valid_c(ov_cmos_char_valid_c),
+        .char_valid_c_o_0(ov_cmos_char_valid_c_o_0),
         .cmos_data(cmos_data_1),
         .cmos_href(cmos_href_1),
         .cmos_iic_scl_i(ov_cmos_cmos_iic_SCL_I),
@@ -7700,11 +7758,22 @@ module m3_for_arty_a7
         .reset(reset_1),
         .s_axi_lite_aclk(clk_wiz_0_clk_out1),
         .sys_clock(sys_clock_2),
+        .ui_addn_clk_0(ov_cmos_ui_addn_clk_0),
         .vga_pBlue_0(ov_cmos_vga_pBlue_0),
         .vga_pGreen_0(ov_cmos_vga_pGreen_0),
         .vga_pHSync_0(ov_cmos_vga_pHSync_0),
         .vga_pRed_0(ov_cmos_vga_pRed_0),
         .vga_pVSync_0(ov_cmos_vga_pVSync_0));
+  m3_for_arty_a7_system_ila_0_0 system_ila_0
+       (.clk(ov_cmos_ui_addn_clk_0),
+        .probe0(ov_cmos_char_index),
+        .probe1(ov_cmos_char_diff),
+        .probe2(ov_cmos_interrupt2),
+        .probe3(ov_cmos_bound_x_min_addr),
+        .probe4(ov_cmos_char_index_c),
+        .probe5(ov_cmos_char_valid_c),
+        .probe6(ov_cmos_char_index_c_o),
+        .probe7(ov_cmos_char_valid_c_o_0));
   m3_for_arty_a7_tri_io_buf_0_0 tri_io_buf_0
        (.din(Cortex_M3_0_SWDO),
         .dout(tri_io_buf_0_dout),
@@ -7721,7 +7790,7 @@ module m3_for_arty_a7
         .In2(ov_cmos_interrupt1),
         .In3(ov_cmos_interrupt),
         .In4(ov_cmos_interrupt2),
-        .In5(1'b0),
+        .In5(ov_cmos_char_valid_c_o_0),
         .In6(1'b0),
         .In7(xlconstant_1_dout),
         .In8(ov_cmos_iic2intc_irpt),
@@ -12450,6 +12519,13 @@ module ov_cmos_imp_183AGT0
     S00_AXI_wstrb,
     S00_AXI_wvalid,
     axi_resetn,
+    bound_x_min_addr,
+    char_diff,
+    char_index,
+    char_index_c,
+    char_index_c_o,
+    char_valid_c,
+    char_valid_c_o_0,
     cmos_data,
     cmos_href,
     cmos_iic_scl_i,
@@ -12471,6 +12547,7 @@ module ov_cmos_imp_183AGT0
     reset,
     s_axi_lite_aclk,
     sys_clock,
+    ui_addn_clk_0,
     vga_pBlue_0,
     vga_pGreen_0,
     vga_pHSync_0,
@@ -12526,6 +12603,13 @@ module ov_cmos_imp_183AGT0
   input [3:0]S00_AXI_wstrb;
   input [0:0]S00_AXI_wvalid;
   input axi_resetn;
+  output [2:0]bound_x_min_addr;
+  output [15:0]char_diff;
+  output [3:0]char_index;
+  output [31:0]char_index_c;
+  output [31:0]char_index_c_o;
+  output char_valid_c;
+  output char_valid_c_o_0;
   input [7:0]cmos_data;
   input cmos_href;
   input cmos_iic_scl_i;
@@ -12547,6 +12631,7 @@ module ov_cmos_imp_183AGT0
   input reset;
   input s_axi_lite_aclk;
   input sys_clock;
+  output ui_addn_clk_0;
   output [3:0]vga_pBlue_0;
   output [3:0]vga_pGreen_0;
   output vga_pHSync_0;
@@ -12616,9 +12701,16 @@ module ov_cmos_imp_183AGT0
   wire Image_Process_M_AXIS_TREADY;
   wire [0:0]Image_Process_M_AXIS_TUSER;
   wire Image_Process_M_AXIS_TVALID;
+  (* DEBUG = "true" *) wire [2:0]Image_Process_bound_x_min_addr;
+  (* DEBUG = "true" *) wire [15:0]Image_Process_char_diff;
+  (* DEBUG = "true" *) wire [3:0]Image_Process_char_index;
+  (* DEBUG = "true" *) wire [31:0]Image_Process_char_index_c;
+  (* DEBUG = "true" *) wire [31:0]Image_Process_char_index_c_o;
+  (* DEBUG = "true" *) wire Image_Process_char_valid_c;
+  (* DEBUG = "true" *) wire Image_Process_char_valid_c_o_0;
   wire Image_Process_interrupt;
   wire Image_Process_interrupt1;
-  wire Image_Process_interrupt2;
+  (* DEBUG = "true" *) wire Image_Process_interrupt2;
   wire M04_ARESETN_1;
   wire OV_Sensor_0_cmos_xclk_o;
   wire OV_Sensor_0_vid_clk_ce;
@@ -12957,6 +13049,13 @@ module ov_cmos_imp_183AGT0
   assign S00_AXI_rvalid[0] = Conn1_RVALID;
   assign S00_AXI_wready[0] = Conn1_WREADY;
   assign axi_resetn_1 = axi_resetn;
+  assign bound_x_min_addr[2:0] = Image_Process_bound_x_min_addr;
+  assign char_diff[15:0] = Image_Process_char_diff;
+  assign char_index[3:0] = Image_Process_char_index;
+  assign char_index_c[31:0] = Image_Process_char_index_c;
+  assign char_index_c_o[31:0] = Image_Process_char_index_c_o;
+  assign char_valid_c = Image_Process_char_valid_c;
+  assign char_valid_c_o_0 = Image_Process_char_valid_c_o_0;
   assign cmos_data_1 = cmos_data[7:0];
   assign cmos_href_1 = cmos_href;
   assign cmos_iic_scl_o = Conn4_SCL_O;
@@ -12975,6 +13074,7 @@ module ov_cmos_imp_183AGT0
   assign reset_0_1 = reset;
   assign s_axi_lite_aclk_1 = s_axi_lite_aclk;
   assign sys_clock_0_1 = sys_clock;
+  assign ui_addn_clk_0 = clk_wiz_clk_100M;
   assign vga_pBlue_0[3:0] = rgb2vga_0_vga_pBlue;
   assign vga_pGreen_0[3:0] = rgb2vga_0_vga_pGreen;
   assign vga_pHSync_0 = rgb2vga_0_vga_pHSync;
@@ -13022,6 +13122,13 @@ module ov_cmos_imp_183AGT0
         .S00_AXI_wready(S00_AXI_1_WREADY),
         .S00_AXI_wstrb(S00_AXI_1_WSTRB),
         .S00_AXI_wvalid(S00_AXI_1_WVALID),
+        .bound_x_min_addr(Image_Process_bound_x_min_addr),
+        .char_diff(Image_Process_char_diff),
+        .char_index(Image_Process_char_index),
+        .char_index_c(Image_Process_char_index_c),
+        .char_index_c_o(Image_Process_char_index_c_o),
+        .char_valid_c(Image_Process_char_valid_c),
+        .char_valid_c_o_0(Image_Process_char_valid_c_o_0),
         .clk_100M(clk_wiz_clk_100M),
         .clk_cpu(s_axi_lite_aclk_1),
         .cpu_aresetn_100M(axi_resetn_1),

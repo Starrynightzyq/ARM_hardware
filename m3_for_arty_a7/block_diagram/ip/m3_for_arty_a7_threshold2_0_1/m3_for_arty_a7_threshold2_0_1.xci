@@ -7,7 +7,7 @@
   <spirit:componentInstances>
     <spirit:componentInstance>
       <spirit:instanceName>m3_for_arty_a7_threshold2_0_1</spirit:instanceName>
-      <spirit:componentRef spirit:vendor="starrynightzyq.com" spirit:library="hls" spirit:name="threshold2" spirit:version="1.2"/>
+      <spirit:componentRef spirit:vendor="starrynightzyq.com" spirit:library="hls" spirit:name="threshold2" spirit:version="1.3"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="ADDRBLOCK_RANGE.S_AXI_AXILITES.Reg">65536</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN">m3_for_arty_a7_mig_7series_0_1_ui_clk</spirit:configurableElementValue>
@@ -76,7 +76,7 @@
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.USE_RDI_CUSTOMIZATION">TRUE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.USE_RDI_GENERATION">TRUE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPCONTEXT">IP_Integrator</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPREVISION">1906072057</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPREVISION">1906090127</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.MANAGED">TRUE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.OUTPUTDIR">.</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SELECTEDSIMMODEL"/>
