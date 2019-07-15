@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun Jun  9 01:55:37 2019
+// Date        : Sun Jul 14 16:53:32 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top m3_for_arty_a7_threshold2_0_1 -prefix
-//               m3_for_arty_a7_threshold2_0_1_ m3_for_arty_a7_threshold2_0_1_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_threshold2_0_1/m3_for_arty_a7_threshold2_0_1_stub.v
 // Design      : m3_for_arty_a7_threshold2_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

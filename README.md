@@ -94,16 +94,18 @@ ArmCortex-M3 DesignStart处理器；
 | JA9: F18    | JB9: G13    | JC9: J4     | JD9: G2     | JXADC9: B17 (AD2N)   |
 | JA10: G18   | JB10: H16   | JC10: E6    | JD10: F3    | JXADC10: A18 (AD11N) |
 
-| **Pmod JA** |      |
-| ----------- | ---- |
-| JA1: C17    |      |
-| JA2: D18    |      |
-| JA3: E18    |      |
-| JA4: G17    |      |
-| JA7: D17    |      |
-| JA8: E17    |      |
-| JA9: F18    |      |
-| JA10: G18   |      |
+| **Pmod JA** |                        |
+| ----------- | ---------------------- |
+| JA1: C17    | spi_rtl_ss_io[1] (CS2) |
+| JA2: D18    | spi_rtl_ss_io[0] (CS1) |
+| JA3: E18    | spi_rtl_io1_io (MISO)  |
+| JA4: G17    | GPIO_lcd[2] (BLK)      |
+| JA7: D17    | GPIO_lcd[0] (DC)       |
+| JA8: E17    | GPIO_lcd[1] (RES)      |
+| JA9: F18    | spi_rtl_io0_io (MOSI)  |
+| JA10: G18   | spi_rtl_sck_io (CLK)   |
+
+![SPI LCD 接口](README/LCD.jpg)
 
 | **Pmod JB** |                        |
 | ----------- | ---------------------- |
@@ -137,6 +139,17 @@ ArmCortex-M3 DesignStart处理器；
 | JD8: G4     | RST                | PCLK       |
 | JD9: G2     | HREF               | VSYNC      |
 | JD10: F3    | VSYNC              | SCL        |
+
+| **Pmod XDAC**        |                   |
+| -------------------- | ----------------- |
+| JXADC1: A13 (AD3P)   |                   |
+| JXADC2: A15 (AD10P)  |                   |
+| JXADC3: B16 (AD2P)   | uart_keyboard_rxd |
+| JXADC4: B18 (AD11P)  | uart_keyboard_txd |
+| JXADC7: A14 (AD3N)   |                   |
+| JXADC8: A16 (AD10N)  |                   |
+| JXADC9: B17 (AD2N)   | uart_wifi_rx      |
+| JXADC10: A18 (AD11N) | uart_wifi_tx      |
 
 ## OV5640
 

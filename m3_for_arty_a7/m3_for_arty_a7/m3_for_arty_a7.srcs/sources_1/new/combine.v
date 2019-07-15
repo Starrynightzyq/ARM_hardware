@@ -20,9 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module combine#(
-	parameter MAX_DIFF = 50
-	) (
+module combine (
 	input             clk         ,
 	input             rst_n       ,
 
@@ -130,11 +128,7 @@ module combine#(
 					end
 				end
 				CHAR2_V : begin 
-					if(char_diff_delay < MAX_DIFF) begin
-						state_next = CHAR2;
-					end else begin 
-						state_next = IDLE;
-					end
+					state_next = CHAR2;
 				end
 				CHAR2 : begin 
 					if(char_valid_delay) begin

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sun Jun  9 22:10:08 2019
+//Date        : Mon Jul 15 21:09:38 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -45,6 +45,10 @@ module m3_for_arty_a7_wrapper
     spi_rtl_sck_io,
     spi_rtl_ss_io,
     sys_clock,
+    uart_keyboard_rxd,
+    uart_keyboard_txd,
+    uart_wifi_rx,
+    uart_wifi_tx,
     usb_uart_rxd,
     usb_uart_txd,
     vga_pBlue_0,
@@ -87,6 +91,10 @@ module m3_for_arty_a7_wrapper
   inout spi_rtl_sck_io;
   inout [1:0]spi_rtl_ss_io;
   input sys_clock;
+  input uart_keyboard_rxd;
+  output uart_keyboard_txd;
+  input uart_wifi_rx;
+  output uart_wifi_tx;
   input usb_uart_rxd;
   output usb_uart_txd;
   output [3:0]vga_pBlue_0;
@@ -166,6 +174,10 @@ module m3_for_arty_a7_wrapper
   wire [1:1]spi_rtl_ss_o_1;
   wire spi_rtl_ss_t;
   wire sys_clock;
+  wire uart_keyboard_rxd;
+  wire uart_keyboard_txd;
+  wire uart_wifi_rx;
+  wire uart_wifi_tx;
   wire usb_uart_rxd;
   wire usb_uart_txd;
   wire [3:0]vga_pBlue_0;
@@ -254,6 +266,10 @@ module m3_for_arty_a7_wrapper
         .spi_rtl_ss_o({spi_rtl_ss_o_1,spi_rtl_ss_o_0}),
         .spi_rtl_ss_t(spi_rtl_ss_t),
         .sys_clock(sys_clock),
+        .uart_keyboard_rxd(uart_keyboard_rxd),
+        .uart_keyboard_txd(uart_keyboard_txd),
+        .uart_wifi_rx(uart_wifi_rx),
+        .uart_wifi_tx(uart_wifi_tx),
         .usb_uart_rxd(usb_uart_rxd),
         .usb_uart_txd(usb_uart_txd),
         .vga_pBlue_0(vga_pBlue_0),

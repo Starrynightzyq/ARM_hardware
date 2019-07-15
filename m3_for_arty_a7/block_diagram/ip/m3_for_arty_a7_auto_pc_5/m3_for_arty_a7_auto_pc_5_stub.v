@@ -1,11 +1,11 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Jun  7 13:03:03 2019
+// Date        : Mon Jul 15 14:34:06 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top m3_for_arty_a7_auto_pc_5 -prefix
-//               m3_for_arty_a7_auto_pc_5_ m3_for_arty_a7_auto_pc_8_stub.v
-// Design      : m3_for_arty_a7_auto_pc_8
+//               m3_for_arty_a7_auto_pc_5_ m3_for_arty_a7_auto_pc_5_stub.v
+// Design      : m3_for_arty_a7_auto_pc_5
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
@@ -24,10 +24,10 @@ module m3_for_arty_a7_auto_pc_5(aclk, aresetn, s_axi_awaddr, s_axi_awlen,
   m_axi_awready, m_axi_wdata, m_axi_wstrb, m_axi_wvalid, m_axi_wready, m_axi_bresp, 
   m_axi_bvalid, m_axi_bready, m_axi_araddr, m_axi_arprot, m_axi_arvalid, m_axi_arready, 
   m_axi_rdata, m_axi_rresp, m_axi_rvalid, m_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="aclk,aresetn,s_axi_awaddr[31:0],s_axi_awlen[7:0],s_axi_awsize[2:0],s_axi_awburst[1:0],s_axi_awlock[0:0],s_axi_awcache[3:0],s_axi_awprot[2:0],s_axi_awregion[3:0],s_axi_awqos[3:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wlast,s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[31:0],s_axi_arlen[7:0],s_axi_arsize[2:0],s_axi_arburst[1:0],s_axi_arlock[0:0],s_axi_arcache[3:0],s_axi_arprot[2:0],s_axi_arregion[3:0],s_axi_arqos[3:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rlast,s_axi_rvalid,s_axi_rready,m_axi_awaddr[31:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid,m_axi_wready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,m_axi_araddr[31:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid,m_axi_rready" */;
+/* synthesis syn_black_box black_box_pad_pin="aclk,aresetn,s_axi_awaddr[12:0],s_axi_awlen[7:0],s_axi_awsize[2:0],s_axi_awburst[1:0],s_axi_awlock[0:0],s_axi_awcache[3:0],s_axi_awprot[2:0],s_axi_awregion[3:0],s_axi_awqos[3:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wlast,s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[12:0],s_axi_arlen[7:0],s_axi_arsize[2:0],s_axi_arburst[1:0],s_axi_arlock[0:0],s_axi_arcache[3:0],s_axi_arprot[2:0],s_axi_arregion[3:0],s_axi_arqos[3:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rlast,s_axi_rvalid,s_axi_rready,m_axi_awaddr[12:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid,m_axi_wready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,m_axi_araddr[12:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid,m_axi_rready" */;
   input aclk;
   input aresetn;
-  input [31:0]s_axi_awaddr;
+  input [12:0]s_axi_awaddr;
   input [7:0]s_axi_awlen;
   input [2:0]s_axi_awsize;
   input [1:0]s_axi_awburst;
@@ -46,7 +46,7 @@ module m3_for_arty_a7_auto_pc_5(aclk, aresetn, s_axi_awaddr, s_axi_awlen,
   output [1:0]s_axi_bresp;
   output s_axi_bvalid;
   input s_axi_bready;
-  input [31:0]s_axi_araddr;
+  input [12:0]s_axi_araddr;
   input [7:0]s_axi_arlen;
   input [2:0]s_axi_arsize;
   input [1:0]s_axi_arburst;
@@ -62,7 +62,7 @@ module m3_for_arty_a7_auto_pc_5(aclk, aresetn, s_axi_awaddr, s_axi_awlen,
   output s_axi_rlast;
   output s_axi_rvalid;
   input s_axi_rready;
-  output [31:0]m_axi_awaddr;
+  output [12:0]m_axi_awaddr;
   output [2:0]m_axi_awprot;
   output m_axi_awvalid;
   input m_axi_awready;
@@ -73,7 +73,7 @@ module m3_for_arty_a7_auto_pc_5(aclk, aresetn, s_axi_awaddr, s_axi_awlen,
   input [1:0]m_axi_bresp;
   input m_axi_bvalid;
   output m_axi_bready;
-  output [31:0]m_axi_araddr;
+  output [12:0]m_axi_araddr;
   output [2:0]m_axi_arprot;
   output m_axi_arvalid;
   input m_axi_arready;

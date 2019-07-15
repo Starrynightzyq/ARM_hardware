@@ -3,87 +3,88 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="V:/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+      <db_ref path="C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="9841fs"></ZoomEndTime>
+      <ZoomEndTime time="9961fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="314"></NameColumnWidth>
+      <NameColumnWidth column_width="302"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe3_1" type="array">
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe1_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe3_1[2:0]</obj_property>
-      <obj_property name="ObjectShortName">probe3_1[2:0]</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe1_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">probe1_1[127:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="label">ov_cmos_bound_x_min_addr</obj_property>
+      <obj_property name="label">combine_0_char_diff_c</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe1_1" type="array">
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe0_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe1_1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">probe1_1[15:0]</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe0_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="label">ov_cmos_char_diff</obj_property>
+      <obj_property name="label">combine_0_char_index_c</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe0_1" type="array">
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe2_1" type="logic">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe0_1[3:0]</obj_property>
-      <obj_property name="ObjectShortName">probe0_1[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="label">ov_cmos_char_index</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe4_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe4_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">probe4_1[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="label">ov_cmos_char_index_c</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe6_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe6_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">probe6_1[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="label">ov_cmos_char_index_c_o</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe5_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe5_1</obj_property>
-      <obj_property name="ObjectShortName">probe5_1</obj_property>
-      <obj_property name="label">ov_cmos_char_valid_c</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe7_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe7_1</obj_property>
-      <obj_property name="ObjectShortName">probe7_1</obj_property>
-      <obj_property name="label">ov_cmos_char_valid_c_o_0</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/system_ila_0/inst/probe2_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/system_ila_0/inst/probe2_1</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe2_1</obj_property>
       <obj_property name="ObjectShortName">probe2_1</obj_property>
-      <obj_property name="label">ov_cmos_interrupt2</obj_property>
+      <obj_property name="label">combine_0_char_valid_c</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe5_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe5_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">probe5_1[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">gpio_allocate_0_max_diff</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe6_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe6_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe6_1[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">gpio_allocate_0_min_continue</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe7_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe7_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe7_1[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">gpio_allocate_0_min_counter</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe4_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe4_1[19:0]</obj_property>
+      <obj_property name="ObjectShortName">probe4_1[19:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">judge_0_char_index_co</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe3_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/probe3_1</obj_property>
+      <obj_property name="ObjectShortName">probe3_1</obj_property>
+      <obj_property name="label">char_valid_co</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

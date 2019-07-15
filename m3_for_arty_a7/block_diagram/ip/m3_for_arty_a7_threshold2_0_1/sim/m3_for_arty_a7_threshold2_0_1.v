@@ -47,8 +47,8 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:threshold2:1.3
-// IP Revision: 1906090127
+// IP VLNV: starrynightzyq.com:hls:threshold2:1.5
+// IP Revision: 1907141648
 
 `timescale 1ns/1ps
 

@@ -17,24 +17,24 @@ module bd_082c_wrapper
     probe6,
     probe7);
   input clk;
-  input [3:0]probe0;
-  input [15:0]probe1;
+  input [31:0]probe0;
+  input [127:0]probe1;
   input [0:0]probe2;
-  input [2:0]probe3;
-  input [31:0]probe4;
-  input [0:0]probe5;
-  input [31:0]probe6;
-  input [0:0]probe7;
+  input [0:0]probe3;
+  input [19:0]probe4;
+  input [15:0]probe5;
+  input [3:0]probe6;
+  input [7:0]probe7;
 
   wire clk;
-  wire [3:0]probe0;
-  wire [15:0]probe1;
+  wire [31:0]probe0;
+  wire [127:0]probe1;
   wire [0:0]probe2;
-  wire [2:0]probe3;
-  wire [31:0]probe4;
-  wire [0:0]probe5;
-  wire [31:0]probe6;
-  wire [0:0]probe7;
+  wire [0:0]probe3;
+  wire [19:0]probe4;
+  wire [15:0]probe5;
+  wire [3:0]probe6;
+  wire [7:0]probe7;
 
   bd_082c bd_082c_i
        (.clk(clk),

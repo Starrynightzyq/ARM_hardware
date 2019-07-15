@@ -1,0 +1,38 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port resetn_25M -pg 1 -y 420 -defaultsOSRD
+preplace port axis_clk -pg 1 -y 80 -defaultsOSRD
+preplace port vga_pHSync_0 -pg 1 -y 140 -defaultsOSRD
+preplace port S_AXIS -pg 1 -y 60 -defaultsOSRD
+preplace port axis_resetn -pg 1 -y 100 -defaultsOSRD
+preplace port reset_25M -pg 1 -y 240 -defaultsOSRD
+preplace port clk_25M -pg 1 -y 260 -defaultsOSRD
+preplace port vga_pVSync_0 -pg 1 -y 160 -defaultsOSRD
+preplace portBus vga_pGreen_0 -pg 1 -y 100 -defaultsOSRD
+preplace portBus vga_pBlue_0 -pg 1 -y 120 -defaultsOSRD
+preplace portBus vga_pRed_0 -pg 1 -y 80 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 2 -y 160 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 1 -y 390 -defaultsOSRD
+preplace inst RGB2RBG -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace inst rgb2vga_0 -pg 1 -lvl 3 -y 120 -defaultsOSRD
+preplace netloc Conn1 1 0 1 NJ
+preplace netloc rgb2vga_0_vga_pRed 1 3 1 NJ
+preplace netloc RGB2RBG_M_AXIS 1 1 1 N
+preplace netloc rgb2vga_0_vga_pGreen 1 3 1 NJ
+preplace netloc v_axi4s_vid_out_0_vid_io_out 1 2 1 N
+preplace netloc vid_io_out_reset_1 1 0 2 NJ 240 NJ
+preplace netloc resetn_1 1 0 1 NJ
+preplace netloc clk_25M 1 0 3 20 200 360 10 650J
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 0 3 30 180 350J 20 640
+preplace netloc rgb2vga_0_vga_pVSync 1 3 1 NJ
+preplace netloc rgb2vga_0_vga_pHSync 1 3 1 NJ
+preplace netloc aresetn_1 1 0 2 20 160 NJ
+preplace netloc ui_addn_clk_0_1 1 0 2 30 170 370
+preplace netloc v_tc_0_vtiming_out 1 1 1 380
+preplace netloc rgb2vga_0_vga_pBlue 1 3 1 NJ
+levelinfo -pg 1 0 190 510 770 910 -top 0 -bot 480
+",
+}
+0

@@ -68,7 +68,7 @@ module m3_for_arty_a7_OV_Sensor_0_0 (
   vid_active_video
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk_24M, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_wiz_clk_out1" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk_24M, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk_24M CLK" *)
 input wire CLK_i;
 input wire cmos_vsync_i;
@@ -87,7 +87,7 @@ output wire vid_clk_ce;
 output wire vid_active_video;
 
   OV_Sensor_ML #(
-    .RBG_CHANGE(1'B1)
+    .RBG_CHANGE(1'B0)
   ) inst (
     .CLK_i(CLK_i),
     .cmos_vsync_i(cmos_vsync_i),

@@ -10,7 +10,6 @@ preplace port aux_reset_in -pg 1 -y 520 -defaultsOSRD
 preplace port clk_qspi -pg 1 -y 200 -defaultsOSRD
 preplace port sys_reset_n -pg 1 -y 90 -defaultsOSRD
 preplace portBus dbgresetn -pg 1 -y 340 -defaultsOSRD
-preplace portBus peripheral_aresetn1 -pg 1 -y 460 -defaultsOSRD
 preplace portBus peripheral_aresetn -pg 1 -y 650 -defaultsOSRD
 preplace portBus interconnect_aresetn -pg 1 -y 530 -defaultsOSRD
 preplace portBus sysresetn -pg 1 -y 760 -defaultsOSRD
@@ -25,14 +24,14 @@ preplace inst i_interconnect_aresetn -pg 1 -lvl 4 -y 530 -defaultsOSRD
 preplace inst i_inv_dbgresetn -pg 1 -lvl 4 -y 340 -defaultsOSRD
 preplace netloc sysresetreq 1 0 2 NJ 540 NJ
 preplace netloc proc_sys_reset_base_peripheral_aresetn 1 2 2 N 150 870J
-preplace netloc proc_sys_reset_base_interconnect_aresetn 1 2 2 NJ 130 890
-preplace netloc proc_sys_reset_DAPLink_peripheral_aresetn 1 2 3 N 560 880J 460 N
+preplace netloc proc_sys_reset_base_interconnect_aresetn 1 2 2 NJ 130 880
+preplace netloc proc_sys_reset_DAPLink_peripheral_aresetn 1 2 2 540 660 NJ
 preplace netloc proc_sys_reset_DAPLink_interconnect_aresetn 1 2 2 N 540 NJ
-preplace netloc dcm_locked_1 1 1 4 200 400 NJ 400 NJ 400 1190
+preplace netloc dcm_locked_1 1 1 4 200 400 NJ 400 NJ 400 1180
 preplace netloc sys_clock_1 1 0 4 NJ 210 NJ 210 NJ 210 NJ
 preplace netloc xlconstant_0_dout 1 1 1 180J
 preplace netloc proc_sys_reset_DAPLink_mb_reset 1 2 1 N
-preplace netloc clk_wiz_0_clk_out1 1 1 4 190 10 NJ 10 NJ 10 1190
+preplace netloc clk_wiz_0_clk_out1 1 1 4 190 10 NJ 10 NJ 10 1180
 preplace netloc clk_wiz_0_clk_out2 1 4 1 NJ
 preplace netloc i_inv_sysresetn1_Res 1 4 1 NJ
 preplace netloc proc_sys_reset_base_mb_reset 1 2 2 540 340 NJ
@@ -43,7 +42,7 @@ preplace netloc i_inv_dbgresetn_Res 1 4 1 NJ
 preplace netloc i_interconnect_aresetn_Res 1 4 1 NJ
 preplace netloc i_peripheral_aresetn1_Res 1 4 1 NJ
 preplace netloc aux_reset_in_1 1 0 2 NJ 520 NJ
-levelinfo -pg 1 0 100 370 710 1040 1210 -top 0 -bot 820
+levelinfo -pg 1 0 100 370 710 1030 1200 -top 0 -bot 820
 ",
 }
 0

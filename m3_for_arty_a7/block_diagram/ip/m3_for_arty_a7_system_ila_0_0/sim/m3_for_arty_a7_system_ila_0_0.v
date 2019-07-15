@@ -68,14 +68,14 @@ module m3_for_arty_a7_system_ila_0_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *)
 input wire clk;
-input wire [3 : 0] probe0;
-input wire [15 : 0] probe1;
+input wire [31 : 0] probe0;
+input wire [127 : 0] probe1;
 input wire [0 : 0] probe2;
-input wire [2 : 0] probe3;
-input wire [31 : 0] probe4;
-input wire [0 : 0] probe5;
-input wire [31 : 0] probe6;
-input wire [0 : 0] probe7;
+input wire [0 : 0] probe3;
+input wire [19 : 0] probe4;
+input wire [15 : 0] probe5;
+input wire [3 : 0] probe6;
+input wire [7 : 0] probe7;
 
   bd_082c inst (
     .clk(clk),

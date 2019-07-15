@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun Jun  9 22:11:54 2019
+// Date        : Mon Jul 15 21:11:19 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               v:/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_combine_0_0/m3_for_arty_a7_combine_0_0_sim_netlist.v
+//               C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_combine_0_0/m3_for_arty_a7_combine_0_0_sim_netlist.v
 // Design      : m3_for_arty_a7_combine_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -66,8 +66,8 @@ module m3_for_arty_a7_combine_0_0_combine
     rst_n,
     char_addr,
     char_valid,
-    char_diff,
-    char_index);
+    char_index,
+    char_diff);
   output [31:0]char_index_c;
   output [127:0]char_diff_c;
   output char_valid_c;
@@ -75,26 +75,24 @@ module m3_for_arty_a7_combine_0_0_combine
   input rst_n;
   input [2:0]char_addr;
   input char_valid;
-  input [15:0]char_diff;
   input [3:0]char_index;
+  input [15:0]char_diff;
 
   wire \FSM_sequential_state_now[0]_i_1_n_0 ;
   wire \FSM_sequential_state_now[0]_i_2_n_0 ;
   wire \FSM_sequential_state_now[0]_i_3_n_0 ;
   wire \FSM_sequential_state_now[0]_i_4_n_0 ;
+  wire \FSM_sequential_state_now[0]_i_5_n_0 ;
   wire \FSM_sequential_state_now[1]_i_1_n_0 ;
   wire \FSM_sequential_state_now[1]_i_2_n_0 ;
   wire \FSM_sequential_state_now[2]_i_1_n_0 ;
   wire \FSM_sequential_state_now[2]_i_2_n_0 ;
   wire \FSM_sequential_state_now[2]_i_3_n_0 ;
   wire \FSM_sequential_state_now[2]_i_4_n_0 ;
-  wire \FSM_sequential_state_now[2]_i_5_n_0 ;
   wire \FSM_sequential_state_now[3]_i_1_n_0 ;
   wire \FSM_sequential_state_now[3]_i_2_n_0 ;
   wire \FSM_sequential_state_now[3]_i_3_n_0 ;
   wire \FSM_sequential_state_now[3]_i_4_n_0 ;
-  wire \FSM_sequential_state_now[3]_i_5_n_0 ;
-  wire \FSM_sequential_state_now[3]_i_6_n_0 ;
   wire \FSM_sequential_state_now[4]_i_1_n_0 ;
   wire \FSM_sequential_state_now[4]_i_2_n_0 ;
   wire [2:0]char_addr;
@@ -122,171 +120,148 @@ module m3_for_arty_a7_combine_0_0_combine
   (* RTL_KEEP = "yes" *) wire [4:0]state_now;
 
   LUT6 #(
-    .INIT(64'hFFFFFFFF00200000)) 
+    .INIT(64'hFF02020200000000)) 
     \FSM_sequential_state_now[0]_i_1 
        (.I0(\FSM_sequential_state_now[0]_i_2_n_0 ),
-        .I1(state_now[0]),
-        .I2(rst_n),
-        .I3(state_now[4]),
-        .I4(char_valid_delay),
-        .I5(\FSM_sequential_state_now[0]_i_3_n_0 ),
+        .I1(state_now[4]),
+        .I2(\FSM_sequential_state_now[0]_i_3_n_0 ),
+        .I3(\FSM_sequential_state_now[0]_i_4_n_0 ),
+        .I4(\FSM_sequential_state_now[0]_i_5_n_0 ),
+        .I5(rst_n),
         .O(\FSM_sequential_state_now[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h2100002000848400)) 
+    .INIT(64'h1284000000001280)) 
     \FSM_sequential_state_now[0]_i_2 
-       (.I0(char_addr_delay[0]),
-        .I1(state_now[2]),
-        .I2(state_now[1]),
-        .I3(state_now[3]),
-        .I4(char_addr_delay[2]),
-        .I5(char_addr_delay[1]),
+       (.I0(state_now[3]),
+        .I1(char_addr_delay[1]),
+        .I2(char_addr_delay[2]),
+        .I3(state_now[2]),
+        .I4(char_addr_delay[0]),
+        .I5(state_now[1]),
         .O(\FSM_sequential_state_now[0]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0001000000000000)) 
+  LUT2 #(
+    .INIT(4'hB)) 
     \FSM_sequential_state_now[0]_i_3 
-       (.I0(state_now[1]),
-        .I1(state_now[2]),
-        .I2(state_now[3]),
-        .I3(state_now[0]),
-        .I4(rst_n),
-        .I5(\FSM_sequential_state_now[0]_i_4_n_0 ),
+       (.I0(state_now[0]),
+        .I1(char_valid_delay),
         .O(\FSM_sequential_state_now[0]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFF0020)) 
+  LUT6 #(
+    .INIT(64'h0000FFFF00000020)) 
     \FSM_sequential_state_now[0]_i_4 
        (.I0(char_valid_delay),
         .I1(char_addr_delay[2]),
         .I2(char_addr_delay[1]),
         .I3(char_addr_delay[0]),
-        .I4(state_now[4]),
+        .I4(state_now[0]),
+        .I5(state_now[4]),
         .O(\FSM_sequential_state_now[0]_i_4_n_0 ));
+  LUT3 #(
+    .INIT(8'h01)) 
+    \FSM_sequential_state_now[0]_i_5 
+       (.I0(state_now[1]),
+        .I1(state_now[2]),
+        .I2(state_now[3]),
+        .O(\FSM_sequential_state_now[0]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h00CC0000F5000000)) 
+    .INIT(64'h0000222220222020)) 
     \FSM_sequential_state_now[1]_i_1 
-       (.I0(state_now[2]),
-        .I1(\FSM_sequential_state_now[1]_i_2_n_0 ),
-        .I2(\FSM_sequential_state_now[2]_i_3_n_0 ),
-        .I3(state_now[0]),
-        .I4(\FSM_sequential_state_now[3]_i_4_n_0 ),
-        .I5(state_now[1]),
+       (.I0(rst_n),
+        .I1(state_now[4]),
+        .I2(\FSM_sequential_state_now[1]_i_2_n_0 ),
+        .I3(char_valid_delay),
+        .I4(state_now[1]),
+        .I5(state_now[0]),
         .O(\FSM_sequential_state_now[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h20404020FFFFFFFF)) 
+    .INIT(64'h0008800008000080)) 
     \FSM_sequential_state_now[1]_i_2 
-       (.I0(char_addr_delay[1]),
-        .I1(state_now[2]),
-        .I2(char_addr_delay[0]),
+       (.I0(char_addr_delay[0]),
+        .I1(state_now[1]),
+        .I2(char_addr_delay[1]),
         .I3(state_now[3]),
-        .I4(char_addr_delay[2]),
-        .I5(char_valid_delay),
+        .I4(state_now[2]),
+        .I5(char_addr_delay[2]),
         .O(\FSM_sequential_state_now[1]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h3C88000030880000)) 
+    .INIT(64'h8088880080808000)) 
     \FSM_sequential_state_now[2]_i_1 
        (.I0(\FSM_sequential_state_now[2]_i_2_n_0 ),
-        .I1(state_now[2]),
-        .I2(state_now[1]),
-        .I3(state_now[0]),
-        .I4(\FSM_sequential_state_now[3]_i_4_n_0 ),
-        .I5(\FSM_sequential_state_now[2]_i_3_n_0 ),
+        .I1(\FSM_sequential_state_now[2]_i_3_n_0 ),
+        .I2(\FSM_sequential_state_now[2]_i_4_n_0 ),
+        .I3(state_now[2]),
+        .I4(state_now[1]),
+        .I5(state_now[0]),
         .O(\FSM_sequential_state_now[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000990FFFFFFFF)) 
+  LUT5 #(
+    .INIT(32'hFFF9FFFF)) 
     \FSM_sequential_state_now[2]_i_2 
        (.I0(char_addr_delay[0]),
         .I1(state_now[1]),
-        .I2(state_now[3]),
-        .I3(char_addr_delay[2]),
-        .I4(char_addr_delay[1]),
-        .I5(char_valid_delay),
-        .O(\FSM_sequential_state_now[2]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000008)) 
-    \FSM_sequential_state_now[2]_i_3 
-       (.I0(\FSM_sequential_state_now[2]_i_4_n_0 ),
-        .I1(\FSM_sequential_state_now[2]_i_5_n_0 ),
-        .I2(char_diff_delay[7]),
-        .I3(char_diff_delay[8]),
-        .I4(char_diff_delay[9]),
-        .I5(state_now[3]),
-        .O(\FSM_sequential_state_now[2]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \FSM_sequential_state_now[2]_i_4 
-       (.I0(char_diff_delay[10]),
-        .I1(char_diff_delay[11]),
-        .I2(char_diff_delay[12]),
-        .I3(char_diff_delay[13]),
-        .I4(char_diff_delay[15]),
-        .I5(char_diff_delay[14]),
-        .O(\FSM_sequential_state_now[2]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h5557FFFF)) 
-    \FSM_sequential_state_now[2]_i_5 
-       (.I0(char_diff_delay[6]),
-        .I1(char_diff_delay[4]),
-        .I2(char_diff_delay[3]),
-        .I3(char_diff_delay[2]),
-        .I4(char_diff_delay[5]),
-        .O(\FSM_sequential_state_now[2]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEDDCFCCCCCCCCCC)) 
-    \FSM_sequential_state_now[3]_i_1 
-       (.I0(\FSM_sequential_state_now[3]_i_2_n_0 ),
-        .I1(\FSM_sequential_state_now[3]_i_3_n_0 ),
-        .I2(char_valid_delay),
-        .I3(state_now[3]),
-        .I4(state_now[0]),
-        .I5(\FSM_sequential_state_now[3]_i_4_n_0 ),
-        .O(\FSM_sequential_state_now[3]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h7)) 
-    \FSM_sequential_state_now[3]_i_2 
-       (.I0(state_now[1]),
-        .I1(state_now[2]),
-        .O(\FSM_sequential_state_now[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hC00A0000000A0000)) 
-    \FSM_sequential_state_now[3]_i_3 
-       (.I0(\FSM_sequential_state_now[3]_i_5_n_0 ),
-        .I1(\FSM_sequential_state_now[3]_i_6_n_0 ),
         .I2(char_addr_delay[1]),
-        .I3(char_addr_delay[2]),
-        .I4(state_now[3]),
-        .I5(\FSM_sequential_state_now[3]_i_4_n_0 ),
-        .O(\FSM_sequential_state_now[3]_i_3_n_0 ));
+        .I3(state_now[0]),
+        .I4(char_valid_delay),
+        .O(\FSM_sequential_state_now[2]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
-    \FSM_sequential_state_now[3]_i_4 
+    \FSM_sequential_state_now[2]_i_3 
        (.I0(rst_n),
         .I1(state_now[4]),
+        .O(\FSM_sequential_state_now[2]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h0404040404444404)) 
+    \FSM_sequential_state_now[2]_i_4 
+       (.I0(state_now[0]),
+        .I1(state_now[2]),
+        .I2(char_valid_delay),
+        .I3(state_now[3]),
+        .I4(char_addr_delay[2]),
+        .I5(char_addr_delay[1]),
+        .O(\FSM_sequential_state_now[2]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAA200000A0)) 
+    \FSM_sequential_state_now[3]_i_1 
+       (.I0(\FSM_sequential_state_now[3]_i_2_n_0 ),
+        .I1(state_now[0]),
+        .I2(\FSM_sequential_state_now[3]_i_3_n_0 ),
+        .I3(state_now[1]),
+        .I4(char_addr_delay[0]),
+        .I5(\FSM_sequential_state_now[3]_i_4_n_0 ),
+        .O(\FSM_sequential_state_now[3]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000EAAA00000000)) 
+    \FSM_sequential_state_now[3]_i_2 
+       (.I0(state_now[3]),
+        .I1(state_now[2]),
+        .I2(state_now[0]),
+        .I3(state_now[1]),
+        .I4(state_now[4]),
+        .I5(rst_n),
+        .O(\FSM_sequential_state_now[3]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h18)) 
+    \FSM_sequential_state_now[3]_i_3 
+       (.I0(char_addr_delay[1]),
+        .I1(char_addr_delay[2]),
+        .I2(state_now[2]),
+        .O(\FSM_sequential_state_now[3]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h53F3A0F3)) 
+    \FSM_sequential_state_now[3]_i_4 
+       (.I0(state_now[2]),
+        .I1(char_valid_delay),
+        .I2(state_now[0]),
+        .I3(state_now[1]),
+        .I4(state_now[3]),
         .O(\FSM_sequential_state_now[3]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h04000000000C0000)) 
-    \FSM_sequential_state_now[3]_i_5 
-       (.I0(state_now[0]),
-        .I1(rst_n),
-        .I2(state_now[4]),
-        .I3(state_now[1]),
-        .I4(state_now[2]),
-        .I5(char_addr_delay[0]),
-        .O(\FSM_sequential_state_now[3]_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h09)) 
-    \FSM_sequential_state_now[3]_i_6 
-       (.I0(char_addr_delay[0]),
-        .I1(state_now[1]),
-        .I2(state_now[2]),
-        .O(\FSM_sequential_state_now[3]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000010080000000)) 
+    .INIT(64'h0001800000000000)) 
     \FSM_sequential_state_now[4]_i_1 
        (.I0(state_now[1]),
         .I1(state_now[2]),
-        .I2(state_now[0]),
-        .I3(rst_n),
-        .I4(state_now[3]),
-        .I5(state_now[4]),
+        .I2(state_now[3]),
+        .I3(state_now[0]),
+        .I4(state_now[4]),
+        .I5(rst_n),
         .O(\FSM_sequential_state_now[4]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -1288,74 +1263,74 @@ module m3_for_arty_a7_combine_0_0_combine
   LUT5 #(
     .INIT(32'h00000004)) 
     \char_index_reg[0][3]_i_1 
-       (.I0(state_now[3]),
+       (.I0(state_now[4]),
         .I1(state_now[0]),
-        .I2(state_now[4]),
+        .I2(state_now[3]),
         .I3(state_now[2]),
         .I4(state_now[1]),
         .O(\char_index_reg[0][3]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00000400)) 
+    .INIT(32'h01000000)) 
     \char_index_reg[1][3]_i_1 
        (.I0(state_now[2]),
-        .I1(state_now[1]),
-        .I2(state_now[3]),
+        .I1(state_now[3]),
+        .I2(state_now[4]),
         .I3(state_now[0]),
-        .I4(state_now[4]),
+        .I4(state_now[1]),
         .O(\char_index_reg[1][3]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h00040000)) 
     \char_index_reg[2][3]_i_1 
-       (.I0(state_now[3]),
+       (.I0(state_now[4]),
         .I1(state_now[0]),
-        .I2(state_now[4]),
-        .I3(state_now[1]),
+        .I2(state_now[1]),
+        .I3(state_now[3]),
         .I4(state_now[2]),
         .O(\char_index_reg[2][3]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h04000000)) 
+    .INIT(32'h00400000)) 
     \char_index_reg[3][3]_i_1 
-       (.I0(state_now[3]),
-        .I1(state_now[0]),
-        .I2(state_now[4]),
-        .I3(state_now[2]),
-        .I4(state_now[1]),
+       (.I0(state_now[4]),
+        .I1(state_now[1]),
+        .I2(state_now[0]),
+        .I3(state_now[3]),
+        .I4(state_now[2]),
         .O(\char_index_reg[3][3]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h00000008)) 
     \char_index_reg[4][3]_i_1 
-       (.I0(state_now[3]),
-        .I1(state_now[0]),
+       (.I0(state_now[0]),
+        .I1(state_now[3]),
         .I2(state_now[4]),
-        .I3(state_now[2]),
-        .I4(state_now[1]),
+        .I3(state_now[1]),
+        .I4(state_now[2]),
         .O(\char_index_reg[4][3]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00004000)) 
+    .INIT(32'h00400000)) 
     \char_index_reg[5][3]_i_1 
        (.I0(state_now[2]),
         .I1(state_now[1]),
-        .I2(state_now[3]),
-        .I3(state_now[0]),
-        .I4(state_now[4]),
+        .I2(state_now[0]),
+        .I3(state_now[4]),
+        .I4(state_now[3]),
         .O(\char_index_reg[5][3]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h00080000)) 
     \char_index_reg[6][3]_i_1 
-       (.I0(state_now[3]),
-        .I1(state_now[0]),
+       (.I0(state_now[2]),
+        .I1(state_now[3]),
         .I2(state_now[4]),
         .I3(state_now[1]),
-        .I4(state_now[2]),
+        .I4(state_now[0]),
         .O(\char_index_reg[6][3]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h08000000)) 
+    .INIT(32'h00800000)) 
     \char_index_reg[7][3]_i_1 
-       (.I0(state_now[3]),
+       (.I0(state_now[1]),
         .I1(state_now[0]),
-        .I2(state_now[4]),
-        .I3(state_now[2]),
-        .I4(state_now[1]),
+        .I2(state_now[2]),
+        .I3(state_now[4]),
+        .I4(state_now[3]),
         .O(char_index_reg));
   FDRE \char_index_reg_reg[0][0] 
        (.C(clk),
@@ -1560,8 +1535,8 @@ module m3_for_arty_a7_combine_0_0_combine
   LUT5 #(
     .INIT(32'h00000008)) 
     char_valid_reg_i_1
-       (.I0(state_now[0]),
-        .I1(state_now[4]),
+       (.I0(state_now[4]),
+        .I1(state_now[0]),
         .I2(state_now[3]),
         .I3(state_now[2]),
         .I4(state_now[1]),
