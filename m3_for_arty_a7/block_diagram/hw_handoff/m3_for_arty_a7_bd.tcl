@@ -1465,7 +1465,7 @@ proc create_root_design { parentCell } {
    CONFIG.DEBUG_LVL {2} \
    CONFIG.DTCM_SIZE {"0110"} \
    CONFIG.ITCM_INIT_FILE {bram_a7.hex} \
-   CONFIG.ITCM_SIZE {"0111"} \
+   CONFIG.ITCM_SIZE {"1000"} \
    CONFIG.JTAG_PRESENT {false} \
    CONFIG.TRACE_LVL {1} \
    CONFIG.WIC_PRESENT {false} \

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Jun  7 13:04:24 2019
+// Date        : Wed Jul 17 17:13:53 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top m3_for_arty_a7_Cortex_M3_0_0 -prefix
-//               m3_for_arty_a7_Cortex_M3_0_0_ m3_for_arty_a7_Cortex_M3_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_Cortex_M3_0_0/m3_for_arty_a7_Cortex_M3_0_0_stub.v
 // Design      : m3_for_arty_a7_Cortex_M3_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

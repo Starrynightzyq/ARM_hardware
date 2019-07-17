@@ -318,7 +318,7 @@ input wire [31 : 0] HRDATAC;
   CortexM3DbgAXI #(
     .NUM_IRQ(12),
     .JTAG_PRESENT(1'B0),
-    .ITCM_SIZE(4'B0111),
+    .ITCM_SIZE(4'B1000),
     .DTCM_SIZE(4'B0110),
     .ITCM_INIT_RAM(1'B1),
     .DTCM_INIT_RAM(1'B0),

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Mon Jul 15 21:09:38 2019
+//Date        : Wed Jul 17 17:06:07 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7.bd
 //Design      : m3_for_arty_a7
@@ -8212,8 +8212,8 @@ module m3_for_arty_a7
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi_rtl SS_O" *) output [1:0]spi_rtl_ss_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi_rtl SS_T" *) output spi_rtl_ss_t;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN m3_for_arty_a7_sys_clock, FREQ_HZ 100000000, PHASE 0.000" *) input sys_clock;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_keyboard " *) input uart_keyboard_rxd;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_keyboard " *) output uart_keyboard_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_keyboard RxD" *) input uart_keyboard_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_keyboard TxD" *) output uart_keyboard_txd;
   input uart_wifi_rx;
   output uart_wifi_tx;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart RxD" *) input usb_uart_rxd;

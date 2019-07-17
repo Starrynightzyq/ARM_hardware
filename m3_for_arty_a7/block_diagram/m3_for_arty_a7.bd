@@ -491,7 +491,7 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_Cortex_M3_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="JTAG_PRESENT">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ITCM_SIZE">"0111"</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ITCM_SIZE">"1000"</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="DTCM_SIZE">"0110"</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ITCM_INIT_FILE">bram_a7.hex</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Component_Name">m3_for_arty_a7_Cortex_M3_0_0</spirit:configurableElementValue>
@@ -740,6 +740,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_uartlite_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_protocol_convert_0" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_uartlite_keyboard" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ACLK"/>
@@ -750,10 +752,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="LCD" spirit:portRef="s_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_uartlite_keyboard" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M06_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M07_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_1_interconnect_aresetn</spirit:name>
@@ -763,10 +763,10 @@
         <spirit:internalPortReference spirit:componentRef="axi_uartlite_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_protocol_convert_0" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="ov_cmos" spirit:portRef="axi_resetn"/>
-        <spirit:internalPortReference spirit:componentRef="LCD" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_uartlite_keyboard" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="ov_cmos" spirit:portRef="axi_resetn"/>
+        <spirit:internalPortReference spirit:componentRef="LCD" spirit:portRef="s_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_1_peripheral_aresetn</spirit:name>
@@ -2362,9 +2362,9 @@ qspi clk 50M</bd:user_comments>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_locked</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz" spirit:portRef="locked"/>
+        <spirit:externalPortReference spirit:portRef="locked"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_25M" spirit:portRef="dcm_locked"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_100M" spirit:portRef="dcm_locked"/>
-        <spirit:externalPortReference spirit:portRef="locked"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>dcm_locked_1</spirit:name>
@@ -6001,6 +6001,9 @@ qspi clk 50M</bd:user_comments>
         <spirit:internalPortReference spirit:componentRef="sort_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="draw_line_hls_0" spirit:portRef="ap_rst_n"/>
         <spirit:internalPortReference spirit:componentRef="threshold2_0" spirit:portRef="ap_rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M02_ARESETN"/>
@@ -6009,9 +6012,6 @@ qspi clk 50M</bd:user_comments>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M05_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M06_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M07_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="rst_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_200M_1</spirit:name>
@@ -6037,6 +6037,9 @@ qspi clk 50M</bd:user_comments>
         <spirit:internalPortReference spirit:componentRef="sort_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="draw_line_hls_0" spirit:portRef="ap_clk"/>
         <spirit:internalPortReference spirit:componentRef="threshold2_0" spirit:portRef="ap_clk"/>
+        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M02_ACLK"/>
@@ -6045,9 +6048,6 @@ qspi clk 50M</bd:user_comments>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M06_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M07_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ACLK_1</spirit:name>
