@@ -20,7 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module resize_ctrl(
+module resize_ctrl #(
+	parameter ALL_CHAR = 0
+	)(
 	input clk,
 	input rst_n,
 
@@ -35,10 +37,10 @@ module resize_ctrl(
 
 	/* resize 输出接口 */
 	input resize_interrupt,
-	input [9:0] resize_o_addr,
-	input resize_o_ce,
-	input resize_o_we,
-	input resize_o_d,	
+	// input [9:0] resize_o_addr,
+	// input resize_o_ce,
+	// input resize_o_we,
+	// input resize_o_d,	
 	
 
 
@@ -46,12 +48,12 @@ module resize_ctrl(
 	output  [15:0] bound_x_min_o,
 	output  [15:0] bound_x_max_o,
 	output  [15:0] bound_y_min_o,
-	output  [15:0] bound_y_max_o,
+	output  [15:0] bound_y_max_o
 
-	output [12:0] resize_ram_i_addr,
-	output resize_ram_i_ce,
-	output resize_ram_i_we,
-	output resize_ram_i_d
+	// output [12:0] resize_ram_i_addr,
+	// output resize_ram_i_ce,
+	// output resize_ram_i_we,
+	// output resize_ram_i_d
     );
 
 	// parameter RESIZE_INDEX_MAX = 28*28;
@@ -102,34 +104,51 @@ module resize_ctrl(
 	end
 	assign resize_interrupt_p = (!resize_interrupt_r0)&&(resize_interrupt);
 
-	always @(posedge clk) begin
-		resize_o_addr_r0 <= resize_o_addr;
-		resize_o_ce_r0 <= resize_o_ce;
-		resize_o_we_r0 <= resize_o_we;
-		resize_o_d_r0 <= resize_o_d;
-	end
+	// always @(posedge clk) begin
+	// 	resize_o_addr_r0 <= resize_o_addr;
+	// 	resize_o_ce_r0 <= resize_o_ce;
+	// 	resize_o_we_r0 <= resize_o_we;
+	// 	resize_o_d_r0 <= resize_o_d;
+	// end
 
-	always @(posedge clk) begin
-		resize_o_addr_r1 <= resize_o_addr_r0;
-		resize_o_ce_r1 <= resize_o_ce_r0;
-		resize_o_we_r1 <= resize_o_we_r0;
-		resize_o_d_r1 <= resize_o_d_r0;
-	end
+	// always @(posedge clk) begin
+	// 	resize_o_addr_r1 <= resize_o_addr_r0;
+	// 	resize_o_ce_r1 <= resize_o_ce_r0;
+	// 	resize_o_we_r1 <= resize_o_we_r0;
+	// 	resize_o_d_r1 <= resize_o_d_r0;
+	// end
 
 	// assign resize_data_r1_valid = resize_o_ce_r1 && resize_o_we_r1;
 	assign resize_end = resize_interrupt_p;
 
-	always @(posedge clk or negedge rst_n) begin : proc_character_index
-		if(~rst_n) begin
-			character_index <= 0;
-		end else if(resize_end) begin
-			if(character_index == CHAR_NUM - 1) begin
-				character_index <= 'b0;
-			end else begin 
-				character_index <= character_index + 'b1;
+	generate
+		if(ALL_CHAR) begin
+			always @(posedge clk or negedge rst_n) begin
+				if(~rst_n) begin
+					character_index <= 0;
+				end else if(resize_end) begin
+					if(character_index == CHAR_NUM - 1) begin
+						character_index <= 'b0;
+					end else begin 
+						character_index <= character_index + 'b1;
+					end
+				end
+			end
+		end else begin 
+			always @(posedge clk or negedge rst_n) begin
+				if(~rst_n) begin
+					character_index <= 'h3;
+				end else if(resize_end) begin
+					if(character_index == CHAR_NUM - 1) begin
+						character_index <= 'h3;
+					end else begin 
+						character_index <= character_index + 'b1;
+					end
+				end
 			end
 		end
-	end
+	endgenerate
+
 
 	always @(posedge clk) begin : proc_character_index_r1
 		character_index_r0 <= character_index;
@@ -165,9 +184,9 @@ module resize_ctrl(
 	assign bound_x_min_addr = character_index; // just for test
 	assign bound_x_max_addr = character_index; // just for test
 
-	assign resize_ram_i_addr = {character_index_r1, resize_o_addr_r1}; // just for test
-	assign resize_ram_i_ce = resize_o_ce_r1;
-	assign resize_ram_i_we = resize_o_we_r1;
-	assign resize_ram_i_d = resize_o_d_r1;
+	// assign resize_ram_i_addr = {character_index_r1, resize_o_addr_r1}; // just for test
+	// assign resize_ram_i_ce = resize_o_ce_r1;
+	// assign resize_ram_i_we = resize_o_we_r1;
+	// assign resize_ram_i_d = resize_o_d_r1;
 
 endmodule

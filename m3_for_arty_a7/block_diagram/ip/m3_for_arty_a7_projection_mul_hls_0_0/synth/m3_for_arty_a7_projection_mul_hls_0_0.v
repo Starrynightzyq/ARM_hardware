@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:projection_mul_hls:1.0
+// IP VLNV: starrynightzyq.com:hls:projection_mul_hls:1.1
 // IP Revision: 1906062139
 
 (* X_CORE_INFO = "projection_mul_hls,Vivado 2018.2" *)

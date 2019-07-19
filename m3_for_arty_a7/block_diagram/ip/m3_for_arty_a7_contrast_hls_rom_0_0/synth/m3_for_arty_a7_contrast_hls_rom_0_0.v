@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:contrast_hls_rom:1.3
+// IP VLNV: starrynightzyq.com:hls:contrast_hls_rom:1.4
 // IP Revision: 1906071220
 
 (* X_CORE_INFO = "contrast_hls_rom,Vivado 2018.2" *)

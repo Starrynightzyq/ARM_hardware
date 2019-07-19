@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:threshold2:1.5
+// IP VLNV: starrynightzyq.com:hls:threshold2:1.6
 // IP Revision: 1907141648
 
 (* X_CORE_INFO = "threshold2,Vivado 2018.2" *)

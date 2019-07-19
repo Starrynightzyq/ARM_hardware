@@ -1368,11 +1368,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jun 08 05:47:10 UTC 2019</spirit:value>
+            <spirit:value>Thu Jul 18 15:50:56 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:be3900ba</spirit:value>
+            <spirit:value>8:96396960</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1388,11 +1388,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 05:45:31 UTC 2019</spirit:value>
+            <spirit:value>Thu Jul 18 15:50:56 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:be3900ba</spirit:value>
+            <spirit:value>8:96396960</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1408,11 +1408,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jun 08 05:47:10 UTC 2019</spirit:value>
+            <spirit:value>Thu Jul 18 15:50:56 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:146eed6c</spirit:value>
+            <spirit:value>8:73f99345</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1428,11 +1428,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 05:45:31 UTC 2019</spirit:value>
+            <spirit:value>Thu Jul 18 15:50:56 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:146eed6c</spirit:value>
+            <spirit:value>8:73f99345</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1446,11 +1446,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 05:51:47 UTC 2019</spirit:value>
+            <spirit:value>Thu Jul 18 15:54:06 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:be3900ba</spirit:value>
+            <spirit:value>8:96396960</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2193,91 +2193,91 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/AXIvideo2Mat.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/AXIvideo2Mat.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Block_Mat_exit1211_p.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Block_Mat_exit1211_p.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/cut.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/cut.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d6_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d6_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Mat2AXIvideo.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Mat2AXIvideo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Resize.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Resize.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_AXILiteS_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_AXILiteS_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_mfYi.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_mfYi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_sdEe.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_sdEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_ueOg.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_ueOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Resize_opr_linear.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Resize_opr_linear.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Resize_opr_linearbkb.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Resize_opr_linearbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_cut_U0.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_cut_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_Mat2AXIg8j.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_Mat2AXIg8j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_Resize_U0.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_Resize_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_Threshohbi.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_Threshohbi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Threshold.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Threshold.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2292,112 +2292,112 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/AXIvideo2Mat.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/AXIvideo2Mat.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Block_Mat_exit1211_p.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Block_Mat_exit1211_p.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/cut.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/cut.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d4_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/fifo_w16_d6_A.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/fifo_w16_d6_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Mat2AXIvideo.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Mat2AXIvideo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Resize.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Resize.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_AXILiteS_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_AXILiteS_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_mfYi.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_mfYi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_sdEe.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_sdEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis_ueOg.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis_ueOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Resize_opr_linear.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Resize_opr_linear.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Resize_opr_linearbkb.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Resize_opr_linearbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_cut_U0.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_cut_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_Mat2AXIg8j.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_Mat2AXIg8j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_Resize_U0.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_Resize_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/start_for_Threshohbi.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/start_for_Threshohbi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/Threshold.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/Threshold.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce70/hdl/verilog/resize_hls_axis.v</spirit:name>
+        <spirit:name>../../ipshared/1f60/hdl/verilog/resize_hls_axis.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2526,8 +2526,6 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INPUT_R.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INPUT_R.LAYERED_METADATA" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INPUT_R.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.LAYERED_METADATA" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.OUTPUT_R.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.OUTPUT_R.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.OUTPUT_R.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>

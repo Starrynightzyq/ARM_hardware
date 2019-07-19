@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Jun  7 12:52:48 2019
+// Date        : Sun Jul 14 16:52:25 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top m3_for_arty_a7_OV_Sensor_0_0 -prefix
-//               m3_for_arty_a7_OV_Sensor_0_0_ m3_for_arty_a7_OV_Sensor_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_OV_Sensor_0_0/m3_for_arty_a7_OV_Sensor_0_0_sim_netlist.v
 // Design      : m3_for_arty_a7_OV_Sensor_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,64 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "m3_for_arty_a7_OV_Sensor_0_0,OV_Sensor_ML,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
+(* X_CORE_INFO = "OV_Sensor_ML,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module m3_for_arty_a7_OV_Sensor_0_0
+   (CLK_i,
+    cmos_vsync_i,
+    cmos_href_i,
+    cmos_pclk_i,
+    cmos_xclk_o,
+    cmos_data_i,
+    vid_hsync,
+    vid_vsync,
+    vid_data,
+    vid_clk_ce,
+    vid_active_video);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk_24M CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk_24M, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_clk_out1" *) input CLK_i;
+  input cmos_vsync_i;
+  input cmos_href_i;
+  input cmos_pclk_i;
+  output cmos_xclk_o;
+  input [7:0]cmos_data_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o HSYNC" *) output vid_hsync;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o VSYNC" *) output vid_vsync;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o DATA" *) output [23:0]vid_data;
+  output vid_clk_ce;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o ACTIVE_VIDEO" *) output vid_active_video;
+
+  wire CLK_i;
+  wire [7:0]cmos_data_i;
+  wire cmos_href_i;
+  wire cmos_pclk_i;
+  wire cmos_vsync_i;
+  wire vid_clk_ce;
+  wire [20:0]\^vid_data ;
+  wire vid_hsync;
+  wire vid_vsync;
+
+  assign cmos_xclk_o = CLK_i;
+  assign vid_active_video = vid_hsync;
+  assign vid_data[23:21] = \^vid_data [18:16];
+  assign vid_data[20:16] = \^vid_data [20:16];
+  assign vid_data[15:14] = \^vid_data [9:8];
+  assign vid_data[13:8] = \^vid_data [13:8];
+  assign vid_data[7:5] = \^vid_data [2:0];
+  assign vid_data[4:0] = \^vid_data [4:0];
+  m3_for_arty_a7_OV_Sensor_0_0_OV_Sensor_ML inst
+       (.CLK_i(CLK_i),
+        .cmos_data_i(cmos_data_i),
+        .cmos_href_i(cmos_href_i),
+        .cmos_pclk_i(cmos_pclk_i),
+        .cmos_vsync_i(cmos_vsync_i),
+        .vid_clk_ce(vid_clk_ce),
+        .vid_data({\^vid_data [18:16],\^vid_data [20:19],\^vid_data [9:8],\^vid_data [13:10],\^vid_data [2:0],\^vid_data [4:3]}),
+        .vid_hsync(vid_hsync),
+        .vid_vsync(vid_vsync));
+endmodule
+
+(* ORIG_REF_NAME = "OV_Sensor_ML" *) 
 module m3_for_arty_a7_OV_Sensor_0_0_OV_Sensor_ML
    (vid_data,
     vid_hsync,
@@ -122,6 +180,7 @@ module m3_for_arty_a7_OV_Sensor_0_0_OV_Sensor_ML
         .\rst_n_reg_reg[4] (nolabel_line85_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "cmos_decode" *) 
 module m3_for_arty_a7_OV_Sensor_0_0_cmos_decode
    (vid_data,
     vid_hsync,
@@ -660,13 +719,13 @@ module m3_for_arty_a7_OV_Sensor_0_0_cmos_decode
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[0]_i_1_n_0 ),
-        .Q(vid_data[6]),
+        .Q(vid_data[0]),
         .R(1'b0));
   FDRE \rgb565_o_reg[10] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[10]_i_1_n_0 ),
-        .Q(vid_data[5]),
+        .Q(vid_data[10]),
         .R(1'b0));
   FDRE \rgb565_o_reg[11] 
        (.C(cmos_pclk_i),
@@ -702,55 +761,55 @@ module m3_for_arty_a7_OV_Sensor_0_0_cmos_decode
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[1]_i_1_n_0 ),
-        .Q(vid_data[7]),
+        .Q(vid_data[1]),
         .R(1'b0));
   FDRE \rgb565_o_reg[2] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[2]_i_1_n_0 ),
-        .Q(vid_data[8]),
+        .Q(vid_data[2]),
         .R(1'b0));
   FDRE \rgb565_o_reg[3] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[3]_i_1_n_0 ),
-        .Q(vid_data[9]),
+        .Q(vid_data[3]),
         .R(1'b0));
   FDRE \rgb565_o_reg[4] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[4]_i_1_n_0 ),
-        .Q(vid_data[10]),
+        .Q(vid_data[4]),
         .R(1'b0));
   FDRE \rgb565_o_reg[5] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[5]_i_1_n_0 ),
-        .Q(vid_data[0]),
+        .Q(vid_data[5]),
         .R(1'b0));
   FDRE \rgb565_o_reg[6] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[6]_i_1_n_0 ),
-        .Q(vid_data[1]),
+        .Q(vid_data[6]),
         .R(1'b0));
   FDRE \rgb565_o_reg[7] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[7]_i_1_n_0 ),
-        .Q(vid_data[2]),
+        .Q(vid_data[7]),
         .R(1'b0));
   FDRE \rgb565_o_reg[8] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[8]_i_1_n_0 ),
-        .Q(vid_data[3]),
+        .Q(vid_data[8]),
         .R(1'b0));
   FDRE \rgb565_o_reg[9] 
        (.C(cmos_pclk_i),
         .CE(\rgb565_o[15]_i_1_n_0 ),
         .D(\rgb565_o[9]_i_1_n_0 ),
-        .Q(vid_data[4]),
+        .Q(vid_data[9]),
         .R(1'b0));
   (* srl_bus_name = "\inst/cmos_decode_u0/rst_n_reg_reg " *) 
   (* srl_name = "\inst/cmos_decode_u0/rst_n_reg_reg[3]_srl5 " *) 
@@ -809,6 +868,7 @@ module m3_for_arty_a7_OV_Sensor_0_0_cmos_decode
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "count_reset" *) 
 module m3_for_arty_a7_OV_Sensor_0_0_count_reset
    (\rst_n_reg_reg[4] ,
     CLK_i);
@@ -1123,63 +1183,6 @@ module m3_for_arty_a7_OV_Sensor_0_0_count_reset
         .I2(\cnt[0]_i_4_n_0 ),
         .I3(\cnt[0]_i_3_n_0 ),
         .O(\rst_n_reg_reg[4] ));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "m3_for_arty_a7_OV_Sensor_0_0,OV_Sensor_ML,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
-(* X_CORE_INFO = "OV_Sensor_ML,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module m3_for_arty_a7_OV_Sensor_0_0
-   (CLK_i,
-    cmos_vsync_i,
-    cmos_href_i,
-    cmos_pclk_i,
-    cmos_xclk_o,
-    cmos_data_i,
-    vid_hsync,
-    vid_vsync,
-    vid_data,
-    vid_clk_ce,
-    vid_active_video);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk_24M CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk_24M, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_wiz_clk_out1" *) input CLK_i;
-  input cmos_vsync_i;
-  input cmos_href_i;
-  input cmos_pclk_i;
-  output cmos_xclk_o;
-  input [7:0]cmos_data_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o HSYNC" *) output vid_hsync;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o VSYNC" *) output vid_vsync;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o DATA" *) output [23:0]vid_data;
-  output vid_clk_ce;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 video_o ACTIVE_VIDEO" *) output vid_active_video;
-
-  wire CLK_i;
-  wire [7:0]cmos_data_i;
-  wire cmos_href_i;
-  wire cmos_pclk_i;
-  wire cmos_vsync_i;
-  wire vid_clk_ce;
-  wire [20:0]\^vid_data ;
-  wire vid_hsync;
-  wire vid_vsync;
-
-  assign cmos_xclk_o = CLK_i;
-  assign vid_active_video = vid_hsync;
-  assign vid_data[23:21] = \^vid_data [18:16];
-  assign vid_data[20:16] = \^vid_data [20:16];
-  assign vid_data[15:13] = \^vid_data [10:8];
-  assign vid_data[12:8] = \^vid_data [12:8];
-  assign vid_data[7:6] = \^vid_data [1:0];
-  assign vid_data[5:0] = \^vid_data [5:0];
-  m3_for_arty_a7_OV_Sensor_0_0_OV_Sensor_ML inst
-       (.CLK_i(CLK_i),
-        .cmos_data_i(cmos_data_i),
-        .cmos_href_i(cmos_href_i),
-        .cmos_pclk_i(cmos_pclk_i),
-        .cmos_vsync_i(cmos_vsync_i),
-        .vid_clk_ce(vid_clk_ce),
-        .vid_data({\^vid_data [18:16],\^vid_data [20:19],\^vid_data [10:8],\^vid_data [12:11],\^vid_data [1:0],\^vid_data [5:2]}),
-        .vid_hsync(vid_hsync),
-        .vid_vsync(vid_vsync));
 endmodule
 `ifndef GLBL
 `define GLBL

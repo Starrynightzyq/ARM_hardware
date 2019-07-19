@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Jul 18 13:50:49 2019
+// Date        : Thu Jul 18 21:49:37 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_combine_0_0/m3_for_arty_a7_combine_0_0_sim_netlist.v
+//               V:/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_combine_0_0/m3_for_arty_a7_combine_0_0_sim_netlist.v
 // Design      : m3_for_arty_a7_combine_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -78,23 +78,42 @@ module m3_for_arty_a7_combine_0_0_combine
   input [3:0]char_index;
   input [15:0]char_diff;
 
-  wire \FSM_sequential_state_now[0]_i_1_n_0 ;
-  wire \FSM_sequential_state_now[0]_i_2_n_0 ;
-  wire \FSM_sequential_state_now[0]_i_3_n_0 ;
-  wire \FSM_sequential_state_now[0]_i_4_n_0 ;
-  wire \FSM_sequential_state_now[0]_i_5_n_0 ;
-  wire \FSM_sequential_state_now[1]_i_1_n_0 ;
-  wire \FSM_sequential_state_now[1]_i_2_n_0 ;
-  wire \FSM_sequential_state_now[2]_i_1_n_0 ;
-  wire \FSM_sequential_state_now[2]_i_2_n_0 ;
-  wire \FSM_sequential_state_now[2]_i_3_n_0 ;
-  wire \FSM_sequential_state_now[2]_i_4_n_0 ;
-  wire \FSM_sequential_state_now[3]_i_1_n_0 ;
-  wire \FSM_sequential_state_now[3]_i_2_n_0 ;
-  wire \FSM_sequential_state_now[3]_i_3_n_0 ;
-  wire \FSM_sequential_state_now[3]_i_4_n_0 ;
-  wire \FSM_sequential_state_now[4]_i_1_n_0 ;
-  wire \FSM_sequential_state_now[4]_i_2_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_2_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_3_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_4_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_5_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_6_n_0 ;
+  wire \FSM_onehot_state_now[10]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[11]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[11]_i_2_n_0 ;
+  wire \FSM_onehot_state_now[11]_i_3_n_0 ;
+  wire \FSM_onehot_state_now[11]_i_4_n_0 ;
+  wire \FSM_onehot_state_now[1]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[2]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[3]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[3]_i_2_n_0 ;
+  wire \FSM_onehot_state_now[4]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[5]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[6]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[7]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[7]_i_2_n_0 ;
+  wire \FSM_onehot_state_now[7]_i_3_n_0 ;
+  wire \FSM_onehot_state_now[8]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[9]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[9]_i_2_n_0 ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[0] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[10] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[11] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[1] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[2] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[3] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[4] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[5] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[6] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[7] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[8] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[9] ;
   wire [2:0]char_addr;
   wire [2:0]char_addr_delay;
   wire [15:0]char_diff;
@@ -111,203 +130,351 @@ module m3_for_arty_a7_combine_0_0_combine
   wire \char_index_reg[4][3]_i_1_n_0 ;
   wire \char_index_reg[5][3]_i_1_n_0 ;
   wire \char_index_reg[6][3]_i_1_n_0 ;
+  wire \char_index_reg[7][3]_i_2_n_0 ;
+  wire \char_index_reg[7][3]_i_3_n_0 ;
+  wire \char_index_reg[7][3]_i_4_n_0 ;
+  wire \char_index_reg[7][3]_i_5_n_0 ;
   wire char_valid;
   wire char_valid_c;
   wire char_valid_delay;
   wire char_valid_reg;
   wire clk;
   wire rst_n;
-  (* RTL_KEEP = "yes" *) wire [4:0]state_now;
 
   LUT6 #(
-    .INIT(64'hFF02020200000000)) 
-    \FSM_sequential_state_now[0]_i_1 
-       (.I0(\FSM_sequential_state_now[0]_i_2_n_0 ),
-        .I1(state_now[4]),
-        .I2(\FSM_sequential_state_now[0]_i_3_n_0 ),
-        .I3(\FSM_sequential_state_now[0]_i_4_n_0 ),
-        .I4(\FSM_sequential_state_now[0]_i_5_n_0 ),
-        .I5(rst_n),
-        .O(\FSM_sequential_state_now[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h1284000000001280)) 
-    \FSM_sequential_state_now[0]_i_2 
-       (.I0(state_now[3]),
-        .I1(char_addr_delay[1]),
+    .INIT(64'hDDDDDDDD5555F555)) 
+    \FSM_onehot_state_now[0]_i_1 
+       (.I0(rst_n),
+        .I1(\FSM_onehot_state_now[0]_i_2_n_0 ),
+        .I2(\FSM_onehot_state_now[0]_i_3_n_0 ),
+        .I3(\FSM_onehot_state_now[0]_i_4_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .O(\FSM_onehot_state_now[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'hFF7F)) 
+    \FSM_onehot_state_now[0]_i_2 
+       (.I0(char_addr_delay[0]),
+        .I1(char_valid_delay),
         .I2(char_addr_delay[2]),
-        .I3(state_now[2]),
-        .I4(char_addr_delay[0]),
-        .I5(state_now[1]),
-        .O(\FSM_sequential_state_now[0]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \FSM_sequential_state_now[0]_i_3 
-       (.I0(state_now[0]),
-        .I1(char_valid_delay),
-        .O(\FSM_sequential_state_now[0]_i_3_n_0 ));
+        .I3(char_addr_delay[1]),
+        .O(\FSM_onehot_state_now[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000FFFF00000020)) 
-    \FSM_sequential_state_now[0]_i_4 
-       (.I0(char_valid_delay),
-        .I1(char_addr_delay[2]),
-        .I2(char_addr_delay[1]),
-        .I3(char_addr_delay[0]),
-        .I4(state_now[0]),
-        .I5(state_now[4]),
-        .O(\FSM_sequential_state_now[0]_i_4_n_0 ));
-  LUT3 #(
-    .INIT(8'h01)) 
-    \FSM_sequential_state_now[0]_i_5 
-       (.I0(state_now[1]),
-        .I1(state_now[2]),
-        .I2(state_now[3]),
-        .O(\FSM_sequential_state_now[0]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000222220222020)) 
-    \FSM_sequential_state_now[1]_i_1 
-       (.I0(rst_n),
-        .I1(state_now[4]),
-        .I2(\FSM_sequential_state_now[1]_i_2_n_0 ),
-        .I3(char_valid_delay),
-        .I4(state_now[1]),
-        .I5(state_now[0]),
-        .O(\FSM_sequential_state_now[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0008800008000080)) 
-    \FSM_sequential_state_now[1]_i_2 
-       (.I0(char_addr_delay[0]),
-        .I1(state_now[1]),
-        .I2(char_addr_delay[1]),
-        .I3(state_now[3]),
-        .I4(state_now[2]),
-        .I5(char_addr_delay[2]),
-        .O(\FSM_sequential_state_now[1]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h8088880080808000)) 
-    \FSM_sequential_state_now[2]_i_1 
-       (.I0(\FSM_sequential_state_now[2]_i_2_n_0 ),
-        .I1(\FSM_sequential_state_now[2]_i_3_n_0 ),
-        .I2(\FSM_sequential_state_now[2]_i_4_n_0 ),
-        .I3(state_now[2]),
-        .I4(state_now[1]),
-        .I5(state_now[0]),
-        .O(\FSM_sequential_state_now[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFF9FFFF)) 
-    \FSM_sequential_state_now[2]_i_2 
-       (.I0(char_addr_delay[0]),
-        .I1(state_now[1]),
-        .I2(char_addr_delay[1]),
-        .I3(state_now[0]),
-        .I4(char_valid_delay),
-        .O(\FSM_sequential_state_now[2]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \FSM_sequential_state_now[2]_i_3 
-       (.I0(rst_n),
-        .I1(state_now[4]),
-        .O(\FSM_sequential_state_now[2]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0404040404444404)) 
-    \FSM_sequential_state_now[2]_i_4 
-       (.I0(state_now[0]),
-        .I1(state_now[2]),
+    .INIT(64'hF000F0F0F000F011)) 
+    \FSM_onehot_state_now[0]_i_3 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
         .I2(char_valid_delay),
-        .I3(state_now[3]),
-        .I4(char_addr_delay[2]),
-        .I5(char_addr_delay[1]),
-        .O(\FSM_sequential_state_now[2]_i_4_n_0 ));
+        .I3(\FSM_onehot_state_now[0]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now[11]_i_3_n_0 ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .O(\FSM_onehot_state_now[0]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAA200000A0)) 
-    \FSM_sequential_state_now[3]_i_1 
-       (.I0(\FSM_sequential_state_now[3]_i_2_n_0 ),
-        .I1(state_now[0]),
-        .I2(\FSM_sequential_state_now[3]_i_3_n_0 ),
-        .I3(state_now[1]),
-        .I4(char_addr_delay[0]),
-        .I5(\FSM_sequential_state_now[3]_i_4_n_0 ),
-        .O(\FSM_sequential_state_now[3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000EAAA00000000)) 
-    \FSM_sequential_state_now[3]_i_2 
-       (.I0(state_now[3]),
-        .I1(state_now[2]),
-        .I2(state_now[0]),
-        .I3(state_now[1]),
-        .I4(state_now[4]),
-        .I5(rst_n),
-        .O(\FSM_sequential_state_now[3]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'h18)) 
-    \FSM_sequential_state_now[3]_i_3 
-       (.I0(char_addr_delay[1]),
-        .I1(char_addr_delay[2]),
-        .I2(state_now[2]),
-        .O(\FSM_sequential_state_now[3]_i_3_n_0 ));
+    .INIT(64'hFDFDFDFDDFEFDFFD)) 
+    \FSM_onehot_state_now[0]_i_4 
+       (.I0(char_addr_delay[2]),
+        .I1(\FSM_onehot_state_now[0]_i_6_n_0 ),
+        .I2(char_addr_delay[0]),
+        .I3(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .O(\FSM_onehot_state_now[0]_i_4_n_0 ));
   LUT5 #(
-    .INIT(32'h53F3A0F3)) 
-    \FSM_sequential_state_now[3]_i_4 
-       (.I0(state_now[2]),
-        .I1(char_valid_delay),
-        .I2(state_now[0]),
-        .I3(state_now[1]),
-        .I4(state_now[3]),
-        .O(\FSM_sequential_state_now[3]_i_4_n_0 ));
+    .INIT(32'hAEAFAEAE)) 
+    \FSM_onehot_state_now[0]_i_5 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .O(\FSM_onehot_state_now[0]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'h1E1F)) 
+    \FSM_onehot_state_now[0]_i_6 
+       (.I0(char_addr_delay[0]),
+        .I1(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I2(char_addr_delay[1]),
+        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .O(\FSM_onehot_state_now[0]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0001800000000000)) 
-    \FSM_sequential_state_now[4]_i_1 
-       (.I0(state_now[1]),
-        .I1(state_now[2]),
-        .I2(state_now[3]),
-        .I3(state_now[0]),
-        .I4(state_now[4]),
-        .I5(rst_n),
-        .O(\FSM_sequential_state_now[4]_i_1_n_0 ));
+    .INIT(64'h0000010000000000)) 
+    \FSM_onehot_state_now[10]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I5(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .O(\FSM_onehot_state_now[10]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00040000)) 
+    \FSM_onehot_state_now[11]_i_1 
+       (.I0(\FSM_onehot_state_now[11]_i_3_n_0 ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I4(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .O(\FSM_onehot_state_now[11]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \FSM_sequential_state_now[4]_i_2 
+    \FSM_onehot_state_now[11]_i_2 
        (.I0(rst_n),
-        .O(\FSM_sequential_state_now[4]_i_2_n_0 ));
-  (* FSM_ENCODED_STATES = "CHAR6:01110,CHAR6_V:01101,CHAR5:01100,CHAR1_V:00011,DONE:10001,CHAR0:00010,CHAR7:10000,CHAR0_V:00001,CHAR5_V:01011,IDLE:00000,CHAR4:01010,CHAR3_V:00111,CHAR2:00110,CHAR4_V:01001,CHAR3:01000,CHAR2_V:00101,CHAR1:00100,CHAR7_V:01111" *) 
+        .O(\FSM_onehot_state_now[11]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \FSM_onehot_state_now[11]_i_3 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .O(\FSM_onehot_state_now[11]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000100)) 
+    \FSM_onehot_state_now[11]_i_4 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I3(rst_n),
+        .I4(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .O(\FSM_onehot_state_now[11]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h0800000000000000)) 
+    \FSM_onehot_state_now[1]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I1(rst_n),
+        .I2(char_addr_delay[1]),
+        .I3(char_addr_delay[2]),
+        .I4(char_valid_delay),
+        .I5(char_addr_delay[0]),
+        .O(\FSM_onehot_state_now[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h40404440)) 
+    \FSM_onehot_state_now[2]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I1(rst_n),
+        .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I4(char_valid_delay),
+        .O(\FSM_onehot_state_now[2]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000800000000000)) 
+    \FSM_onehot_state_now[3]_i_1 
+       (.I0(char_valid_delay),
+        .I1(char_addr_delay[2]),
+        .I2(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I3(char_addr_delay[1]),
+        .I4(char_addr_delay[0]),
+        .I5(\FSM_onehot_state_now[3]_i_2_n_0 ),
+        .O(\FSM_onehot_state_now[3]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h10)) 
+    \FSM_onehot_state_now[3]_i_2 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I2(rst_n),
+        .O(\FSM_onehot_state_now[3]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'hF200)) 
+    \FSM_onehot_state_now[4]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I1(char_valid_delay),
+        .I2(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I3(\FSM_onehot_state_now[7]_i_3_n_0 ),
+        .O(\FSM_onehot_state_now[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0400000000000000)) 
+    \FSM_onehot_state_now[5]_i_1 
+       (.I0(\FSM_onehot_state_now[9]_i_2_n_0 ),
+        .I1(char_addr_delay[0]),
+        .I2(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I4(char_addr_delay[1]),
+        .I5(\FSM_onehot_state_now[7]_i_3_n_0 ),
+        .O(\FSM_onehot_state_now[5]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000F400000000)) 
+    \FSM_onehot_state_now[6]_i_1 
+       (.I0(char_valid_delay),
+        .I1(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I5(\FSM_onehot_state_now[7]_i_3_n_0 ),
+        .O(\FSM_onehot_state_now[6]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000800000000)) 
+    \FSM_onehot_state_now[7]_i_1 
+       (.I0(\FSM_onehot_state_now[7]_i_2_n_0 ),
+        .I1(char_addr_delay[0]),
+        .I2(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I5(\FSM_onehot_state_now[7]_i_3_n_0 ),
+        .O(\FSM_onehot_state_now[7]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h4000)) 
+    \FSM_onehot_state_now[7]_i_2 
+       (.I0(char_addr_delay[2]),
+        .I1(char_addr_delay[1]),
+        .I2(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I3(char_valid_delay),
+        .O(\FSM_onehot_state_now[7]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h0002)) 
+    \FSM_onehot_state_now[7]_i_3 
+       (.I0(rst_n),
+        .I1(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .O(\FSM_onehot_state_now[7]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h1111010000000000)) 
+    \FSM_onehot_state_now[8]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I2(char_valid_delay),
+        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I5(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .O(\FSM_onehot_state_now[8]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000010000000000)) 
+    \FSM_onehot_state_now[9]_i_1 
+       (.I0(\FSM_onehot_state_now[11]_i_3_n_0 ),
+        .I1(char_addr_delay[0]),
+        .I2(\FSM_onehot_state_now[9]_i_2_n_0 ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I4(char_addr_delay[1]),
+        .I5(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .O(\FSM_onehot_state_now[9]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \FSM_onehot_state_now[9]_i_2 
+       (.I0(char_valid_delay),
+        .I1(char_addr_delay[2]),
+        .O(\FSM_onehot_state_now[9]_i_2_n_0 ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
   (* KEEP = "yes" *) 
-  FDCE \FSM_sequential_state_now_reg[0] 
+  FDPE #(
+    .INIT(1'b1)) 
+    \FSM_onehot_state_now_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_state_now[4]_i_2_n_0 ),
-        .D(\FSM_sequential_state_now[0]_i_1_n_0 ),
-        .Q(state_now[0]));
-  (* FSM_ENCODED_STATES = "CHAR6:01110,CHAR6_V:01101,CHAR5:01100,CHAR1_V:00011,DONE:10001,CHAR0:00010,CHAR7:10000,CHAR0_V:00001,CHAR5_V:01011,IDLE:00000,CHAR4:01010,CHAR3_V:00111,CHAR2:00110,CHAR4_V:01001,CHAR3:01000,CHAR2_V:00101,CHAR1:00100,CHAR7_V:01111" *) 
+        .D(\FSM_onehot_state_now[0]_i_1_n_0 ),
+        .PRE(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[0] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
   (* KEEP = "yes" *) 
-  FDCE \FSM_sequential_state_now_reg[1] 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[10] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_state_now[4]_i_2_n_0 ),
-        .D(\FSM_sequential_state_now[1]_i_1_n_0 ),
-        .Q(state_now[1]));
-  (* FSM_ENCODED_STATES = "CHAR6:01110,CHAR6_V:01101,CHAR5:01100,CHAR1_V:00011,DONE:10001,CHAR0:00010,CHAR7:10000,CHAR0_V:00001,CHAR5_V:01011,IDLE:00000,CHAR4:01010,CHAR3_V:00111,CHAR2:00110,CHAR4_V:01001,CHAR3:01000,CHAR2_V:00101,CHAR1:00100,CHAR7_V:01111" *) 
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[10]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[10] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
   (* KEEP = "yes" *) 
-  FDCE \FSM_sequential_state_now_reg[2] 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[11] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_state_now[4]_i_2_n_0 ),
-        .D(\FSM_sequential_state_now[2]_i_1_n_0 ),
-        .Q(state_now[2]));
-  (* FSM_ENCODED_STATES = "CHAR6:01110,CHAR6_V:01101,CHAR5:01100,CHAR1_V:00011,DONE:10001,CHAR0:00010,CHAR7:10000,CHAR0_V:00001,CHAR5_V:01011,IDLE:00000,CHAR4:01010,CHAR3_V:00111,CHAR2:00110,CHAR4_V:01001,CHAR3:01000,CHAR2_V:00101,CHAR1:00100,CHAR7_V:01111" *) 
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[11]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[11] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
   (* KEEP = "yes" *) 
-  FDCE \FSM_sequential_state_now_reg[3] 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_state_now[4]_i_2_n_0 ),
-        .D(\FSM_sequential_state_now[3]_i_1_n_0 ),
-        .Q(state_now[3]));
-  (* FSM_ENCODED_STATES = "CHAR6:01110,CHAR6_V:01101,CHAR5:01100,CHAR1_V:00011,DONE:10001,CHAR0:00010,CHAR7:10000,CHAR0_V:00001,CHAR5_V:01011,IDLE:00000,CHAR4:01010,CHAR3_V:00111,CHAR2:00110,CHAR4_V:01001,CHAR3:01000,CHAR2_V:00101,CHAR1:00100,CHAR7_V:01111" *) 
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[1]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[1] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
   (* KEEP = "yes" *) 
-  FDCE \FSM_sequential_state_now_reg[4] 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_state_now[4]_i_2_n_0 ),
-        .D(\FSM_sequential_state_now[4]_i_1_n_0 ),
-        .Q(state_now[4]));
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[2]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[2] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[3]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[3] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[4] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[4]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[4] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[5] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[5]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[5] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[6] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[6]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[6] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[7] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[7]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[7] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[8] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[8]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[8] ));
+  (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_now_reg[9] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\FSM_onehot_state_now[11]_i_2_n_0 ),
+        .D(\FSM_onehot_state_now[9]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_now_reg_n_0_[9] ));
   FDRE #(
     .INIT(1'b0)) 
     \char_addr_delay_reg[0] 
@@ -1260,78 +1427,124 @@ module m3_for_arty_a7_combine_0_0_combine
         .D(char_index[3]),
         .Q(char_index_delay[3]),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'h00000004)) 
+  LUT6 #(
+    .INIT(64'h0000000000000100)) 
     \char_index_reg[0][3]_i_1 
-       (.I0(state_now[4]),
-        .I1(state_now[0]),
-        .I2(state_now[3]),
-        .I3(state_now[2]),
-        .I4(state_now[1]),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\char_index_reg[7][3]_i_3_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[0][3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h01000000)) 
+  LUT6 #(
+    .INIT(64'h0000000000000400)) 
     \char_index_reg[1][3]_i_1 
-       (.I0(state_now[2]),
-        .I1(state_now[3]),
-        .I2(state_now[4]),
-        .I3(state_now[0]),
-        .I4(state_now[1]),
+       (.I0(\char_index_reg[7][3]_i_3_n_0 ),
+        .I1(\char_index_reg[7][3]_i_2_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[1][3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00040000)) 
+  LUT6 #(
+    .INIT(64'h0000000000000400)) 
     \char_index_reg[2][3]_i_1 
-       (.I0(state_now[4]),
-        .I1(state_now[0]),
-        .I2(state_now[1]),
-        .I3(state_now[3]),
-        .I4(state_now[2]),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\char_index_reg[7][3]_i_3_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[2][3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00400000)) 
+  LUT6 #(
+    .INIT(64'h0000000000000800)) 
     \char_index_reg[3][3]_i_1 
-       (.I0(state_now[4]),
-        .I1(state_now[1]),
-        .I2(state_now[0]),
-        .I3(state_now[3]),
-        .I4(state_now[2]),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\char_index_reg[7][3]_i_3_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[3][3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000008)) 
+  LUT6 #(
+    .INIT(64'h0000000000001000)) 
     \char_index_reg[4][3]_i_1 
-       (.I0(state_now[0]),
-        .I1(state_now[3]),
-        .I2(state_now[4]),
-        .I3(state_now[1]),
-        .I4(state_now[2]),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\char_index_reg[7][3]_i_3_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[4][3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00400000)) 
+  LUT6 #(
+    .INIT(64'h0000000000004000)) 
     \char_index_reg[5][3]_i_1 
-       (.I0(state_now[2]),
-        .I1(state_now[1]),
-        .I2(state_now[0]),
-        .I3(state_now[4]),
-        .I4(state_now[3]),
+       (.I0(\char_index_reg[7][3]_i_3_n_0 ),
+        .I1(\char_index_reg[7][3]_i_2_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[5][3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00080000)) 
+  LUT6 #(
+    .INIT(64'h0000000000004000)) 
     \char_index_reg[6][3]_i_1 
-       (.I0(state_now[2]),
-        .I1(state_now[3]),
-        .I2(state_now[4]),
-        .I3(state_now[1]),
-        .I4(state_now[0]),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\char_index_reg[7][3]_i_3_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[6][3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00800000)) 
+  LUT6 #(
+    .INIT(64'h0000000000008000)) 
     \char_index_reg[7][3]_i_1 
-       (.I0(state_now[1]),
-        .I1(state_now[0]),
-        .I2(state_now[2]),
-        .I3(state_now[4]),
-        .I4(state_now[3]),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\char_index_reg[7][3]_i_3_n_0 ),
+        .I2(\char_index_reg[7][3]_i_4_n_0 ),
+        .I3(\char_index_reg[7][3]_i_5_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(char_index_reg));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \char_index_reg[7][3]_i_2 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .O(\char_index_reg[7][3]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \char_index_reg[7][3]_i_3 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .O(\char_index_reg[7][3]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \char_index_reg[7][3]_i_4 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I2(\FSM_onehot_state_now[11]_i_3_n_0 ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .O(\char_index_reg[7][3]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \char_index_reg[7][3]_i_5 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .O(\char_index_reg[7][3]_i_5_n_0 ));
   FDRE \char_index_reg_reg[0][0] 
        (.C(clk),
         .CE(\char_index_reg[0][3]_i_1_n_0 ),
@@ -1532,14 +1745,15 @@ module m3_for_arty_a7_combine_0_0_combine
         .D(char_valid),
         .Q(char_valid_delay),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'h00000008)) 
+  LUT6 #(
+    .INIT(64'h0000000004040400)) 
     char_valid_reg_i_1
-       (.I0(state_now[4]),
-        .I1(state_now[0]),
-        .I2(state_now[3]),
-        .I3(state_now[2]),
-        .I4(state_now[1]),
+       (.I0(\char_index_reg[7][3]_i_4_n_0 ),
+        .I1(\char_index_reg[7][3]_i_5_n_0 ),
+        .I2(\char_index_reg[7][3]_i_3_n_0 ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I5(\char_index_reg[7][3]_i_2_n_0 ),
         .O(char_valid_reg));
   FDRE char_valid_reg_reg
        (.C(clk),

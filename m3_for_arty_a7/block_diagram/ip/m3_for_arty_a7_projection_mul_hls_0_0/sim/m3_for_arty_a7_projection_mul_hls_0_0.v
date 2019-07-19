@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:projection_mul_hls:1.0
+// IP VLNV: starrynightzyq.com:hls:projection_mul_hls:1.1
 // IP Revision: 1906062139
 
 `timescale 1ns/1ps

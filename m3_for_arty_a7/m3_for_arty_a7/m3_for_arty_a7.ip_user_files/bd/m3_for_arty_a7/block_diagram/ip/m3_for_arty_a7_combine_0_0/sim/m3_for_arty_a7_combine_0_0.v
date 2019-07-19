@@ -80,7 +80,9 @@ output wire [31 : 0] char_index_c;
 output wire [127 : 0] char_diff_c;
 output wire char_valid_c;
 
-  combine inst (
+  combine #(
+    .ALL_CHAR(0)
+  ) inst (
     .clk(clk),
     .rst_n(rst_n),
     .char_index(char_index),

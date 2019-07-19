@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Jul 18 13:50:29 2019
+// Date        : Thu Jul 18 23:47:48 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top m3_for_arty_a7_contrast_hls_rom_0_0 -prefix
-//               m3_for_arty_a7_contrast_hls_rom_0_0_ m3_for_arty_a7_contrast_hls_rom_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               V:/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_contrast_hls_rom_0_0/m3_for_arty_a7_contrast_hls_rom_0_0_sim_netlist.v
 // Design      : m3_for_arty_a7_contrast_hls_rom_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,226 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "m3_for_arty_a7_contrast_hls_rom_0_0,contrast_hls_rom,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "HLS" *) 
+(* X_CORE_INFO = "contrast_hls_rom,Vivado 2018.2" *) (* hls_module = "yes" *) 
+(* NotValidForBitStream *)
+module m3_for_arty_a7_contrast_hls_rom_0_0
+   (diff_sum_0_ap_vld,
+    diff_sum_1_ap_vld,
+    diff_sum_2_ap_vld,
+    diff_sum_3_ap_vld,
+    diff_sum_4_ap_vld,
+    diff_sum_5_ap_vld,
+    diff_sum_6_ap_vld,
+    diff_sum_7_ap_vld,
+    diff_sum_8_ap_vld,
+    diff_sum_9_ap_vld,
+    diff_sum_10_ap_vld,
+    s_axi_AXILiteS_AWADDR,
+    s_axi_AXILiteS_AWVALID,
+    s_axi_AXILiteS_AWREADY,
+    s_axi_AXILiteS_WDATA,
+    s_axi_AXILiteS_WSTRB,
+    s_axi_AXILiteS_WVALID,
+    s_axi_AXILiteS_WREADY,
+    s_axi_AXILiteS_BRESP,
+    s_axi_AXILiteS_BVALID,
+    s_axi_AXILiteS_BREADY,
+    s_axi_AXILiteS_ARADDR,
+    s_axi_AXILiteS_ARVALID,
+    s_axi_AXILiteS_ARREADY,
+    s_axi_AXILiteS_RDATA,
+    s_axi_AXILiteS_RRESP,
+    s_axi_AXILiteS_RVALID,
+    s_axi_AXILiteS_RREADY,
+    ap_clk,
+    ap_rst_n,
+    interrupt,
+    input_r_TVALID,
+    input_r_TREADY,
+    input_r_TDATA,
+    input_r_TKEEP,
+    input_r_TSTRB,
+    input_r_TUSER,
+    input_r_TLAST,
+    input_r_TID,
+    input_r_TDEST,
+    diff_sum_0,
+    diff_sum_1,
+    diff_sum_2,
+    diff_sum_3,
+    diff_sum_4,
+    diff_sum_5,
+    diff_sum_6,
+    diff_sum_7,
+    diff_sum_8,
+    diff_sum_9,
+    diff_sum_10);
+  output diff_sum_0_ap_vld;
+  output diff_sum_1_ap_vld;
+  output diff_sum_2_ap_vld;
+  output diff_sum_3_ap_vld;
+  output diff_sum_4_ap_vld;
+  output diff_sum_5_ap_vld;
+  output diff_sum_6_ap_vld;
+  output diff_sum_7_ap_vld;
+  output diff_sum_8_ap_vld;
+  output diff_sum_9_ap_vld;
+  output diff_sum_10_ap_vld;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWADDR" *) input [3:0]s_axi_AXILiteS_AWADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWVALID" *) input s_axi_AXILiteS_AWVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWREADY" *) output s_axi_AXILiteS_AWREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WDATA" *) input [31:0]s_axi_AXILiteS_WDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WSTRB" *) input [3:0]s_axi_AXILiteS_WSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WVALID" *) input s_axi_AXILiteS_WVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WREADY" *) output s_axi_AXILiteS_WREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BRESP" *) output [1:0]s_axi_AXILiteS_BRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BVALID" *) output s_axi_AXILiteS_BVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BREADY" *) input s_axi_AXILiteS_BREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARADDR" *) input [3:0]s_axi_AXILiteS_ARADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARVALID" *) input s_axi_AXILiteS_ARVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARREADY" *) output s_axi_AXILiteS_ARREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RDATA" *) output [31:0]s_axi_AXILiteS_RDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RRESP" *) output [1:0]s_axi_AXILiteS_RRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RVALID" *) output s_axi_AXILiteS_RVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_AXILiteS, ADDR_WIDTH 4, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_AXILiteS_RREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_AXILiteS:input_r, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) input ap_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, PortWidth 1" *) output interrupt;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TVALID" *) input input_r_TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TREADY" *) output input_r_TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDATA" *) input [7:0]input_r_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TKEEP" *) input [0:0]input_r_TKEEP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TSTRB" *) input [0:0]input_r_TSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TUSER" *) input [0:0]input_r_TUSER;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TLAST" *) input [0:0]input_r_TLAST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TID" *) input [0:0]input_r_TID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) input [0:0]input_r_TDEST;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_1;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_2 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_2, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_2;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_3 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_3, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_3;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_4 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_4, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_4;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_5 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_5, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_5;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_6 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_6, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_6;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_7 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_7, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_7;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_8 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_8, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_8;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_9 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_9, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_9;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_10 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_10, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_10;
+
+  wire ap_clk;
+  wire ap_rst_n;
+  wire [15:0]diff_sum_0;
+  wire diff_sum_0_ap_vld;
+  wire [15:0]diff_sum_1;
+  wire [15:0]diff_sum_10;
+  wire diff_sum_10_ap_vld;
+  wire diff_sum_1_ap_vld;
+  wire [15:0]diff_sum_2;
+  wire diff_sum_2_ap_vld;
+  wire [15:0]diff_sum_3;
+  wire diff_sum_3_ap_vld;
+  wire [15:0]diff_sum_4;
+  wire diff_sum_4_ap_vld;
+  wire [15:0]diff_sum_5;
+  wire diff_sum_5_ap_vld;
+  wire [15:0]diff_sum_6;
+  wire diff_sum_6_ap_vld;
+  wire [15:0]diff_sum_7;
+  wire diff_sum_7_ap_vld;
+  wire [15:0]diff_sum_8;
+  wire diff_sum_8_ap_vld;
+  wire [15:0]diff_sum_9;
+  wire diff_sum_9_ap_vld;
+  wire [7:0]input_r_TDATA;
+  wire [0:0]input_r_TDEST;
+  wire [0:0]input_r_TID;
+  wire [0:0]input_r_TKEEP;
+  wire [0:0]input_r_TLAST;
+  wire input_r_TREADY;
+  wire [0:0]input_r_TSTRB;
+  wire [0:0]input_r_TUSER;
+  wire input_r_TVALID;
+  wire interrupt;
+  wire [3:0]s_axi_AXILiteS_ARADDR;
+  wire s_axi_AXILiteS_ARREADY;
+  wire s_axi_AXILiteS_ARVALID;
+  wire [3:0]s_axi_AXILiteS_AWADDR;
+  wire s_axi_AXILiteS_AWREADY;
+  wire s_axi_AXILiteS_AWVALID;
+  wire s_axi_AXILiteS_BREADY;
+  wire [1:0]s_axi_AXILiteS_BRESP;
+  wire s_axi_AXILiteS_BVALID;
+  wire [31:0]s_axi_AXILiteS_RDATA;
+  wire s_axi_AXILiteS_RREADY;
+  wire [1:0]s_axi_AXILiteS_RRESP;
+  wire s_axi_AXILiteS_RVALID;
+  wire [31:0]s_axi_AXILiteS_WDATA;
+  wire s_axi_AXILiteS_WREADY;
+  wire [3:0]s_axi_AXILiteS_WSTRB;
+  wire s_axi_AXILiteS_WVALID;
+
+  (* C_S_AXI_ADDR_WIDTH = "32" *) 
+  (* C_S_AXI_AXILITES_ADDR_WIDTH = "4" *) 
+  (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
+  (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) 
+  (* C_S_AXI_DATA_WIDTH = "32" *) 
+  (* C_S_AXI_WSTRB_WIDTH = "4" *) 
+  m3_for_arty_a7_contrast_hls_rom_0_0_contrast_hls_rom inst
+       (.ap_clk(ap_clk),
+        .ap_rst_n(ap_rst_n),
+        .diff_sum_0(diff_sum_0),
+        .diff_sum_0_ap_vld(diff_sum_0_ap_vld),
+        .diff_sum_1(diff_sum_1),
+        .diff_sum_10(diff_sum_10),
+        .diff_sum_10_ap_vld(diff_sum_10_ap_vld),
+        .diff_sum_1_ap_vld(diff_sum_1_ap_vld),
+        .diff_sum_2(diff_sum_2),
+        .diff_sum_2_ap_vld(diff_sum_2_ap_vld),
+        .diff_sum_3(diff_sum_3),
+        .diff_sum_3_ap_vld(diff_sum_3_ap_vld),
+        .diff_sum_4(diff_sum_4),
+        .diff_sum_4_ap_vld(diff_sum_4_ap_vld),
+        .diff_sum_5(diff_sum_5),
+        .diff_sum_5_ap_vld(diff_sum_5_ap_vld),
+        .diff_sum_6(diff_sum_6),
+        .diff_sum_6_ap_vld(diff_sum_6_ap_vld),
+        .diff_sum_7(diff_sum_7),
+        .diff_sum_7_ap_vld(diff_sum_7_ap_vld),
+        .diff_sum_8(diff_sum_8),
+        .diff_sum_8_ap_vld(diff_sum_8_ap_vld),
+        .diff_sum_9(diff_sum_9),
+        .diff_sum_9_ap_vld(diff_sum_9_ap_vld),
+        .input_r_TDATA(input_r_TDATA),
+        .input_r_TDEST(input_r_TDEST),
+        .input_r_TID(input_r_TID),
+        .input_r_TKEEP(input_r_TKEEP),
+        .input_r_TLAST(input_r_TLAST),
+        .input_r_TREADY(input_r_TREADY),
+        .input_r_TSTRB(input_r_TSTRB),
+        .input_r_TUSER(input_r_TUSER),
+        .input_r_TVALID(input_r_TVALID),
+        .interrupt(interrupt),
+        .s_axi_AXILiteS_ARADDR(s_axi_AXILiteS_ARADDR),
+        .s_axi_AXILiteS_ARREADY(s_axi_AXILiteS_ARREADY),
+        .s_axi_AXILiteS_ARVALID(s_axi_AXILiteS_ARVALID),
+        .s_axi_AXILiteS_AWADDR(s_axi_AXILiteS_AWADDR),
+        .s_axi_AXILiteS_AWREADY(s_axi_AXILiteS_AWREADY),
+        .s_axi_AXILiteS_AWVALID(s_axi_AXILiteS_AWVALID),
+        .s_axi_AXILiteS_BREADY(s_axi_AXILiteS_BREADY),
+        .s_axi_AXILiteS_BRESP(s_axi_AXILiteS_BRESP),
+        .s_axi_AXILiteS_BVALID(s_axi_AXILiteS_BVALID),
+        .s_axi_AXILiteS_RDATA(s_axi_AXILiteS_RDATA),
+        .s_axi_AXILiteS_RREADY(s_axi_AXILiteS_RREADY),
+        .s_axi_AXILiteS_RRESP(s_axi_AXILiteS_RRESP),
+        .s_axi_AXILiteS_RVALID(s_axi_AXILiteS_RVALID),
+        .s_axi_AXILiteS_WDATA(s_axi_AXILiteS_WDATA),
+        .s_axi_AXILiteS_WREADY(s_axi_AXILiteS_WREADY),
+        .s_axi_AXILiteS_WSTRB(s_axi_AXILiteS_WSTRB),
+        .s_axi_AXILiteS_WVALID(s_axi_AXILiteS_WVALID));
+endmodule
+
+(* ORIG_REF_NAME = "AXIvideo2Mat" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_AXIvideo2Mat
    (ap_rst_n_inv,
     input_r_TREADY,
@@ -2693,6 +2913,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_AXIvideo2Mat
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "Duplicate_my" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_Duplicate_my
    (CO,
     start_once_reg,
@@ -4140,7 +4361,7 @@ endmodule
 
 (* C_S_AXI_ADDR_WIDTH = "32" *) (* C_S_AXI_AXILITES_ADDR_WIDTH = "4" *) (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
 (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_WSTRB_WIDTH = "4" *) 
-(* hls_module = "yes" *) 
+(* ORIG_REF_NAME = "contrast_hls_rom" *) (* hls_module = "yes" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_contrast_hls_rom
    (s_axi_AXILiteS_AWVALID,
     s_axi_AXILiteS_AWREADY,
@@ -5238,6 +5459,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_contrast_hls_rom
         .\t_V_reg_114_reg[1] (minus_vector_U0_n_4));
 endmodule
 
+(* ORIG_REF_NAME = "contrast_hls_rom_AXILiteS_s_axi" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_contrast_hls_rom_AXILiteS_s_axi
    (out,
     s_axi_AXILiteS_RVALID,
@@ -5856,6 +6078,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_contrast_hls_rom_AXILiteS_s_axi
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w6_d2_A" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_fifo_w6_d2_A
    (img_src_0_cols_V_c27_full_n,
     img_src_0_cols_V_c27_empty_n,
@@ -6307,6 +6530,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_fifo_w6_d2_A_2
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w8_d2_A" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_fifo_w8_d2_A
    (\SRL_SIG_reg[0][7] ,
     img_src_0_data_strea_full_n,
@@ -7870,6 +8094,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_fifo_w8_d2_A_9
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w8_d2_A_shiftReg" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_fifo_w8_d2_A_shiftReg
    (\diff_sum_t_fu_84_reg[3] ,
     \diff_sum_t_fu_84_reg[3]_0 ,
@@ -8532,225 +8757,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_fifo_w8_d2_A_shiftReg_15
         .R(1'b0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "m3_for_arty_a7_contrast_hls_rom_0_0,contrast_hls_rom,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "HLS" *) 
-(* X_CORE_INFO = "contrast_hls_rom,Vivado 2018.2" *) (* hls_module = "yes" *) 
-(* NotValidForBitStream *)
-module m3_for_arty_a7_contrast_hls_rom_0_0
-   (diff_sum_0_ap_vld,
-    diff_sum_1_ap_vld,
-    diff_sum_2_ap_vld,
-    diff_sum_3_ap_vld,
-    diff_sum_4_ap_vld,
-    diff_sum_5_ap_vld,
-    diff_sum_6_ap_vld,
-    diff_sum_7_ap_vld,
-    diff_sum_8_ap_vld,
-    diff_sum_9_ap_vld,
-    diff_sum_10_ap_vld,
-    s_axi_AXILiteS_AWADDR,
-    s_axi_AXILiteS_AWVALID,
-    s_axi_AXILiteS_AWREADY,
-    s_axi_AXILiteS_WDATA,
-    s_axi_AXILiteS_WSTRB,
-    s_axi_AXILiteS_WVALID,
-    s_axi_AXILiteS_WREADY,
-    s_axi_AXILiteS_BRESP,
-    s_axi_AXILiteS_BVALID,
-    s_axi_AXILiteS_BREADY,
-    s_axi_AXILiteS_ARADDR,
-    s_axi_AXILiteS_ARVALID,
-    s_axi_AXILiteS_ARREADY,
-    s_axi_AXILiteS_RDATA,
-    s_axi_AXILiteS_RRESP,
-    s_axi_AXILiteS_RVALID,
-    s_axi_AXILiteS_RREADY,
-    ap_clk,
-    ap_rst_n,
-    interrupt,
-    input_r_TVALID,
-    input_r_TREADY,
-    input_r_TDATA,
-    input_r_TKEEP,
-    input_r_TSTRB,
-    input_r_TUSER,
-    input_r_TLAST,
-    input_r_TID,
-    input_r_TDEST,
-    diff_sum_0,
-    diff_sum_1,
-    diff_sum_2,
-    diff_sum_3,
-    diff_sum_4,
-    diff_sum_5,
-    diff_sum_6,
-    diff_sum_7,
-    diff_sum_8,
-    diff_sum_9,
-    diff_sum_10);
-  output diff_sum_0_ap_vld;
-  output diff_sum_1_ap_vld;
-  output diff_sum_2_ap_vld;
-  output diff_sum_3_ap_vld;
-  output diff_sum_4_ap_vld;
-  output diff_sum_5_ap_vld;
-  output diff_sum_6_ap_vld;
-  output diff_sum_7_ap_vld;
-  output diff_sum_8_ap_vld;
-  output diff_sum_9_ap_vld;
-  output diff_sum_10_ap_vld;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWADDR" *) input [3:0]s_axi_AXILiteS_AWADDR;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWVALID" *) input s_axi_AXILiteS_AWVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWREADY" *) output s_axi_AXILiteS_AWREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WDATA" *) input [31:0]s_axi_AXILiteS_WDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WSTRB" *) input [3:0]s_axi_AXILiteS_WSTRB;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WVALID" *) input s_axi_AXILiteS_WVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WREADY" *) output s_axi_AXILiteS_WREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BRESP" *) output [1:0]s_axi_AXILiteS_BRESP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BVALID" *) output s_axi_AXILiteS_BVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BREADY" *) input s_axi_AXILiteS_BREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARADDR" *) input [3:0]s_axi_AXILiteS_ARADDR;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARVALID" *) input s_axi_AXILiteS_ARVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARREADY" *) output s_axi_AXILiteS_ARREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RDATA" *) output [31:0]s_axi_AXILiteS_RDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RRESP" *) output [1:0]s_axi_AXILiteS_RRESP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RVALID" *) output s_axi_AXILiteS_RVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_AXILiteS, ADDR_WIDTH 4, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_AXILiteS_RREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_AXILiteS:input_r, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) input ap_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, PortWidth 1" *) output interrupt;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TVALID" *) input input_r_TVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TREADY" *) output input_r_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDATA" *) input [7:0]input_r_TDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TKEEP" *) input [0:0]input_r_TKEEP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TSTRB" *) input [0:0]input_r_TSTRB;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TUSER" *) input [0:0]input_r_TUSER;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TLAST" *) input [0:0]input_r_TLAST;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TID" *) input [0:0]input_r_TID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) input [0:0]input_r_TDEST;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_1;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_2 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_2, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_2;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_3 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_3, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_3;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_4 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_4, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_4;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_5 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_5, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_5;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_6 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_6, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_6;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_7 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_7, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_7;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_8 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_8, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_8;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_9 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_9, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_9;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 diff_sum_10 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_10, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]diff_sum_10;
-
-  wire ap_clk;
-  wire ap_rst_n;
-  wire [15:0]diff_sum_0;
-  wire diff_sum_0_ap_vld;
-  wire [15:0]diff_sum_1;
-  wire [15:0]diff_sum_10;
-  wire diff_sum_10_ap_vld;
-  wire diff_sum_1_ap_vld;
-  wire [15:0]diff_sum_2;
-  wire diff_sum_2_ap_vld;
-  wire [15:0]diff_sum_3;
-  wire diff_sum_3_ap_vld;
-  wire [15:0]diff_sum_4;
-  wire diff_sum_4_ap_vld;
-  wire [15:0]diff_sum_5;
-  wire diff_sum_5_ap_vld;
-  wire [15:0]diff_sum_6;
-  wire diff_sum_6_ap_vld;
-  wire [15:0]diff_sum_7;
-  wire diff_sum_7_ap_vld;
-  wire [15:0]diff_sum_8;
-  wire diff_sum_8_ap_vld;
-  wire [15:0]diff_sum_9;
-  wire diff_sum_9_ap_vld;
-  wire [7:0]input_r_TDATA;
-  wire [0:0]input_r_TDEST;
-  wire [0:0]input_r_TID;
-  wire [0:0]input_r_TKEEP;
-  wire [0:0]input_r_TLAST;
-  wire input_r_TREADY;
-  wire [0:0]input_r_TSTRB;
-  wire [0:0]input_r_TUSER;
-  wire input_r_TVALID;
-  wire interrupt;
-  wire [3:0]s_axi_AXILiteS_ARADDR;
-  wire s_axi_AXILiteS_ARREADY;
-  wire s_axi_AXILiteS_ARVALID;
-  wire [3:0]s_axi_AXILiteS_AWADDR;
-  wire s_axi_AXILiteS_AWREADY;
-  wire s_axi_AXILiteS_AWVALID;
-  wire s_axi_AXILiteS_BREADY;
-  wire [1:0]s_axi_AXILiteS_BRESP;
-  wire s_axi_AXILiteS_BVALID;
-  wire [31:0]s_axi_AXILiteS_RDATA;
-  wire s_axi_AXILiteS_RREADY;
-  wire [1:0]s_axi_AXILiteS_RRESP;
-  wire s_axi_AXILiteS_RVALID;
-  wire [31:0]s_axi_AXILiteS_WDATA;
-  wire s_axi_AXILiteS_WREADY;
-  wire [3:0]s_axi_AXILiteS_WSTRB;
-  wire s_axi_AXILiteS_WVALID;
-
-  (* C_S_AXI_ADDR_WIDTH = "32" *) 
-  (* C_S_AXI_AXILITES_ADDR_WIDTH = "4" *) 
-  (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
-  (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) 
-  (* C_S_AXI_DATA_WIDTH = "32" *) 
-  (* C_S_AXI_WSTRB_WIDTH = "4" *) 
-  m3_for_arty_a7_contrast_hls_rom_0_0_contrast_hls_rom inst
-       (.ap_clk(ap_clk),
-        .ap_rst_n(ap_rst_n),
-        .diff_sum_0(diff_sum_0),
-        .diff_sum_0_ap_vld(diff_sum_0_ap_vld),
-        .diff_sum_1(diff_sum_1),
-        .diff_sum_10(diff_sum_10),
-        .diff_sum_10_ap_vld(diff_sum_10_ap_vld),
-        .diff_sum_1_ap_vld(diff_sum_1_ap_vld),
-        .diff_sum_2(diff_sum_2),
-        .diff_sum_2_ap_vld(diff_sum_2_ap_vld),
-        .diff_sum_3(diff_sum_3),
-        .diff_sum_3_ap_vld(diff_sum_3_ap_vld),
-        .diff_sum_4(diff_sum_4),
-        .diff_sum_4_ap_vld(diff_sum_4_ap_vld),
-        .diff_sum_5(diff_sum_5),
-        .diff_sum_5_ap_vld(diff_sum_5_ap_vld),
-        .diff_sum_6(diff_sum_6),
-        .diff_sum_6_ap_vld(diff_sum_6_ap_vld),
-        .diff_sum_7(diff_sum_7),
-        .diff_sum_7_ap_vld(diff_sum_7_ap_vld),
-        .diff_sum_8(diff_sum_8),
-        .diff_sum_8_ap_vld(diff_sum_8_ap_vld),
-        .diff_sum_9(diff_sum_9),
-        .diff_sum_9_ap_vld(diff_sum_9_ap_vld),
-        .input_r_TDATA(input_r_TDATA),
-        .input_r_TDEST(input_r_TDEST),
-        .input_r_TID(input_r_TID),
-        .input_r_TKEEP(input_r_TKEEP),
-        .input_r_TLAST(input_r_TLAST),
-        .input_r_TREADY(input_r_TREADY),
-        .input_r_TSTRB(input_r_TSTRB),
-        .input_r_TUSER(input_r_TUSER),
-        .input_r_TVALID(input_r_TVALID),
-        .interrupt(interrupt),
-        .s_axi_AXILiteS_ARADDR(s_axi_AXILiteS_ARADDR),
-        .s_axi_AXILiteS_ARREADY(s_axi_AXILiteS_ARREADY),
-        .s_axi_AXILiteS_ARVALID(s_axi_AXILiteS_ARVALID),
-        .s_axi_AXILiteS_AWADDR(s_axi_AXILiteS_AWADDR),
-        .s_axi_AXILiteS_AWREADY(s_axi_AXILiteS_AWREADY),
-        .s_axi_AXILiteS_AWVALID(s_axi_AXILiteS_AWVALID),
-        .s_axi_AXILiteS_BREADY(s_axi_AXILiteS_BREADY),
-        .s_axi_AXILiteS_BRESP(s_axi_AXILiteS_BRESP),
-        .s_axi_AXILiteS_BVALID(s_axi_AXILiteS_BVALID),
-        .s_axi_AXILiteS_RDATA(s_axi_AXILiteS_RDATA),
-        .s_axi_AXILiteS_RREADY(s_axi_AXILiteS_RREADY),
-        .s_axi_AXILiteS_RRESP(s_axi_AXILiteS_RRESP),
-        .s_axi_AXILiteS_RVALID(s_axi_AXILiteS_RVALID),
-        .s_axi_AXILiteS_WDATA(s_axi_AXILiteS_WDATA),
-        .s_axi_AXILiteS_WREADY(s_axi_AXILiteS_WREADY),
-        .s_axi_AXILiteS_WSTRB(s_axi_AXILiteS_WSTRB),
-        .s_axi_AXILiteS_WVALID(s_axi_AXILiteS_WVALID));
-endmodule
-
+(* ORIG_REF_NAME = "minus_vector" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector
    (ap_done_reg,
     q0_reg,
@@ -10040,6 +10047,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector26" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector26
    (q0_reg,
     \mOutPtr_reg[0] ,
@@ -11294,6 +11302,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector26
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector26_mabkb" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector26_mabkb
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -11344,6 +11353,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector26_mabkb
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector26_mabkb_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector26_mabkb_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -11594,6 +11604,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector26_mabkb_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector27" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector27
    (ap_done_reg_reg_0,
     q0_reg,
@@ -12886,6 +12897,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector27
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector27_macud" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector27_macud
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -12936,6 +12948,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector27_macud
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector27_macud_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector27_macud_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -13186,6 +13199,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector27_macud_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector28" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector28
    (ap_done_reg,
     q0_reg,
@@ -14424,6 +14438,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector28
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector28_madEe" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector28_madEe
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -14474,6 +14489,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector28_madEe
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector28_madEe_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector28_madEe_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -14724,6 +14740,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector28_madEe_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector29" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector29
    (q0_reg,
     \mOutPtr_reg[0] ,
@@ -15971,6 +15988,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector29
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector29_maeOg" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector29_maeOg
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -16021,6 +16039,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector29_maeOg
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector29_maeOg_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector29_maeOg_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -16271,6 +16290,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector29_maeOg_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector30" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector30
    (ap_done_reg,
     q0_reg,
@@ -17508,6 +17528,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector30
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector30_mafYi" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector30_mafYi
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -17558,6 +17579,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector30_mafYi
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector30_mafYi_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector30_mafYi_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -17808,6 +17830,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector30_mafYi_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector31" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector31
    (ap_done_reg,
     q0_reg,
@@ -19091,6 +19114,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector31
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector31_mag8j" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector31_mag8j
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -19141,6 +19165,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector31_mag8j
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector31_mag8j_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector31_mag8j_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -19391,6 +19416,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector31_mag8j_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector32" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector32
    (q0_reg,
     \mOutPtr_reg[0] ,
@@ -20645,6 +20671,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector32
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector32_mahbi" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector32_mahbi
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -20695,6 +20722,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector32_mahbi
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector32_mahbi_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector32_mahbi_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -20945,6 +20973,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector32_mahbi_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector33" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector33
    (q0_reg,
     \mOutPtr_reg[0] ,
@@ -22192,6 +22221,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector33
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector33_maibs" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector33_maibs
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -22242,6 +22272,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector33_maibs
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector33_maibs_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector33_maibs_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -22492,6 +22523,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector33_maibs_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector34" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector34
    (ap_done_reg,
     q0_reg,
@@ -23750,6 +23782,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector34
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector34_majbC" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector34_majbC
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -23800,6 +23833,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector34_majbC
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector34_majbC_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector34_majbC_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -24050,6 +24084,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector34_majbC_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector35" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector35
    (q0_reg,
     \mOutPtr_reg[0] ,
@@ -25304,6 +25339,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector35
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector35_makbM" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector35_makbM
    (diff_sum_t_1_fu_260_p3,
     ap_clk,
@@ -25354,6 +25390,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector35_makbM
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector35_makbM_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector35_makbM_rom
    (diff_sum_t_1_fu_260_p3,
     ap_clk,
@@ -25604,6 +25641,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector35_makbM_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector_masklbW" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector_masklbW
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -25654,6 +25692,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector_masklbW
         .\mOutPtr_reg[1] (\mOutPtr_reg[1] ));
 endmodule
 
+(* ORIG_REF_NAME = "minus_vector_masklbW_rom" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector_masklbW_rom
    (diff_sum_t_3_fu_260_p3,
     ap_clk,
@@ -25904,6 +25943,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_minus_vector_masklbW_rom
         .S({Q[3],S}));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_Duplicamb6" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_Duplicamb6
    (start_for_Duplicate_my_U0_full_n,
     Duplicate_my_U0_ap_start,
@@ -26080,6 +26120,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_Duplicamb6
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vncg" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vncg
    (start_for_minus_vector26_U0_full_n,
     minus_vector26_U0_ap_start,
@@ -26190,6 +26231,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vncg
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vocq" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vocq
    (start_for_minus_vector27_U0_full_n,
     minus_vector27_U0_ap_start,
@@ -26300,6 +26342,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vocq
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vpcA" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vpcA
    (start_for_minus_vector28_U0_full_n,
     minus_vector28_U0_ap_start,
@@ -26410,6 +26453,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vpcA
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vqcK" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vqcK
    (start_for_minus_vector29_U0_full_n,
     minus_vector29_U0_ap_start,
@@ -26520,6 +26564,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vqcK
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vrcU" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vrcU
    (start_for_minus_vector30_U0_full_n,
     minus_vector30_U0_ap_start,
@@ -26630,6 +26675,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vrcU
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vsc4" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vsc4
    (minus_vector31_U0_ap_start,
     int_ap_idle_reg,
@@ -26754,6 +26800,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vsc4
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vtde" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vtde
    (start_for_minus_vector32_U0_full_n,
     minus_vector32_U0_ap_start,
@@ -26864,6 +26911,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vtde
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vudo" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vudo
    (minus_vector33_U0_ap_start,
     int_ap_idle_reg,
@@ -26992,6 +27040,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vudo
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vvdy" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vvdy
    (start_for_minus_vector34_U0_full_n,
     minus_vector34_U0_ap_start,
@@ -27102,6 +27151,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vvdy
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vwdI" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vwdI
    (start_for_minus_vector35_U0_full_n,
     minus_vector35_U0_ap_start,
@@ -27236,6 +27286,7 @@ module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vwdI
         .S(ap_rst_n_inv));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_minus_vxdS" *) 
 module m3_for_arty_a7_contrast_hls_rom_0_0_start_for_minus_vxdS
    (minus_vector_U0_ap_start,
     int_ap_idle_reg,

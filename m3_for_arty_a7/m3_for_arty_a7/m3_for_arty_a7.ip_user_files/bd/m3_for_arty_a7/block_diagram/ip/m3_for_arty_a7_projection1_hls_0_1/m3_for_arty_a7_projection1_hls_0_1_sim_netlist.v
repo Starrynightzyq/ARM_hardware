@@ -1,17 +1,217 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Jun  7 12:58:41 2019
+// Date        : Thu Jul 18 23:53:17 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top m3_for_arty_a7_projection1_hls_0_1 -prefix
-//               m3_for_arty_a7_projection1_hls_0_1_ m3_for_arty_a7_projection1_hls_0_0_sim_netlist.v
-// Design      : m3_for_arty_a7_projection1_hls_0_0
+// Command     : write_verilog -force -mode funcsim
+//               V:/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_projection1_hls_0_1/m3_for_arty_a7_projection1_hls_0_1_sim_netlist.v
+// Design      : m3_for_arty_a7_projection1_hls_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "m3_for_arty_a7_projection1_hls_0_1,projection1_hls,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "HLS" *) 
+(* X_CORE_INFO = "projection1_hls,Vivado 2018.2" *) (* hls_module = "yes" *) 
+(* NotValidForBitStream *)
+module m3_for_arty_a7_projection1_hls_0_1
+   (bound_y_min_ap_vld,
+    bound_y_max_ap_vld,
+    bound_x_min_ap_vld,
+    bound_x_max_ap_vld,
+    s_axi_AXILiteS_AWADDR,
+    s_axi_AXILiteS_AWVALID,
+    s_axi_AXILiteS_AWREADY,
+    s_axi_AXILiteS_WDATA,
+    s_axi_AXILiteS_WSTRB,
+    s_axi_AXILiteS_WVALID,
+    s_axi_AXILiteS_WREADY,
+    s_axi_AXILiteS_BRESP,
+    s_axi_AXILiteS_BVALID,
+    s_axi_AXILiteS_BREADY,
+    s_axi_AXILiteS_ARADDR,
+    s_axi_AXILiteS_ARVALID,
+    s_axi_AXILiteS_ARREADY,
+    s_axi_AXILiteS_RDATA,
+    s_axi_AXILiteS_RRESP,
+    s_axi_AXILiteS_RVALID,
+    s_axi_AXILiteS_RREADY,
+    ap_clk,
+    ap_rst_n,
+    interrupt,
+    input_r_TVALID,
+    input_r_TREADY,
+    input_r_TDATA,
+    input_r_TKEEP,
+    input_r_TSTRB,
+    input_r_TUSER,
+    input_r_TLAST,
+    input_r_TID,
+    input_r_TDEST,
+    output_r_TVALID,
+    output_r_TREADY,
+    output_r_TDATA,
+    output_r_TKEEP,
+    output_r_TSTRB,
+    output_r_TUSER,
+    output_r_TLAST,
+    output_r_TID,
+    output_r_TDEST,
+    bound_x_min,
+    bound_x_max,
+    bound_y_min,
+    bound_y_max);
+  output bound_y_min_ap_vld;
+  output bound_y_max_ap_vld;
+  output bound_x_min_ap_vld;
+  output bound_x_max_ap_vld;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWADDR" *) input [6:0]s_axi_AXILiteS_AWADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWVALID" *) input s_axi_AXILiteS_AWVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWREADY" *) output s_axi_AXILiteS_AWREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WDATA" *) input [31:0]s_axi_AXILiteS_WDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WSTRB" *) input [3:0]s_axi_AXILiteS_WSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WVALID" *) input s_axi_AXILiteS_WVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WREADY" *) output s_axi_AXILiteS_WREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BRESP" *) output [1:0]s_axi_AXILiteS_BRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BVALID" *) output s_axi_AXILiteS_BVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BREADY" *) input s_axi_AXILiteS_BREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARADDR" *) input [6:0]s_axi_AXILiteS_ARADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARVALID" *) input s_axi_AXILiteS_ARVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARREADY" *) output s_axi_AXILiteS_ARREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RDATA" *) output [31:0]s_axi_AXILiteS_RDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RRESP" *) output [1:0]s_axi_AXILiteS_RRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RVALID" *) output s_axi_AXILiteS_RVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_AXILiteS, ADDR_WIDTH 7, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_AXILiteS_RREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_AXILiteS:input_r:output_r, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) input ap_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, PortWidth 1" *) output interrupt;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TVALID" *) input input_r_TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TREADY" *) output input_r_TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDATA" *) input [7:0]input_r_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TKEEP" *) input [0:0]input_r_TKEEP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TSTRB" *) input [0:0]input_r_TSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TUSER" *) input [0:0]input_r_TUSER;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TLAST" *) input [0:0]input_r_TLAST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TID" *) input [0:0]input_r_TID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) input [0:0]input_r_TDEST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TVALID" *) output output_r_TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TREADY" *) input output_r_TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TDATA" *) output [7:0]output_r_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TKEEP" *) output [0:0]output_r_TKEEP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TSTRB" *) output [0:0]output_r_TSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TUSER" *) output [0:0]output_r_TUSER;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TLAST" *) output [0:0]output_r_TLAST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TID" *) output [0:0]output_r_TID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) output [0:0]output_r_TDEST;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_x_min DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_x_min, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_x_min;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_x_max DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_x_max, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_x_max;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_y_min DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_y_min, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_y_min;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_y_max DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_y_max, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_y_max;
+
+  wire ap_clk;
+  wire ap_rst_n;
+  wire [15:0]bound_x_max;
+  wire bound_x_max_ap_vld;
+  wire [15:0]bound_x_min;
+  wire bound_x_min_ap_vld;
+  wire [15:0]bound_y_max;
+  wire bound_y_max_ap_vld;
+  wire [15:0]bound_y_min;
+  wire bound_y_min_ap_vld;
+  wire [7:0]input_r_TDATA;
+  wire [0:0]input_r_TDEST;
+  wire [0:0]input_r_TID;
+  wire [0:0]input_r_TKEEP;
+  wire [0:0]input_r_TLAST;
+  wire input_r_TREADY;
+  wire [0:0]input_r_TSTRB;
+  wire [0:0]input_r_TUSER;
+  wire input_r_TVALID;
+  wire interrupt;
+  wire [7:0]output_r_TDATA;
+  wire [0:0]output_r_TDEST;
+  wire [0:0]output_r_TID;
+  wire [0:0]output_r_TKEEP;
+  wire [0:0]output_r_TLAST;
+  wire output_r_TREADY;
+  wire [0:0]output_r_TSTRB;
+  wire [0:0]output_r_TUSER;
+  wire output_r_TVALID;
+  wire [6:0]s_axi_AXILiteS_ARADDR;
+  wire s_axi_AXILiteS_ARREADY;
+  wire s_axi_AXILiteS_ARVALID;
+  wire [6:0]s_axi_AXILiteS_AWADDR;
+  wire s_axi_AXILiteS_AWREADY;
+  wire s_axi_AXILiteS_AWVALID;
+  wire s_axi_AXILiteS_BREADY;
+  wire [1:0]s_axi_AXILiteS_BRESP;
+  wire s_axi_AXILiteS_BVALID;
+  wire [31:0]s_axi_AXILiteS_RDATA;
+  wire s_axi_AXILiteS_RREADY;
+  wire [1:0]s_axi_AXILiteS_RRESP;
+  wire s_axi_AXILiteS_RVALID;
+  wire [31:0]s_axi_AXILiteS_WDATA;
+  wire s_axi_AXILiteS_WREADY;
+  wire [3:0]s_axi_AXILiteS_WSTRB;
+  wire s_axi_AXILiteS_WVALID;
+
+  (* C_S_AXI_ADDR_WIDTH = "32" *) 
+  (* C_S_AXI_AXILITES_ADDR_WIDTH = "7" *) 
+  (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
+  (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) 
+  (* C_S_AXI_DATA_WIDTH = "32" *) 
+  (* C_S_AXI_WSTRB_WIDTH = "4" *) 
+  m3_for_arty_a7_projection1_hls_0_1_projection1_hls inst
+       (.ap_clk(ap_clk),
+        .ap_rst_n(ap_rst_n),
+        .bound_x_max(bound_x_max),
+        .bound_x_max_ap_vld(bound_x_max_ap_vld),
+        .bound_x_min(bound_x_min),
+        .bound_x_min_ap_vld(bound_x_min_ap_vld),
+        .bound_y_max(bound_y_max),
+        .bound_y_max_ap_vld(bound_y_max_ap_vld),
+        .bound_y_min(bound_y_min),
+        .bound_y_min_ap_vld(bound_y_min_ap_vld),
+        .input_r_TDATA(input_r_TDATA),
+        .input_r_TDEST(input_r_TDEST),
+        .input_r_TID(input_r_TID),
+        .input_r_TKEEP(input_r_TKEEP),
+        .input_r_TLAST(input_r_TLAST),
+        .input_r_TREADY(input_r_TREADY),
+        .input_r_TSTRB(input_r_TSTRB),
+        .input_r_TUSER(input_r_TUSER),
+        .input_r_TVALID(input_r_TVALID),
+        .interrupt(interrupt),
+        .output_r_TDATA(output_r_TDATA),
+        .output_r_TDEST(output_r_TDEST),
+        .output_r_TID(output_r_TID),
+        .output_r_TKEEP(output_r_TKEEP),
+        .output_r_TLAST(output_r_TLAST),
+        .output_r_TREADY(output_r_TREADY),
+        .output_r_TSTRB(output_r_TSTRB),
+        .output_r_TUSER(output_r_TUSER),
+        .output_r_TVALID(output_r_TVALID),
+        .s_axi_AXILiteS_ARADDR(s_axi_AXILiteS_ARADDR),
+        .s_axi_AXILiteS_ARREADY(s_axi_AXILiteS_ARREADY),
+        .s_axi_AXILiteS_ARVALID(s_axi_AXILiteS_ARVALID),
+        .s_axi_AXILiteS_AWADDR(s_axi_AXILiteS_AWADDR),
+        .s_axi_AXILiteS_AWREADY(s_axi_AXILiteS_AWREADY),
+        .s_axi_AXILiteS_AWVALID(s_axi_AXILiteS_AWVALID),
+        .s_axi_AXILiteS_BREADY(s_axi_AXILiteS_BREADY),
+        .s_axi_AXILiteS_BRESP(s_axi_AXILiteS_BRESP),
+        .s_axi_AXILiteS_BVALID(s_axi_AXILiteS_BVALID),
+        .s_axi_AXILiteS_RDATA(s_axi_AXILiteS_RDATA),
+        .s_axi_AXILiteS_RREADY(s_axi_AXILiteS_RREADY),
+        .s_axi_AXILiteS_RRESP(s_axi_AXILiteS_RRESP),
+        .s_axi_AXILiteS_RVALID(s_axi_AXILiteS_RVALID),
+        .s_axi_AXILiteS_WDATA(s_axi_AXILiteS_WDATA),
+        .s_axi_AXILiteS_WREADY(s_axi_AXILiteS_WREADY),
+        .s_axi_AXILiteS_WSTRB(s_axi_AXILiteS_WSTRB),
+        .s_axi_AXILiteS_WVALID(s_axi_AXILiteS_WVALID));
+endmodule
+
+(* ORIG_REF_NAME = "AXIvideo2Mat" *) 
 module m3_for_arty_a7_projection1_hls_0_1_AXIvideo2Mat
    (input_r_TREADY,
     start_once_reg,
@@ -3269,6 +3469,7 @@ module m3_for_arty_a7_projection1_hls_0_1_AXIvideo2Mat
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "Block_Mat_exit2817_p" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Block_Mat_exit2817_p
    (start_once_reg,
     \mOutPtr_reg[3] ,
@@ -3322,6 +3523,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Block_Mat_exit2817_p
         .R(SS));
 endmodule
 
+(* ORIG_REF_NAME = "Duplicate" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Duplicate
    (\SRL_SIG_reg[0][0] ,
     \mOutPtr_reg[1] ,
@@ -5156,6 +5358,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Duplicate
         .R(t_V_reg_150));
 endmodule
 
+(* ORIG_REF_NAME = "Duplicate60" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Duplicate60
    (shiftReg_ce,
     \mOutPtr_reg[0] ,
@@ -6965,6 +7168,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Duplicate60
         .R(t_V_reg_150));
 endmodule
 
+(* ORIG_REF_NAME = "Mat2AXIvideo" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Mat2AXIvideo
    (mOutPtr110_out,
     Mat2AXIvideo_U0_img_data_stream_V_read,
@@ -10201,6 +10405,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Mat2AXIvideo
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "Reduce" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Reduce
    (tmp_6_reg_241,
     dst_data_stream_V_din,
@@ -10730,6 +10935,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Reduce
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "Reduce_my" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Reduce_my
    (DOBDO,
     Q,
@@ -13565,6 +13771,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Reduce_my
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "Reduce_my_dst_bufbkb" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Reduce_my_dst_bufbkb
    (DOBDO,
     E,
@@ -13639,6 +13846,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Reduce_my_dst_bufbkb
         .\tmp_i_56_reg_264_reg[0] (\tmp_i_56_reg_264_reg[0] ));
 endmodule
 
+(* ORIG_REF_NAME = "Reduce_my_dst_bufbkb_ram" *) 
 module m3_for_arty_a7_projection1_hls_0_1_Reduce_my_dst_bufbkb_ram
    (DOBDO,
     E,
@@ -13970,6 +14178,7 @@ module m3_for_arty_a7_projection1_hls_0_1_Reduce_my_dst_bufbkb_ram
         .S({\tmp_9_reg_288[7]_i_6_n_0 ,\tmp_9_reg_288[7]_i_7_n_0 ,\tmp_9_reg_288[7]_i_8_n_0 ,\tmp_9_reg_288[7]_i_9_n_0 }));
 endmodule
 
+(* ORIG_REF_NAME = "U8toBin" *) 
 module m3_for_arty_a7_projection1_hls_0_1_U8toBin
    (\mOutPtr_reg[0] ,
     exitcond_i_reg_200_pp0_iter1_reg,
@@ -16010,6 +16219,7 @@ module m3_for_arty_a7_projection1_hls_0_1_U8toBin
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w16_d2_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w16_d2_A
    (\mOutPtr_reg[1]_0 ,
     \mOutPtr_reg[1]_1 ,
@@ -16277,6 +16487,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w16_d2_A_1
         .O(shiftReg_addr));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w16_d2_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w16_d2_A_shiftReg
    (Vdist_data_stream_0_dout,
     Q,
@@ -16848,6 +17059,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w16_d2_A_shiftReg_43
         .O(Hdist_data_stream_0_dout[0]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d2_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d2_A
    (img_0_cols_V_c40_full_n,
     img_0_cols_V_c40_empty_n,
@@ -17656,6 +17868,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d2_A_4
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d2_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d2_A_shiftReg
    (D,
     img_0_rows_V_c_full_n,
@@ -20359,6 +20572,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d2_A_shiftReg_40
         .O(src_cols_V_dout[9]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d4_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d4_A
    (img_original_0_cols_s_full_n,
     img_original_0_cols_s_empty_n,
@@ -20998,6 +21212,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d4_A_16
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d4_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d4_A_shiftReg
    (out,
     internal_full_n_reg,
@@ -22857,6 +23072,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d4_A_shiftReg_29
         .O(\mOutPtr_reg[2] ));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d5_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d5_A
    (img_1_bin_cols_V_c_empty_n,
     img_1_bin_cols_V_c_full_n,
@@ -23317,6 +23533,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d5_A_6
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d5_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d5_A_shiftReg
    (out,
     img_1_bin_rows_V_c_full_n,
@@ -24248,6 +24465,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d5_A_shiftReg_36
         .Q(out[9]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d6_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d6_A
    (Reduce_U0_src_cols_V_read,
     img_1_cols_V_c_empty_n,
@@ -25156,6 +25374,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d6_A_9
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d6_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d6_A_shiftReg
    (out,
     internal_full_n_reg,
@@ -27019,6 +27238,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d6_A_shiftReg_34
         .Q(out[9]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d7_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d7_A
    (Hdist_rows_V_c_empty_n,
     Hdist_rows_V_c_full_n,
@@ -27874,6 +28094,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d7_A_21
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w32_d7_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d7_A_shiftReg
    (out,
     internal_full_n_reg,
@@ -29544,6 +29765,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w32_d7_A_shiftReg_42
         .O(S[2]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w8_d2_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d2_A
    (img_0_data_stream_0_full_n,
     img_0_data_stream_0_empty_n,
@@ -30409,6 +30631,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d2_A_7
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w8_d2_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d2_A_shiftReg
    (\tmp_i_52_reg_209_reg[0] ,
     Q,
@@ -31170,6 +31393,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d2_A_shiftReg_38
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w8_d7_A" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d7_A
    (shrink_x_max_c_empty_n,
     shrink_x_max_c_full_n,
@@ -32074,6 +32298,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d7_A_19
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_w8_d7_A_shiftReg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d7_A_shiftReg
    (out,
     internal_full_n_reg,
@@ -32697,6 +32922,7 @@ module m3_for_arty_a7_projection1_hls_0_1_fifo_w8_d7_A_shiftReg_25
         .Q(out[7]));
 endmodule
 
+(* ORIG_REF_NAME = "find_boundary_shrink" *) 
 module m3_for_arty_a7_projection1_hls_0_1_find_boundary_shrink
    (find_boundary_shrink_U0_Hdist_rows_V_read,
     ap_done_reg,
@@ -38148,6 +38374,7 @@ module m3_for_arty_a7_projection1_hls_0_1_find_boundary_shrink
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "find_boundary_shrink_1" *) 
 module m3_for_arty_a7_projection1_hls_0_1_find_boundary_shrink_1
    (find_boundary_shrink_1_U0_shrink_x_max_read,
     Q,
@@ -43511,208 +43738,9 @@ module m3_for_arty_a7_projection1_hls_0_1_find_boundary_shrink_1
         .R(1'b0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "m3_for_arty_a7_projection1_hls_0_0,projection1_hls,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "HLS" *) 
-(* X_CORE_INFO = "projection1_hls,Vivado 2018.2" *) (* hls_module = "yes" *) 
-(* NotValidForBitStream *)
-module m3_for_arty_a7_projection1_hls_0_1
-   (bound_y_min_ap_vld,
-    bound_y_max_ap_vld,
-    bound_x_min_ap_vld,
-    bound_x_max_ap_vld,
-    s_axi_AXILiteS_AWADDR,
-    s_axi_AXILiteS_AWVALID,
-    s_axi_AXILiteS_AWREADY,
-    s_axi_AXILiteS_WDATA,
-    s_axi_AXILiteS_WSTRB,
-    s_axi_AXILiteS_WVALID,
-    s_axi_AXILiteS_WREADY,
-    s_axi_AXILiteS_BRESP,
-    s_axi_AXILiteS_BVALID,
-    s_axi_AXILiteS_BREADY,
-    s_axi_AXILiteS_ARADDR,
-    s_axi_AXILiteS_ARVALID,
-    s_axi_AXILiteS_ARREADY,
-    s_axi_AXILiteS_RDATA,
-    s_axi_AXILiteS_RRESP,
-    s_axi_AXILiteS_RVALID,
-    s_axi_AXILiteS_RREADY,
-    ap_clk,
-    ap_rst_n,
-    interrupt,
-    input_r_TVALID,
-    input_r_TREADY,
-    input_r_TDATA,
-    input_r_TKEEP,
-    input_r_TSTRB,
-    input_r_TUSER,
-    input_r_TLAST,
-    input_r_TID,
-    input_r_TDEST,
-    output_r_TVALID,
-    output_r_TREADY,
-    output_r_TDATA,
-    output_r_TKEEP,
-    output_r_TSTRB,
-    output_r_TUSER,
-    output_r_TLAST,
-    output_r_TID,
-    output_r_TDEST,
-    bound_x_min,
-    bound_x_max,
-    bound_y_min,
-    bound_y_max);
-  output bound_y_min_ap_vld;
-  output bound_y_max_ap_vld;
-  output bound_x_min_ap_vld;
-  output bound_x_max_ap_vld;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWADDR" *) input [6:0]s_axi_AXILiteS_AWADDR;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWVALID" *) input s_axi_AXILiteS_AWVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWREADY" *) output s_axi_AXILiteS_AWREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WDATA" *) input [31:0]s_axi_AXILiteS_WDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WSTRB" *) input [3:0]s_axi_AXILiteS_WSTRB;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WVALID" *) input s_axi_AXILiteS_WVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WREADY" *) output s_axi_AXILiteS_WREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BRESP" *) output [1:0]s_axi_AXILiteS_BRESP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BVALID" *) output s_axi_AXILiteS_BVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BREADY" *) input s_axi_AXILiteS_BREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARADDR" *) input [6:0]s_axi_AXILiteS_ARADDR;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARVALID" *) input s_axi_AXILiteS_ARVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARREADY" *) output s_axi_AXILiteS_ARREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RDATA" *) output [31:0]s_axi_AXILiteS_RDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RRESP" *) output [1:0]s_axi_AXILiteS_RRESP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RVALID" *) output s_axi_AXILiteS_RVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_AXILiteS, ADDR_WIDTH 7, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_AXILiteS_RREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_AXILiteS:input_r:output_r, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk" *) input ap_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, PortWidth 1" *) output interrupt;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TVALID" *) input input_r_TVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TREADY" *) output input_r_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDATA" *) input [7:0]input_r_TDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TKEEP" *) input [0:0]input_r_TKEEP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TSTRB" *) input [0:0]input_r_TSTRB;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TUSER" *) input [0:0]input_r_TUSER;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TLAST" *) input [0:0]input_r_TLAST;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TID" *) input [0:0]input_r_TID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk" *) input [0:0]input_r_TDEST;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TVALID" *) output output_r_TVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TREADY" *) input output_r_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TDATA" *) output [7:0]output_r_TDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TKEEP" *) output [0:0]output_r_TKEEP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TSTRB" *) output [0:0]output_r_TSTRB;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TUSER" *) output [0:0]output_r_TUSER;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TLAST" *) output [0:0]output_r_TLAST;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TID" *) output [0:0]output_r_TID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_r TDEST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk" *) output [0:0]output_r_TDEST;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_x_min DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_x_min, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_x_min;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_x_max DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_x_max, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_x_max;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_y_min DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_y_min, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_y_min;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 bound_y_max DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME bound_y_max, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}" *) output [15:0]bound_y_max;
-
-  wire ap_clk;
-  wire ap_rst_n;
-  wire [15:0]bound_x_max;
-  wire bound_x_max_ap_vld;
-  wire [15:0]bound_x_min;
-  wire bound_x_min_ap_vld;
-  wire [15:0]bound_y_max;
-  wire bound_y_max_ap_vld;
-  wire [15:0]bound_y_min;
-  wire bound_y_min_ap_vld;
-  wire [7:0]input_r_TDATA;
-  wire [0:0]input_r_TDEST;
-  wire [0:0]input_r_TID;
-  wire [0:0]input_r_TKEEP;
-  wire [0:0]input_r_TLAST;
-  wire input_r_TREADY;
-  wire [0:0]input_r_TSTRB;
-  wire [0:0]input_r_TUSER;
-  wire input_r_TVALID;
-  wire interrupt;
-  wire [7:0]output_r_TDATA;
-  wire [0:0]output_r_TDEST;
-  wire [0:0]output_r_TID;
-  wire [0:0]output_r_TKEEP;
-  wire [0:0]output_r_TLAST;
-  wire output_r_TREADY;
-  wire [0:0]output_r_TSTRB;
-  wire [0:0]output_r_TUSER;
-  wire output_r_TVALID;
-  wire [6:0]s_axi_AXILiteS_ARADDR;
-  wire s_axi_AXILiteS_ARREADY;
-  wire s_axi_AXILiteS_ARVALID;
-  wire [6:0]s_axi_AXILiteS_AWADDR;
-  wire s_axi_AXILiteS_AWREADY;
-  wire s_axi_AXILiteS_AWVALID;
-  wire s_axi_AXILiteS_BREADY;
-  wire [1:0]s_axi_AXILiteS_BRESP;
-  wire s_axi_AXILiteS_BVALID;
-  wire [31:0]s_axi_AXILiteS_RDATA;
-  wire s_axi_AXILiteS_RREADY;
-  wire [1:0]s_axi_AXILiteS_RRESP;
-  wire s_axi_AXILiteS_RVALID;
-  wire [31:0]s_axi_AXILiteS_WDATA;
-  wire s_axi_AXILiteS_WREADY;
-  wire [3:0]s_axi_AXILiteS_WSTRB;
-  wire s_axi_AXILiteS_WVALID;
-
-  (* C_S_AXI_ADDR_WIDTH = "32" *) 
-  (* C_S_AXI_AXILITES_ADDR_WIDTH = "7" *) 
-  (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
-  (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) 
-  (* C_S_AXI_DATA_WIDTH = "32" *) 
-  (* C_S_AXI_WSTRB_WIDTH = "4" *) 
-  m3_for_arty_a7_projection1_hls_0_1_projection1_hls inst
-       (.ap_clk(ap_clk),
-        .ap_rst_n(ap_rst_n),
-        .bound_x_max(bound_x_max),
-        .bound_x_max_ap_vld(bound_x_max_ap_vld),
-        .bound_x_min(bound_x_min),
-        .bound_x_min_ap_vld(bound_x_min_ap_vld),
-        .bound_y_max(bound_y_max),
-        .bound_y_max_ap_vld(bound_y_max_ap_vld),
-        .bound_y_min(bound_y_min),
-        .bound_y_min_ap_vld(bound_y_min_ap_vld),
-        .input_r_TDATA(input_r_TDATA),
-        .input_r_TDEST(input_r_TDEST),
-        .input_r_TID(input_r_TID),
-        .input_r_TKEEP(input_r_TKEEP),
-        .input_r_TLAST(input_r_TLAST),
-        .input_r_TREADY(input_r_TREADY),
-        .input_r_TSTRB(input_r_TSTRB),
-        .input_r_TUSER(input_r_TUSER),
-        .input_r_TVALID(input_r_TVALID),
-        .interrupt(interrupt),
-        .output_r_TDATA(output_r_TDATA),
-        .output_r_TDEST(output_r_TDEST),
-        .output_r_TID(output_r_TID),
-        .output_r_TKEEP(output_r_TKEEP),
-        .output_r_TLAST(output_r_TLAST),
-        .output_r_TREADY(output_r_TREADY),
-        .output_r_TSTRB(output_r_TSTRB),
-        .output_r_TUSER(output_r_TUSER),
-        .output_r_TVALID(output_r_TVALID),
-        .s_axi_AXILiteS_ARADDR(s_axi_AXILiteS_ARADDR),
-        .s_axi_AXILiteS_ARREADY(s_axi_AXILiteS_ARREADY),
-        .s_axi_AXILiteS_ARVALID(s_axi_AXILiteS_ARVALID),
-        .s_axi_AXILiteS_AWADDR(s_axi_AXILiteS_AWADDR),
-        .s_axi_AXILiteS_AWREADY(s_axi_AXILiteS_AWREADY),
-        .s_axi_AXILiteS_AWVALID(s_axi_AXILiteS_AWVALID),
-        .s_axi_AXILiteS_BREADY(s_axi_AXILiteS_BREADY),
-        .s_axi_AXILiteS_BRESP(s_axi_AXILiteS_BRESP),
-        .s_axi_AXILiteS_BVALID(s_axi_AXILiteS_BVALID),
-        .s_axi_AXILiteS_RDATA(s_axi_AXILiteS_RDATA),
-        .s_axi_AXILiteS_RREADY(s_axi_AXILiteS_RREADY),
-        .s_axi_AXILiteS_RRESP(s_axi_AXILiteS_RRESP),
-        .s_axi_AXILiteS_RVALID(s_axi_AXILiteS_RVALID),
-        .s_axi_AXILiteS_WDATA(s_axi_AXILiteS_WDATA),
-        .s_axi_AXILiteS_WREADY(s_axi_AXILiteS_WREADY),
-        .s_axi_AXILiteS_WSTRB(s_axi_AXILiteS_WSTRB),
-        .s_axi_AXILiteS_WVALID(s_axi_AXILiteS_WVALID));
-endmodule
-
 (* C_S_AXI_ADDR_WIDTH = "32" *) (* C_S_AXI_AXILITES_ADDR_WIDTH = "7" *) (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
 (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_WSTRB_WIDTH = "4" *) 
-(* hls_module = "yes" *) 
+(* ORIG_REF_NAME = "projection1_hls" *) (* hls_module = "yes" *) 
 module m3_for_arty_a7_projection1_hls_0_1_projection1_hls
    (s_axi_AXILiteS_AWVALID,
     s_axi_AXILiteS_AWREADY,
@@ -45133,6 +45161,7 @@ module m3_for_arty_a7_projection1_hls_0_1_projection1_hls
         .threshold_width_c_full_n(threshold_width_c_full_n));
 endmodule
 
+(* ORIG_REF_NAME = "projection1_hls_AXILiteS_s_axi" *) 
 module m3_for_arty_a7_projection1_hls_0_1_projection1_hls_AXILiteS_s_axi
    (start_once_reg_reg,
     ap_start,
@@ -49331,6 +49360,7 @@ module m3_for_arty_a7_projection1_hls_0_1_projection1_hls_AXILiteS_s_axi
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "reduce_opr" *) 
 module m3_for_arty_a7_projection1_hls_0_1_reduce_opr
    (DI,
     dst_data_stream_V_din,
@@ -51748,6 +51778,7 @@ module m3_for_arty_a7_projection1_hls_0_1_reduce_opr
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_DuplicadEe" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_DuplicadEe
    (Duplicate_U0_ap_start,
     start_for_Duplicate_U0_full_n,
@@ -51935,6 +51966,7 @@ module m3_for_arty_a7_projection1_hls_0_1_start_for_DuplicadEe
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_Duplicaibs" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_Duplicaibs
    (start_for_Duplicate60_U0_full_n,
     Duplicate60_U0_ap_start,
@@ -52172,6 +52204,7 @@ module m3_for_arty_a7_projection1_hls_0_1_start_for_Duplicaibs
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_Mat2AXIhbi" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_Mat2AXIhbi
    (start_for_Mat2AXIvideo_U0_full_n,
     Mat2AXIvideo_U0_ap_start,
@@ -52333,6 +52366,7 @@ module m3_for_arty_a7_projection1_hls_0_1_start_for_Mat2AXIhbi
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_Reduce_U0" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_Reduce_U0
    (start_for_Reduce_U0_full_n,
     Reduce_U0_ap_start,
@@ -52499,6 +52533,7 @@ module m3_for_arty_a7_projection1_hls_0_1_start_for_Reduce_U0
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_Reduce_eOg" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_Reduce_eOg
    (Reduce_my_U0_src_cols_V_read,
     Reduce_my_U0_ap_start,
@@ -52751,6 +52786,7 @@ module m3_for_arty_a7_projection1_hls_0_1_start_for_Reduce_eOg
         .O(\mOutPtr_reg[0]_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_U8toBincud" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_U8toBincud
    (start_for_U8toBin_U0_full_n,
     U8toBin_U0_ap_start,
@@ -52914,6 +52950,7 @@ module m3_for_arty_a7_projection1_hls_0_1_start_for_U8toBincud
         .S(SS));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_find_bofYi" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_find_bofYi
    (\mOutPtr_reg[0]_0 ,
     find_boundary_shrink_U0_ap_start,
@@ -53100,6 +53137,7 @@ module m3_for_arty_a7_projection1_hls_0_1_start_for_find_bofYi
         .O(\mOutPtr_reg[0]_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "start_for_find_bog8j" *) 
 module m3_for_arty_a7_projection1_hls_0_1_start_for_find_bog8j
    (start_for_find_boundary_shrink_1_U0_full_n,
     find_boundary_shrink_1_U0_ap_start,

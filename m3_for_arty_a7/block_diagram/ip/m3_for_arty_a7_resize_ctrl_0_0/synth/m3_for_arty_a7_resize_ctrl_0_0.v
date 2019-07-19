@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "resize_ctrl,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_resize_ctrl_0_0,resize_ctrl,{}" *)
-(* CORE_GENERATION_INFO = "m3_for_arty_a7_resize_ctrl_0_0,resize_ctrl,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=resize_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CHAR_NUM=8}" *)
+(* CORE_GENERATION_INFO = "m3_for_arty_a7_resize_ctrl_0_0,resize_ctrl,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=resize_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,ALL_CHAR=0}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module m3_for_arty_a7_resize_ctrl_0_0 (
@@ -65,18 +65,10 @@ module m3_for_arty_a7_resize_ctrl_0_0 (
   bound_x_min_addr,
   bound_x_max_addr,
   resize_interrupt,
-  resize_o_addr,
-  resize_o_ce,
-  resize_o_we,
-  resize_o_d,
   bound_x_min_o,
   bound_x_max_o,
   bound_y_min_o,
-  bound_y_max_o,
-  resize_ram_i_addr,
-  resize_ram_i_ce,
-  resize_ram_i_we,
-  resize_ram_i_d
+  bound_y_max_o
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *)
@@ -94,21 +86,13 @@ output wire [2 : 0] bound_x_max_addr;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME resize_interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 resize_interrupt INTERRUPT" *)
 input wire resize_interrupt;
-input wire [9 : 0] resize_o_addr;
-input wire resize_o_ce;
-input wire resize_o_we;
-input wire resize_o_d;
 output wire [15 : 0] bound_x_min_o;
 output wire [15 : 0] bound_x_max_o;
 output wire [15 : 0] bound_y_min_o;
 output wire [15 : 0] bound_y_max_o;
-output wire [12 : 0] resize_ram_i_addr;
-output wire resize_ram_i_ce;
-output wire resize_ram_i_we;
-output wire resize_ram_i_d;
 
   resize_ctrl #(
-    .CHAR_NUM(8)
+    .ALL_CHAR(0)
   ) inst (
     .clk(clk),
     .rst_n(rst_n),
@@ -119,17 +103,9 @@ output wire resize_ram_i_d;
     .bound_x_min_addr(bound_x_min_addr),
     .bound_x_max_addr(bound_x_max_addr),
     .resize_interrupt(resize_interrupt),
-    .resize_o_addr(resize_o_addr),
-    .resize_o_ce(resize_o_ce),
-    .resize_o_we(resize_o_we),
-    .resize_o_d(resize_o_d),
     .bound_x_min_o(bound_x_min_o),
     .bound_x_max_o(bound_x_max_o),
     .bound_y_min_o(bound_y_min_o),
-    .bound_y_max_o(bound_y_max_o),
-    .resize_ram_i_addr(resize_ram_i_addr),
-    .resize_ram_i_ce(resize_ram_i_ce),
-    .resize_ram_i_we(resize_ram_i_we),
-    .resize_ram_i_d(resize_ram_i_d)
+    .bound_y_max_o(bound_y_max_o)
   );
 endmodule

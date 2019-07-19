@@ -7,7 +7,7 @@
   <spirit:componentInstances>
     <spirit:componentInstance>
       <spirit:instanceName>m3_for_arty_a7_mask_0_0</spirit:instanceName>
-      <spirit:componentRef spirit:vendor="starrynightzyq.com" spirit:library="hls" spirit:name="mask" spirit:version="2.2"/>
+      <spirit:componentRef spirit:vendor="starrynightzyq.com" spirit:library="hls" spirit:name="mask" spirit:version="2.3"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="ADDRBLOCK_RANGE.S_AXI_AXILITES.Reg">65536</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN">/ov_cmos/clk_and_reset/clk_wiz_1_clk_out1</spirit:configurableElementValue>

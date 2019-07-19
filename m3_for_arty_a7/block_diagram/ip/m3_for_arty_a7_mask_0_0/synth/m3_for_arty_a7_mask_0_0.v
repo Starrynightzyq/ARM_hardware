@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:mask:2.2
+// IP VLNV: starrynightzyq.com:hls:mask:2.3
 // IP Revision: 1906072052
 
 (* X_CORE_INFO = "mask,Vivado 2018.2" *)

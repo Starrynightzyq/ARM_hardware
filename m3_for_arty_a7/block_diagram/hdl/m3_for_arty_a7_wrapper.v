@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Jul 18 14:53:09 2019
+//Date        : Fri Jul 19 13:56:10 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -27,6 +27,8 @@ module m3_for_arty_a7_wrapper
     GPIO_lcd,
     SDWIO,
     SWCLK,
+    char_valid,
+    char_valid_c,
     cmos_data,
     cmos_href,
     cmos_iic_scl_io,
@@ -73,6 +75,8 @@ module m3_for_arty_a7_wrapper
   output [2:0]GPIO_lcd;
   inout [0:0]SDWIO;
   input SWCLK;
+  output char_valid;
+  output char_valid_c;
   input [7:0]cmos_data;
   input cmos_href;
   inout cmos_iic_scl_io;
@@ -120,6 +124,8 @@ module m3_for_arty_a7_wrapper
   wire [2:0]GPIO_lcd;
   wire [0:0]SDWIO;
   wire SWCLK;
+  wire char_valid;
+  wire char_valid_c;
   wire [7:0]cmos_data;
   wire cmos_href;
   wire cmos_iic_scl_i;
@@ -234,6 +240,8 @@ module m3_for_arty_a7_wrapper
         .GPIO_lcd(GPIO_lcd),
         .SDWIO(SDWIO),
         .SWCLK(SWCLK),
+        .char_valid(char_valid),
+        .char_valid_c(char_valid_c),
         .cmos_data(cmos_data),
         .cmos_href(cmos_href),
         .cmos_iic_scl_i(cmos_iic_scl_i),

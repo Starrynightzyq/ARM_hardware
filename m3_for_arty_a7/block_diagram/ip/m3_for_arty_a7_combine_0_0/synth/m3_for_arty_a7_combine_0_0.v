@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "combine,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_combine_0_0,combine,{}" *)
-(* CORE_GENERATION_INFO = "m3_for_arty_a7_combine_0_0,combine,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=combine,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "m3_for_arty_a7_combine_0_0,combine,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=combine,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,ALL_CHAR=0}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module m3_for_arty_a7_combine_0_0 (
@@ -81,7 +81,9 @@ output wire [31 : 0] char_index_c;
 output wire [127 : 0] char_diff_c;
 output wire char_valid_c;
 
-  combine inst (
+  combine #(
+    .ALL_CHAR(0)
+  ) inst (
     .clk(clk),
     .rst_n(rst_n),
     .char_index(char_index),

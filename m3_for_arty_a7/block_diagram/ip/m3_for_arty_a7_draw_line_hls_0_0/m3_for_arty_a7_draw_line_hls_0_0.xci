@@ -7,7 +7,7 @@
   <spirit:componentInstances>
     <spirit:componentInstance>
       <spirit:instanceName>m3_for_arty_a7_draw_line_hls_0_0</spirit:instanceName>
-      <spirit:componentRef spirit:vendor="starrynightzyq.com" spirit:library="hls" spirit:name="draw_line_hls" spirit:version="1.1"/>
+      <spirit:componentRef spirit:vendor="starrynightzyq.com" spirit:library="hls" spirit:name="draw_line_hls" spirit:version="1.2"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="ADDRBLOCK_RANGE.S_AXI_AXILITES.Reg">65536</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN">/ov_cmos/clk_and_reset/clk_wiz_1_clk_out1</spirit:configurableElementValue>

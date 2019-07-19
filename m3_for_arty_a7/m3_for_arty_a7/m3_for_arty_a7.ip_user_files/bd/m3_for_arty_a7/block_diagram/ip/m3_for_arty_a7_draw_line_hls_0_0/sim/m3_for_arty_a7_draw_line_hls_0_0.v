@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:draw_line_hls:1.1
+// IP VLNV: starrynightzyq.com:hls:draw_line_hls:1.2
 // IP Revision: 1906090150
 
 `timescale 1ns/1ps

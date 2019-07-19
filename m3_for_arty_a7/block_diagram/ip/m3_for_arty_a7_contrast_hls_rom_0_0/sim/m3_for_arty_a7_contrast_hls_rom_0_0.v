@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:contrast_hls_rom:1.3
+// IP VLNV: starrynightzyq.com:hls:contrast_hls_rom:1.4
 // IP Revision: 1906071220
 
 `timescale 1ns/1ps

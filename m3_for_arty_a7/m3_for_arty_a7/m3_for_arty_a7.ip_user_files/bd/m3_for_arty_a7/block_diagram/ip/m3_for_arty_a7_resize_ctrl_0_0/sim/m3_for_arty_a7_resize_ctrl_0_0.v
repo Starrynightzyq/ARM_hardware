@@ -64,21 +64,13 @@ module m3_for_arty_a7_resize_ctrl_0_0 (
   bound_x_min_addr,
   bound_x_max_addr,
   resize_interrupt,
-  resize_o_addr,
-  resize_o_ce,
-  resize_o_we,
-  resize_o_d,
   bound_x_min_o,
   bound_x_max_o,
   bound_y_min_o,
-  bound_y_max_o,
-  resize_ram_i_addr,
-  resize_ram_i_ce,
-  resize_ram_i_we,
-  resize_ram_i_d
+  bound_y_max_o
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0, CLK_DOMAIN m3_for_arty_a7_mig_7series_0_1_ui_clk" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW" *)
@@ -93,21 +85,13 @@ output wire [2 : 0] bound_x_max_addr;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME resize_interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 resize_interrupt INTERRUPT" *)
 input wire resize_interrupt;
-input wire [9 : 0] resize_o_addr;
-input wire resize_o_ce;
-input wire resize_o_we;
-input wire resize_o_d;
 output wire [15 : 0] bound_x_min_o;
 output wire [15 : 0] bound_x_max_o;
 output wire [15 : 0] bound_y_min_o;
 output wire [15 : 0] bound_y_max_o;
-output wire [12 : 0] resize_ram_i_addr;
-output wire resize_ram_i_ce;
-output wire resize_ram_i_we;
-output wire resize_ram_i_d;
 
   resize_ctrl #(
-    .CHAR_NUM(8)
+    .ALL_CHAR(0)
   ) inst (
     .clk(clk),
     .rst_n(rst_n),
@@ -118,17 +102,9 @@ output wire resize_ram_i_d;
     .bound_x_min_addr(bound_x_min_addr),
     .bound_x_max_addr(bound_x_max_addr),
     .resize_interrupt(resize_interrupt),
-    .resize_o_addr(resize_o_addr),
-    .resize_o_ce(resize_o_ce),
-    .resize_o_we(resize_o_we),
-    .resize_o_d(resize_o_d),
     .bound_x_min_o(bound_x_min_o),
     .bound_x_max_o(bound_x_max_o),
     .bound_y_min_o(bound_y_min_o),
-    .bound_y_max_o(bound_y_max_o),
-    .resize_ram_i_addr(resize_ram_i_addr),
-    .resize_ram_i_ce(resize_ram_i_ce),
-    .resize_ram_i_we(resize_ram_i_we),
-    .resize_ram_i_d(resize_ram_i_d)
+    .bound_y_max_o(bound_y_max_o)
   );
 endmodule

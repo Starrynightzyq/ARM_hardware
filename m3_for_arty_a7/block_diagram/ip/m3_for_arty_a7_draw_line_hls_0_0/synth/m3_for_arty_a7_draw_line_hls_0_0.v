@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:draw_line_hls:1.1
+// IP VLNV: starrynightzyq.com:hls:draw_line_hls:1.2
 // IP Revision: 1906090150
 
 (* X_CORE_INFO = "draw_line_hls,Vivado 2018.2" *)

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Jul 18 14:53:08 2019
+//Date        : Fri Jul 19 13:56:09 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7.bd
 //Design      : m3_for_arty_a7
@@ -164,6 +164,7 @@ module Image_Process_imp_1FI7WQV
     axi_resetn,
     axis_clk,
     axis_resetn,
+    char_valid_c,
     char_valid_co);
   output [23:0]M_AXIS_tdata;
   output [0:0]M_AXIS_tdest;
@@ -219,6 +220,7 @@ module Image_Process_imp_1FI7WQV
   input axi_resetn;
   input axis_clk;
   input axis_resetn;
+  output char_valid_c;
   output char_valid_co;
 
   wire ACLK_1;
@@ -414,15 +416,15 @@ module Image_Process_imp_1FI7WQV
   wire [1:1]axis_broadcaster_0_M01_AXIS_TSTRB;
   wire [1:1]axis_broadcaster_0_M01_AXIS_TUSER;
   wire [1:1]axis_broadcaster_0_M01_AXIS_TVALID;
-  (* DEBUG = "true" *) wire [23:0]axis_data_fifo_0_M_AXIS_TDATA;
-  (* DEBUG = "true" *) wire [0:0]axis_data_fifo_0_M_AXIS_TDEST;
-  (* DEBUG = "true" *) wire [0:0]axis_data_fifo_0_M_AXIS_TID;
-  (* DEBUG = "true" *) wire [2:0]axis_data_fifo_0_M_AXIS_TKEEP;
-  (* DEBUG = "true" *) wire axis_data_fifo_0_M_AXIS_TLAST;
-  (* DEBUG = "true" *) wire [0:0]axis_data_fifo_0_M_AXIS_TREADY;
-  (* DEBUG = "true" *) wire [2:0]axis_data_fifo_0_M_AXIS_TSTRB;
-  (* DEBUG = "true" *) wire [0:0]axis_data_fifo_0_M_AXIS_TUSER;
-  (* DEBUG = "true" *) wire axis_data_fifo_0_M_AXIS_TVALID;
+  wire [23:0]axis_data_fifo_0_M_AXIS_TDATA;
+  wire [0:0]axis_data_fifo_0_M_AXIS_TDEST;
+  wire [0:0]axis_data_fifo_0_M_AXIS_TID;
+  wire [2:0]axis_data_fifo_0_M_AXIS_TKEEP;
+  wire axis_data_fifo_0_M_AXIS_TLAST;
+  wire [0:0]axis_data_fifo_0_M_AXIS_TREADY;
+  wire [2:0]axis_data_fifo_0_M_AXIS_TSTRB;
+  wire [0:0]axis_data_fifo_0_M_AXIS_TUSER;
+  wire axis_data_fifo_0_M_AXIS_TVALID;
   wire [15:0]bound_fsm_0_bound_x_max_o;
   wire [15:0]bound_fsm_0_bound_x_min_o;
   wire [15:0]bound_fsm_0_bound_y_max_o;
@@ -474,13 +476,13 @@ module Image_Process_imp_1FI7WQV
   wire [15:0]gpio_allocate_0_max_diff;
   wire [3:0]gpio_allocate_0_min_continue;
   wire [7:0]gpio_allocate_0_min_counter;
-  (* DEBUG = "true" *) wire hold_0_trick_o;
-  (* DEBUG = "true" *) wire [23:0]input_r_1_TDATA;
-  (* DEBUG = "true" *) wire [2:0]input_r_1_TKEEP;
-  (* DEBUG = "true" *) wire [0:0]input_r_1_TLAST;
-  (* DEBUG = "true" *) wire input_r_1_TREADY;
-  (* DEBUG = "true" *) wire [0:0]input_r_1_TUSER;
-  (* DEBUG = "true" *) wire [0:0]input_r_1_TVALID;
+  wire hold_0_trick_o;
+  wire [23:0]input_r_1_TDATA;
+  wire [2:0]input_r_1_TKEEP;
+  wire [0:0]input_r_1_TLAST;
+  wire input_r_1_TREADY;
+  wire [0:0]input_r_1_TUSER;
+  wire [0:0]input_r_1_TVALID;
   wire [19:0]judge_0_char_index_co;
   wire judge_0_char_valid_co;
   wire [7:0]mask_0_output_r_TDATA;
@@ -603,6 +605,7 @@ module Image_Process_imp_1FI7WQV
   assign S_AXIS_tready[0] = input_r_1_TREADY;
   assign axi_resetn_1 = axis_resetn;
   assign axis_data_fifo_0_M_AXIS_TREADY = M_AXIS_tready[0];
+  assign char_valid_c = combine_0_char_valid_c;
   assign char_valid_co = hold_0_trick_o;
   assign clk_200M_1 = axis_clk;
   assign input_r_1_TDATA = S_AXIS_tdata[23:0];
@@ -1202,10 +1205,6 @@ module Image_Process_imp_1FI7WQV
         .bound_y_min_o(resize_ctrl_0_bound_y_min_o),
         .clk(clk_200M_1),
         .resize_interrupt(resize_hls_axis_0_output_r_TUSER),
-        .resize_o_addr(xlconstant_1_dout[9:0]),
-        .resize_o_ce(xlconstant_1_dout[0]),
-        .resize_o_d(xlconstant_1_dout[0]),
-        .resize_o_we(xlconstant_1_dout[0]),
         .rst_n(axi_resetn_1));
   m3_for_arty_a7_resize_hls_axis_0_0 resize_hls_axis_0
        (.ap_clk(clk_200M_1),
@@ -1806,10 +1805,6 @@ module cmos2axis_imp_1N4HUND
     cmos_xclk_o_0,
     iic2intc_irpt,
     reset_25M,
-    vid_io_in_active_video,
-    vid_io_in_data,
-    vid_io_in_hsync,
-    vid_io_in_vsync,
     video_out_tdata,
     video_out_tlast,
     video_out_tready,
@@ -1870,10 +1865,6 @@ module cmos2axis_imp_1N4HUND
   output cmos_xclk_o_0;
   output iic2intc_irpt;
   input reset_25M;
-  output vid_io_in_active_video;
-  output [23:0]vid_io_in_data;
-  output vid_io_in_hsync;
-  output vid_io_in_vsync;
   output [23:0]video_out_tdata;
   output video_out_tlast;
   input video_out_tready;
@@ -1881,11 +1872,11 @@ module cmos2axis_imp_1N4HUND
   output video_out_tvalid;
 
   wire CLK_i_1;
-  (* DEBUG = "true" *) wire [23:0]Conn1_TDATA;
-  (* DEBUG = "true" *) wire Conn1_TLAST;
-  (* DEBUG = "true" *) wire Conn1_TREADY;
-  (* DEBUG = "true" *) wire Conn1_TUSER;
-  (* DEBUG = "true" *) wire Conn1_TVALID;
+  wire [23:0]Conn1_TDATA;
+  wire Conn1_TLAST;
+  wire Conn1_TREADY;
+  wire Conn1_TUSER;
+  wire Conn1_TVALID;
   wire Conn2_SCL_I;
   wire Conn2_SCL_O;
   wire Conn2_SCL_T;
@@ -1930,10 +1921,10 @@ module cmos2axis_imp_1N4HUND
   wire Conn6_WVALID;
   wire OV_Sensor_0_cmos_xclk_o;
   wire OV_Sensor_0_vid_clk_ce;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire OV_Sensor_0_video_o_ACTIVE_VIDEO;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [23:0]OV_Sensor_0_video_o_DATA;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire OV_Sensor_0_video_o_HSYNC;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire OV_Sensor_0_video_o_VSYNC;
+  wire OV_Sensor_0_video_o_ACTIVE_VIDEO;
+  wire [23:0]OV_Sensor_0_video_o_DATA;
+  wire OV_Sensor_0_video_o_HSYNC;
+  wire OV_Sensor_0_video_o_VSYNC;
   wire aclken_1;
   wire aresetn_1;
   wire axi_iic_0_iic2intc_irpt;
@@ -2001,11 +1992,7 @@ module cmos2axis_imp_1N4HUND
   assign iic2intc_irpt = axi_iic_0_iic2intc_irpt;
   assign s_axi_lite_aclk_1 = axi_clk;
   assign ui_addn_clk_0_1 = axis_clk;
-  assign vid_io_in_active_video = OV_Sensor_0_video_o_ACTIVE_VIDEO;
-  assign vid_io_in_data[23:0] = OV_Sensor_0_video_o_DATA;
-  assign vid_io_in_hsync = OV_Sensor_0_video_o_HSYNC;
   assign vid_io_in_reset_1 = reset_25M;
-  assign vid_io_in_vsync = OV_Sensor_0_video_o_VSYNC;
   assign video_out_tdata[23:0] = Conn1_TDATA;
   assign video_out_tlast = Conn1_TLAST;
   assign video_out_tuser = Conn1_TUSER;
@@ -2133,15 +2120,15 @@ module display_imp_10OMWVT
   output [3:0]vga_pRed_0;
   output vga_pVSync_0;
 
-  (* DEBUG = "true" *) wire [23:0]Conn1_TDATA;
-  (* DEBUG = "true" *) wire [0:0]Conn1_TDEST;
-  (* DEBUG = "true" *) wire [0:0]Conn1_TID;
-  (* DEBUG = "true" *) wire [2:0]Conn1_TKEEP;
-  (* DEBUG = "true" *) wire [0:0]Conn1_TLAST;
-  (* DEBUG = "true" *) wire Conn1_TREADY;
-  (* DEBUG = "true" *) wire [2:0]Conn1_TSTRB;
-  (* DEBUG = "true" *) wire [0:0]Conn1_TUSER;
-  (* DEBUG = "true" *) wire [0:0]Conn1_TVALID;
+  wire [23:0]Conn1_TDATA;
+  wire [0:0]Conn1_TDEST;
+  wire [0:0]Conn1_TID;
+  wire [2:0]Conn1_TKEEP;
+  wire [0:0]Conn1_TLAST;
+  wire Conn1_TREADY;
+  wire [2:0]Conn1_TSTRB;
+  wire [0:0]Conn1_TUSER;
+  wire [0:0]Conn1_TVALID;
   wire [23:0]RGB2RBG_M_AXIS_TDATA;
   wire RGB2RBG_M_AXIS_TLAST;
   wire RGB2RBG_M_AXIS_TREADY;
@@ -8097,7 +8084,7 @@ endmodule
 
 /* cpu clk 50M
 qspi clk 50M */
-(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=129,numReposBlks=93,numNonXlnxBlks=10,numHierBlks=36,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=7,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=27,da_board_cnt=22,da_bram_cntlr_cnt=3,da_clkrst_cnt=30,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
+(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=127,numReposBlks=91,numNonXlnxBlks=10,numHierBlks=36,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=7,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=27,da_board_cnt=22,da_bram_cntlr_cnt=3,da_clkrst_cnt=30,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
 module m3_for_arty_a7
    (DDR2_0_addr,
     DDR2_0_ba,
@@ -8116,6 +8103,8 @@ module m3_for_arty_a7
     GPIO_lcd,
     SDWIO,
     SWCLK,
+    char_valid,
+    char_valid_c,
     cmos_data,
     cmos_href,
     cmos_iic_scl_i,
@@ -8176,6 +8165,8 @@ module m3_for_arty_a7
   output [2:0]GPIO_lcd;
   inout [0:0]SDWIO;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SWCLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SWCLK, CLK_DOMAIN m3_for_arty_a7_SWCLK, FREQ_HZ 100000000, PHASE 0.000" *) input SWCLK;
+  output char_valid;
+  output char_valid_c;
   input [7:0]cmos_data;
   input cmos_href;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmos_iic SCL_I" *) input cmos_iic_scl_i;
@@ -8550,7 +8541,8 @@ module m3_for_arty_a7
   wire [0:0]ov_cmos_DDR2_0_ODT;
   wire ov_cmos_DDR2_0_RAS_N;
   wire ov_cmos_DDR2_0_WE_N;
-  (* DEBUG = "true" *) wire ov_cmos_char_valid_c_o_0;
+  wire ov_cmos_char_valid_c_0;
+  wire ov_cmos_char_valid_c_o_0;
   wire ov_cmos_cmos_iic_SCL_I;
   wire ov_cmos_cmos_iic_SCL_O;
   wire ov_cmos_cmos_iic_SCL_T;
@@ -8599,6 +8591,8 @@ module m3_for_arty_a7
   assign axi_gpio_0_GPIO_TRI_I = led_4bits_tri_i[3:0];
   assign axi_uartlite_0_UART_RxD = usb_uart_rxd;
   assign axi_uartlite_1_UART_RxD = uart_keyboard_rxd;
+  assign char_valid = ov_cmos_char_valid_c_o_0;
+  assign char_valid_c = ov_cmos_char_valid_c_0;
   assign cmos_data_1 = cmos_data[7:0];
   assign cmos_href_1 = cmos_href;
   assign cmos_iic_scl_o = ov_cmos_cmos_iic_SCL_O;
@@ -9308,6 +9302,7 @@ module m3_for_arty_a7
         .S00_AXI_wstrb(axi_interconnect_0_M03_AXI_WSTRB),
         .S00_AXI_wvalid(axi_interconnect_0_M03_AXI_WVALID),
         .axi_resetn(proc_sys_reset_1_interconnect_aresetn),
+        .char_valid_c(ov_cmos_char_valid_c_0),
         .char_valid_c_o_0(ov_cmos_char_valid_c_o_0),
         .cmos_data(cmos_data_1),
         .cmos_href(cmos_href_1),
@@ -14276,6 +14271,7 @@ module ov_cmos_imp_183AGT0
     S00_AXI_wstrb,
     S00_AXI_wvalid,
     axi_resetn,
+    char_valid_c,
     char_valid_c_o_0,
     cmos_data,
     cmos_href,
@@ -14350,6 +14346,7 @@ module ov_cmos_imp_183AGT0
   input [3:0]S00_AXI_wstrb;
   input [0:0]S00_AXI_wvalid;
   input axi_resetn;
+  output char_valid_c;
   output char_valid_c_o_0;
   input [7:0]cmos_data;
   input cmos_href;
@@ -14425,20 +14422,17 @@ module ov_cmos_imp_183AGT0
   wire [0:0]Conn2_ODT;
   wire Conn2_RAS_N;
   wire Conn2_WE_N;
-  (* CONN_BUS_INFO = "Conn xilinx.com:interface:vid_io:1.0 None ACTIVE_VIDEO" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire Conn_ACTIVE_VIDEO;
-  (* CONN_BUS_INFO = "Conn xilinx.com:interface:vid_io:1.0 None DATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [23:0]Conn_DATA;
-  (* CONN_BUS_INFO = "Conn xilinx.com:interface:vid_io:1.0 None HSYNC" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire Conn_HSYNC;
-  (* CONN_BUS_INFO = "Conn xilinx.com:interface:vid_io:1.0 None VSYNC" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire Conn_VSYNC;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [23:0]Image_Process_M_AXIS_TDATA;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TDEST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]Image_Process_M_AXIS_TDEST;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]Image_Process_M_AXIS_TID;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TKEEP" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]Image_Process_M_AXIS_TKEEP;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]Image_Process_M_AXIS_TLAST;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [1:1]Image_Process_M_AXIS_TREADY;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TSTRB" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]Image_Process_M_AXIS_TSTRB;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TUSER" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]Image_Process_M_AXIS_TUSER;
-  (* CONN_BUS_INFO = "Image_Process_M_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]Image_Process_M_AXIS_TVALID;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire Image_Process_char_valid_c_o_0;
+  wire [23:0]Image_Process_M_AXIS_TDATA;
+  wire [0:0]Image_Process_M_AXIS_TDEST;
+  wire [0:0]Image_Process_M_AXIS_TID;
+  wire [2:0]Image_Process_M_AXIS_TKEEP;
+  wire [0:0]Image_Process_M_AXIS_TLAST;
+  wire [1:1]Image_Process_M_AXIS_TREADY;
+  wire [2:0]Image_Process_M_AXIS_TSTRB;
+  wire [0:0]Image_Process_M_AXIS_TUSER;
+  wire [0:0]Image_Process_M_AXIS_TVALID;
+  wire Image_Process_char_valid_c;
+  wire Image_Process_char_valid_c_o_0;
   wire M04_ARESETN_1;
   wire [31:0]S00_AXI_1_ARADDR;
   wire [1:0]S00_AXI_1_ARBURST;
@@ -14627,12 +14621,12 @@ module ov_cmos_imp_183AGT0
   wire axi_smc_M00_AXI_WREADY;
   wire [7:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  (* CONN_BUS_INFO = "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [23:0]axi_vdma_0_M_AXIS_MM2S_TDATA;
-  (* CONN_BUS_INFO = "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TKEEP" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]axi_vdma_0_M_AXIS_MM2S_TKEEP;
-  (* CONN_BUS_INFO = "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TLAST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_vdma_0_M_AXIS_MM2S_TLAST;
-  (* CONN_BUS_INFO = "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axi_vdma_0_M_AXIS_MM2S_TREADY;
-  (* CONN_BUS_INFO = "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TUSER" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axi_vdma_0_M_AXIS_MM2S_TUSER;
-  (* CONN_BUS_INFO = "axi_vdma_0_M_AXIS_MM2S xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_vdma_0_M_AXIS_MM2S_TVALID;
+  wire [23:0]axi_vdma_0_M_AXIS_MM2S_TDATA;
+  wire [2:0]axi_vdma_0_M_AXIS_MM2S_TKEEP;
+  wire axi_vdma_0_M_AXIS_MM2S_TLAST;
+  wire [0:0]axi_vdma_0_M_AXIS_MM2S_TREADY;
+  wire [0:0]axi_vdma_0_M_AXIS_MM2S_TUSER;
+  wire axi_vdma_0_M_AXIS_MM2S_TVALID;
   wire [31:0]axi_vdma_0_M_AXI_MM2S_ARADDR;
   wire [1:0]axi_vdma_0_M_AXI_MM2S_ARBURST;
   wire [3:0]axi_vdma_0_M_AXI_MM2S_ARCACHE;
@@ -14662,27 +14656,27 @@ module ov_cmos_imp_183AGT0
   wire axi_vdma_0_M_AXI_S2MM_WREADY;
   wire [7:0]axi_vdma_0_M_AXI_S2MM_WSTRB;
   wire axi_vdma_0_M_AXI_S2MM_WVALID;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [23:0]axis_switch_0_M00_AXIS_TDATA;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TDEST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axis_switch_0_M00_AXIS_TDEST;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axis_switch_0_M00_AXIS_TID;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TKEEP" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]axis_switch_0_M00_AXIS_TKEEP;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axis_switch_0_M00_AXIS_TLAST;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axis_switch_0_M00_AXIS_TREADY;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TSTRB" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]axis_switch_0_M00_AXIS_TSTRB;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TUSER" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axis_switch_0_M00_AXIS_TUSER;
-  (* CONN_BUS_INFO = "axis_switch_0_M00_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axis_switch_0_M00_AXIS_TVALID;
+  wire [23:0]axis_switch_0_M00_AXIS_TDATA;
+  wire [0:0]axis_switch_0_M00_AXIS_TDEST;
+  wire [0:0]axis_switch_0_M00_AXIS_TID;
+  wire [2:0]axis_switch_0_M00_AXIS_TKEEP;
+  wire [0:0]axis_switch_0_M00_AXIS_TLAST;
+  wire [0:0]axis_switch_0_M00_AXIS_TREADY;
+  wire [2:0]axis_switch_0_M00_AXIS_TSTRB;
+  wire [0:0]axis_switch_0_M00_AXIS_TUSER;
+  wire [0:0]axis_switch_0_M00_AXIS_TVALID;
   wire [23:0]axis_switch_1_M00_AXIS_TDATA;
   wire [2:0]axis_switch_1_M00_AXIS_TKEEP;
   wire [0:0]axis_switch_1_M00_AXIS_TLAST;
   wire [0:0]axis_switch_1_M00_AXIS_TREADY;
   wire [0:0]axis_switch_1_M00_AXIS_TUSER;
   wire [0:0]axis_switch_1_M00_AXIS_TVALID;
-  (* CONN_BUS_INFO = "axis_switch_1_M01_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [47:24]axis_switch_1_M01_AXIS_TDATA;
-  (* CONN_BUS_INFO = "axis_switch_1_M01_AXIS xilinx.com:interface:axis:1.0 None TKEEP" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [5:3]axis_switch_1_M01_AXIS_TKEEP;
-  (* CONN_BUS_INFO = "axis_switch_1_M01_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [1:1]axis_switch_1_M01_AXIS_TLAST;
-  (* CONN_BUS_INFO = "axis_switch_1_M01_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]axis_switch_1_M01_AXIS_TREADY;
-  (* CONN_BUS_INFO = "axis_switch_1_M01_AXIS xilinx.com:interface:axis:1.0 None TUSER" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [1:1]axis_switch_1_M01_AXIS_TUSER;
-  (* CONN_BUS_INFO = "axis_switch_1_M01_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [1:1]axis_switch_1_M01_AXIS_TVALID;
+  wire [47:24]axis_switch_1_M01_AXIS_TDATA;
+  wire [5:3]axis_switch_1_M01_AXIS_TKEEP;
+  wire [1:1]axis_switch_1_M01_AXIS_TLAST;
+  wire [0:0]axis_switch_1_M01_AXIS_TREADY;
+  wire [1:1]axis_switch_1_M01_AXIS_TUSER;
+  wire [1:1]axis_switch_1_M01_AXIS_TVALID;
   wire clk_and_reset_clk_200M;
   wire clk_and_reset_locked;
   wire [0:0]clk_and_reset_peripheral_aresetn_200M;
@@ -14697,11 +14691,11 @@ module ov_cmos_imp_183AGT0
   wire [0:0]cmos2axis_cmos_rst_TRI_O;
   wire cmos2axis_cmos_xclk_o_0;
   wire cmos2axis_iic2intc_irpt;
-  (* CONN_BUS_INFO = "cmos2axis_video_out xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [23:0]cmos2axis_video_out_TDATA;
-  (* CONN_BUS_INFO = "cmos2axis_video_out xilinx.com:interface:axis:1.0 None TLAST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire cmos2axis_video_out_TLAST;
-  (* CONN_BUS_INFO = "cmos2axis_video_out xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire cmos2axis_video_out_TREADY;
-  (* CONN_BUS_INFO = "cmos2axis_video_out xilinx.com:interface:axis:1.0 None TUSER" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire cmos2axis_video_out_TUSER;
-  (* CONN_BUS_INFO = "cmos2axis_video_out xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire cmos2axis_video_out_TVALID;
+  wire [23:0]cmos2axis_video_out_TDATA;
+  wire cmos2axis_video_out_TLAST;
+  wire cmos2axis_video_out_TREADY;
+  wire cmos2axis_video_out_TUSER;
+  wire cmos2axis_video_out_TVALID;
   wire [7:0]cmos_data_1;
   wire cmos_href_1;
   wire cmos_pclk_1;
@@ -14768,6 +14762,7 @@ module ov_cmos_imp_183AGT0
   assign S00_AXI_rvalid[0] = Conn1_RVALID;
   assign S00_AXI_wready[0] = Conn1_WREADY;
   assign axi_resetn_1 = axi_resetn;
+  assign char_valid_c = Image_Process_char_valid_c;
   assign char_valid_c_o_0 = Image_Process_char_valid_c_o_0;
   assign cmos2axis_cmos_iic_SCL_I = cmos_iic_scl_i;
   assign cmos2axis_cmos_iic_SDA_I = cmos_iic_sda_i;
@@ -14846,6 +14841,7 @@ module ov_cmos_imp_183AGT0
         .axi_resetn(axi_resetn_1),
         .axis_clk(clk_and_reset_clk_200M),
         .axis_resetn(clk_and_reset_peripheral_aresetn_200M),
+        .char_valid_c(Image_Process_char_valid_c),
         .char_valid_co(Image_Process_char_valid_c_o_0));
   m3_for_arty_a7_axi_interconnect_0_3 axi_interconnect_1
        (.ACLK(s_axi_lite_aclk_1),
@@ -15363,10 +15359,6 @@ module ov_cmos_imp_183AGT0
         .cmos_xclk_o_0(cmos2axis_cmos_xclk_o_0),
         .iic2intc_irpt(cmos2axis_iic2intc_irpt),
         .reset_25M(proc_sys_reset_0_peripheral_reset),
-        .vid_io_in_active_video(Conn_ACTIVE_VIDEO),
-        .vid_io_in_data(Conn_DATA),
-        .vid_io_in_hsync(Conn_HSYNC),
-        .vid_io_in_vsync(Conn_VSYNC),
         .video_out_tdata(cmos2axis_video_out_TDATA),
         .video_out_tlast(cmos2axis_video_out_TLAST),
         .video_out_tready(cmos2axis_video_out_TREADY),
@@ -15448,51 +15440,6 @@ module ov_cmos_imp_183AGT0
         .sys_rst(reset_0_1),
         .ui_clk(mig_7series_0_ui_clk),
         .ui_clk_sync_rst(mig_7series_0_ui_clk_sync_rst));
-  m3_for_arty_a7_system_ila_0_0 system_ila_0
-       (.SLOT_0_AXIS_tdata(cmos2axis_video_out_TDATA),
-        .SLOT_0_AXIS_tlast(cmos2axis_video_out_TLAST),
-        .SLOT_0_AXIS_tready(cmos2axis_video_out_TREADY),
-        .SLOT_0_AXIS_tuser(cmos2axis_video_out_TUSER),
-        .SLOT_0_AXIS_tvalid(cmos2axis_video_out_TVALID),
-        .SLOT_1_AXIS_tdata(axi_vdma_0_M_AXIS_MM2S_TDATA),
-        .SLOT_1_AXIS_tkeep(axi_vdma_0_M_AXIS_MM2S_TKEEP),
-        .SLOT_1_AXIS_tlast(axi_vdma_0_M_AXIS_MM2S_TLAST),
-        .SLOT_1_AXIS_tready(axi_vdma_0_M_AXIS_MM2S_TREADY),
-        .SLOT_1_AXIS_tuser(axi_vdma_0_M_AXIS_MM2S_TUSER),
-        .SLOT_1_AXIS_tvalid(axi_vdma_0_M_AXIS_MM2S_TVALID),
-        .SLOT_2_AXIS_tdata(axis_switch_0_M00_AXIS_TDATA),
-        .SLOT_2_AXIS_tdest(axis_switch_0_M00_AXIS_TDEST),
-        .SLOT_2_AXIS_tid(axis_switch_0_M00_AXIS_TID),
-        .SLOT_2_AXIS_tkeep(axis_switch_0_M00_AXIS_TKEEP),
-        .SLOT_2_AXIS_tlast(axis_switch_0_M00_AXIS_TLAST),
-        .SLOT_2_AXIS_tready(axis_switch_0_M00_AXIS_TREADY),
-        .SLOT_2_AXIS_tstrb(axis_switch_0_M00_AXIS_TSTRB),
-        .SLOT_2_AXIS_tuser(axis_switch_0_M00_AXIS_TUSER),
-        .SLOT_2_AXIS_tvalid(axis_switch_0_M00_AXIS_TVALID),
-        .SLOT_3_AXIS_tdata(axis_switch_1_M01_AXIS_TDATA),
-        .SLOT_3_AXIS_tkeep(axis_switch_1_M01_AXIS_TKEEP),
-        .SLOT_3_AXIS_tlast(axis_switch_1_M01_AXIS_TLAST),
-        .SLOT_3_AXIS_tready(axis_switch_1_M01_AXIS_TREADY),
-        .SLOT_3_AXIS_tuser(axis_switch_1_M01_AXIS_TUSER),
-        .SLOT_3_AXIS_tvalid(axis_switch_1_M01_AXIS_TVALID),
-        .SLOT_4_AXIS_tdata(Image_Process_M_AXIS_TDATA),
-        .SLOT_4_AXIS_tdest(Image_Process_M_AXIS_TDEST),
-        .SLOT_4_AXIS_tid(Image_Process_M_AXIS_TID),
-        .SLOT_4_AXIS_tkeep(Image_Process_M_AXIS_TKEEP),
-        .SLOT_4_AXIS_tlast(Image_Process_M_AXIS_TLAST),
-        .SLOT_4_AXIS_tready(Image_Process_M_AXIS_TREADY),
-        .SLOT_4_AXIS_tstrb(Image_Process_M_AXIS_TSTRB),
-        .SLOT_4_AXIS_tuser(Image_Process_M_AXIS_TUSER),
-        .SLOT_4_AXIS_tvalid(Image_Process_M_AXIS_TVALID),
-        .clk(clk_and_reset_clk_200M),
-        .probe0(Image_Process_char_valid_c_o_0),
-        .resetn(clk_and_reset_peripheral_aresetn_200M));
-  m3_for_arty_a7_system_ila_1_0 system_ila_1
-       (.SLOT_0_VID_IO_active_video(Conn_ACTIVE_VIDEO),
-        .SLOT_0_VID_IO_data(Conn_DATA),
-        .SLOT_0_VID_IO_hsync(Conn_HSYNC),
-        .SLOT_0_VID_IO_vsync(Conn_VSYNC),
-        .clk(cmos_pclk_1));
 endmodule
 
 module s00_couplers_imp_11BAHIF
