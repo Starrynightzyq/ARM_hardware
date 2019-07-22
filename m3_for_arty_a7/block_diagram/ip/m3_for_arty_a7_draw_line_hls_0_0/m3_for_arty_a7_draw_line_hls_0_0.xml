@@ -1358,11 +1358,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 15:50:55 UTC 2019</spirit:value>
+            <spirit:value>Mon Jul 22 08:32:41 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f633ba53</spirit:value>
+            <spirit:value>8:e7b3f21a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1378,11 +1378,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 15:50:55 UTC 2019</spirit:value>
+            <spirit:value>Mon Jul 22 08:32:41 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f633ba53</spirit:value>
+            <spirit:value>8:e7b3f21a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1398,11 +1398,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 15:50:55 UTC 2019</spirit:value>
+            <spirit:value>Mon Jul 22 08:32:41 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:d8fd93c9</spirit:value>
+            <spirit:value>8:9e7d11f1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1418,11 +1418,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 15:50:55 UTC 2019</spirit:value>
+            <spirit:value>Mon Jul 22 08:32:41 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:d8fd93c9</spirit:value>
+            <spirit:value>8:9e7d11f1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1436,11 +1436,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 18 15:53:11 UTC 2019</spirit:value>
+            <spirit:value>Mon Jul 22 08:35:34 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f633ba53</spirit:value>
+            <spirit:value>8:e7b3f21a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2277,59 +2277,59 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/AXIvideo2Mat.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/AXIvideo2Mat.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/Block_Mat_exit88_pro.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/Block_Mat_exit88_pro.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_line.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_line.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_line_hls_AXILiteS_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_line_hls_AXILiteS_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_middle_line.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_middle_line.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w32_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w32_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w32_d3_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w32_d3_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w32_d4_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w32_d4_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/Mat2AXIvideo.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/Mat2AXIvideo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/start_for_draw_mibkb.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/start_for_draw_mibkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/start_for_Mat2AXIcud.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/start_for_Mat2AXIcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_line_hls.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_line_hls.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2344,72 +2344,72 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/AXIvideo2Mat.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/AXIvideo2Mat.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/Block_Mat_exit88_pro.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/Block_Mat_exit88_pro.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_line.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_line.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_line_hls_AXILiteS_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_line_hls_AXILiteS_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_middle_line.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_middle_line.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w8_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w16_d3_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w32_d2_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w32_d2_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w32_d3_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w32_d3_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/fifo_w32_d4_A.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/fifo_w32_d4_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/Mat2AXIvideo.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/Mat2AXIvideo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/start_for_draw_mibkb.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/start_for_draw_mibkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/start_for_Mat2AXIcud.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/start_for_Mat2AXIcud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b3b/hdl/verilog/draw_line_hls.v</spirit:name>
+        <spirit:name>../../ipshared/e34b/hdl/verilog/draw_line_hls.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2525,7 +2525,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>draw_line_hls</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1906090150</xilinx:coreRevision>
+      <xilinx:coreRevision>1907202256</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
@@ -2579,10 +2579,10 @@
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="fc825fb9"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="0766f4cc"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e7fd323b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="aaf42cf5"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d41ee1ce"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1cf4461c"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ddfadfca"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7682381c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

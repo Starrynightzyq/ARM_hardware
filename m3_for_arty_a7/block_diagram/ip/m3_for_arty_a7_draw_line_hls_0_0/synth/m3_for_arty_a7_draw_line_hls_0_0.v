@@ -48,7 +48,7 @@
 
 
 // IP VLNV: starrynightzyq.com:hls:draw_line_hls:1.2
-// IP Revision: 1906090150
+// IP Revision: 1907202256
 
 (* X_CORE_INFO = "draw_line_hls,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_draw_line_hls_0_0,draw_line_hls,{}" *)

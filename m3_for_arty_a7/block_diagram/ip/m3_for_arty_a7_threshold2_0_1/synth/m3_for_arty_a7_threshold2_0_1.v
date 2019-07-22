@@ -48,7 +48,7 @@
 
 
 // IP VLNV: starrynightzyq.com:hls:threshold2:1.6
-// IP Revision: 1907141648
+// IP Revision: 1907202314
 
 (* X_CORE_INFO = "threshold2,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_threshold2_0_1,threshold2,{}" *)

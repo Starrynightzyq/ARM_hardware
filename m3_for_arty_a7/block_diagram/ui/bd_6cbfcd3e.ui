@@ -1,0 +1,51 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port ap_clk -pg 1 -y 500 -defaultsOSRD
+preplace port s_axi_AXILiteS -pg 1 -y 350 -defaultsOSRD
+preplace port input_r -pg 1 -y 380 -defaultsOSRD
+preplace port ena -pg 1 -y 140 -defaultsOSRD
+preplace port ap_rst_n -pg 1 -y 520 -defaultsOSRD
+preplace port M_AXIS -pg 1 -y 380 -defaultsOSRD
+preplace port ena1 -pg 1 -y 680 -defaultsOSRD
+preplace portBus wea1 -pg 1 -y 160 -defaultsOSRD
+preplace portBus bound_y_max -pg 1 -y 560 -defaultsOSRD
+preplace portBus dina -pg 1 -y 120 -defaultsOSRD
+preplace portBus addra -pg 1 -y 620 -defaultsOSRD
+preplace portBus dina1 -pg 1 -y 660 -defaultsOSRD
+preplace portBus bound_y_min -pg 1 -y 540 -defaultsOSRD
+preplace portBus addra1 -pg 1 -y 80 -defaultsOSRD
+preplace portBus wea -pg 1 -y 700 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -y 440 -defaultsOSRD
+preplace inst draw_line_hls_0 -pg 1 -lvl 2 -y 450 -defaultsOSRD
+preplace inst bound_x_min -pg 1 -lvl 3 -y 700 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 3 -y 380 -defaultsOSRD
+preplace inst bound_x_max -pg 1 -lvl 3 -y 160 -defaultsOSRD
+preplace netloc Conn1 1 0 2 NJ 380 NJ
+preplace netloc Conn2 1 3 1 N
+preplace netloc bound_y_max_1 1 0 2 NJ 560 210J
+preplace netloc Conn3 1 0 2 NJ 350 190J
+preplace netloc addra_1 1 0 3 NJ 620 NJ 620 NJ
+preplace netloc draw_line_hls_0_bound_min_ce0 1 2 1 660
+preplace netloc ap_rst_n_1 1 0 3 NJ 520 180 300 710J
+preplace netloc addra1_1 1 0 3 NJ 80 NJ 80 NJ
+preplace netloc dina1_1 1 0 3 NJ 660 NJ 660 NJ
+preplace netloc dina_1 1 0 3 NJ 120 NJ 120 NJ
+preplace netloc bound_x_min_doutb 1 1 2 220 780 NJ
+preplace netloc draw_line_hls_0_bound_min_address0 1 2 1 670
+preplace netloc draw_line_hls_0_bound_max_ce0 1 2 1 690
+preplace netloc xlconstant_0_dout 1 1 1 190
+preplace netloc ap_clk_1 1 0 3 NJ 500 200 600 700
+preplace netloc draw_line_hls_0_output_r 1 2 1 N
+preplace netloc draw_line_hls_0_bound_max_address0 1 2 1 680
+preplace netloc ena1_1 1 0 3 NJ 680 NJ 680 NJ
+preplace netloc bound_x_max_doutb 1 1 2 210 240 NJ
+preplace netloc wea1_1 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc wea_1 1 0 3 NJ 700 NJ 700 NJ
+preplace netloc ena_1 1 0 3 NJ 140 NJ 140 NJ
+preplace netloc bound_y_min_1 1 0 2 NJ 540 190J
+levelinfo -pg 1 -20 100 450 870 1080 -top 0 -bot 860
+",
+}
+0

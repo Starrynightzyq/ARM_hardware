@@ -47,8 +47,8 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:resize_hls_axis:1.1
-// IP Revision: 1906062158
+// IP VLNV: starrynightzyq.com:hls:resize_hls_axis:1.2
+// IP Revision: 1907221602
 
 (* X_CORE_INFO = "resize_hls_axis,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_resize_hls_axis_0_0,resize_hls_axis,{}" *)

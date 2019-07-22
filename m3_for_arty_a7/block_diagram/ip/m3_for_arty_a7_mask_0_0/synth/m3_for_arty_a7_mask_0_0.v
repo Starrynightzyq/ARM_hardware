@@ -48,7 +48,7 @@
 
 
 // IP VLNV: starrynightzyq.com:hls:mask:2.3
-// IP Revision: 1906072052
+// IP Revision: 1907202302
 
 (* X_CORE_INFO = "mask,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_mask_0_0,mask,{}" *)

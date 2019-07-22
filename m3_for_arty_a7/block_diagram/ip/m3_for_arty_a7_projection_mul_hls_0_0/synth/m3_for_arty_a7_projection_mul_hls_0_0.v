@@ -48,7 +48,7 @@
 
 
 // IP VLNV: starrynightzyq.com:hls:projection_mul_hls:1.1
-// IP Revision: 1906062139
+// IP Revision: 1907202310
 
 (* X_CORE_INFO = "projection_mul_hls,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_projection_mul_hls_0_0,projection_mul_hls,{}" *)

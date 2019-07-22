@@ -47,8 +47,8 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: starrynightzyq.com:hls:resize_hls_axis:1.1
-// IP Revision: 1906062158
+// IP VLNV: starrynightzyq.com:hls:resize_hls_axis:1.2
+// IP Revision: 1907221602
 
 `timescale 1ns/1ps
 

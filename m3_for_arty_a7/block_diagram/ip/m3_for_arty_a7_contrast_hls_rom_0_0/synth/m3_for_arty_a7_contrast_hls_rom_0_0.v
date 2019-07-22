@@ -48,7 +48,7 @@
 
 
 // IP VLNV: starrynightzyq.com:hls:contrast_hls_rom:1.4
-// IP Revision: 1906071220
+// IP Revision: 1907202252
 
 (* X_CORE_INFO = "contrast_hls_rom,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_contrast_hls_rom_0_0,contrast_hls_rom,{}" *)
@@ -181,8 +181,7 @@ input wire [0 : 0] input_r_TUSER;
 input wire [0 : 0] input_r_TLAST;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TID" *)
 input wire [0 : 0] input_r_TID;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1,\
- HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME input_r, TDATA_NUM_BYTES 1, TDEST_WIDTH 1, TID_WIDTH 1, TUSER_WIDTH 1, LAYERED_METADATA undef, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 input_r TDEST" *)
 input wire [0 : 0] input_r_TDEST;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_sum_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} va\
