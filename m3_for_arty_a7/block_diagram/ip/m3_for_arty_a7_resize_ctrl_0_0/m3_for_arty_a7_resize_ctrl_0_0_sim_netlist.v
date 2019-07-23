@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Jul 18 21:49:37 2019
+// Date        : Mon Jul 22 23:36:05 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               V:/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_resize_ctrl_0_0/m3_for_arty_a7_resize_ctrl_0_0_sim_netlist.v
@@ -156,28 +156,27 @@ module m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl
         .I1(ram_i_pack_r1),
         .I2(ram_i_pack_r10_in),
         .O(ram_i_pack_r));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h64)) 
     character_index
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(Q[0]),
         .O(character_index_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
-    .INIT(8'hB3)) 
+    .INIT(8'h07)) 
     \character_index[0]_i_1 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(Q[0]),
         .O(\character_index[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hBC)) 
+  LUT2 #(
+    .INIT(4'h6)) 
     \character_index[1]_i_1 
-       (.I0(Q[2]),
+       (.I0(Q[1]),
         .I1(Q[0]),
-        .I2(Q[1]),
         .O(\character_index[1]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
@@ -190,13 +189,13 @@ module m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl
     \character_index[2]_i_2 
        (.I0(rst_n),
         .O(\character_index[2]_i_2_n_0 ));
-  FDPE #(
+  FDCE #(
     .INIT(1'b0)) 
     \character_index_reg[0] 
        (.C(clk),
         .CE(resize_interrupt_p),
+        .CLR(\character_index[2]_i_2_n_0 ),
         .D(\character_index[0]_i_1_n_0 ),
-        .PRE(\character_index[2]_i_2_n_0 ),
         .Q(Q[0]));
   FDPE #(
     .INIT(1'b0)) 

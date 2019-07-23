@@ -21,7 +21,8 @@
 
 
 module resize_ctrl #(
-	parameter ALL_CHAR = 0
+	parameter ALL_CHAR = 0,
+	parameter CHAR_NUM = 7
 	)(
 	input clk,
 	input rst_n,
@@ -57,7 +58,6 @@ module resize_ctrl #(
     );
 
 	// parameter RESIZE_INDEX_MAX = 28*28;
-	parameter CHAR_NUM = 8;
 
 	reg [2:0] character_index = 0;
 	reg [2:0] character_index_r0 = 0;
@@ -137,10 +137,10 @@ module resize_ctrl #(
 		end else begin 
 			always @(posedge clk or negedge rst_n) begin
 				if(~rst_n) begin
-					character_index <= 'h3;
+					character_index <= CHAR_NUM-5;
 				end else if(resize_end) begin
 					if(character_index == CHAR_NUM - 1) begin
-						character_index <= 'h3;
+						character_index <= CHAR_NUM-5;
 					end else begin 
 						character_index <= character_index + 'b1;
 					end

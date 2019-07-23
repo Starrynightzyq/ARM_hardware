@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# tri_io_buf, combine, gpio_allocate, hold, judge, sort, bound_fsm, resize_ctrl
+# tri_io_buf, combine, hold, sort, bound_fsm, resize_ctrl
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -587,17 +587,6 @@ proc create_hier_cell_contrast { parentCell nameHier } {
   create_bd_pin -dir O char_valid_c_o_0
   create_bd_pin -dir O char_valid_co
 
-  # Create instance: axi_gpio_0, and set properties
-  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
-  set_property -dict [ list \
-   CONFIG.C_ALL_INPUTS {1} \
-   CONFIG.C_ALL_INPUTS_2 {0} \
-   CONFIG.C_ALL_OUTPUTS_2 {1} \
-   CONFIG.C_GPIO2_WIDTH {28} \
-   CONFIG.C_GPIO_WIDTH {20} \
-   CONFIG.C_IS_DUAL {1} \
- ] $axi_gpio_0
-
   # Create instance: combine_0, and set properties
   set block_name combine
   set block_cell_name combine_0
@@ -612,17 +601,6 @@ proc create_hier_cell_contrast { parentCell nameHier } {
   # Create instance: contrast_hls_rom_0, and set properties
   set contrast_hls_rom_0 [ create_bd_cell -type ip -vlnv starrynightzyq.com:hls:contrast_hls_rom:1.4 contrast_hls_rom_0 ]
 
-  # Create instance: gpio_allocate_0, and set properties
-  set block_name gpio_allocate
-  set block_cell_name gpio_allocate_0
-  if { [catch {set gpio_allocate_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $gpio_allocate_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: hold_0, and set properties
   set block_name hold
   set block_cell_name hold_0
@@ -634,17 +612,9 @@ proc create_hier_cell_contrast { parentCell nameHier } {
      return 1
    }
   
-  # Create instance: judge_0, and set properties
-  set block_name judge
-  set block_cell_name judge_0
-  if { [catch {set judge_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $judge_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
+  # Create instance: judge_1, and set properties
+  set judge_1 [ create_bd_cell -type ip -vlnv starrynightzyq.com:user:judge:1.0 judge_1 ]
+
   # Create instance: sort_0, and set properties
   set block_name sort
   set block_cell_name sort_0
@@ -659,26 +629,26 @@ proc create_hier_cell_contrast { parentCell nameHier } {
   # Create interface connections
   connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins s_axi_AXILiteS] [get_bd_intf_pins contrast_hls_rom_0/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins input_r] [get_bd_intf_pins contrast_hls_rom_0/input_r]
-  connect_bd_intf_net -intf_net Conn3 [get_bd_intf_pins S_AXI] [get_bd_intf_pins axi_gpio_0/S_AXI]
+  connect_bd_intf_net -intf_net S_AXI_1 [get_bd_intf_pins S_AXI] [get_bd_intf_pins judge_1/S_AXI]
 
   # Create port connections
-  connect_bd_net -net ap_clk_1 [get_bd_pins ap_clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins combine_0/clk] [get_bd_pins contrast_hls_rom_0/ap_clk] [get_bd_pins hold_0/clk] [get_bd_pins judge_0/clk] [get_bd_pins sort_0/clk]
-  connect_bd_net -net ap_rst_n_1 [get_bd_pins ap_rst_n] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins combine_0/rst_n] [get_bd_pins contrast_hls_rom_0/ap_rst_n] [get_bd_pins hold_0/rst_n] [get_bd_pins judge_0/rst_n] [get_bd_pins sort_0/rst_n]
-  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins gpio_allocate_0/gpio_input]
+  connect_bd_net -net ap_clk_1 [get_bd_pins ap_clk] [get_bd_pins combine_0/clk] [get_bd_pins contrast_hls_rom_0/ap_clk] [get_bd_pins hold_0/clk] [get_bd_pins judge_1/s_axi_aclk] [get_bd_pins sort_0/clk]
+  connect_bd_net -net ap_rst_n_1 [get_bd_pins ap_rst_n] [get_bd_pins combine_0/rst_n] [get_bd_pins contrast_hls_rom_0/ap_rst_n] [get_bd_pins hold_0/rst_n] [get_bd_pins judge_1/s_axi_aresetn] [get_bd_pins sort_0/rst_n]
   connect_bd_net -net char_addr_1 [get_bd_pins char_addr] [get_bd_pins combine_0/char_addr]
-  connect_bd_net -net combine_0_char_diff_c [get_bd_pins combine_0/char_diff_c] [get_bd_pins judge_0/char_diff_c]
-  connect_bd_net -net combine_0_char_index_c [get_bd_pins combine_0/char_index_c] [get_bd_pins judge_0/char_index_c]
-  connect_bd_net -net combine_0_char_valid_c [get_bd_pins combine_0/char_valid_c] [get_bd_pins judge_0/char_valid_c]
+  connect_bd_net -net combine_0_char_diff_c [get_bd_pins combine_0/char_diff_c] [get_bd_pins judge_1/char_diff_c]
+  connect_bd_net -net combine_0_char_index_c [get_bd_pins combine_0/char_index_c] [get_bd_pins judge_1/char_index_c]
+  connect_bd_net -net combine_0_char_valid_c [get_bd_pins combine_0/char_valid_c] [get_bd_pins judge_1/char_valid_c]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_0 [get_bd_pins contrast_hls_rom_0/diff_sum_0] [get_bd_pins sort_0/diff_sum_0]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_0_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_0_ap_vld] [get_bd_pins sort_0/diff_sum_0_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_1 [get_bd_pins contrast_hls_rom_0/diff_sum_1] [get_bd_pins sort_0/diff_sum_1]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_2 [get_bd_pins contrast_hls_rom_0/diff_sum_2] [get_bd_pins sort_0/diff_sum_2]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_3 [get_bd_pins contrast_hls_rom_0/diff_sum_3] [get_bd_pins sort_0/diff_sum_3]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_4 [get_bd_pins contrast_hls_rom_0/diff_sum_4] [get_bd_pins sort_0/diff_sum_4]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_10 [get_bd_pins contrast_hls_rom_0/diff_sum_10] [get_bd_pins sort_0/diff_sum_10]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_10_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_10_ap_vld] [get_bd_pins sort_0/diff_sum_10_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_1_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_1_ap_vld] [get_bd_pins sort_0/diff_sum_1_ap_vld]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_2 [get_bd_pins contrast_hls_rom_0/diff_sum_2] [get_bd_pins sort_0/diff_sum_2]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_2_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_2_ap_vld] [get_bd_pins sort_0/diff_sum_2_ap_vld]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_3 [get_bd_pins contrast_hls_rom_0/diff_sum_3] [get_bd_pins sort_0/diff_sum_3]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_3_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_3_ap_vld] [get_bd_pins sort_0/diff_sum_3_ap_vld]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_4 [get_bd_pins contrast_hls_rom_0/diff_sum_4] [get_bd_pins sort_0/diff_sum_4]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_4_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_4_ap_vld] [get_bd_pins sort_0/diff_sum_4_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_5 [get_bd_pins contrast_hls_rom_0/diff_sum_5] [get_bd_pins sort_0/diff_sum_5]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_5_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_5_ap_vld] [get_bd_pins sort_0/diff_sum_5_ap_vld]
@@ -687,16 +657,11 @@ proc create_hier_cell_contrast { parentCell nameHier } {
   connect_bd_net -net contrast_hls_rom_0_diff_sum_7 [get_bd_pins contrast_hls_rom_0/diff_sum_7] [get_bd_pins sort_0/diff_sum_7]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_7_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_7_ap_vld] [get_bd_pins sort_0/diff_sum_7_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_8 [get_bd_pins contrast_hls_rom_0/diff_sum_8] [get_bd_pins sort_0/diff_sum_8]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_9 [get_bd_pins contrast_hls_rom_0/diff_sum_9] [get_bd_pins sort_0/diff_sum_9]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_10 [get_bd_pins contrast_hls_rom_0/diff_sum_10] [get_bd_pins sort_0/diff_sum_10]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_8_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_8_ap_vld] [get_bd_pins sort_0/diff_sum_8_ap_vld]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_9 [get_bd_pins contrast_hls_rom_0/diff_sum_9] [get_bd_pins sort_0/diff_sum_9]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_9_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_9_ap_vld] [get_bd_pins sort_0/diff_sum_9_ap_vld]
-  connect_bd_net -net gpio_allocate_0_max_diff [get_bd_pins gpio_allocate_0/max_diff] [get_bd_pins judge_0/max_diff]
-  connect_bd_net -net gpio_allocate_0_min_continue [get_bd_pins gpio_allocate_0/min_continue] [get_bd_pins judge_0/min_continue]
-  connect_bd_net -net gpio_allocate_0_min_counter [get_bd_pins gpio_allocate_0/min_counter] [get_bd_pins judge_0/min_counter]
   connect_bd_net -net hold_0_trick_o [get_bd_pins char_valid_c_o_0] [get_bd_pins hold_0/trick_o]
-  connect_bd_net -net judge_0_char_index_co [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins judge_0/char_index_co]
-  connect_bd_net -net judge_0_char_valid_co [get_bd_pins char_valid_co] [get_bd_pins hold_0/trick_i] [get_bd_pins judge_0/char_valid_co]
+  connect_bd_net -net judge_0_char_valid_co [get_bd_pins char_valid_co] [get_bd_pins hold_0/trick_i] [get_bd_pins judge_1/char_valid_co]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG {true} \
  ] [get_bd_nets judge_0_char_valid_co]
@@ -2028,7 +1993,6 @@ proc create_root_design { parentCell } {
   # Create address segments
   create_bd_addr_seg -range 0x00001000 -offset 0x00000000 [get_bd_addr_spaces Cortex_M3_0/CM3_CODE_AXI3] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0
   create_bd_addr_seg -range 0x00010000 -offset 0x40110000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x40010000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/contrast/axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg1
   create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/cmos2axis/axi_gpio_1/S_AXI/Reg] SEG_axi_gpio_1_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x40020000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs LCD/axi_gpio_1/S_AXI/Reg] SEG_axi_gpio_1_Reg1
   create_bd_addr_seg -range 0x00010000 -offset 0x40800000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/cmos2axis/axi_iic_0/S_AXI/Reg] SEG_axi_iic_0_Reg
@@ -2042,6 +2006,7 @@ proc create_root_design { parentCell } {
   create_bd_addr_seg -range 0x00010000 -offset 0x44AA0000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/axis_switch_1/S_AXI_CTRL/Reg] SEG_axis_switch_1_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A50000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/contrast/contrast_hls_rom_0/s_axi_AXILiteS/Reg] SEG_contrast_hls_rom_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A60000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/drawlines/draw_line_hls_0/s_axi_AXILiteS/Reg] SEG_draw_line_hls_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x44AC0000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/contrast/judge_1/S_AXI/S_AXI_reg] SEG_judge_1_S_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/mask_0/s_axi_AXILiteS/Reg] SEG_mask_0_Reg
   create_bd_addr_seg -range 0x08000000 -offset 0x80000000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/mig_7series_0/memmap/memaddr] SEG_mig_7series_0_memaddr
   create_bd_addr_seg -range 0x00010000 -offset 0x44A70000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/projection1/projection1_hls_0/s_axi_AXILiteS/Reg] SEG_projection1_hls_0_Reg

@@ -21,7 +21,8 @@
 
 
 module combine #(
-	parameter ALL_CHAR = 0
+	parameter [0:0] ALL_CHAR = 0,
+	parameter [3:0] CHAR_NUM = 7
 	)(
 	input             clk         ,
 	input             rst_n       ,
@@ -84,7 +85,7 @@ module combine #(
 			state_now <= state_next;
 		end
 	end
-
+/*
 generate
 	if(ALL_CHAR) begin
 
@@ -218,6 +219,327 @@ generate
 	
 	end else begin 
 
+		generate
+
+			if(CHAR_NUM == 8) begin
+
+				always @(*) begin : proc_state_next
+					if(~rst_n) begin
+						state_next = IDLE;
+					end else begin
+						case (state_now)
+							IDLE : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd5) begin
+										state_next = CHAR3_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR3_V : begin 
+								state_next = CHAR3;
+							end
+							CHAR3 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd6) begin
+										state_next = CHAR4_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR4_V : begin 
+								state_next = CHAR4;
+							end
+							CHAR4 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd7) begin
+										state_next = CHAR5_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR5_V : begin 
+								state_next = CHAR5;
+							end
+							CHAR5 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd3) begin
+										state_next = CHAR6_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR6_V : begin 
+								state_next = CHAR6;
+							end
+							CHAR6 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd4) begin
+										state_next = CHAR7_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR7_V : begin 
+								state_next = CHAR7;
+							end
+							CHAR7 : begin 
+								state_next = DONE;
+							end
+							DONE : begin 
+								state_next = IDLE;
+							end
+							default : state_next = IDLE;
+						endcase
+					end
+				end
+				
+			end else begin 
+
+				always @(*) begin : proc_state_next
+					if(~rst_n) begin
+						state_next = IDLE;
+					end else begin
+						case (state_now)
+							IDLE : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd4) begin
+										state_next = CHAR3_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR3_V : begin 
+								state_next = CHAR3;
+							end
+							CHAR3 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd5) begin
+										state_next = CHAR4_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR4_V : begin 
+								state_next = CHAR4;
+							end
+							CHAR4 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd6) begin
+										state_next = CHAR5_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR5_V : begin 
+								state_next = CHAR5;
+							end
+							CHAR5 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd2) begin
+										state_next = CHAR6_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR6_V : begin 
+								state_next = CHAR6;
+							end
+							CHAR6 : begin 
+								if(char_valid_delay) begin
+									if(char_addr_delay == 'd3) begin
+										state_next = CHAR7_V;
+									end else begin 
+										state_next = IDLE;
+									end
+								end else begin 
+									state_next = state_now;
+								end
+							end
+							CHAR7_V : begin 
+								state_next = CHAR7;
+							end
+							CHAR7 : begin 
+								state_next = DONE;
+							end
+							DONE : begin 
+								state_next = IDLE;
+							end
+							default : state_next = IDLE;
+						endcase
+					end
+				end
+
+			end
+
+		endgenerate
+	
+	end
+endgenerate
+*/
+
+generate
+case ({ALL_CHAR, CHAR_NUM})
+	5'b11000: begin // ALL CHAR
+
+		always @(*) begin : proc_state_next
+			if(~rst_n) begin
+				state_next = IDLE;
+			end else begin
+				case (state_now)
+					IDLE : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd2) begin
+								state_next = CHAR0_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR0_V : begin 
+						state_next = CHAR0;
+					end
+					CHAR0 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd3) begin
+								state_next = CHAR1_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR1_V : begin 
+						state_next = CHAR1;
+					end
+					CHAR1 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd4) begin
+								state_next = CHAR2_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR2_V : begin 
+						state_next = CHAR2;
+					end
+					CHAR2 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd5) begin
+								state_next = CHAR3_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR3_V : begin 
+						state_next = CHAR3;
+					end
+					CHAR3 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd6) begin
+								state_next = CHAR4_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR4_V : begin 
+						state_next = CHAR4;
+					end
+					CHAR4 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd7) begin
+								state_next = CHAR5_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR5_V : begin 
+						state_next = CHAR5;
+					end
+					CHAR5 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd0) begin
+								state_next = CHAR6_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR6_V : begin 
+						state_next = CHAR6;
+					end
+					CHAR6 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd1) begin
+								state_next = CHAR7_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR7_V : begin 
+						state_next = CHAR7;
+					end
+					CHAR7 : begin 
+						state_next = DONE;
+					end
+					DONE : begin 
+						state_next = IDLE;
+					end
+					default : state_next = IDLE;
+				endcase
+			end
+		end
+
+	end
+	5'b01000: begin // CHAR NUM = 8
+
 		always @(*) begin : proc_state_next
 			if(~rst_n) begin
 				state_next = IDLE;
@@ -303,8 +625,187 @@ generate
 				endcase
 			end
 		end
-	
+
 	end
+	5'b00111:begin // CHAR NUM = 7
+
+		always @(*) begin : proc_state_next
+			if(~rst_n) begin
+				state_next = IDLE;
+			end else begin
+				case (state_now)
+					IDLE : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd4) begin
+								state_next = CHAR3_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR3_V : begin 
+						state_next = CHAR3;
+					end
+					CHAR3 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd5) begin
+								state_next = CHAR4_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR4_V : begin 
+						state_next = CHAR4;
+					end
+					CHAR4 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd6) begin
+								state_next = CHAR5_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR5_V : begin 
+						state_next = CHAR5;
+					end
+					CHAR5 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd2) begin
+								state_next = CHAR6_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR6_V : begin 
+						state_next = CHAR6;
+					end
+					CHAR6 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd3) begin
+								state_next = CHAR7_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR7_V : begin 
+						state_next = CHAR7;
+					end
+					CHAR7 : begin 
+						state_next = DONE;
+					end
+					DONE : begin 
+						state_next = IDLE;
+					end
+					default : state_next = IDLE;
+				endcase
+			end
+		end
+
+	end
+	default :begin // CHAR NUM = 7
+
+		always @(*) begin : proc_state_next
+			if(~rst_n) begin
+				state_next = IDLE;
+			end else begin
+				case (state_now)
+					IDLE : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd4) begin
+								state_next = CHAR3_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR3_V : begin 
+						state_next = CHAR3;
+					end
+					CHAR3 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd5) begin
+								state_next = CHAR4_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR4_V : begin 
+						state_next = CHAR4;
+					end
+					CHAR4 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd6) begin
+								state_next = CHAR5_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR5_V : begin 
+						state_next = CHAR5;
+					end
+					CHAR5 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd2) begin
+								state_next = CHAR6_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR6_V : begin 
+						state_next = CHAR6;
+					end
+					CHAR6 : begin 
+						if(char_valid_delay) begin
+							if(char_addr_delay == 'd3) begin
+								state_next = CHAR7_V;
+							end else begin 
+								state_next = IDLE;
+							end
+						end else begin 
+							state_next = state_now;
+						end
+					end
+					CHAR7_V : begin 
+						state_next = CHAR7;
+					end
+					CHAR7 : begin 
+						state_next = DONE;
+					end
+					DONE : begin 
+						state_next = IDLE;
+					end
+					default : state_next = IDLE;
+				endcase
+			end
+		end
+
+	end
+endcase
 endgenerate
 
 	always @(posedge clk) begin : proc_output

@@ -14,22 +14,22 @@ preplace portBus bound_y_max_o -pg 1 -y 510 -defaultsOSRD
 preplace inst projection1_hls_0 -pg 1 -lvl 1 -y 150 -defaultsOSRD
 preplace inst bound_fsm_0 -pg 1 -lvl 1 -y 520 -defaultsOSRD
 preplace netloc Conn1 1 0 1 20J
-preplace netloc projection1_hls_0_bound_x_min_ap_vld 1 0 2 40 320 560
+preplace netloc projection1_hls_0_bound_x_min_ap_vld 1 0 2 40 320 550
 preplace netloc Conn2 1 1 1 NJ
-preplace netloc projection1_hls_0_bound_y_min_ap_vld 1 0 2 80 360 590
-preplace netloc projection1_hls_0_bound_x_max 1 0 2 60 310 520
+preplace netloc projection1_hls_0_bound_y_min_ap_vld 1 0 2 80 360 580
+preplace netloc projection1_hls_0_bound_x_max 1 0 2 60 310 510
 preplace netloc Conn3 1 0 1 NJ
 preplace netloc bound_fsm_0_bound_y_min_o 1 1 1 NJ
 preplace netloc ap_rst_n_1 1 0 1 10
-preplace netloc projection1_hls_0_bound_x_max_ap_vld 1 0 2 30 300 530
+preplace netloc projection1_hls_0_bound_x_max_ap_vld 1 0 2 30 300 520
 preplace netloc ap_clk_1 1 0 1 20
-preplace netloc projection1_hls_0_bound_y_max 1 0 2 70 350 540
+preplace netloc projection1_hls_0_bound_y_max 1 0 2 70 350 530
 preplace netloc bound_fsm_0_bound_x_max_o 1 1 1 NJ
-preplace netloc projection1_hls_0_bound_y_max_ap_vld 1 0 2 50 340 580
-preplace netloc projection1_hls_0_bound_x_min 1 0 2 90 330 550
+preplace netloc projection1_hls_0_bound_y_max_ap_vld 1 0 2 50 340 570
+preplace netloc projection1_hls_0_bound_x_min 1 0 2 90 330 540
 preplace netloc bound_fsm_0_bound_x_min_o 1 1 1 NJ
 preplace netloc bound_fsm_0_bound_y_max_o 1 1 1 NJ
-preplace netloc projection1_hls_0_bound_y_min 1 0 2 100 370 570
+preplace netloc projection1_hls_0_bound_y_min 1 0 2 100 370 560
 levelinfo -pg 1 -30 310 630 -top 0 -bot 670
 ",
 }

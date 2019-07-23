@@ -91,7 +91,8 @@ output wire [15 : 0] bound_y_min_o;
 output wire [15 : 0] bound_y_max_o;
 
   resize_ctrl #(
-    .ALL_CHAR(0)
+    .ALL_CHAR(0),
+    .CHAR_NUM(7)
   ) inst (
     .clk(clk),
     .rst_n(rst_n),

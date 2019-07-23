@@ -81,7 +81,8 @@ output wire [127 : 0] char_diff_c;
 output wire char_valid_c;
 
   combine #(
-    .ALL_CHAR(0)
+    .ALL_CHAR(0),
+    .CHAR_NUM(7)
   ) inst (
     .clk(clk),
     .rst_n(rst_n),

@@ -2,63 +2,56 @@
    ExpandedHierarchyInLayout: "",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
-preplace port ap_clk -pg 1 -y 330 -defaultsOSRD
-preplace port S_AXI -pg 1 -y 670 -defaultsOSRD
-preplace port input_r -pg 1 -y 310 -defaultsOSRD
-preplace port s_axi_AXILiteS -pg 1 -y 280 -defaultsOSRD
-preplace port char_valid_co -pg 1 -y 590 -defaultsOSRD
-preplace port ap_rst_n -pg 1 -y 350 -defaultsOSRD
-preplace port char_valid_c_o_0 -pg 1 -y 510 -defaultsOSRD
-preplace portBus char_addr -pg 1 -y 600 -defaultsOSRD
-preplace inst contrast_hls_rom_0 -pg 1 -lvl 1 -y 320 -defaultsOSRD
-preplace inst combine_0 -pg 1 -lvl 3 -y 570 -defaultsOSRD
-preplace inst hold_0 -pg 1 -lvl 5 -y 510 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 2 -y 690 -defaultsOSRD
-preplace inst judge_0 -pg 1 -lvl 4 -y 520 -defaultsOSRD
+preplace port ap_clk -pg 1 -y 320 -defaultsOSRD
+preplace port S_AXI -pg 1 -y 600 -defaultsOSRD
+preplace port input_r -pg 1 -y 300 -defaultsOSRD
+preplace port s_axi_AXILiteS -pg 1 -y 270 -defaultsOSRD
+preplace port char_valid_co -pg 1 -y 650 -defaultsOSRD
+preplace port ap_rst_n -pg 1 -y 340 -defaultsOSRD
+preplace port char_valid_c_o_0 -pg 1 -y 780 -defaultsOSRD
+preplace portBus char_addr -pg 1 -y 740 -defaultsOSRD
+preplace inst combine_0 -pg 1 -lvl 3 -y 710 -defaultsOSRD
+preplace inst contrast_hls_rom_0 -pg 1 -lvl 1 -y 300 -defaultsOSRD
+preplace inst hold_0 -pg 1 -lvl 5 -y 780 -defaultsOSRD
 preplace inst sort_0 -pg 1 -lvl 2 -y 290 -defaultsOSRD
-preplace inst gpio_allocate_0 -pg 1 -lvl 3 -y 760 -defaultsOSRD
-preplace netloc Conn1 1 0 1 -10J
-preplace netloc contrast_hls_rom_0_diff_sum_8 1 1 1 490
-preplace netloc contrast_hls_rom_0_diff_sum_5_ap_vld 1 1 1 N
-preplace netloc Conn2 1 0 1 NJ
-preplace netloc contrast_hls_rom_0_diff_sum_9 1 1 1 500
-preplace netloc Conn3 1 0 2 NJ 670 NJ
-preplace netloc gpio_allocate_0_min_continue 1 3 1 1250
-preplace netloc ap_rst_n_1 1 0 5 0 40 440 590 880 460 1240 660 1670J
-preplace netloc contrast_hls_rom_0_diff_sum_9_ap_vld 1 1 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_4_ap_vld 1 1 1 N
-preplace netloc combine_0_char_diff_c 1 3 1 N
-preplace netloc sort_0_interrupt 1 2 1 850
-preplace netloc contrast_hls_rom_0_diff_sum_2_ap_vld 1 1 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_6_ap_vld 1 1 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_1_ap_vld 1 1 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_0 1 1 1 390
-preplace netloc judge_0_char_index_co 1 2 3 NJ 680 NJ 680 1640
-preplace netloc combine_0_char_index_c 1 3 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_1 1 1 1 400
-preplace netloc combine_0_char_valid_c 1 3 1 N
-preplace netloc ap_clk_1 1 0 5 -20 30 460 580 860 450 1260 650 1650J
-preplace netloc contrast_hls_rom_0_diff_sum_10 1 1 1 510
-preplace netloc contrast_hls_rom_0_diff_sum_2 1 1 1 410
-preplace netloc contrast_hls_rom_0_diff_sum_10_ap_vld 1 1 1 N
-preplace netloc gpio_allocate_0_max_diff 1 3 1 1230
-preplace netloc sort_0_char_index 1 2 1 890
-preplace netloc contrast_hls_rom_0_diff_sum_3 1 1 1 420
-preplace netloc contrast_hls_rom_0_diff_sum_8_ap_vld 1 1 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_0_ap_vld 1 1 1 N
-preplace netloc gpio_allocate_0_min_counter 1 3 1 1270
-preplace netloc judge_0_char_valid_co 1 4 2 1660 590 N
-preplace netloc contrast_hls_rom_0_diff_sum_4 1 1 1 430
-preplace netloc axi_gpio_0_gpio2_io_o 1 2 1 870
-preplace netloc contrast_hls_rom_0_diff_sum_5 1 1 1 450
-preplace netloc contrast_hls_rom_0_diff_sum_7_ap_vld 1 1 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_3_ap_vld 1 1 1 N
-preplace netloc hold_0_trick_o 1 5 1 N
-preplace netloc contrast_hls_rom_0_diff_sum_6 1 1 1 470
-preplace netloc char_addr_1 1 0 3 NJ 600 NJ 600 NJ
-preplace netloc sort_0_char_diff 1 2 1 870
-preplace netloc contrast_hls_rom_0_diff_sum_7 1 1 1 480
-levelinfo -pg 1 -60 210 690 1070 1460 1770 1900 -top 0 -bot 840
+preplace inst judge_1 -pg 1 -lvl 4 -y 650 -defaultsOSRD
+preplace netloc S_AXI_1 1 0 4 NJ 600 NJ 600 NJ 600 NJ
+preplace netloc Conn1 1 0 1 NJ
+preplace netloc contrast_hls_rom_0_diff_sum_8 1 1 1 N
+preplace netloc contrast_hls_rom_0_diff_sum_5_ap_vld 1 1 1 480
+preplace netloc Conn2 1 0 1 30J
+preplace netloc contrast_hls_rom_0_diff_sum_9 1 1 1 N
+preplace netloc ap_rst_n_1 1 0 5 40 20 540 620 890 830 1310 780 NJ
+preplace netloc contrast_hls_rom_0_diff_sum_9_ap_vld 1 1 1 440
+preplace netloc contrast_hls_rom_0_diff_sum_4_ap_vld 1 1 1 490
+preplace netloc combine_0_char_diff_c 1 3 1 1280
+preplace netloc sort_0_interrupt 1 2 1 910
+preplace netloc contrast_hls_rom_0_diff_sum_2_ap_vld 1 1 1 510
+preplace netloc contrast_hls_rom_0_diff_sum_6_ap_vld 1 1 1 470
+preplace netloc contrast_hls_rom_0_diff_sum_1_ap_vld 1 1 1 520
+preplace netloc contrast_hls_rom_0_diff_sum_0 1 1 1 N
+preplace netloc combine_0_char_index_c 1 3 1 1270
+preplace netloc contrast_hls_rom_0_diff_sum_1 1 1 1 N
+preplace netloc combine_0_char_valid_c 1 3 1 1290
+preplace netloc ap_clk_1 1 0 5 20 10 550 610 900 820 1300 760 N
+preplace netloc contrast_hls_rom_0_diff_sum_10 1 1 1 N
+preplace netloc contrast_hls_rom_0_diff_sum_2 1 1 1 N
+preplace netloc contrast_hls_rom_0_diff_sum_10_ap_vld 1 1 1 430
+preplace netloc sort_0_char_index 1 2 1 930
+preplace netloc contrast_hls_rom_0_diff_sum_3 1 1 1 N
+preplace netloc contrast_hls_rom_0_diff_sum_8_ap_vld 1 1 1 450
+preplace netloc contrast_hls_rom_0_diff_sum_0_ap_vld 1 1 1 530
+preplace netloc judge_0_char_valid_co 1 4 2 1600 650 NJ
+preplace netloc contrast_hls_rom_0_diff_sum_4 1 1 1 N
+preplace netloc contrast_hls_rom_0_diff_sum_5 1 1 1 N
+preplace netloc contrast_hls_rom_0_diff_sum_7_ap_vld 1 1 1 460
+preplace netloc contrast_hls_rom_0_diff_sum_3_ap_vld 1 1 1 500
+preplace netloc hold_0_trick_o 1 5 1 NJ
+preplace netloc contrast_hls_rom_0_diff_sum_6 1 1 1 N
+preplace netloc char_addr_1 1 0 3 NJ 740 NJ 740 NJ
+preplace netloc sort_0_char_diff 1 2 1 920
+preplace netloc contrast_hls_rom_0_diff_sum_7 1 1 1 N
+levelinfo -pg 1 -20 250 730 1110 1460 1720 1850 -top 0 -bot 860
 ",
 }
 0

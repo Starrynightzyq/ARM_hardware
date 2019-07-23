@@ -5679,13 +5679,6 @@ qspi clk 50M</bd:user_comments>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>projection_mul_hls_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="hls" spirit:name="projection_mul_hls" spirit:vendor="starrynightzyq.com" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_projection_mul_hls_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>threshold2_0</spirit:instanceName>
         <spirit:componentRef spirit:library="hls" spirit:name="threshold2" spirit:vendor="starrynightzyq.com" spirit:version="1.6"/>
         <spirit:configurableElementValues>
@@ -5737,6 +5730,13 @@ qspi clk 50M</bd:user_comments>
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_7_INTF_TYPE">xilinx.com:interface:axis_rtl:1.0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_8_INTF_TYPE">xilinx.com:interface:axis_rtl:1.0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MON_TYPE">MIX</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>projection_mul_hls_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="hls" spirit:name="projection_mul_hls" spirit:vendor="starrynightzyq.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_projection_mul_hls_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -5896,8 +5896,8 @@ qspi clk 50M</bd:user_comments>
         <spirit:externalPortReference spirit:portRef="axis_resetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_broadcaster_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="mask_0" spirit:portRef="ap_rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="projection_mul_hls_0" spirit:portRef="ap_rst_n"/>
         <spirit:internalPortReference spirit:componentRef="threshold2_0" spirit:portRef="ap_rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="projection_mul_hls_0" spirit:portRef="ap_rst_n"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M02_ARESETN"/>
@@ -5916,8 +5916,8 @@ qspi clk 50M</bd:user_comments>
         <spirit:externalPortReference spirit:portRef="axis_clk"/>
         <spirit:internalPortReference spirit:componentRef="axis_broadcaster_0" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="mask_0" spirit:portRef="ap_clk"/>
-        <spirit:internalPortReference spirit:componentRef="projection_mul_hls_0" spirit:portRef="ap_clk"/>
         <spirit:internalPortReference spirit:componentRef="threshold2_0" spirit:portRef="ap_clk"/>
+        <spirit:internalPortReference spirit:componentRef="projection_mul_hls_0" spirit:portRef="ap_clk"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M02_ACLK"/>
@@ -6946,17 +6946,6 @@ qspi clk 50M</bd:user_comments>
     <spirit:version>1.00.a</spirit:version>
     <spirit:componentInstances>
       <spirit:componentInstance>
-        <spirit:instanceName>resize_ctrl_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="resize_ctrl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_resize_ctrl_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">resize_ctrl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>axis_subset_converter_1</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="axis_subset_converter" spirit:vendor="xilinx.com" spirit:version="1.1"/>
         <spirit:configurableElementValues>
@@ -7028,14 +7017,25 @@ qspi clk 50M</bd:user_comments>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_resize_hls_axis_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>resize_ctrl_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="resize_ctrl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_resize_ctrl_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">resize_ctrl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections/>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
         <spirit:name>resize_hls_axis_0_output_r_TUSER</spirit:name>
         <spirit:internalPortReference spirit:componentRef="resize_hls_axis_0" spirit:portRef="output_r_TUSER"/>
-        <spirit:internalPortReference spirit:componentRef="resize_ctrl_0" spirit:portRef="resize_interrupt"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_1" spirit:portRef="s_axis_tuser"/>
+        <spirit:internalPortReference spirit:componentRef="resize_ctrl_0" spirit:portRef="resize_interrupt"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>resize_ctrl_0_bound_x_min_o</spirit:name>
@@ -7101,19 +7101,19 @@ qspi clk 50M</bd:user_comments>
         <spirit:name>aresetn_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_1" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="resize_ctrl_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="resize_hls_axis_0" spirit:portRef="ap_rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="resize_ctrl_0" spirit:portRef="rst_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>aclk_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="axis_subset_converter_1" spirit:portRef="aclk"/>
-        <spirit:internalPortReference spirit:componentRef="resize_ctrl_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="bound_x_max1" spirit:portRef="clka"/>
         <spirit:internalPortReference spirit:componentRef="bound_x_max1" spirit:portRef="clkb"/>
         <spirit:internalPortReference spirit:componentRef="bound_x_min1" spirit:portRef="clka"/>
         <spirit:internalPortReference spirit:componentRef="bound_x_min1" spirit:portRef="clkb"/>
         <spirit:internalPortReference spirit:componentRef="resize_hls_axis_0" spirit:portRef="ap_clk"/>
+        <spirit:internalPortReference spirit:componentRef="resize_ctrl_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>resize_ctrl_0_bound_x_min_addr</spirit:name>
@@ -7344,28 +7344,6 @@ qspi clk 50M</bd:user_comments>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>combine_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="combine" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_combine_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">combine</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>judge_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="judge" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_judge_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">judge</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>hold_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="hold" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -7377,34 +7355,28 @@ qspi clk 50M</bd:user_comments>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>gpio_allocate_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="gpio_allocate" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>contrast_hls_rom_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="hls" spirit:name="contrast_hls_rom" spirit:vendor="starrynightzyq.com" spirit:version="1.4"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_gpio_allocate_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">gpio_allocate</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_contrast_hls_rom_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>combine_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="combine" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_combine_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">combine</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>axi_gpio_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:instanceName>judge_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="judge" spirit:vendor="starrynightzyq.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_axi_gpio_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">20</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_GPIO2_WIDTH">28</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_IS_DUAL">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_ALL_INPUTS">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_ALL_INPUTS_2">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_ALL_OUTPUTS_2">1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>contrast_hls_rom_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="hls" spirit:name="contrast_hls_rom" spirit:vendor="starrynightzyq.com" spirit:version="1.4"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_contrast_hls_rom_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">m3_for_arty_a7_judge_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -7524,26 +7496,19 @@ qspi clk 50M</bd:user_comments>
         <spirit:name>ap_clk_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="ap_clk"/>
         <spirit:internalPortReference spirit:componentRef="sort_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="contrast_hls_rom_0" spirit:portRef="ap_clk"/>
+        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="judge_1" spirit:portRef="s_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ap_rst_n_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="ap_rst_n"/>
         <spirit:internalPortReference spirit:componentRef="sort_0" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="contrast_hls_rom_0" spirit:portRef="ap_rst_n"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>combine_0_char_valid_c</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="char_valid_c"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="char_valid_c"/>
+        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="judge_1" spirit:portRef="s_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sort_0_char_diff</spirit:name>
@@ -7566,54 +7531,34 @@ qspi clk 50M</bd:user_comments>
         <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="char_addr"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>combine_0_char_index_c</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="char_index_c"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="char_index_c"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>combine_0_char_diff_c</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="char_diff_c"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="char_diff_c"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>hold_0_trick_o</spirit:name>
         <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="trick_o"/>
         <spirit:externalPortReference spirit:portRef="char_valid_c_o_0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>judge_0_char_valid_co</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="char_valid_co"/>
-        <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="trick_i"/>
+        <spirit:internalPortReference spirit:componentRef="judge_1" spirit:portRef="char_valid_co"/>
         <spirit:externalPortReference spirit:portRef="char_valid_co"/>
+        <spirit:internalPortReference spirit:componentRef="hold_0" spirit:portRef="trick_i"/>
         <bd:hdl_attributes>
           <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
           <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
         </bd:hdl_attributes>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>gpio_allocate_0_min_continue</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="gpio_allocate_0" spirit:portRef="min_continue"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="min_continue"/>
+        <spirit:name>combine_0_char_index_c</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="char_index_c"/>
+        <spirit:internalPortReference spirit:componentRef="judge_1" spirit:portRef="char_index_c"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>gpio_allocate_0_min_counter</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="gpio_allocate_0" spirit:portRef="min_counter"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="min_counter"/>
+        <spirit:name>combine_0_char_diff_c</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="char_diff_c"/>
+        <spirit:internalPortReference spirit:componentRef="judge_1" spirit:portRef="char_diff_c"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>gpio_allocate_0_max_diff</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="gpio_allocate_0" spirit:portRef="max_diff"/>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="max_diff"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>axi_gpio_0_gpio2_io_o</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio2_io_o"/>
-        <spirit:internalPortReference spirit:componentRef="gpio_allocate_0" spirit:portRef="gpio_input"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>judge_0_char_index_co</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="judge_0" spirit:portRef="char_index_co"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio_io_i"/>
+        <spirit:name>combine_0_char_valid_c</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="combine_0" spirit:portRef="char_valid_c"/>
+        <spirit:internalPortReference spirit:componentRef="judge_1" spirit:portRef="char_valid_c"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -7626,8 +7571,8 @@ qspi clk 50M</bd:user_comments>
           <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
         </bd:hdl_attributes>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="S_AXI/Conn3">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_gpio_0"/>
+      <spirit:hierConnection spirit:interfaceRef="S_AXI/S_AXI_1">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="judge_1"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -13252,12 +13197,6 @@ qspi clk 50M</bd:user_comments>
             <spirit:range>64K</spirit:range>
           </spirit:segment>
           <spirit:segment>
-            <spirit:name>SEG_axi_gpio_0_Reg1</spirit:name>
-            <spirit:displayName>/ov_cmos/Image_Process/contrast/axi_gpio_0/S_AXI/Reg</spirit:displayName>
-            <spirit:addressOffset>0x40010000</spirit:addressOffset>
-            <spirit:range>64K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
             <spirit:name>SEG_axi_gpio_1_Reg</spirit:name>
             <spirit:displayName>/ov_cmos/cmos2axis/axi_gpio_1/S_AXI/Reg</spirit:displayName>
             <spirit:addressOffset>0x40000000</spirit:addressOffset>
@@ -13333,6 +13272,12 @@ qspi clk 50M</bd:user_comments>
             <spirit:name>SEG_draw_line_hls_0_Reg</spirit:name>
             <spirit:displayName>/ov_cmos/Image_Process/drawlines/draw_line_hls_0/s_axi_AXILiteS/Reg</spirit:displayName>
             <spirit:addressOffset>0x44A60000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_judge_1_S_AXI_reg</spirit:name>
+            <spirit:displayName>/ov_cmos/Image_Process/contrast/judge_1/S_AXI/S_AXI_reg</spirit:displayName>
+            <spirit:addressOffset>0x44AC0000</spirit:addressOffset>
             <spirit:range>64K</spirit:range>
           </spirit:segment>
           <spirit:segment>

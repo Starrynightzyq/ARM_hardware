@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Jul 18 21:49:37 2019
+// Date        : Mon Jul 22 23:36:05 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               V:/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_combine_0_0/m3_for_arty_a7_combine_0_0_sim_netlist.v
@@ -35,22 +35,87 @@ module m3_for_arty_a7_combine_0_0
   output [127:0]char_diff_c;
   output char_valid_c;
 
+  wire \<const0> ;
   wire [2:0]char_addr;
   wire [15:0]char_diff;
-  wire [127:0]char_diff_c;
+  wire [127:48]\^char_diff_c ;
   wire [3:0]char_index;
-  wire [31:0]char_index_c;
+  wire [31:12]\^char_index_c ;
   wire char_valid;
   wire char_valid_c;
   wire clk;
   wire rst_n;
 
+  assign char_diff_c[127:48] = \^char_diff_c [127:48];
+  assign char_diff_c[47] = \<const0> ;
+  assign char_diff_c[46] = \<const0> ;
+  assign char_diff_c[45] = \<const0> ;
+  assign char_diff_c[44] = \<const0> ;
+  assign char_diff_c[43] = \<const0> ;
+  assign char_diff_c[42] = \<const0> ;
+  assign char_diff_c[41] = \<const0> ;
+  assign char_diff_c[40] = \<const0> ;
+  assign char_diff_c[39] = \<const0> ;
+  assign char_diff_c[38] = \<const0> ;
+  assign char_diff_c[37] = \<const0> ;
+  assign char_diff_c[36] = \<const0> ;
+  assign char_diff_c[35] = \<const0> ;
+  assign char_diff_c[34] = \<const0> ;
+  assign char_diff_c[33] = \<const0> ;
+  assign char_diff_c[32] = \<const0> ;
+  assign char_diff_c[31] = \<const0> ;
+  assign char_diff_c[30] = \<const0> ;
+  assign char_diff_c[29] = \<const0> ;
+  assign char_diff_c[28] = \<const0> ;
+  assign char_diff_c[27] = \<const0> ;
+  assign char_diff_c[26] = \<const0> ;
+  assign char_diff_c[25] = \<const0> ;
+  assign char_diff_c[24] = \<const0> ;
+  assign char_diff_c[23] = \<const0> ;
+  assign char_diff_c[22] = \<const0> ;
+  assign char_diff_c[21] = \<const0> ;
+  assign char_diff_c[20] = \<const0> ;
+  assign char_diff_c[19] = \<const0> ;
+  assign char_diff_c[18] = \<const0> ;
+  assign char_diff_c[17] = \<const0> ;
+  assign char_diff_c[16] = \<const0> ;
+  assign char_diff_c[15] = \<const0> ;
+  assign char_diff_c[14] = \<const0> ;
+  assign char_diff_c[13] = \<const0> ;
+  assign char_diff_c[12] = \<const0> ;
+  assign char_diff_c[11] = \<const0> ;
+  assign char_diff_c[10] = \<const0> ;
+  assign char_diff_c[9] = \<const0> ;
+  assign char_diff_c[8] = \<const0> ;
+  assign char_diff_c[7] = \<const0> ;
+  assign char_diff_c[6] = \<const0> ;
+  assign char_diff_c[5] = \<const0> ;
+  assign char_diff_c[4] = \<const0> ;
+  assign char_diff_c[3] = \<const0> ;
+  assign char_diff_c[2] = \<const0> ;
+  assign char_diff_c[1] = \<const0> ;
+  assign char_diff_c[0] = \<const0> ;
+  assign char_index_c[31:12] = \^char_index_c [31:12];
+  assign char_index_c[11] = \<const0> ;
+  assign char_index_c[10] = \<const0> ;
+  assign char_index_c[9] = \<const0> ;
+  assign char_index_c[8] = \<const0> ;
+  assign char_index_c[7] = \<const0> ;
+  assign char_index_c[6] = \<const0> ;
+  assign char_index_c[5] = \<const0> ;
+  assign char_index_c[4] = \<const0> ;
+  assign char_index_c[3] = \<const0> ;
+  assign char_index_c[2] = \<const0> ;
+  assign char_index_c[1] = \<const0> ;
+  assign char_index_c[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
   m3_for_arty_a7_combine_0_0_combine inst
        (.char_addr(char_addr),
         .char_diff(char_diff),
-        .char_diff_c(char_diff_c),
+        .char_diff_c(\^char_diff_c ),
         .char_index(char_index),
-        .char_index_c(char_index_c),
+        .char_index_c(\^char_index_c ),
         .char_valid(char_valid),
         .char_valid_c(char_valid_c),
         .clk(clk),
@@ -68,8 +133,8 @@ module m3_for_arty_a7_combine_0_0_combine
     char_valid,
     char_index,
     char_diff);
-  output [31:0]char_index_c;
-  output [127:0]char_diff_c;
+  output [19:0]char_index_c;
+  output [79:0]char_diff_c;
   output char_valid_c;
   input clk;
   input rst_n;
@@ -84,6 +149,8 @@ module m3_for_arty_a7_combine_0_0_combine
   wire \FSM_onehot_state_now[0]_i_4_n_0 ;
   wire \FSM_onehot_state_now[0]_i_5_n_0 ;
   wire \FSM_onehot_state_now[0]_i_6_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_7_n_0 ;
+  wire \FSM_onehot_state_now[0]_i_8_n_0 ;
   wire \FSM_onehot_state_now[10]_i_1_n_0 ;
   wire \FSM_onehot_state_now[11]_i_1_n_0 ;
   wire \FSM_onehot_state_now[11]_i_2_n_0 ;
@@ -92,16 +159,17 @@ module m3_for_arty_a7_combine_0_0_combine
   wire \FSM_onehot_state_now[1]_i_1_n_0 ;
   wire \FSM_onehot_state_now[2]_i_1_n_0 ;
   wire \FSM_onehot_state_now[3]_i_1_n_0 ;
-  wire \FSM_onehot_state_now[3]_i_2_n_0 ;
   wire \FSM_onehot_state_now[4]_i_1_n_0 ;
   wire \FSM_onehot_state_now[5]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[5]_i_2_n_0 ;
   wire \FSM_onehot_state_now[6]_i_1_n_0 ;
   wire \FSM_onehot_state_now[7]_i_1_n_0 ;
   wire \FSM_onehot_state_now[7]_i_2_n_0 ;
-  wire \FSM_onehot_state_now[7]_i_3_n_0 ;
   wire \FSM_onehot_state_now[8]_i_1_n_0 ;
+  wire \FSM_onehot_state_now[8]_i_2_n_0 ;
   wire \FSM_onehot_state_now[9]_i_1_n_0 ;
   wire \FSM_onehot_state_now[9]_i_2_n_0 ;
+  wire \FSM_onehot_state_now[9]_i_3_n_0 ;
   (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[0] ;
   (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[10] ;
   (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_now_reg_n_0_[11] ;
@@ -117,23 +185,22 @@ module m3_for_arty_a7_combine_0_0_combine
   wire [2:0]char_addr;
   wire [2:0]char_addr_delay;
   wire [15:0]char_diff;
-  wire [127:0]char_diff_c;
+  wire [79:0]char_diff_c;
   wire [15:0]char_diff_delay;
   wire [3:0]char_index;
-  wire [31:0]char_index_c;
+  wire [19:0]char_index_c;
   wire [3:0]char_index_delay;
   wire char_index_reg;
-  wire \char_index_reg[0][3]_i_1_n_0 ;
-  wire \char_index_reg[1][3]_i_1_n_0 ;
-  wire \char_index_reg[2][3]_i_1_n_0 ;
   wire \char_index_reg[3][3]_i_1_n_0 ;
   wire \char_index_reg[4][3]_i_1_n_0 ;
+  wire \char_index_reg[4][3]_i_2_n_0 ;
   wire \char_index_reg[5][3]_i_1_n_0 ;
   wire \char_index_reg[6][3]_i_1_n_0 ;
+  wire \char_index_reg[6][3]_i_2_n_0 ;
+  wire \char_index_reg[6][3]_i_3_n_0 ;
   wire \char_index_reg[7][3]_i_2_n_0 ;
   wire \char_index_reg[7][3]_i_3_n_0 ;
   wire \char_index_reg[7][3]_i_4_n_0 ;
-  wire \char_index_reg[7][3]_i_5_n_0 ;
   wire char_valid;
   wire char_valid_c;
   wire char_valid_delay;
@@ -142,219 +209,237 @@ module m3_for_arty_a7_combine_0_0_combine
   wire rst_n;
 
   LUT6 #(
-    .INIT(64'hDDDDDDDD5555F555)) 
+    .INIT(64'hFFFFFFFF45004000)) 
     \FSM_onehot_state_now[0]_i_1 
-       (.I0(rst_n),
-        .I1(\FSM_onehot_state_now[0]_i_2_n_0 ),
-        .I2(\FSM_onehot_state_now[0]_i_3_n_0 ),
-        .I3(\FSM_onehot_state_now[0]_i_4_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[1] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[0] ),
-        .O(\FSM_onehot_state_now[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'hFF7F)) 
-    \FSM_onehot_state_now[0]_i_2 
-       (.I0(char_addr_delay[0]),
-        .I1(char_valid_delay),
-        .I2(char_addr_delay[2]),
-        .I3(char_addr_delay[1]),
-        .O(\FSM_onehot_state_now[0]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hF000F0F0F000F011)) 
-    \FSM_onehot_state_now[0]_i_3 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[10] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
-        .I2(char_valid_delay),
+       (.I0(\FSM_onehot_state_now[0]_i_2_n_0 ),
+        .I1(\FSM_onehot_state_now[0]_i_3_n_0 ),
+        .I2(\FSM_onehot_state_now[0]_i_4_n_0 ),
         .I3(\FSM_onehot_state_now[0]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now[11]_i_3_n_0 ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .O(\FSM_onehot_state_now[0]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFDFDFDFDDFEFDFFD)) 
-    \FSM_onehot_state_now[0]_i_4 
-       (.I0(char_addr_delay[2]),
-        .I1(\FSM_onehot_state_now[0]_i_6_n_0 ),
-        .I2(char_addr_delay[0]),
-        .I3(\FSM_onehot_state_now_reg_n_0_[4] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[2] ),
-        .O(\FSM_onehot_state_now[0]_i_4_n_0 ));
+        .I4(char_valid_delay),
+        .I5(\FSM_onehot_state_now[0]_i_6_n_0 ),
+        .O(\FSM_onehot_state_now[0]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hAEAFAEAE)) 
-    \FSM_onehot_state_now[0]_i_5 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[2] ),
+    .INIT(32'h00004222)) 
+    \FSM_onehot_state_now[0]_i_2 
+       (.I0(char_addr_delay[1]),
+        .I1(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I2(char_addr_delay[0]),
+        .I3(char_addr_delay[2]),
+        .I4(\FSM_onehot_state_now[0]_i_7_n_0 ),
+        .O(\FSM_onehot_state_now[0]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000001)) 
+    \FSM_onehot_state_now[0]_i_3 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .O(\FSM_onehot_state_now[0]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'h00A2)) 
+    \FSM_onehot_state_now[0]_i_4 
+       (.I0(\FSM_onehot_state_now[0]_i_8_n_0 ),
         .I1(\FSM_onehot_state_now_reg_n_0_[4] ),
         .I2(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[5] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .O(\FSM_onehot_state_now[0]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \FSM_onehot_state_now[0]_i_5 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[0] ),
         .O(\FSM_onehot_state_now[0]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'h1E1F)) 
-    \FSM_onehot_state_now[0]_i_6 
-       (.I0(char_addr_delay[0]),
-        .I1(\FSM_onehot_state_now_reg_n_0_[2] ),
-        .I2(char_addr_delay[1]),
-        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .O(\FSM_onehot_state_now[0]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0000010000000000)) 
-    \FSM_onehot_state_now[10]_i_1 
+    .INIT(64'hAAAAFFFFAA2AFFFF)) 
+    \FSM_onehot_state_now[0]_i_6 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I1(char_addr_delay[2]),
+        .I2(char_valid_delay),
+        .I3(char_addr_delay[0]),
+        .I4(rst_n),
+        .I5(char_addr_delay[1]),
+        .O(\FSM_onehot_state_now[0]_i_6_n_0 ));
+  LUT5 #(
+    .INIT(32'h1111EBEF)) 
+    \FSM_onehot_state_now[0]_i_7 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I1(char_addr_delay[0]),
+        .I2(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I4(char_addr_delay[2]),
+        .O(\FSM_onehot_state_now[0]_i_7_n_0 ));
+  LUT5 #(
+    .INIT(32'hEEEEFFEF)) 
+    \FSM_onehot_state_now[0]_i_8 
        (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
         .I1(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[7] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[9] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .I5(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .O(\FSM_onehot_state_now[0]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'h0020)) 
+    \FSM_onehot_state_now[10]_i_1 
+       (.I0(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I3(\FSM_onehot_state_now[11]_i_3_n_0 ),
         .O(\FSM_onehot_state_now[10]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00040000)) 
+    .INIT(32'h01000000)) 
     \FSM_onehot_state_now[11]_i_1 
        (.I0(\FSM_onehot_state_now[11]_i_3_n_0 ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[10] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[9] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .I4(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I3(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\FSM_onehot_state_now[11]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \FSM_onehot_state_now[11]_i_2 
        (.I0(rst_n),
         .O(\FSM_onehot_state_now[11]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'hFE)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \FSM_onehot_state_now[11]_i_3 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[7] ),
+       (.I0(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[6] ),
         .O(\FSM_onehot_state_now[11]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000100)) 
-    \FSM_onehot_state_now[11]_i_4 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[2] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[0] ),
-        .I3(rst_n),
-        .I4(\FSM_onehot_state_now_reg_n_0_[4] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[6] ),
-        .O(\FSM_onehot_state_now[11]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h0800000000000000)) 
-    \FSM_onehot_state_now[1]_i_1 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[0] ),
-        .I1(rst_n),
-        .I2(char_addr_delay[1]),
-        .I3(char_addr_delay[2]),
-        .I4(char_valid_delay),
-        .I5(char_addr_delay[0]),
-        .O(\FSM_onehot_state_now[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h40404440)) 
-    \FSM_onehot_state_now[2]_i_1 
+    .INIT(32'h00000004)) 
+    \FSM_onehot_state_now[11]_i_4 
        (.I0(\FSM_onehot_state_now_reg_n_0_[0] ),
         .I1(rst_n),
         .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
         .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
-        .I4(char_valid_delay),
+        .I4(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .O(\FSM_onehot_state_now[11]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000800000)) 
+    \FSM_onehot_state_now[1]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I1(char_addr_delay[2]),
+        .I2(char_valid_delay),
+        .I3(char_addr_delay[0]),
+        .I4(rst_n),
+        .I5(char_addr_delay[1]),
+        .O(\FSM_onehot_state_now[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000F200)) 
+    \FSM_onehot_state_now[2]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I1(char_valid_delay),
+        .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I3(rst_n),
+        .I4(\FSM_onehot_state_now_reg_n_0_[0] ),
         .O(\FSM_onehot_state_now[2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0000800000000000)) 
     \FSM_onehot_state_now[3]_i_1 
+       (.I0(char_addr_delay[2]),
+        .I1(char_valid_delay),
+        .I2(\FSM_onehot_state_now[9]_i_3_n_0 ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I4(char_addr_delay[1]),
+        .I5(char_addr_delay[0]),
+        .O(\FSM_onehot_state_now[3]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h40444040)) 
+    \FSM_onehot_state_now[4]_i_1 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I1(\FSM_onehot_state_now[9]_i_3_n_0 ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I3(char_valid_delay),
+        .I4(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .O(\FSM_onehot_state_now[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000800)) 
+    \FSM_onehot_state_now[5]_i_1 
+       (.I0(\FSM_onehot_state_now[5]_i_2_n_0 ),
+        .I1(char_addr_delay[1]),
+        .I2(char_addr_delay[0]),
+        .I3(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .O(\FSM_onehot_state_now[5]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h04000000)) 
+    \FSM_onehot_state_now[5]_i_2 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .I1(rst_n),
+        .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I3(char_valid_delay),
+        .I4(char_addr_delay[2]),
+        .O(\FSM_onehot_state_now[5]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000AA08)) 
+    \FSM_onehot_state_now[6]_i_1 
+       (.I0(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I2(char_valid_delay),
+        .I3(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .O(\FSM_onehot_state_now[6]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000020000000000)) 
+    \FSM_onehot_state_now[7]_i_1 
+       (.I0(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .I1(\FSM_onehot_state_now[8]_i_2_n_0 ),
+        .I2(\FSM_onehot_state_now[7]_i_2_n_0 ),
+        .I3(char_addr_delay[1]),
+        .I4(char_addr_delay[0]),
+        .I5(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .O(\FSM_onehot_state_now[7]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \FSM_onehot_state_now[7]_i_2 
+       (.I0(char_addr_delay[2]),
+        .I1(char_valid_delay),
+        .O(\FSM_onehot_state_now[7]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000000000AA08)) 
+    \FSM_onehot_state_now[8]_i_1 
+       (.I0(\FSM_onehot_state_now[11]_i_4_n_0 ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I2(char_valid_delay),
+        .I3(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I5(\FSM_onehot_state_now[8]_i_2_n_0 ),
+        .O(\FSM_onehot_state_now[8]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \FSM_onehot_state_now[8]_i_2 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .O(\FSM_onehot_state_now[8]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000200000)) 
+    \FSM_onehot_state_now[9]_i_1 
+       (.I0(char_addr_delay[0]),
+        .I1(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I3(\FSM_onehot_state_now[9]_i_2_n_0 ),
+        .I4(\FSM_onehot_state_now[9]_i_3_n_0 ),
+        .I5(\FSM_onehot_state_now[11]_i_3_n_0 ),
+        .O(\FSM_onehot_state_now[9]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'hFDFF)) 
+    \FSM_onehot_state_now[9]_i_2 
        (.I0(char_valid_delay),
         .I1(char_addr_delay[2]),
         .I2(\FSM_onehot_state_now_reg_n_0_[2] ),
         .I3(char_addr_delay[1]),
-        .I4(char_addr_delay[0]),
-        .I5(\FSM_onehot_state_now[3]_i_2_n_0 ),
-        .O(\FSM_onehot_state_now[3]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h10)) 
-    \FSM_onehot_state_now[3]_i_2 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[1] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[0] ),
-        .I2(rst_n),
-        .O(\FSM_onehot_state_now[3]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hF200)) 
-    \FSM_onehot_state_now[4]_i_1 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[4] ),
-        .I1(char_valid_delay),
-        .I2(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I3(\FSM_onehot_state_now[7]_i_3_n_0 ),
-        .O(\FSM_onehot_state_now[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0400000000000000)) 
-    \FSM_onehot_state_now[5]_i_1 
-       (.I0(\FSM_onehot_state_now[9]_i_2_n_0 ),
-        .I1(char_addr_delay[0]),
-        .I2(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[4] ),
-        .I4(char_addr_delay[1]),
-        .I5(\FSM_onehot_state_now[7]_i_3_n_0 ),
-        .O(\FSM_onehot_state_now[5]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000F400000000)) 
-    \FSM_onehot_state_now[6]_i_1 
-       (.I0(char_valid_delay),
-        .I1(\FSM_onehot_state_now_reg_n_0_[6] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[5] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[4] ),
-        .I5(\FSM_onehot_state_now[7]_i_3_n_0 ),
-        .O(\FSM_onehot_state_now[6]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000800000000)) 
-    \FSM_onehot_state_now[7]_i_1 
-       (.I0(\FSM_onehot_state_now[7]_i_2_n_0 ),
-        .I1(char_addr_delay[0]),
-        .I2(\FSM_onehot_state_now_reg_n_0_[4] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[5] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I5(\FSM_onehot_state_now[7]_i_3_n_0 ),
-        .O(\FSM_onehot_state_now[7]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h4000)) 
-    \FSM_onehot_state_now[7]_i_2 
-       (.I0(char_addr_delay[2]),
-        .I1(char_addr_delay[1]),
-        .I2(\FSM_onehot_state_now_reg_n_0_[6] ),
-        .I3(char_valid_delay),
-        .O(\FSM_onehot_state_now[7]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h0002)) 
-    \FSM_onehot_state_now[7]_i_3 
-       (.I0(rst_n),
-        .I1(\FSM_onehot_state_now_reg_n_0_[0] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
-        .O(\FSM_onehot_state_now[7]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h1111010000000000)) 
-    \FSM_onehot_state_now[8]_i_1 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[5] ),
-        .I2(char_valid_delay),
-        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[7] ),
-        .I5(\FSM_onehot_state_now[11]_i_4_n_0 ),
-        .O(\FSM_onehot_state_now[8]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000010000000000)) 
-    \FSM_onehot_state_now[9]_i_1 
-       (.I0(\FSM_onehot_state_now[11]_i_3_n_0 ),
-        .I1(char_addr_delay[0]),
-        .I2(\FSM_onehot_state_now[9]_i_2_n_0 ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .I4(char_addr_delay[1]),
-        .I5(\FSM_onehot_state_now[11]_i_4_n_0 ),
-        .O(\FSM_onehot_state_now[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \FSM_onehot_state_now[9]_i_2 
-       (.I0(char_valid_delay),
-        .I1(char_addr_delay[2]),
         .O(\FSM_onehot_state_now[9]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h04)) 
+    \FSM_onehot_state_now[9]_i_3 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I1(rst_n),
+        .I2(\FSM_onehot_state_now_reg_n_0_[0] ),
+        .O(\FSM_onehot_state_now[9]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "IDLE:000000000001,CHAR3_V:000000000010,CHAR4_V:000000001000,CHAR3:000000000100,CHAR7_V:001000000000,CHAR6:000100000000,DONE:100000000000,CHAR6_V:000010000000,CHAR7:010000000000,CHAR5_V:000000100000,CHAR5:000001000000,CHAR4:000000010000" *) 
   (* KEEP = "yes" *) 
   FDPE #(
@@ -627,773 +712,485 @@ module m3_for_arty_a7_combine_0_0_combine
         .D(char_diff[9]),
         .Q(char_diff_delay[9]),
         .R(1'b0));
-  FDRE \char_diff_reg_reg[0][0] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[0]),
-        .Q(char_diff_c[0]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][10] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[10]),
-        .Q(char_diff_c[10]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][11] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[11]),
-        .Q(char_diff_c[11]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][12] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[12]),
-        .Q(char_diff_c[12]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][13] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[13]),
-        .Q(char_diff_c[13]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][14] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[14]),
-        .Q(char_diff_c[14]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][15] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[15]),
-        .Q(char_diff_c[15]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][1] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[1]),
-        .Q(char_diff_c[1]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][2] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[2]),
-        .Q(char_diff_c[2]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][3] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[3]),
-        .Q(char_diff_c[3]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][4] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[4]),
-        .Q(char_diff_c[4]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][5] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[5]),
-        .Q(char_diff_c[5]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][6] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[6]),
-        .Q(char_diff_c[6]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][7] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[7]),
-        .Q(char_diff_c[7]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][8] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[8]),
-        .Q(char_diff_c[8]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[0][9] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_diff_delay[9]),
-        .Q(char_diff_c[9]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][0] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[0]),
-        .Q(char_diff_c[16]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][10] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[10]),
-        .Q(char_diff_c[26]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][11] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[11]),
-        .Q(char_diff_c[27]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][12] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[12]),
-        .Q(char_diff_c[28]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][13] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[13]),
-        .Q(char_diff_c[29]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][14] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[14]),
-        .Q(char_diff_c[30]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][15] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[15]),
-        .Q(char_diff_c[31]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][1] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[1]),
-        .Q(char_diff_c[17]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][2] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[2]),
-        .Q(char_diff_c[18]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][3] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[3]),
-        .Q(char_diff_c[19]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][4] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[4]),
-        .Q(char_diff_c[20]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][5] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[5]),
-        .Q(char_diff_c[21]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][6] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[6]),
-        .Q(char_diff_c[22]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][7] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[7]),
-        .Q(char_diff_c[23]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][8] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[8]),
-        .Q(char_diff_c[24]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[1][9] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_diff_delay[9]),
-        .Q(char_diff_c[25]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][0] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[0]),
-        .Q(char_diff_c[32]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][10] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[10]),
-        .Q(char_diff_c[42]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][11] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[11]),
-        .Q(char_diff_c[43]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][12] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[12]),
-        .Q(char_diff_c[44]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][13] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[13]),
-        .Q(char_diff_c[45]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][14] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[14]),
-        .Q(char_diff_c[46]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][15] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[15]),
-        .Q(char_diff_c[47]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][1] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[1]),
-        .Q(char_diff_c[33]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][2] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[2]),
-        .Q(char_diff_c[34]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][3] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[3]),
-        .Q(char_diff_c[35]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][4] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[4]),
-        .Q(char_diff_c[36]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][5] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[5]),
-        .Q(char_diff_c[37]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][6] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[6]),
-        .Q(char_diff_c[38]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][7] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[7]),
-        .Q(char_diff_c[39]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][8] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[8]),
-        .Q(char_diff_c[40]),
-        .R(1'b0));
-  FDRE \char_diff_reg_reg[2][9] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_diff_delay[9]),
-        .Q(char_diff_c[41]),
-        .R(1'b0));
   FDRE \char_diff_reg_reg[3][0] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[0]),
-        .Q(char_diff_c[48]),
+        .Q(char_diff_c[0]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][10] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[10]),
-        .Q(char_diff_c[58]),
+        .Q(char_diff_c[10]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][11] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[11]),
-        .Q(char_diff_c[59]),
+        .Q(char_diff_c[11]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][12] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[12]),
-        .Q(char_diff_c[60]),
+        .Q(char_diff_c[12]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][13] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[13]),
-        .Q(char_diff_c[61]),
+        .Q(char_diff_c[13]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][14] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[14]),
-        .Q(char_diff_c[62]),
+        .Q(char_diff_c[14]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][15] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[15]),
-        .Q(char_diff_c[63]),
+        .Q(char_diff_c[15]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][1] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[1]),
-        .Q(char_diff_c[49]),
+        .Q(char_diff_c[1]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][2] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[2]),
-        .Q(char_diff_c[50]),
+        .Q(char_diff_c[2]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][3] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[3]),
-        .Q(char_diff_c[51]),
+        .Q(char_diff_c[3]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][4] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[4]),
-        .Q(char_diff_c[52]),
+        .Q(char_diff_c[4]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][5] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[5]),
-        .Q(char_diff_c[53]),
+        .Q(char_diff_c[5]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][6] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[6]),
-        .Q(char_diff_c[54]),
+        .Q(char_diff_c[6]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][7] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[7]),
-        .Q(char_diff_c[55]),
+        .Q(char_diff_c[7]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][8] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[8]),
-        .Q(char_diff_c[56]),
+        .Q(char_diff_c[8]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[3][9] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_diff_delay[9]),
-        .Q(char_diff_c[57]),
+        .Q(char_diff_c[9]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][0] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[0]),
-        .Q(char_diff_c[64]),
+        .Q(char_diff_c[16]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][10] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[10]),
-        .Q(char_diff_c[74]),
+        .Q(char_diff_c[26]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][11] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[11]),
-        .Q(char_diff_c[75]),
+        .Q(char_diff_c[27]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][12] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[12]),
-        .Q(char_diff_c[76]),
+        .Q(char_diff_c[28]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][13] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[13]),
-        .Q(char_diff_c[77]),
+        .Q(char_diff_c[29]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][14] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[14]),
-        .Q(char_diff_c[78]),
+        .Q(char_diff_c[30]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][15] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[15]),
-        .Q(char_diff_c[79]),
+        .Q(char_diff_c[31]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][1] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[1]),
-        .Q(char_diff_c[65]),
+        .Q(char_diff_c[17]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][2] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[2]),
-        .Q(char_diff_c[66]),
+        .Q(char_diff_c[18]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][3] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[3]),
-        .Q(char_diff_c[67]),
+        .Q(char_diff_c[19]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][4] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[4]),
-        .Q(char_diff_c[68]),
+        .Q(char_diff_c[20]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][5] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[5]),
-        .Q(char_diff_c[69]),
+        .Q(char_diff_c[21]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][6] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[6]),
-        .Q(char_diff_c[70]),
+        .Q(char_diff_c[22]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][7] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[7]),
-        .Q(char_diff_c[71]),
+        .Q(char_diff_c[23]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][8] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[8]),
-        .Q(char_diff_c[72]),
+        .Q(char_diff_c[24]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[4][9] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_diff_delay[9]),
-        .Q(char_diff_c[73]),
+        .Q(char_diff_c[25]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][0] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[0]),
-        .Q(char_diff_c[80]),
+        .Q(char_diff_c[32]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][10] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[10]),
-        .Q(char_diff_c[90]),
+        .Q(char_diff_c[42]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][11] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[11]),
-        .Q(char_diff_c[91]),
+        .Q(char_diff_c[43]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][12] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[12]),
-        .Q(char_diff_c[92]),
+        .Q(char_diff_c[44]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][13] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[13]),
-        .Q(char_diff_c[93]),
+        .Q(char_diff_c[45]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][14] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[14]),
-        .Q(char_diff_c[94]),
+        .Q(char_diff_c[46]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][15] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[15]),
-        .Q(char_diff_c[95]),
+        .Q(char_diff_c[47]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][1] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[1]),
-        .Q(char_diff_c[81]),
+        .Q(char_diff_c[33]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][2] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[2]),
-        .Q(char_diff_c[82]),
+        .Q(char_diff_c[34]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][3] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[3]),
-        .Q(char_diff_c[83]),
+        .Q(char_diff_c[35]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][4] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[4]),
-        .Q(char_diff_c[84]),
+        .Q(char_diff_c[36]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][5] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[5]),
-        .Q(char_diff_c[85]),
+        .Q(char_diff_c[37]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][6] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[6]),
-        .Q(char_diff_c[86]),
+        .Q(char_diff_c[38]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][7] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[7]),
-        .Q(char_diff_c[87]),
+        .Q(char_diff_c[39]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][8] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[8]),
-        .Q(char_diff_c[88]),
+        .Q(char_diff_c[40]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[5][9] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_diff_delay[9]),
-        .Q(char_diff_c[89]),
+        .Q(char_diff_c[41]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][0] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[0]),
-        .Q(char_diff_c[96]),
+        .Q(char_diff_c[48]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][10] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[10]),
-        .Q(char_diff_c[106]),
+        .Q(char_diff_c[58]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][11] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[11]),
-        .Q(char_diff_c[107]),
+        .Q(char_diff_c[59]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][12] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[12]),
-        .Q(char_diff_c[108]),
+        .Q(char_diff_c[60]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][13] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[13]),
-        .Q(char_diff_c[109]),
+        .Q(char_diff_c[61]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][14] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[14]),
-        .Q(char_diff_c[110]),
+        .Q(char_diff_c[62]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][15] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[15]),
-        .Q(char_diff_c[111]),
+        .Q(char_diff_c[63]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][1] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[1]),
-        .Q(char_diff_c[97]),
+        .Q(char_diff_c[49]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][2] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[2]),
-        .Q(char_diff_c[98]),
+        .Q(char_diff_c[50]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][3] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[3]),
-        .Q(char_diff_c[99]),
+        .Q(char_diff_c[51]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][4] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[4]),
-        .Q(char_diff_c[100]),
+        .Q(char_diff_c[52]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][5] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[5]),
-        .Q(char_diff_c[101]),
+        .Q(char_diff_c[53]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][6] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[6]),
-        .Q(char_diff_c[102]),
+        .Q(char_diff_c[54]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][7] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[7]),
-        .Q(char_diff_c[103]),
+        .Q(char_diff_c[55]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][8] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[8]),
-        .Q(char_diff_c[104]),
+        .Q(char_diff_c[56]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[6][9] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_diff_delay[9]),
-        .Q(char_diff_c[105]),
+        .Q(char_diff_c[57]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][0] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[0]),
-        .Q(char_diff_c[112]),
+        .Q(char_diff_c[64]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][10] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[10]),
-        .Q(char_diff_c[122]),
+        .Q(char_diff_c[74]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][11] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[11]),
-        .Q(char_diff_c[123]),
+        .Q(char_diff_c[75]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][12] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[12]),
-        .Q(char_diff_c[124]),
+        .Q(char_diff_c[76]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][13] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[13]),
-        .Q(char_diff_c[125]),
+        .Q(char_diff_c[77]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][14] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[14]),
-        .Q(char_diff_c[126]),
+        .Q(char_diff_c[78]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][15] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[15]),
-        .Q(char_diff_c[127]),
+        .Q(char_diff_c[79]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][1] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[1]),
-        .Q(char_diff_c[113]),
+        .Q(char_diff_c[65]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][2] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[2]),
-        .Q(char_diff_c[114]),
+        .Q(char_diff_c[66]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][3] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[3]),
-        .Q(char_diff_c[115]),
+        .Q(char_diff_c[67]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][4] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[4]),
-        .Q(char_diff_c[116]),
+        .Q(char_diff_c[68]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][5] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[5]),
-        .Q(char_diff_c[117]),
+        .Q(char_diff_c[69]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][6] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[6]),
-        .Q(char_diff_c[118]),
+        .Q(char_diff_c[70]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][7] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[7]),
-        .Q(char_diff_c[119]),
+        .Q(char_diff_c[71]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][8] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[8]),
-        .Q(char_diff_c[120]),
+        .Q(char_diff_c[72]),
         .R(1'b0));
   FDRE \char_diff_reg_reg[7][9] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_diff_delay[9]),
-        .Q(char_diff_c[121]),
+        .Q(char_diff_c[73]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1427,315 +1224,226 @@ module m3_for_arty_a7_combine_0_0_combine
         .D(char_index[3]),
         .Q(char_index_delay[3]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000000000000100)) 
-    \char_index_reg[0][3]_i_1 
-       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
-        .I1(\char_index_reg[7][3]_i_3_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
-        .O(\char_index_reg[0][3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000400)) 
-    \char_index_reg[1][3]_i_1 
-       (.I0(\char_index_reg[7][3]_i_3_n_0 ),
-        .I1(\char_index_reg[7][3]_i_2_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
-        .O(\char_index_reg[1][3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000400)) 
-    \char_index_reg[2][3]_i_1 
-       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
-        .I1(\char_index_reg[7][3]_i_3_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
-        .O(\char_index_reg[2][3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000800)) 
+  LUT5 #(
+    .INIT(32'h00000040)) 
     \char_index_reg[3][3]_i_1 
-       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
-        .I1(\char_index_reg[7][3]_i_3_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
+       (.I0(\char_index_reg[7][3]_i_3_n_0 ),
+        .I1(\char_index_reg[7][3]_i_4_n_0 ),
+        .I2(\char_index_reg[7][3]_i_2_n_0 ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(\char_index_reg[3][3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000001000)) 
+  LUT4 #(
+    .INIT(16'h0001)) 
     \char_index_reg[4][3]_i_1 
        (.I0(\char_index_reg[7][3]_i_2_n_0 ),
-        .I1(\char_index_reg[7][3]_i_3_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I3(\char_index_reg[4][3]_i_2_n_0 ),
         .O(\char_index_reg[4][3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000004000)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \char_index_reg[4][3]_i_2 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I3(\char_index_reg[7][3]_i_4_n_0 ),
+        .I4(\char_index_reg[6][3]_i_3_n_0 ),
+        .O(\char_index_reg[4][3]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000001)) 
     \char_index_reg[5][3]_i_1 
-       (.I0(\char_index_reg[7][3]_i_3_n_0 ),
-        .I1(\char_index_reg[7][3]_i_2_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I3(\char_index_reg[7][3]_i_3_n_0 ),
+        .I4(\char_index_reg[7][3]_i_4_n_0 ),
         .O(\char_index_reg[5][3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000004000)) 
+    .INIT(64'h0000000000010000)) 
     \char_index_reg[6][3]_i_1 
        (.I0(\char_index_reg[7][3]_i_2_n_0 ),
-        .I1(\char_index_reg[7][3]_i_3_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I3(\char_index_reg[6][3]_i_2_n_0 ),
+        .I4(\char_index_reg[7][3]_i_4_n_0 ),
+        .I5(\char_index_reg[6][3]_i_3_n_0 ),
         .O(\char_index_reg[6][3]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \char_index_reg[6][3]_i_2 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .O(\char_index_reg[6][3]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000008000)) 
+    .INIT(64'h0000000000000001)) 
+    \char_index_reg[6][3]_i_3 
+       (.I0(\FSM_onehot_state_now_reg_n_0_[3] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .O(\char_index_reg[6][3]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h00010000)) 
     \char_index_reg[7][3]_i_1 
        (.I0(\char_index_reg[7][3]_i_2_n_0 ),
-        .I1(\char_index_reg[7][3]_i_3_n_0 ),
-        .I2(\char_index_reg[7][3]_i_4_n_0 ),
-        .I3(\char_index_reg[7][3]_i_5_n_0 ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[10] ),
+        .I3(\char_index_reg[7][3]_i_3_n_0 ),
+        .I4(\char_index_reg[7][3]_i_4_n_0 ),
         .O(char_index_reg));
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+    .INIT(32'h00000001)) 
     \char_index_reg[7][3]_i_2 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[8] ),
+       (.I0(\FSM_onehot_state_now[11]_i_3_n_0 ),
         .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[4] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[5] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[3] ),
         .O(\char_index_reg[7][3]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAAAAAAAAB)) 
+    \char_index_reg[7][3]_i_3 
+       (.I0(\char_index_reg[6][3]_i_3_n_0 ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[4] ),
+        .I5(\FSM_onehot_state_now_reg_n_0_[5] ),
+        .O(\char_index_reg[7][3]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \char_index_reg[7][3]_i_3 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[6] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[7] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[1] ),
-        .O(\char_index_reg[7][3]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \char_index_reg[7][3]_i_4 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[8] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[9] ),
-        .I2(\FSM_onehot_state_now[11]_i_3_n_0 ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[2] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[6] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[4] ),
+       (.I0(\FSM_onehot_state_now_reg_n_0_[1] ),
+        .I1(\FSM_onehot_state_now_reg_n_0_[7] ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[6] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[8] ),
+        .I4(\FSM_onehot_state_now_reg_n_0_[9] ),
         .O(\char_index_reg[7][3]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \char_index_reg[7][3]_i_5 
-       (.I0(\FSM_onehot_state_now_reg_n_0_[5] ),
-        .I1(\FSM_onehot_state_now_reg_n_0_[3] ),
-        .I2(\FSM_onehot_state_now_reg_n_0_[7] ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[1] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I5(\FSM_onehot_state_now_reg_n_0_[9] ),
-        .O(\char_index_reg[7][3]_i_5_n_0 ));
-  FDRE \char_index_reg_reg[0][0] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_index_delay[0]),
-        .Q(char_index_c[0]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[0][1] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_index_delay[1]),
-        .Q(char_index_c[1]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[0][2] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_index_delay[2]),
-        .Q(char_index_c[2]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[0][3] 
-       (.C(clk),
-        .CE(\char_index_reg[0][3]_i_1_n_0 ),
-        .D(char_index_delay[3]),
-        .Q(char_index_c[3]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[1][0] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_index_delay[0]),
-        .Q(char_index_c[4]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[1][1] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_index_delay[1]),
-        .Q(char_index_c[5]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[1][2] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_index_delay[2]),
-        .Q(char_index_c[6]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[1][3] 
-       (.C(clk),
-        .CE(\char_index_reg[1][3]_i_1_n_0 ),
-        .D(char_index_delay[3]),
-        .Q(char_index_c[7]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[2][0] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_index_delay[0]),
-        .Q(char_index_c[8]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[2][1] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_index_delay[1]),
-        .Q(char_index_c[9]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[2][2] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_index_delay[2]),
-        .Q(char_index_c[10]),
-        .R(1'b0));
-  FDRE \char_index_reg_reg[2][3] 
-       (.C(clk),
-        .CE(\char_index_reg[2][3]_i_1_n_0 ),
-        .D(char_index_delay[3]),
-        .Q(char_index_c[11]),
-        .R(1'b0));
   FDRE \char_index_reg_reg[3][0] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_index_delay[0]),
-        .Q(char_index_c[12]),
+        .Q(char_index_c[0]),
         .R(1'b0));
   FDRE \char_index_reg_reg[3][1] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_index_delay[1]),
-        .Q(char_index_c[13]),
+        .Q(char_index_c[1]),
         .R(1'b0));
   FDRE \char_index_reg_reg[3][2] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_index_delay[2]),
-        .Q(char_index_c[14]),
+        .Q(char_index_c[2]),
         .R(1'b0));
   FDRE \char_index_reg_reg[3][3] 
        (.C(clk),
         .CE(\char_index_reg[3][3]_i_1_n_0 ),
         .D(char_index_delay[3]),
-        .Q(char_index_c[15]),
+        .Q(char_index_c[3]),
         .R(1'b0));
   FDRE \char_index_reg_reg[4][0] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_index_delay[0]),
-        .Q(char_index_c[16]),
+        .Q(char_index_c[4]),
         .R(1'b0));
   FDRE \char_index_reg_reg[4][1] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_index_delay[1]),
-        .Q(char_index_c[17]),
+        .Q(char_index_c[5]),
         .R(1'b0));
   FDRE \char_index_reg_reg[4][2] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_index_delay[2]),
-        .Q(char_index_c[18]),
+        .Q(char_index_c[6]),
         .R(1'b0));
   FDRE \char_index_reg_reg[4][3] 
        (.C(clk),
         .CE(\char_index_reg[4][3]_i_1_n_0 ),
         .D(char_index_delay[3]),
-        .Q(char_index_c[19]),
+        .Q(char_index_c[7]),
         .R(1'b0));
   FDRE \char_index_reg_reg[5][0] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_index_delay[0]),
-        .Q(char_index_c[20]),
+        .Q(char_index_c[8]),
         .R(1'b0));
   FDRE \char_index_reg_reg[5][1] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_index_delay[1]),
-        .Q(char_index_c[21]),
+        .Q(char_index_c[9]),
         .R(1'b0));
   FDRE \char_index_reg_reg[5][2] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_index_delay[2]),
-        .Q(char_index_c[22]),
+        .Q(char_index_c[10]),
         .R(1'b0));
   FDRE \char_index_reg_reg[5][3] 
        (.C(clk),
         .CE(\char_index_reg[5][3]_i_1_n_0 ),
         .D(char_index_delay[3]),
-        .Q(char_index_c[23]),
+        .Q(char_index_c[11]),
         .R(1'b0));
   FDRE \char_index_reg_reg[6][0] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_index_delay[0]),
-        .Q(char_index_c[24]),
+        .Q(char_index_c[12]),
         .R(1'b0));
   FDRE \char_index_reg_reg[6][1] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_index_delay[1]),
-        .Q(char_index_c[25]),
+        .Q(char_index_c[13]),
         .R(1'b0));
   FDRE \char_index_reg_reg[6][2] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_index_delay[2]),
-        .Q(char_index_c[26]),
+        .Q(char_index_c[14]),
         .R(1'b0));
   FDRE \char_index_reg_reg[6][3] 
        (.C(clk),
         .CE(\char_index_reg[6][3]_i_1_n_0 ),
         .D(char_index_delay[3]),
-        .Q(char_index_c[27]),
+        .Q(char_index_c[15]),
         .R(1'b0));
   FDRE \char_index_reg_reg[7][0] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_index_delay[0]),
-        .Q(char_index_c[28]),
+        .Q(char_index_c[16]),
         .R(1'b0));
   FDRE \char_index_reg_reg[7][1] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_index_delay[1]),
-        .Q(char_index_c[29]),
+        .Q(char_index_c[17]),
         .R(1'b0));
   FDRE \char_index_reg_reg[7][2] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_index_delay[2]),
-        .Q(char_index_c[30]),
+        .Q(char_index_c[18]),
         .R(1'b0));
   FDRE \char_index_reg_reg[7][3] 
        (.C(clk),
         .CE(char_index_reg),
         .D(char_index_delay[3]),
-        .Q(char_index_c[31]),
+        .Q(char_index_c[19]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1745,15 +1453,13 @@ module m3_for_arty_a7_combine_0_0_combine
         .D(char_valid),
         .Q(char_valid_delay),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000000004040400)) 
+  LUT4 #(
+    .INIT(16'h2220)) 
     char_valid_reg_i_1
-       (.I0(\char_index_reg[7][3]_i_4_n_0 ),
-        .I1(\char_index_reg[7][3]_i_5_n_0 ),
-        .I2(\char_index_reg[7][3]_i_3_n_0 ),
-        .I3(\FSM_onehot_state_now_reg_n_0_[11] ),
-        .I4(\FSM_onehot_state_now_reg_n_0_[10] ),
-        .I5(\char_index_reg[7][3]_i_2_n_0 ),
+       (.I0(\char_index_reg[7][3]_i_2_n_0 ),
+        .I1(\char_index_reg[4][3]_i_2_n_0 ),
+        .I2(\FSM_onehot_state_now_reg_n_0_[11] ),
+        .I3(\FSM_onehot_state_now_reg_n_0_[10] ),
         .O(char_valid_reg));
   FDRE char_valid_reg_reg
        (.C(clk),
