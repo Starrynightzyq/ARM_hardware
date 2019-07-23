@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Jul 23 14:22:52 2019
+//Date        : Tue Jul 23 18:53:35 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -37,7 +37,7 @@ module m3_for_arty_a7_wrapper
     cmos_vsync,
     cmos_xclk_o_0,
     dip_switches_4bits_tri_i,
-    led_4bits_tri_io,
+    led_16bits_tri_o,
     nSRST,
     reset,
     spi_rtl_io0_io,
@@ -83,7 +83,7 @@ module m3_for_arty_a7_wrapper
   input cmos_vsync;
   output cmos_xclk_o_0;
   input [3:0]dip_switches_4bits_tri_i;
-  inout [3:0]led_4bits_tri_io;
+  output [15:0]led_16bits_tri_o;
   input nSRST;
   input reset;
   inout spi_rtl_io0_io;
@@ -136,22 +136,7 @@ module m3_for_arty_a7_wrapper
   wire cmos_vsync;
   wire cmos_xclk_o_0;
   wire [3:0]dip_switches_4bits_tri_i;
-  wire [0:0]led_4bits_tri_i_0;
-  wire [1:1]led_4bits_tri_i_1;
-  wire [2:2]led_4bits_tri_i_2;
-  wire [3:3]led_4bits_tri_i_3;
-  wire [0:0]led_4bits_tri_io_0;
-  wire [1:1]led_4bits_tri_io_1;
-  wire [2:2]led_4bits_tri_io_2;
-  wire [3:3]led_4bits_tri_io_3;
-  wire [0:0]led_4bits_tri_o_0;
-  wire [1:1]led_4bits_tri_o_1;
-  wire [2:2]led_4bits_tri_o_2;
-  wire [3:3]led_4bits_tri_o_3;
-  wire [0:0]led_4bits_tri_t_0;
-  wire [1:1]led_4bits_tri_t_1;
-  wire [2:2]led_4bits_tri_t_2;
-  wire [3:3]led_4bits_tri_t_3;
+  wire [15:0]led_16bits_tri_o;
   wire nSRST;
   wire reset;
   wire spi_rtl_io0_i;
@@ -196,26 +181,6 @@ module m3_for_arty_a7_wrapper
         .IO(cmos_iic_sda_io),
         .O(cmos_iic_sda_i),
         .T(cmos_iic_sda_t));
-  IOBUF led_4bits_tri_iobuf_0
-       (.I(led_4bits_tri_o_0),
-        .IO(led_4bits_tri_io[0]),
-        .O(led_4bits_tri_i_0),
-        .T(led_4bits_tri_t_0));
-  IOBUF led_4bits_tri_iobuf_1
-       (.I(led_4bits_tri_o_1),
-        .IO(led_4bits_tri_io[1]),
-        .O(led_4bits_tri_i_1),
-        .T(led_4bits_tri_t_1));
-  IOBUF led_4bits_tri_iobuf_2
-       (.I(led_4bits_tri_o_2),
-        .IO(led_4bits_tri_io[2]),
-        .O(led_4bits_tri_i_2),
-        .T(led_4bits_tri_t_2));
-  IOBUF led_4bits_tri_iobuf_3
-       (.I(led_4bits_tri_o_3),
-        .IO(led_4bits_tri_io[3]),
-        .O(led_4bits_tri_i_3),
-        .T(led_4bits_tri_t_3));
   m3_for_arty_a7 m3_for_arty_a7_i
        (.DDR2_0_addr(DDR2_0_addr),
         .DDR2_0_ba(DDR2_0_ba),
@@ -248,9 +213,7 @@ module m3_for_arty_a7_wrapper
         .cmos_vsync(cmos_vsync),
         .cmos_xclk_o_0(cmos_xclk_o_0),
         .dip_switches_4bits_tri_i(dip_switches_4bits_tri_i),
-        .led_4bits_tri_i({led_4bits_tri_i_3,led_4bits_tri_i_2,led_4bits_tri_i_1,led_4bits_tri_i_0}),
-        .led_4bits_tri_o({led_4bits_tri_o_3,led_4bits_tri_o_2,led_4bits_tri_o_1,led_4bits_tri_o_0}),
-        .led_4bits_tri_t({led_4bits_tri_t_3,led_4bits_tri_t_2,led_4bits_tri_t_1,led_4bits_tri_t_0}),
+        .led_16bits_tri_o(led_16bits_tri_o),
         .nSRST(nSRST),
         .reset(reset),
         .spi_rtl_io0_i(spi_rtl_io0_i),

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Jul 23 14:22:50 2019
+//Date        : Tue Jul 23 18:53:34 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7.bd
 //Design      : m3_for_arty_a7
@@ -8666,7 +8666,7 @@ endmodule
 
 /* cpu clk 50M
 qspi clk 50M */
-(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=133,numReposBlks=93,numNonXlnxBlks=11,numHierBlks=40,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=7,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=27,da_board_cnt=22,da_bram_cntlr_cnt=3,da_clkrst_cnt=30,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
+(* CORE_GENERATION_INFO = "m3_for_arty_a7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=m3_for_arty_a7,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=133,numReposBlks=93,numNonXlnxBlks=11,numHierBlks=40,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=7,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=27,da_board_cnt=23,da_bram_cntlr_cnt=3,da_clkrst_cnt=30,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "m3_for_arty_a7.hwdef" *) 
 module m3_for_arty_a7
    (DDR2_0_addr,
     DDR2_0_ba,
@@ -8699,9 +8699,7 @@ module m3_for_arty_a7
     cmos_vsync,
     cmos_xclk_o_0,
     dip_switches_4bits_tri_i,
-    led_4bits_tri_i,
-    led_4bits_tri_o,
-    led_4bits_tri_t,
+    led_16bits_tri_o,
     nSRST,
     reset,
     spi_rtl_io0_i,
@@ -8759,9 +8757,7 @@ module m3_for_arty_a7
   input cmos_vsync;
   output cmos_xclk_o_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 dip_switches_4bits TRI_I" *) input [3:0]dip_switches_4bits_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_4bits TRI_I" *) input [3:0]led_4bits_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_4bits TRI_O" *) output [3:0]led_4bits_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_4bits TRI_T" *) output [3:0]led_4bits_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_16bits TRI_O" *) output [15:0]led_16bits_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.NSRST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.NSRST, POLARITY ACTIVE_LOW" *) input nSRST;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, POLARITY ACTIVE_LOW" *) input reset;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 spi_rtl IO0_I" *) input spi_rtl_io0_i;
@@ -8888,9 +8884,7 @@ module m3_for_arty_a7
   wire axi_bram_ctrl_0_BRAM_PORTB_EN;
   wire axi_bram_ctrl_0_BRAM_PORTB_RST;
   wire [3:0]axi_gpio_0_GPIO2_TRI_I;
-  wire [3:0]axi_gpio_0_GPIO_TRI_I;
-  wire [3:0]axi_gpio_0_GPIO_TRI_O;
-  wire [3:0]axi_gpio_0_GPIO_TRI_T;
+  wire [15:0]axi_gpio_0_GPIO_TRI_O;
   wire axi_gpio_0_ip2intc_irpt;
   wire [31:0]axi_interconnect_0_M00_AXI_ARADDR;
   wire axi_interconnect_0_M00_AXI_ARREADY;
@@ -9165,7 +9159,6 @@ module m3_for_arty_a7
   assign SWCLKTCK_0_1 = SWCLK;
   assign aux_reset_in_0_1 = nSRST;
   assign axi_gpio_0_GPIO2_TRI_I = dip_switches_4bits_tri_i[3:0];
-  assign axi_gpio_0_GPIO_TRI_I = led_4bits_tri_i[3:0];
   assign axi_uartlite_0_UART_RxD = usb_uart_rxd;
   assign axi_uartlite_1_UART_RxD = uart_keyboard_rxd;
   assign cmos_data_1 = cmos_data[7:0];
@@ -9179,8 +9172,7 @@ module m3_for_arty_a7
   assign cmos_rst_tri_o[0] = ov_cmos_cmos_rst_TRI_O;
   assign cmos_vsync_1 = cmos_vsync;
   assign cmos_xclk_o_0 = ov_cmos_cmos_xclk_o_0;
-  assign led_4bits_tri_o[3:0] = axi_gpio_0_GPIO_TRI_O;
-  assign led_4bits_tri_t[3:0] = axi_gpio_0_GPIO_TRI_T;
+  assign led_16bits_tri_o[15:0] = axi_gpio_0_GPIO_TRI_O;
   assign ov_cmos_cmos_iic_SCL_I = cmos_iic_scl_i;
   assign ov_cmos_cmos_iic_SDA_I = cmos_iic_sda_i;
   assign reset_1 = reset;
@@ -9405,9 +9397,7 @@ module m3_for_arty_a7
         .s_axi_wvalid(axi_protocol_convert_0_M_AXI_WVALID));
   m3_for_arty_a7_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_i(axi_gpio_0_GPIO2_TRI_I),
-        .gpio_io_i(axi_gpio_0_GPIO_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
-        .gpio_io_t(axi_gpio_0_GPIO_TRI_T),
         .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(clk_wiz_0_clk_out1),
         .s_axi_araddr(axi_interconnect_0_M01_AXI_ARADDR[8:0]),
