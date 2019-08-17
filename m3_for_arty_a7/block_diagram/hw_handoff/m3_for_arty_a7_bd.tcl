@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# tri_io_buf, combine, hold, sort, bound_fsm, resize_ctrl
+# tri_io_buf, combine_addr, hold, sort, bound_fsm, ping_pong_ram, resize_ctrl
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -173,7 +173,7 @@ proc create_hier_cell_resize { parentCell nameHier } {
   create_bd_pin -dir I -type clk aclk
   create_bd_pin -dir I -from 2 -to 0 addra
   create_bd_pin -dir I -from 2 -to 0 addra1
-  create_bd_pin -dir I -from 2 -to 0 addrb
+  create_bd_pin -dir I ap_start
   create_bd_pin -dir I -type rst aresetn
   create_bd_pin -dir O -from 2 -to 0 bound_x_min_addr
   create_bd_pin -dir I -from 15 -to 0 bound_y_max_i
@@ -185,19 +185,17 @@ proc create_hier_cell_resize { parentCell nameHier } {
   create_bd_pin -dir I -from 0 -to 0 wea
   create_bd_pin -dir I -from 0 -to 0 wea1
 
-  # Create instance: axis_subset_converter_1, and set properties
-  set axis_subset_converter_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_1 ]
+  # Create instance: GND, and set properties
+  set GND [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 GND ]
   set_property -dict [ list \
-   CONFIG.S_HAS_TKEEP {1} \
-   CONFIG.S_HAS_TLAST {1} \
-   CONFIG.S_HAS_TREADY {1} \
-   CONFIG.S_HAS_TSTRB {1} \
-   CONFIG.S_TDATA_NUM_BYTES {1} \
-   CONFIG.S_TDEST_WIDTH {1} \
-   CONFIG.S_TID_WIDTH {1} \
-   CONFIG.S_TUSER_WIDTH {1} \
-   CONFIG.TSTRB_REMAP {tstrb[0:0]} \
- ] $axis_subset_converter_1
+   CONFIG.CONST_VAL {0} \
+ ] $GND
+
+  # Create instance: VCC, and set properties
+  set VCC [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 VCC ]
+
+  # Create instance: axis2ram_0, and set properties
+  set axis2ram_0 [ create_bd_cell -type ip -vlnv axis2ram:hls:axis2ram:1.0 axis2ram_0 ]
 
   # Create instance: bound_x_max1, and set properties
   set bound_x_max1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 bound_x_max1 ]
@@ -249,6 +247,20 @@ proc create_hier_cell_resize { parentCell nameHier } {
    CONFIG.use_bram_block {Stand_Alone} \
  ] $bound_x_min1
 
+  # Create instance: ping_pong_ram_0, and set properties
+  set block_name ping_pong_ram
+  set block_cell_name ping_pong_ram_0
+  if { [catch {set ping_pong_ram_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ping_pong_ram_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: reorder_resize_0, and set properties
+  set reorder_resize_0 [ create_bd_cell -type ip -vlnv reorder_resize:hls:reorder_resize:1.1 reorder_resize_0 ]
+
   # Create instance: resize_ctrl_0, and set properties
   set block_name resize_ctrl
   set block_cell_name resize_ctrl_0
@@ -260,24 +272,23 @@ proc create_hier_cell_resize { parentCell nameHier } {
      return 1
    }
   
-  # Create instance: resize_hls_axis_0, and set properties
-  set resize_hls_axis_0 [ create_bd_cell -type ip -vlnv starrynightzyq.com:hls:resize_hls_axis:1.2 resize_hls_axis_0 ]
-
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-
   # Create interface connections
-  connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins input_r] [get_bd_intf_pins resize_hls_axis_0/input_r]
-  connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins s_axi_AXILiteS] [get_bd_intf_pins resize_hls_axis_0/s_axi_AXILiteS]
-  connect_bd_intf_net -intf_net Conn3 [get_bd_intf_pins M_AXIS] [get_bd_intf_pins axis_subset_converter_1/M_AXIS]
+  connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins s_axi_AXILiteS] [get_bd_intf_pins reorder_resize_0/s_axi_AXILiteS]
+  connect_bd_intf_net -intf_net input_r_1 [get_bd_intf_pins input_r] [get_bd_intf_pins axis2ram_0/input_r]
+  connect_bd_intf_net -intf_net reorder_resize_0_output_r [get_bd_intf_pins M_AXIS] [get_bd_intf_pins reorder_resize_0/output_r]
 
   # Create port connections
-  connect_bd_net -net aclk_1 [get_bd_pins aclk] [get_bd_pins axis_subset_converter_1/aclk] [get_bd_pins bound_x_max1/clka] [get_bd_pins bound_x_max1/clkb] [get_bd_pins bound_x_min1/clka] [get_bd_pins bound_x_min1/clkb] [get_bd_pins resize_ctrl_0/clk] [get_bd_pins resize_hls_axis_0/ap_clk]
+  connect_bd_net -net GND_dout [get_bd_pins GND/dout] [get_bd_pins axis2ram_0/output_r_q0]
+  connect_bd_net -net VCC_dout [get_bd_pins VCC/dout] [get_bd_pins reorder_resize_0/bound_x_max_ap_vld] [get_bd_pins reorder_resize_0/bound_x_min_ap_vld] [get_bd_pins reorder_resize_0/bound_y_max_ap_vld] [get_bd_pins reorder_resize_0/bound_y_min_ap_vld]
+  connect_bd_net -net aclk_1 [get_bd_pins aclk] [get_bd_pins axis2ram_0/ap_clk] [get_bd_pins bound_x_max1/clka] [get_bd_pins bound_x_max1/clkb] [get_bd_pins bound_x_min1/clka] [get_bd_pins bound_x_min1/clkb] [get_bd_pins ping_pong_ram_0/clk] [get_bd_pins reorder_resize_0/ap_clk] [get_bd_pins resize_ctrl_0/clk]
   connect_bd_net -net addra1_1 [get_bd_pins addra1] [get_bd_pins bound_x_max1/addra]
   connect_bd_net -net addra_1 [get_bd_pins addra] [get_bd_pins bound_x_min1/addra]
-  connect_bd_net -net addrb_1 [get_bd_pins addrb] [get_bd_pins bound_x_min1/addrb]
-  connect_bd_net -net aresetn_1 [get_bd_pins aresetn] [get_bd_pins axis_subset_converter_1/aresetn] [get_bd_pins resize_ctrl_0/rst_n] [get_bd_pins resize_hls_axis_0/ap_rst_n]
-  connect_bd_net -net axis_subset_converter_1_s_axis_tready [get_bd_pins axis_subset_converter_1/s_axis_tready] [get_bd_pins resize_hls_axis_0/output_r_TREADY]
+  connect_bd_net -net ap_start_1 [get_bd_pins ap_start] [get_bd_pins axis2ram_0/ap_start] [get_bd_pins reorder_resize_0/ap_start]
+  connect_bd_net -net aresetn_1 [get_bd_pins aresetn] [get_bd_pins axis2ram_0/ap_rst_n] [get_bd_pins ping_pong_ram_0/rst_n] [get_bd_pins reorder_resize_0/ap_rst_n] [get_bd_pins resize_ctrl_0/rst_n]
+  connect_bd_net -net axis2ram_0_ap_done [get_bd_pins axis2ram_0/ap_done] [get_bd_pins resize_ctrl_0/axis2ram_done]
+  connect_bd_net -net axis2ram_0_output_r_address0 [get_bd_pins axis2ram_0/output_r_address0] [get_bd_pins ping_pong_ram_0/addra]
+  connect_bd_net -net axis2ram_0_output_r_d0 [get_bd_pins axis2ram_0/output_r_d0] [get_bd_pins ping_pong_ram_0/dina]
+  connect_bd_net -net axis2ram_0_output_r_we0 [get_bd_pins axis2ram_0/output_r_we0] [get_bd_pins ping_pong_ram_0/wea]
   connect_bd_net -net bound_x_max1_doutb [get_bd_pins bound_x_max1/doutb] [get_bd_pins resize_ctrl_0/bound_x_max_i]
   connect_bd_net -net bound_x_min1_doutb [get_bd_pins bound_x_min1/doutb] [get_bd_pins resize_ctrl_0/bound_x_min_i]
   connect_bd_net -net bound_y_max_i_1 [get_bd_pins bound_y_max_i] [get_bd_pins resize_ctrl_0/bound_y_max_i]
@@ -286,23 +297,18 @@ proc create_hier_cell_resize { parentCell nameHier } {
   connect_bd_net -net dina_1 [get_bd_pins dina] [get_bd_pins bound_x_max1/dina]
   connect_bd_net -net ena1_1 [get_bd_pins ena1] [get_bd_pins bound_x_min1/ena]
   connect_bd_net -net ena_1 [get_bd_pins ena] [get_bd_pins bound_x_max1/ena]
+  connect_bd_net -net ping_pong_ram_0_doutb [get_bd_pins ping_pong_ram_0/doutb] [get_bd_pins reorder_resize_0/input_r_q0]
+  connect_bd_net -net reorder_resize_0_ap_done [get_bd_pins reorder_resize_0/ap_done] [get_bd_pins resize_ctrl_0/resize_interrupt]
+  connect_bd_net -net reorder_resize_0_input_r_address0 [get_bd_pins ping_pong_ram_0/addrb] [get_bd_pins reorder_resize_0/input_r_address0]
   connect_bd_net -net resize_ctrl_0_bound_x_max_addr [get_bd_pins bound_x_max1/addrb] [get_bd_pins resize_ctrl_0/bound_x_max_addr]
-  connect_bd_net -net resize_ctrl_0_bound_x_max_o [get_bd_pins resize_ctrl_0/bound_x_max_o] [get_bd_pins resize_hls_axis_0/bound_x_max]
-  connect_bd_net -net resize_ctrl_0_bound_x_min_addr [get_bd_pins bound_x_min_addr] [get_bd_pins resize_ctrl_0/bound_x_min_addr]
-  connect_bd_net -net resize_ctrl_0_bound_x_min_o [get_bd_pins resize_ctrl_0/bound_x_min_o] [get_bd_pins resize_hls_axis_0/bound_x_min]
-  connect_bd_net -net resize_ctrl_0_bound_y_max_o [get_bd_pins resize_ctrl_0/bound_y_max_o] [get_bd_pins resize_hls_axis_0/bound_y_max]
-  connect_bd_net -net resize_ctrl_0_bound_y_min_o [get_bd_pins resize_ctrl_0/bound_y_min_o] [get_bd_pins resize_hls_axis_0/bound_y_min]
-  connect_bd_net -net resize_hls_axis_0_output_r_TDATA [get_bd_pins axis_subset_converter_1/s_axis_tdata] [get_bd_pins resize_hls_axis_0/output_r_TDATA]
-  connect_bd_net -net resize_hls_axis_0_output_r_TDEST [get_bd_pins axis_subset_converter_1/s_axis_tdest] [get_bd_pins resize_hls_axis_0/output_r_TDEST]
-  connect_bd_net -net resize_hls_axis_0_output_r_TID [get_bd_pins axis_subset_converter_1/s_axis_tid] [get_bd_pins resize_hls_axis_0/output_r_TID]
-  connect_bd_net -net resize_hls_axis_0_output_r_TKEEP [get_bd_pins axis_subset_converter_1/s_axis_tkeep] [get_bd_pins resize_hls_axis_0/output_r_TKEEP]
-  connect_bd_net -net resize_hls_axis_0_output_r_TLAST [get_bd_pins axis_subset_converter_1/s_axis_tlast] [get_bd_pins resize_hls_axis_0/output_r_TLAST]
-  connect_bd_net -net resize_hls_axis_0_output_r_TSTRB [get_bd_pins axis_subset_converter_1/s_axis_tstrb] [get_bd_pins resize_hls_axis_0/output_r_TSTRB]
-  connect_bd_net -net resize_hls_axis_0_output_r_TUSER [get_bd_pins axis_subset_converter_1/s_axis_tuser] [get_bd_pins resize_ctrl_0/resize_interrupt] [get_bd_pins resize_hls_axis_0/output_r_TUSER]
-  connect_bd_net -net resize_hls_axis_0_output_r_TVALID [get_bd_pins axis_subset_converter_1/s_axis_tvalid] [get_bd_pins resize_hls_axis_0/output_r_TVALID]
+  connect_bd_net -net resize_ctrl_0_bound_x_max_o [get_bd_pins reorder_resize_0/bound_x_max] [get_bd_pins resize_ctrl_0/bound_x_max_o]
+  connect_bd_net -net resize_ctrl_0_bound_x_min_addr [get_bd_pins bound_x_min_addr] [get_bd_pins bound_x_min1/addrb] [get_bd_pins resize_ctrl_0/bound_x_min_addr]
+  connect_bd_net -net resize_ctrl_0_bound_x_min_o [get_bd_pins reorder_resize_0/bound_x_min] [get_bd_pins resize_ctrl_0/bound_x_min_o]
+  connect_bd_net -net resize_ctrl_0_bound_y_max_o [get_bd_pins reorder_resize_0/bound_y_max] [get_bd_pins resize_ctrl_0/bound_y_max_o]
+  connect_bd_net -net resize_ctrl_0_bound_y_min_o [get_bd_pins reorder_resize_0/bound_y_min] [get_bd_pins resize_ctrl_0/bound_y_min_o]
+  connect_bd_net -net resize_ctrl_0_resize_continue [get_bd_pins reorder_resize_0/ap_continue] [get_bd_pins resize_ctrl_0/resize_continue]
   connect_bd_net -net wea1_1 [get_bd_pins wea1] [get_bd_pins bound_x_max1/wea]
   connect_bd_net -net wea_1 [get_bd_pins wea] [get_bd_pins bound_x_min1/wea]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins resize_hls_axis_0/bound_x_max_ap_vld] [get_bd_pins resize_hls_axis_0/bound_x_min_ap_vld] [get_bd_pins resize_hls_axis_0/bound_y_max_ap_vld] [get_bd_pins resize_hls_axis_0/bound_y_min_ap_vld] [get_bd_pins xlconstant_0/dout]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -585,15 +591,15 @@ proc create_hier_cell_contrast { parentCell nameHier } {
   create_bd_pin -dir I -type rst ap_rst_n
   create_bd_pin -dir I -from 2 -to 0 char_addr
   create_bd_pin -dir O char_valid_c_o_0
-  create_bd_pin -dir O char_valid_co
+  create_bd_pin -dir I -from 2 -to 0 shift_0
 
-  # Create instance: combine_0, and set properties
-  set block_name combine
-  set block_cell_name combine_0
-  if { [catch {set combine_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: combine_addr_0, and set properties
+  set block_name combine_addr
+  set block_cell_name combine_addr_0
+  if { [catch {set combine_addr_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $combine_0 eq "" } {
+   } elseif { $combine_addr_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -632,23 +638,22 @@ proc create_hier_cell_contrast { parentCell nameHier } {
   connect_bd_intf_net -intf_net S_AXI_1 [get_bd_intf_pins S_AXI] [get_bd_intf_pins judge_1/S_AXI]
 
   # Create port connections
-  connect_bd_net -net ap_clk_1 [get_bd_pins ap_clk] [get_bd_pins combine_0/clk] [get_bd_pins contrast_hls_rom_0/ap_clk] [get_bd_pins hold_0/clk] [get_bd_pins judge_1/s_axi_aclk] [get_bd_pins sort_0/clk]
-  connect_bd_net -net ap_rst_n_1 [get_bd_pins ap_rst_n] [get_bd_pins combine_0/rst_n] [get_bd_pins contrast_hls_rom_0/ap_rst_n] [get_bd_pins hold_0/rst_n] [get_bd_pins judge_1/s_axi_aresetn] [get_bd_pins sort_0/rst_n]
-  connect_bd_net -net char_addr_1 [get_bd_pins char_addr] [get_bd_pins combine_0/char_addr]
-  connect_bd_net -net combine_0_char_diff_c [get_bd_pins combine_0/char_diff_c] [get_bd_pins judge_1/char_diff_c]
-  connect_bd_net -net combine_0_char_index_c [get_bd_pins combine_0/char_index_c] [get_bd_pins judge_1/char_index_c]
-  connect_bd_net -net combine_0_char_valid_c [get_bd_pins combine_0/char_valid_c] [get_bd_pins judge_1/char_valid_c]
+  connect_bd_net -net ap_clk_1 [get_bd_pins ap_clk] [get_bd_pins combine_addr_0/clk] [get_bd_pins contrast_hls_rom_0/ap_clk] [get_bd_pins hold_0/clk] [get_bd_pins judge_1/s_axi_aclk] [get_bd_pins sort_0/clk]
+  connect_bd_net -net ap_rst_n_1 [get_bd_pins ap_rst_n] [get_bd_pins combine_addr_0/rst_n] [get_bd_pins contrast_hls_rom_0/ap_rst_n] [get_bd_pins hold_0/rst_n] [get_bd_pins judge_1/s_axi_aresetn] [get_bd_pins sort_0/rst_n]
+  connect_bd_net -net char_addr_1 [get_bd_pins char_addr] [get_bd_pins combine_addr_0/char_addr]
+  connect_bd_net -net combine_addr_0_char_diff_c [get_bd_pins combine_addr_0/char_diff_c] [get_bd_pins judge_1/char_diff_c]
+  connect_bd_net -net combine_addr_0_char_index_c [get_bd_pins combine_addr_0/char_index_c] [get_bd_pins judge_1/char_index_c]
+  connect_bd_net -net combine_addr_0_char_valid_c [get_bd_pins combine_addr_0/char_valid_c] [get_bd_pins judge_1/char_valid_c]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_0 [get_bd_pins contrast_hls_rom_0/diff_sum_0] [get_bd_pins sort_0/diff_sum_0]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_0_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_0_ap_vld] [get_bd_pins sort_0/diff_sum_0_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_1 [get_bd_pins contrast_hls_rom_0/diff_sum_1] [get_bd_pins sort_0/diff_sum_1]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_2 [get_bd_pins contrast_hls_rom_0/diff_sum_2] [get_bd_pins sort_0/diff_sum_2]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_3 [get_bd_pins contrast_hls_rom_0/diff_sum_3] [get_bd_pins sort_0/diff_sum_3]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_4 [get_bd_pins contrast_hls_rom_0/diff_sum_4] [get_bd_pins sort_0/diff_sum_4]
-  connect_bd_net -net contrast_hls_rom_0_diff_sum_10 [get_bd_pins contrast_hls_rom_0/diff_sum_10] [get_bd_pins sort_0/diff_sum_10]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_10_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_10_ap_vld] [get_bd_pins sort_0/diff_sum_10_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_1_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_1_ap_vld] [get_bd_pins sort_0/diff_sum_1_ap_vld]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_2 [get_bd_pins contrast_hls_rom_0/diff_sum_2] [get_bd_pins sort_0/diff_sum_2]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_2_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_2_ap_vld] [get_bd_pins sort_0/diff_sum_2_ap_vld]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_3 [get_bd_pins contrast_hls_rom_0/diff_sum_3] [get_bd_pins sort_0/diff_sum_3]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_3_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_3_ap_vld] [get_bd_pins sort_0/diff_sum_3_ap_vld]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_4 [get_bd_pins contrast_hls_rom_0/diff_sum_4] [get_bd_pins sort_0/diff_sum_4]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_4_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_4_ap_vld] [get_bd_pins sort_0/diff_sum_4_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_5 [get_bd_pins contrast_hls_rom_0/diff_sum_5] [get_bd_pins sort_0/diff_sum_5]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_5_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_5_ap_vld] [get_bd_pins sort_0/diff_sum_5_ap_vld]
@@ -659,15 +664,14 @@ proc create_hier_cell_contrast { parentCell nameHier } {
   connect_bd_net -net contrast_hls_rom_0_diff_sum_8 [get_bd_pins contrast_hls_rom_0/diff_sum_8] [get_bd_pins sort_0/diff_sum_8]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_8_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_8_ap_vld] [get_bd_pins sort_0/diff_sum_8_ap_vld]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_9 [get_bd_pins contrast_hls_rom_0/diff_sum_9] [get_bd_pins sort_0/diff_sum_9]
+  connect_bd_net -net contrast_hls_rom_0_diff_sum_10 [get_bd_pins contrast_hls_rom_0/diff_sum_10] [get_bd_pins sort_0/diff_sum_10]
   connect_bd_net -net contrast_hls_rom_0_diff_sum_9_ap_vld [get_bd_pins contrast_hls_rom_0/diff_sum_9_ap_vld] [get_bd_pins sort_0/diff_sum_9_ap_vld]
   connect_bd_net -net hold_0_trick_o [get_bd_pins char_valid_c_o_0] [get_bd_pins hold_0/trick_o]
-  connect_bd_net -net judge_0_char_valid_co [get_bd_pins char_valid_co] [get_bd_pins hold_0/trick_i] [get_bd_pins judge_1/char_valid_co]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets judge_0_char_valid_co]
-  connect_bd_net -net sort_0_char_diff [get_bd_pins combine_0/char_diff] [get_bd_pins sort_0/char_diff]
-  connect_bd_net -net sort_0_char_index [get_bd_pins combine_0/char_index] [get_bd_pins sort_0/char_index]
-  connect_bd_net -net sort_0_interrupt [get_bd_pins combine_0/char_valid] [get_bd_pins sort_0/interrupt]
+  connect_bd_net -net judge_0_char_valid_co [get_bd_pins hold_0/trick_i] [get_bd_pins judge_1/char_valid_co]
+  connect_bd_net -net shift_0_1 [get_bd_pins shift_0] [get_bd_pins combine_addr_0/shift]
+  connect_bd_net -net sort_0_char_diff [get_bd_pins combine_addr_0/char_diff] [get_bd_pins sort_0/char_diff]
+  connect_bd_net -net sort_0_char_index [get_bd_pins combine_addr_0/char_index] [get_bd_pins sort_0/char_index]
+  connect_bd_net -net sort_0_interrupt [get_bd_pins combine_addr_0/char_valid] [get_bd_pins sort_0/interrupt]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -1081,8 +1085,6 @@ proc create_hier_cell_Image_Process { parentCell nameHier } {
   # Create interface pins
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S00_AXI
-  create_bd_intf_pin -mode Monitor -vlnv xilinx.com:interface:axis_rtl:1.0 SLOT_7_AXIS
-  create_bd_intf_pin -mode Monitor -vlnv xilinx.com:interface:axis_rtl:1.0 SLOT_8_AXIS
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS
 
   # Create pins
@@ -1091,13 +1093,12 @@ proc create_hier_cell_Image_Process { parentCell nameHier } {
   create_bd_pin -dir I -type clk axis_clk
   create_bd_pin -dir I -type rst axis_resetn
   create_bd_pin -dir O char_valid_co
-  create_bd_pin -dir I -type clk clk
-  create_bd_pin -dir I -type rst resetn
+  create_bd_pin -dir I -from 2 -to 0 shift_0
 
   # Create instance: axi_interconnect_0, and set properties
   set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {8} \
+   CONFIG.NUM_MI {9} \
  ] $axi_interconnect_0
 
   # Create instance: axis_broadcaster_0, and set properties
@@ -1108,6 +1109,13 @@ proc create_hier_cell_Image_Process { parentCell nameHier } {
 
   # Create instance: drawlines
   create_hier_cell_drawlines $hier_obj drawlines
+
+  # Create instance: gpio_ap_ctrl, and set properties
+  set gpio_ap_ctrl [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 gpio_ap_ctrl ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_GPIO_WIDTH {1} \
+ ] $gpio_ap_ctrl
 
   # Create instance: mask_0, and set properties
   set mask_0 [ create_bd_cell -type ip -vlnv starrynightzyq.com:hls:mask:2.3 mask_0 ]
@@ -1120,51 +1128,6 @@ proc create_hier_cell_Image_Process { parentCell nameHier } {
 
   # Create instance: resize
   create_hier_cell_resize $hier_obj resize
-
-  # Create instance: system_ila_0, and set properties
-  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
-  set_property -dict [ list \
-   CONFIG.C_MON_TYPE {MIX} \
-   CONFIG.C_NUM_MONITOR_SLOTS {9} \
-   CONFIG.C_NUM_OF_PROBES {1} \
-   CONFIG.C_PROBE0_TYPE {0} \
-   CONFIG.C_SLOT_0_APC_EN {0} \
-   CONFIG.C_SLOT_0_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_0_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_1_APC_EN {0} \
-   CONFIG.C_SLOT_1_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_1_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_1_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_2_APC_EN {0} \
-   CONFIG.C_SLOT_2_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_2_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_2_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_3_APC_EN {0} \
-   CONFIG.C_SLOT_3_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_3_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_3_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_4_APC_EN {0} \
-   CONFIG.C_SLOT_4_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_4_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_4_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_5_APC_EN {0} \
-   CONFIG.C_SLOT_5_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_5_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_5_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_6_APC_EN {0} \
-   CONFIG.C_SLOT_6_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_6_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_6_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_7_APC_EN {0} \
-   CONFIG.C_SLOT_7_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_7_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_7_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_8_APC_EN {0} \
-   CONFIG.C_SLOT_8_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_8_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_8_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
- ] $system_ila_0
 
   # Create instance: threshold2_0, and set properties
   set threshold2_0 [ create_bd_cell -type ip -vlnv starrynightzyq.com:hls:threshold2:1.6 threshold2_0 ]
@@ -1182,11 +1145,6 @@ proc create_hier_cell_Image_Process { parentCell nameHier } {
   # Create interface connections
   connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins S00_AXI] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
   connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins M_AXIS] [get_bd_intf_pins drawlines/M_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets Conn2]
-  connect_bd_intf_net -intf_net Conn3 [get_bd_intf_pins SLOT_7_AXIS] [get_bd_intf_pins system_ila_0/SLOT_7_AXIS]
-  connect_bd_intf_net -intf_net Conn4 [get_bd_intf_pins SLOT_8_AXIS] [get_bd_intf_pins system_ila_0/SLOT_8_AXIS]
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins threshold2_0/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net axi_interconnect_0_M01_AXI [get_bd_intf_pins axi_interconnect_0/M01_AXI] [get_bd_intf_pins mask_0/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net axi_interconnect_0_M02_AXI [get_bd_intf_pins axi_interconnect_0/M02_AXI] [get_bd_intf_pins projection1/s_axi_AXILiteS]
@@ -1195,56 +1153,25 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_intf_net -intf_net axi_interconnect_0_M05_AXI [get_bd_intf_pins axi_interconnect_0/M05_AXI] [get_bd_intf_pins resize/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net axi_interconnect_0_M06_AXI [get_bd_intf_pins axi_interconnect_0/M06_AXI] [get_bd_intf_pins contrast/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net axi_interconnect_0_M07_AXI [get_bd_intf_pins axi_interconnect_0/M07_AXI] [get_bd_intf_pins contrast/S_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M08_AXI [get_bd_intf_pins axi_interconnect_0/M08_AXI] [get_bd_intf_pins gpio_ap_ctrl/S_AXI]
   connect_bd_intf_net -intf_net axis_broadcaster_0_M00_AXIS [get_bd_intf_pins axis_broadcaster_0/M00_AXIS] [get_bd_intf_pins drawlines/input_r]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets axis_broadcaster_0_M00_AXIS] [get_bd_intf_pins axis_broadcaster_0/M00_AXIS] [get_bd_intf_pins system_ila_0/SLOT_6_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets axis_broadcaster_0_M00_AXIS]
   connect_bd_intf_net -intf_net axis_broadcaster_0_M01_AXIS [get_bd_intf_pins axis_broadcaster_0/M01_AXIS] [get_bd_intf_pins resize/input_r]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets axis_broadcaster_0_M01_AXIS] [get_bd_intf_pins axis_broadcaster_0/M01_AXIS] [get_bd_intf_pins system_ila_0/SLOT_2_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets axis_broadcaster_0_M01_AXIS]
   connect_bd_intf_net -intf_net input_r_1 [get_bd_intf_pins S_AXIS] [get_bd_intf_pins threshold2_0/input_r]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets input_r_1]
   connect_bd_intf_net -intf_net mask_0_output_r [get_bd_intf_pins mask_0/output_r] [get_bd_intf_pins projection_mul_hls_0/input_r]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets mask_0_output_r] [get_bd_intf_pins projection_mul_hls_0/input_r] [get_bd_intf_pins system_ila_0/SLOT_0_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets mask_0_output_r]
   connect_bd_intf_net -intf_net projection1_output_r [get_bd_intf_pins mask_0/input_r] [get_bd_intf_pins projection1/output_r]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets projection1_output_r] [get_bd_intf_pins mask_0/input_r] [get_bd_intf_pins system_ila_0/SLOT_4_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets projection1_output_r]
   connect_bd_intf_net -intf_net projection_mul_hls_0_output_r [get_bd_intf_pins axis_broadcaster_0/S_AXIS] [get_bd_intf_pins projection_mul_hls_0/output_r]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets projection_mul_hls_0_output_r] [get_bd_intf_pins axis_broadcaster_0/S_AXIS] [get_bd_intf_pins system_ila_0/SLOT_1_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets projection_mul_hls_0_output_r]
   connect_bd_intf_net -intf_net resize_M_AXIS [get_bd_intf_pins contrast/input_r] [get_bd_intf_pins resize/M_AXIS]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets resize_M_AXIS] [get_bd_intf_pins resize/M_AXIS] [get_bd_intf_pins system_ila_0/SLOT_3_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets resize_M_AXIS]
   connect_bd_intf_net -intf_net threshold2_0_output_r [get_bd_intf_pins projection1/input_r] [get_bd_intf_pins threshold2_0/output_r]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets threshold2_0_output_r] [get_bd_intf_pins projection1/input_r] [get_bd_intf_pins system_ila_0/SLOT_5_AXIS]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_intf_nets threshold2_0_output_r]
 
   # Create port connections
   connect_bd_net -net ACLK_1 [get_bd_pins axi_clk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK]
   connect_bd_net -net ARESETN_1 [get_bd_pins axi_resetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN]
-  connect_bd_net -net axi_resetn_1 [get_bd_pins axis_resetn] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/M04_ARESETN] [get_bd_pins axi_interconnect_0/M05_ARESETN] [get_bd_pins axi_interconnect_0/M06_ARESETN] [get_bd_pins axi_interconnect_0/M07_ARESETN] [get_bd_pins axis_broadcaster_0/aresetn] [get_bd_pins contrast/ap_rst_n] [get_bd_pins drawlines/ap_rst_n] [get_bd_pins mask_0/ap_rst_n] [get_bd_pins projection1/ap_rst_n] [get_bd_pins projection_mul_hls_0/ap_rst_n] [get_bd_pins resize/aresetn] [get_bd_pins threshold2_0/ap_rst_n]
+  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins gpio_ap_ctrl/gpio_io_o] [get_bd_pins resize/ap_start]
+  connect_bd_net -net axi_resetn_1 [get_bd_pins axis_resetn] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/M04_ARESETN] [get_bd_pins axi_interconnect_0/M05_ARESETN] [get_bd_pins axi_interconnect_0/M06_ARESETN] [get_bd_pins axi_interconnect_0/M07_ARESETN] [get_bd_pins axi_interconnect_0/M08_ARESETN] [get_bd_pins axis_broadcaster_0/aresetn] [get_bd_pins contrast/ap_rst_n] [get_bd_pins drawlines/ap_rst_n] [get_bd_pins gpio_ap_ctrl/s_axi_aresetn] [get_bd_pins mask_0/ap_rst_n] [get_bd_pins projection1/ap_rst_n] [get_bd_pins projection_mul_hls_0/ap_rst_n] [get_bd_pins resize/aresetn] [get_bd_pins threshold2_0/ap_rst_n]
   connect_bd_net -net bound_fsm_0_bound_y_max_o [get_bd_pins drawlines/bound_y_max] [get_bd_pins mask_0/bound_y_max] [get_bd_pins projection1/bound_y_max_o] [get_bd_pins resize/bound_y_max_i]
   connect_bd_net -net bound_fsm_0_bound_y_min_o [get_bd_pins drawlines/bound_y_min] [get_bd_pins mask_0/bound_y_min] [get_bd_pins projection1/bound_y_min_o] [get_bd_pins resize/bound_y_min_i]
-  connect_bd_net -net clk_1 [get_bd_pins clk] [get_bd_pins system_ila_0/clk]
-  connect_bd_net -net clk_200M_1 [get_bd_pins axis_clk] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/M04_ACLK] [get_bd_pins axi_interconnect_0/M05_ACLK] [get_bd_pins axi_interconnect_0/M06_ACLK] [get_bd_pins axi_interconnect_0/M07_ACLK] [get_bd_pins axis_broadcaster_0/aclk] [get_bd_pins contrast/ap_clk] [get_bd_pins drawlines/ap_clk] [get_bd_pins mask_0/ap_clk] [get_bd_pins projection1/ap_clk] [get_bd_pins projection_mul_hls_0/ap_clk] [get_bd_pins resize/aclk] [get_bd_pins threshold2_0/ap_clk]
+  connect_bd_net -net clk_200M_1 [get_bd_pins axis_clk] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/M04_ACLK] [get_bd_pins axi_interconnect_0/M05_ACLK] [get_bd_pins axi_interconnect_0/M06_ACLK] [get_bd_pins axi_interconnect_0/M07_ACLK] [get_bd_pins axi_interconnect_0/M08_ACLK] [get_bd_pins axis_broadcaster_0/aclk] [get_bd_pins contrast/ap_clk] [get_bd_pins drawlines/ap_clk] [get_bd_pins gpio_ap_ctrl/s_axi_aclk] [get_bd_pins mask_0/ap_clk] [get_bd_pins projection1/ap_clk] [get_bd_pins projection_mul_hls_0/ap_clk] [get_bd_pins resize/aclk] [get_bd_pins threshold2_0/ap_clk]
   connect_bd_net -net contrast_char_valid_c_o_0 [get_bd_pins char_valid_co] [get_bd_pins contrast/char_valid_c_o_0]
-  connect_bd_net -net contrast_char_valid_co [get_bd_pins contrast/char_valid_co] [get_bd_pins system_ila_0/probe0]
   connect_bd_net -net projection1_bound_x_max_o [get_bd_pins mask_0/bound_x_max] [get_bd_pins projection1/bound_x_max_o]
   connect_bd_net -net projection1_bound_x_min_o [get_bd_pins mask_0/bound_x_min] [get_bd_pins projection1/bound_x_min_o]
   connect_bd_net -net projection_mul_hls_0_bound_max_address0 [get_bd_pins drawlines/addra1] [get_bd_pins projection_mul_hls_0/bound_max_address0] [get_bd_pins resize/addra1]
@@ -1255,9 +1182,8 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net projection_mul_hls_0_bound_min_ce0 [get_bd_pins drawlines/ena1] [get_bd_pins projection_mul_hls_0/bound_min_ce0] [get_bd_pins resize/ena1]
   connect_bd_net -net projection_mul_hls_0_bound_min_d0 [get_bd_pins drawlines/dina1] [get_bd_pins projection_mul_hls_0/bound_min_d0] [get_bd_pins resize/dina1]
   connect_bd_net -net projection_mul_hls_0_bound_min_we0 [get_bd_pins drawlines/wea] [get_bd_pins projection_mul_hls_0/bound_min_we0] [get_bd_pins resize/wea]
-  connect_bd_net -net resetn_1 [get_bd_pins resetn] [get_bd_pins system_ila_0/resetn]
-  create_bd_net resize_ctrl_0_bound_x_min_addr
-  connect_bd_net -net [get_bd_nets resize_ctrl_0_bound_x_min_addr] [get_bd_pins contrast/char_addr] [get_bd_pins resize/addrb] [get_bd_pins resize/bound_x_min_addr]
+  connect_bd_net -net resize_ctrl_0_bound_x_min_addr [get_bd_pins contrast/char_addr] [get_bd_pins resize/bound_x_min_addr]
+  connect_bd_net -net shift_0_1 [get_bd_pins shift_0] [get_bd_pins contrast/shift_0]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins mask_0/bound_x_max_ap_vld] [get_bd_pins mask_0/bound_x_min_ap_vld] [get_bd_pins mask_0/bound_y_max_ap_vld] [get_bd_pins mask_0/bound_y_min_ap_vld] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins projection_mul_hls_0/bound_max_q0] [get_bd_pins projection_mul_hls_0/bound_min_q0] [get_bd_pins xlconstant_1/dout]
 
@@ -1318,6 +1244,7 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
   create_bd_pin -dir I -type rst interconnect_aresetn
   create_bd_pin -dir I -type rst reset
   create_bd_pin -dir I -type clk s_axi_lite_aclk
+  create_bd_pin -dir I -from 2 -to 0 shift_0
   create_bd_pin -dir I -type clk sys_clock
   create_bd_pin -dir O -from 3 -to 0 vga_pBlue_0
   create_bd_pin -dir O -from 3 -to 0 vga_pGreen_0
@@ -1354,7 +1281,7 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
   # Create instance: axi_smc, and set properties
   set axi_smc [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc ]
   set_property -dict [ list \
-   CONFIG.NUM_CLKS {1} \
+   CONFIG.NUM_CLKS {2} \
    CONFIG.NUM_SI {3} \
  ] $axi_smc
 
@@ -1394,11 +1321,62 @@ proc create_hier_cell_ov_cmos { parentCell nameHier } {
    CONFIG.RESET_BOARD_INTERFACE {reset} \
  ] $mig_7series_0
 
+  # Create instance: system_ila_0, and set properties
+  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_MON_TYPE {INTERFACE} \
+   CONFIG.C_NUM_MONITOR_SLOTS {7} \
+   CONFIG.C_SLOT_0_APC_EN {0} \
+   CONFIG.C_SLOT_0_AXI_AR_SEL_DATA {1} \
+   CONFIG.C_SLOT_0_AXI_AR_SEL_TRIG {1} \
+   CONFIG.C_SLOT_0_AXI_AW_SEL_DATA {1} \
+   CONFIG.C_SLOT_0_AXI_AW_SEL_TRIG {1} \
+   CONFIG.C_SLOT_0_AXI_B_SEL_DATA {1} \
+   CONFIG.C_SLOT_0_AXI_B_SEL_TRIG {1} \
+   CONFIG.C_SLOT_0_AXI_R_SEL_DATA {1} \
+   CONFIG.C_SLOT_0_AXI_R_SEL_TRIG {1} \
+   CONFIG.C_SLOT_0_AXI_W_SEL_DATA {1} \
+   CONFIG.C_SLOT_0_AXI_W_SEL_TRIG {1} \
+   CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:aximm_rtl:1.0} \
+   CONFIG.C_SLOT_1_APC_EN {0} \
+   CONFIG.C_SLOT_1_AXI_AR_SEL_DATA {1} \
+   CONFIG.C_SLOT_1_AXI_AR_SEL_TRIG {1} \
+   CONFIG.C_SLOT_1_AXI_AW_SEL_DATA {1} \
+   CONFIG.C_SLOT_1_AXI_AW_SEL_TRIG {1} \
+   CONFIG.C_SLOT_1_AXI_B_SEL_DATA {1} \
+   CONFIG.C_SLOT_1_AXI_B_SEL_TRIG {1} \
+   CONFIG.C_SLOT_1_AXI_R_SEL_DATA {1} \
+   CONFIG.C_SLOT_1_AXI_R_SEL_TRIG {1} \
+   CONFIG.C_SLOT_1_AXI_W_SEL_DATA {1} \
+   CONFIG.C_SLOT_1_AXI_W_SEL_TRIG {1} \
+   CONFIG.C_SLOT_1_INTF_TYPE {xilinx.com:interface:aximm_rtl:1.0} \
+   CONFIG.C_SLOT_2_APC_EN {0} \
+   CONFIG.C_SLOT_2_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_2_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_2_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_3_APC_EN {0} \
+   CONFIG.C_SLOT_3_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_3_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_3_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_4_APC_EN {0} \
+   CONFIG.C_SLOT_4_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_4_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_4_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_5_APC_EN {0} \
+   CONFIG.C_SLOT_5_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_5_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_5_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_6_APC_EN {0} \
+   CONFIG.C_SLOT_6_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_6_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_6_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+ ] $system_ila_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins S00_AXI] [get_bd_intf_pins axi_interconnect_1/S00_AXI]
   connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins DDR2_0] [get_bd_intf_pins mig_7series_0/DDR2]
   connect_bd_intf_net -intf_net Image_Process_M_AXIS [get_bd_intf_pins Image_Process/M_AXIS] [get_bd_intf_pins axis_switch_1/S01_AXIS]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets Image_Process_M_AXIS] [get_bd_intf_pins Image_Process/M_AXIS] [get_bd_intf_pins Image_Process/SLOT_8_AXIS]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets Image_Process_M_AXIS] [get_bd_intf_pins Image_Process/M_AXIS] [get_bd_intf_pins system_ila_0/SLOT_6_AXIS]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG {true} \
  ] [get_bd_intf_nets Image_Process_M_AXIS]
@@ -1411,12 +1389,28 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_intf_net -intf_net axi_interconnect_1_M06_AXI [get_bd_intf_pins axi_interconnect_1/M06_AXI] [get_bd_intf_pins axis_switch_1/S_AXI_CTRL]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins mig_7series_0/S_AXI]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_switch_0/S00_AXIS]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets axi_vdma_0_M_AXIS_MM2S] [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins system_ila_0/SLOT_3_AXIS]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_intf_nets axi_vdma_0_M_AXIS_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_MM2S [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets axi_vdma_0_M_AXI_MM2S] [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S] [get_bd_intf_pins system_ila_0/SLOT_1_AXI]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_intf_nets axi_vdma_0_M_AXI_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_S2MM [get_bd_intf_pins axi_smc/S01_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets axi_vdma_0_M_AXI_S2MM] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM] [get_bd_intf_pins system_ila_0/SLOT_0_AXI]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_intf_nets axi_vdma_0_M_AXI_S2MM]
   connect_bd_intf_net -intf_net axis_switch_0_M00_AXIS [get_bd_intf_pins axis_switch_1/M00_AXIS] [get_bd_intf_pins display/S_AXIS]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets axis_switch_0_M00_AXIS] [get_bd_intf_pins axis_switch_1/M00_AXIS] [get_bd_intf_pins system_ila_0/SLOT_4_AXIS]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_intf_nets axis_switch_0_M00_AXIS]
   connect_bd_intf_net -intf_net axis_switch_1_M00_AXIS [get_bd_intf_pins axis_switch_0/M00_AXIS] [get_bd_intf_pins axis_switch_1/S00_AXIS]
   connect_bd_intf_net -intf_net axis_switch_1_M01_AXIS [get_bd_intf_pins Image_Process/S_AXIS] [get_bd_intf_pins axis_switch_0/M01_AXIS]
-  connect_bd_intf_net -intf_net [get_bd_intf_nets axis_switch_1_M01_AXIS] [get_bd_intf_pins Image_Process/SLOT_7_AXIS] [get_bd_intf_pins axis_switch_0/M01_AXIS]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets axis_switch_1_M01_AXIS] [get_bd_intf_pins axis_switch_0/M01_AXIS] [get_bd_intf_pins system_ila_0/SLOT_5_AXIS]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG {true} \
  ] [get_bd_intf_nets axis_switch_1_M01_AXIS]
@@ -1424,6 +1418,10 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_intf_net -intf_net cmos2axis_cmos_pwdn [get_bd_intf_pins cmos_pwdn] [get_bd_intf_pins cmos2axis/cmos_pwdn]
   connect_bd_intf_net -intf_net cmos2axis_cmos_rst [get_bd_intf_pins cmos_rst] [get_bd_intf_pins cmos2axis/cmos_rst]
   connect_bd_intf_net -intf_net cmos2axis_video_out [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM] [get_bd_intf_pins cmos2axis/video_out]
+  connect_bd_intf_net -intf_net [get_bd_intf_nets cmos2axis_video_out] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM] [get_bd_intf_pins system_ila_0/SLOT_2_AXIS]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_intf_nets cmos2axis_video_out]
 
   # Create port connections
   connect_bd_net -net CLK_i_1 [get_bd_pins clk_and_reset/clk_24M] [get_bd_pins cmos2axis/clk_24M]
@@ -1431,9 +1429,9 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net M04_ARESETN_1 [get_bd_pins interconnect_aresetn] [get_bd_pins axi_interconnect_1/ARESETN] [get_bd_pins axi_interconnect_1/M00_ARESETN] [get_bd_pins axi_interconnect_1/M01_ARESETN] [get_bd_pins axi_interconnect_1/M02_ARESETN] [get_bd_pins axi_interconnect_1/M03_ARESETN] [get_bd_pins axi_interconnect_1/M04_ARESETN] [get_bd_pins axi_interconnect_1/M05_ARESETN] [get_bd_pins axi_interconnect_1/M06_ARESETN] [get_bd_pins axi_interconnect_1/S00_ARESETN]
   connect_bd_net -net aresetn_1 [get_bd_pins axi_smc/aresetn] [get_bd_pins clk_and_reset/peripheral_aresetn_81M] [get_bd_pins mig_7series_0/aresetn]
   connect_bd_net -net axi_resetn_1 [get_bd_pins axi_resetn] [get_bd_pins Image_Process/axi_resetn] [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins axis_switch_0/s_axi_ctrl_aresetn] [get_bd_pins axis_switch_1/s_axi_ctrl_aresetn] [get_bd_pins cmos2axis/axi_resetn]
-  connect_bd_net -net clk_and_reset_clk_200M [get_bd_pins Image_Process/axis_clk] [get_bd_pins Image_Process/clk] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axis_switch_0/aclk] [get_bd_pins axis_switch_1/aclk] [get_bd_pins clk_and_reset/clk_200M] [get_bd_pins cmos2axis/axis_clk] [get_bd_pins display/axis_clk] [get_bd_pins mig_7series_0/sys_clk_i]
+  connect_bd_net -net clk_and_reset_clk_200M [get_bd_pins Image_Process/axis_clk] [get_bd_pins axi_smc/aclk1] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axis_switch_0/aclk] [get_bd_pins axis_switch_1/aclk] [get_bd_pins clk_and_reset/clk_200M] [get_bd_pins cmos2axis/axis_clk] [get_bd_pins display/axis_clk] [get_bd_pins mig_7series_0/sys_clk_i] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net clk_and_reset_locked [get_bd_pins clk_and_reset/locked] [get_bd_pins cmos2axis/aclken]
-  connect_bd_net -net clk_and_reset_peripheral_aresetn_200M [get_bd_pins Image_Process/axis_resetn] [get_bd_pins Image_Process/resetn] [get_bd_pins axis_switch_0/aresetn] [get_bd_pins axis_switch_1/aresetn] [get_bd_pins clk_and_reset/peripheral_aresetn_200M] [get_bd_pins cmos2axis/axis_resetn] [get_bd_pins display/axis_resetn]
+  connect_bd_net -net clk_and_reset_peripheral_aresetn_200M [get_bd_pins Image_Process/axis_resetn] [get_bd_pins axis_switch_0/aresetn] [get_bd_pins axis_switch_1/aresetn] [get_bd_pins clk_and_reset/peripheral_aresetn_200M] [get_bd_pins cmos2axis/axis_resetn] [get_bd_pins display/axis_resetn] [get_bd_pins system_ila_0/resetn]
   connect_bd_net -net clk_wiz_clk_25M [get_bd_pins clk_and_reset/clk_25M] [get_bd_pins display/clk_25M]
   connect_bd_net -net cmos2axis_cmos_xclk_o_0 [get_bd_pins cmos_xclk_o_0] [get_bd_pins cmos2axis/cmos_xclk_o_0]
   connect_bd_net -net cmos2axis_iic2intc_irpt [get_bd_pins iic2intc_irpt] [get_bd_pins cmos2axis/iic2intc_irpt]
@@ -1447,12 +1445,13 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net display_vga_pRed_0 [get_bd_pins vga_pRed_0] [get_bd_pins display/vga_pRed_0]
   connect_bd_net -net display_vga_pVSync_0 [get_bd_pins vga_pVSync_0] [get_bd_pins display/vga_pVSync_0]
   connect_bd_net -net mig_7series_0_mmcm_locked [get_bd_pins clk_and_reset/ddr_locked] [get_bd_pins mig_7series_0/mmcm_locked]
-  connect_bd_net -net mig_7series_0_ui_clk [get_bd_pins axi_interconnect_1/M03_ACLK] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins clk_and_reset/ddr_clk_81M] [get_bd_pins mig_7series_0/ui_clk]
+  connect_bd_net -net mig_7series_0_ui_clk [get_bd_pins axi_interconnect_1/M03_ACLK] [get_bd_pins axi_smc/aclk] [get_bd_pins clk_and_reset/ddr_clk_81M] [get_bd_pins mig_7series_0/ui_clk]
   connect_bd_net -net mig_7series_0_ui_clk_sync_rst [get_bd_pins clk_and_reset/ddr_reset] [get_bd_pins mig_7series_0/ui_clk_sync_rst]
   connect_bd_net -net proc_sys_reset_0_peripheral_reset [get_bd_pins clk_and_reset/peripheral_reset_25M] [get_bd_pins cmos2axis/reset_25M] [get_bd_pins display/reset_25M]
   connect_bd_net -net reset_0_1 [get_bd_pins reset] [get_bd_pins clk_and_reset/sys_reset] [get_bd_pins mig_7series_0/sys_rst]
   connect_bd_net -net resetn_1 [get_bd_pins clk_and_reset/peripheral_aresetn_25M] [get_bd_pins display/resetn_25M]
   connect_bd_net -net s_axi_lite_aclk_1 [get_bd_pins s_axi_lite_aclk] [get_bd_pins Image_Process/axi_clk] [get_bd_pins axi_interconnect_1/ACLK] [get_bd_pins axi_interconnect_1/M00_ACLK] [get_bd_pins axi_interconnect_1/M01_ACLK] [get_bd_pins axi_interconnect_1/M02_ACLK] [get_bd_pins axi_interconnect_1/M04_ACLK] [get_bd_pins axi_interconnect_1/M05_ACLK] [get_bd_pins axi_interconnect_1/M06_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins axis_switch_0/s_axi_ctrl_aclk] [get_bd_pins axis_switch_1/s_axi_ctrl_aclk] [get_bd_pins cmos2axis/axi_clk]
+  connect_bd_net -net shift_0_1 [get_bd_pins shift_0] [get_bd_pins Image_Process/shift_0]
   connect_bd_net -net sys_clock_1 [get_bd_pins sys_clock] [get_bd_pins clk_and_reset/sys_clock]
 
   # Restore current instance
@@ -1776,6 +1775,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_LOW} \
  ] $reset
+  set shift_0 [ create_bd_port -dir I -from 2 -to 0 shift_0 ]
   set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
@@ -1983,6 +1983,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net proc_sys_reset_1_interconnect_aresetn [get_bd_pins Clocks_and_Resets/peripheral_aresetn] [get_bd_pins LCD/s_axi_aresetn] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_protocol_convert_0/aresetn] [get_bd_pins axi_timer_0/s_axi_aresetn] [get_bd_pins axi_uart16550_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins axi_uartlite_keyboard/s_axi_aresetn] [get_bd_pins ov_cmos/axi_resetn]
   connect_bd_net -net proc_sys_reset_1_peripheral_aresetn [get_bd_pins Clocks_and_Resets/interconnect_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/M04_ARESETN] [get_bd_pins axi_interconnect_0/M05_ARESETN] [get_bd_pins axi_interconnect_0/M06_ARESETN] [get_bd_pins axi_interconnect_0/M07_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins ov_cmos/interconnect_aresetn]
   connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins Clocks_and_Resets/sys_reset_n] [get_bd_pins ov_cmos/reset]
+  connect_bd_net -net shift_0_1 [get_bd_ports shift_0] [get_bd_pins ov_cmos/shift_0]
   connect_bd_net -net sin_0_1 [get_bd_ports uart_wifi_rx] [get_bd_pins axi_uart16550_0/sin]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins Clocks_and_Resets/sys_clock]
   connect_bd_net -net sys_clock_2 [get_bd_pins Clocks_and_Resets/clk_100M] [get_bd_pins ov_cmos/sys_clock]
@@ -2007,12 +2008,13 @@ proc create_root_design { parentCell } {
   create_bd_addr_seg -range 0x00010000 -offset 0x44AA0000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/axis_switch_1/S_AXI_CTRL/Reg] SEG_axis_switch_1_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A50000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/contrast/contrast_hls_rom_0/s_axi_AXILiteS/Reg] SEG_contrast_hls_rom_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A60000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/drawlines/draw_line_hls_0/s_axi_AXILiteS/Reg] SEG_draw_line_hls_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x40010000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/gpio_ap_ctrl/S_AXI/Reg] SEG_gpio_ap_ctrl_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44AC0000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/contrast/judge_1/S_AXI/S_AXI_reg] SEG_judge_1_S_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/mask_0/s_axi_AXILiteS/Reg] SEG_mask_0_Reg
   create_bd_addr_seg -range 0x08000000 -offset 0x80000000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/mig_7series_0/memmap/memaddr] SEG_mig_7series_0_memaddr
   create_bd_addr_seg -range 0x00010000 -offset 0x44A70000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/projection1/projection1_hls_0/s_axi_AXILiteS/Reg] SEG_projection1_hls_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A80000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/projection_mul_hls_0/s_axi_AXILiteS/Reg] SEG_projection_mul_hls_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A90000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/resize/resize_hls_axis_0/s_axi_AXILiteS/Reg] SEG_resize_hls_axis_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x44A90000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/resize/reorder_resize_0/s_axi_AXILiteS/Reg] SEG_reorder_resize_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x44A40000 [get_bd_addr_spaces Cortex_M3_0/CM3_SYS_AXI3] [get_bd_addr_segs ov_cmos/Image_Process/threshold2_0/s_axi_AXILiteS/Reg] SEG_threshold2_0_Reg
   create_bd_addr_seg -range 0x08000000 -offset 0x80000000 [get_bd_addr_spaces ov_cmos/axi_vdma_0/Data_MM2S] [get_bd_addr_segs ov_cmos/mig_7series_0/memmap/memaddr] SEG_mig_7series_0_memaddr
   create_bd_addr_seg -range 0x08000000 -offset 0x80000000 [get_bd_addr_spaces ov_cmos/axi_vdma_0/Data_S2MM] [get_bd_addr_segs ov_cmos/mig_7series_0/memmap/memaddr] SEG_mig_7series_0_memaddr

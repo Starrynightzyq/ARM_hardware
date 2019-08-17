@@ -21,11 +21,17 @@
 
 
 module resize_ctrl #(
-	parameter ALL_CHAR = 0,
+	parameter ALL_CHAR = 1,
 	parameter CHAR_NUM = 7
 	)(
 	input clk,
 	input rst_n,
+
+	/* axis2ram 控制口输入 */
+	input axis2ram_done,
+
+	/* resize 控制口 */
+	output resize_continue,
 
 	/* bound ram 输出接口 */
 	input  [15:0] bound_x_min_i,
@@ -58,6 +64,9 @@ module resize_ctrl #(
     );
 
 	// parameter RESIZE_INDEX_MAX = 28*28;
+	// 
+	localparam [0:0] IDLE = 1'b0;
+	localparam [0:0] RESIZE_ON = 1'b1;
 
 	reg [2:0] character_index = 0;
 	reg [2:0] character_index_r0 = 0;
@@ -75,6 +84,7 @@ module resize_ctrl #(
 	reg [0:0] resize_o_d_r1 = 'b0;
 
 	wire resize_end;
+	wire resize_start;
 
 	wire [63:0] ram_i_pack;
 	reg [63:0] ram_i_pack_r;
@@ -97,33 +107,24 @@ module resize_ctrl #(
 	// reg resize_interrupt_r2;
 	wire resize_interrupt_p; // 上升沿
 
+	reg axis2ram_done_delay;
+	wire axis2ram_done_r;
+
+	reg [0:0] fsm_state;
+
 	always @(posedge clk) begin : proc_resize_interrupt_r0
 		resize_interrupt_r0 <= resize_interrupt;
+		axis2ram_done_delay <= axis2ram_done;
 		// resize_interrupt_r1 <= resize_interrupt_r0;
 		// resize_interrupt_r2 <= resize_interrupt_r1;
 	end
 	assign resize_interrupt_p = (!resize_interrupt_r0)&&(resize_interrupt);
+	assign axis2ram_done_r = (!axis2ram_done_delay)&&(axis2ram_done);
 
-	// always @(posedge clk) begin
-	// 	resize_o_addr_r0 <= resize_o_addr;
-	// 	resize_o_ce_r0 <= resize_o_ce;
-	// 	resize_o_we_r0 <= resize_o_we;
-	// 	resize_o_d_r0 <= resize_o_d;
-	// end
-
-	// always @(posedge clk) begin
-	// 	resize_o_addr_r1 <= resize_o_addr_r0;
-	// 	resize_o_ce_r1 <= resize_o_ce_r0;
-	// 	resize_o_we_r1 <= resize_o_we_r0;
-	// 	resize_o_d_r1 <= resize_o_d_r0;
-	// end
-
-	// assign resize_data_r1_valid = resize_o_ce_r1 && resize_o_we_r1;
 	assign resize_end = resize_interrupt_p;
+	assign resize_start = axis2ram_done_r;
 
-	generate
-		if(ALL_CHAR) begin
-			always @(posedge clk or negedge rst_n) begin
+/*			always @(posedge clk or negedge rst_n) begin
 				if(~rst_n) begin
 					character_index <= 0;
 				end else if(resize_end) begin
@@ -133,22 +134,53 @@ module resize_ctrl #(
 						character_index <= character_index + 'b1;
 					end
 				end
-			end
-		end else begin 
-			always @(posedge clk or negedge rst_n) begin
-				if(~rst_n) begin
-					character_index <= CHAR_NUM-5;
-				end else if(resize_end) begin
-					if(character_index == CHAR_NUM - 1) begin
-						character_index <= CHAR_NUM-5;
+			end*/
+
+	always @(posedge clk or negedge rst_n) begin : proc_fsm_state
+		if(~rst_n) begin
+			fsm_state <= IDLE;
+		end else begin
+			case (fsm_state)
+				IDLE : begin 
+					if(resize_start) begin
+						fsm_state <= RESIZE_ON;
 					end else begin 
-						character_index <= character_index + 'b1;
+						fsm_state <= IDLE;
 					end
 				end
-			end
+				RESIZE_ON : begin 
+					if((character_index == CHAR_NUM - 1) && (resize_end)) begin
+						fsm_state <= IDLE;
+					end else begin 
+						fsm_state <= RESIZE_ON;
+					end
+				end
+				default : fsm_state <= IDLE;
+			endcase
 		end
-	endgenerate
+	end
 
+	always @(posedge clk or negedge rst_n) begin : proc_character_index
+		if(~rst_n) begin
+			character_index <= 0;
+		end else begin
+			case (fsm_state)
+				IDLE : begin 
+					character_index <= 0;
+				end
+				RESIZE_ON : begin 
+					if(resize_end) begin
+						if(character_index == CHAR_NUM - 1) begin
+							character_index <= 'b0;
+						end else begin 
+							character_index <= character_index + 'b1;
+						end
+					end
+				end
+				default : character_index <= 0;
+			endcase
+		end
+	end
 
 	always @(posedge clk) begin : proc_character_index_r1
 		character_index_r0 <= character_index;
@@ -183,6 +215,8 @@ module resize_ctrl #(
 
 	assign bound_x_min_addr = character_index; // just for test
 	assign bound_x_max_addr = character_index; // just for test
+
+	assign resize_continue = ((character_index < CHAR_NUM - 1) && fsm_state == RESIZE_ON) ? 1'b1 : 1'b0;
 
 	// assign resize_ram_i_addr = {character_index_r1, resize_o_addr_r1}; // just for test
 	// assign resize_ram_i_ce = resize_o_ce_r1;

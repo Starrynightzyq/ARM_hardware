@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Mon Jul 22 23:36:05 2019
+// Date        : Wed Aug 14 10:05:09 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               V:/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_resize_ctrl_0_0/m3_for_arty_a7_resize_ctrl_0_0_sim_netlist.v
+//               C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_resize_ctrl_0_0/m3_for_arty_a7_resize_ctrl_0_0_sim_netlist.v
 // Design      : m3_for_arty_a7_resize_ctrl_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,6 +18,8 @@
 module m3_for_arty_a7_resize_ctrl_0_0
    (clk,
     rst_n,
+    axis2ram_done,
+    resize_continue,
     bound_x_min_i,
     bound_x_max_i,
     bound_y_min_i,
@@ -31,6 +33,8 @@ module m3_for_arty_a7_resize_ctrl_0_0
     bound_y_max_o);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN /ov_cmos/clk_and_reset/clk_wiz_1_clk_out1" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW" *) input rst_n;
+  input axis2ram_done;
+  output resize_continue;
   input [15:0]bound_x_min_i;
   input [15:0]bound_x_max_i;
   input [15:0]bound_y_min_i;
@@ -43,6 +47,7 @@ module m3_for_arty_a7_resize_ctrl_0_0
   output [15:0]bound_y_min_o;
   output [15:0]bound_y_max_o;
 
+  wire axis2ram_done;
   wire [15:0]bound_x_max_i;
   wire [15:0]bound_x_max_o;
   wire [2:0]bound_x_min_addr;
@@ -53,42 +58,63 @@ module m3_for_arty_a7_resize_ctrl_0_0
   wire [15:0]bound_y_min_i;
   wire [15:0]bound_y_min_o;
   wire clk;
+  wire resize_continue;
   wire resize_interrupt;
   wire rst_n;
 
   assign bound_x_max_addr[2:0] = bound_x_min_addr;
   m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl inst
        (.D({bound_x_min_i,bound_x_max_i,bound_y_min_i,bound_y_max_i}),
-        .Q(bound_x_min_addr),
-        .\bound_x_min_o[15] ({bound_x_min_o,bound_x_max_o,bound_y_min_o,bound_y_max_o}),
+        .Q({bound_x_min_o,bound_x_max_o,bound_y_min_o,bound_y_max_o}),
+        .axis2ram_done(axis2ram_done),
+        .\bound_x_min_addr[0] (bound_x_min_addr[0]),
+        .\bound_x_min_addr[1] (bound_x_min_addr[1]),
+        .\bound_x_min_addr[2] (bound_x_min_addr[2]),
         .clk(clk),
+        .resize_continue(resize_continue),
         .resize_interrupt(resize_interrupt),
         .rst_n(rst_n));
 endmodule
 
 (* ORIG_REF_NAME = "resize_ctrl" *) 
 module m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl
-   (Q,
-    \bound_x_min_o[15] ,
+   (\bound_x_min_addr[0] ,
+    \bound_x_min_addr[1] ,
+    \bound_x_min_addr[2] ,
+    Q,
+    resize_continue,
     resize_interrupt,
     clk,
+    axis2ram_done,
     D,
     rst_n);
-  output [2:0]Q;
-  output [63:0]\bound_x_min_o[15] ;
+  output \bound_x_min_addr[0] ;
+  output \bound_x_min_addr[1] ;
+  output \bound_x_min_addr[2] ;
+  output [63:0]Q;
+  output resize_continue;
   input resize_interrupt;
   input clk;
+  input axis2ram_done;
   input [63:0]D;
   input rst_n;
 
   wire [63:0]D;
-  wire [2:0]Q;
-  wire [63:0]\bound_x_min_o[15] ;
+  wire [63:0]Q;
+  wire axis2ram_done;
+  wire axis2ram_done_delay;
+  wire \bound_x_min_addr[0] ;
+  wire \bound_x_min_addr[1] ;
+  wire \bound_x_min_addr[2] ;
   wire \character_index[0]_i_1_n_0 ;
   wire \character_index[1]_i_1_n_0 ;
+  wire \character_index[2]_i_1_n_0 ;
   wire \character_index[2]_i_2_n_0 ;
-  wire character_index_n_0;
   wire clk;
+  wire fsm_state;
+  wire fsm_state2;
+  wire \fsm_state[0]_i_1_n_0 ;
+  wire p_1_in;
   wire ram_i_pack_r;
   wire ram_i_pack_r1;
   wire ram_i_pack_r10_in;
@@ -138,10 +164,10 @@ module m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl
   wire ram_i_pack_r1_carry_n_1;
   wire ram_i_pack_r1_carry_n_2;
   wire ram_i_pack_r1_carry_n_3;
+  wire resize_continue;
   wire resize_end_r1;
   wire resize_end_r2;
   wire resize_interrupt;
-  wire resize_interrupt_p;
   wire resize_interrupt_r0;
   wire rst_n;
   wire [3:0]NLW_ram_i_pack_r1__7_carry_O_UNCONNECTED;
@@ -156,34 +182,42 @@ module m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl
         .I1(ram_i_pack_r1),
         .I2(ram_i_pack_r10_in),
         .O(ram_i_pack_r));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h64)) 
-    character_index
-       (.I0(Q[1]),
-        .I1(Q[2]),
-        .I2(Q[0]),
-        .O(character_index_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h07)) 
+  FDRE axis2ram_done_delay_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(axis2ram_done),
+        .Q(axis2ram_done_delay),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'hF0FF000007000000)) 
     \character_index[0]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[2]),
-        .I2(Q[0]),
+       (.I0(\bound_x_min_addr[2] ),
+        .I1(\bound_x_min_addr[1] ),
+        .I2(resize_interrupt_r0),
+        .I3(resize_interrupt),
+        .I4(fsm_state),
+        .I5(\bound_x_min_addr[0] ),
         .O(\character_index[0]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
+  LUT6 #(
+    .INIT(64'hF1FF00000A000000)) 
     \character_index[1]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[0]),
+       (.I0(\bound_x_min_addr[0] ),
+        .I1(\bound_x_min_addr[2] ),
+        .I2(resize_interrupt_r0),
+        .I3(resize_interrupt),
+        .I4(fsm_state),
+        .I5(\bound_x_min_addr[1] ),
         .O(\character_index[1]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT6 #(
+    .INIT(64'hF3FF000008000000)) 
     \character_index[2]_i_1 
-       (.I0(resize_interrupt),
-        .I1(resize_interrupt_r0),
-        .O(resize_interrupt_p));
+       (.I0(\bound_x_min_addr[0] ),
+        .I1(\bound_x_min_addr[1] ),
+        .I2(resize_interrupt_r0),
+        .I3(resize_interrupt),
+        .I4(fsm_state),
+        .I5(\bound_x_min_addr[2] ),
+        .O(\character_index[2]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \character_index[2]_i_2 
@@ -193,26 +227,50 @@ module m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl
     .INIT(1'b0)) 
     \character_index_reg[0] 
        (.C(clk),
-        .CE(resize_interrupt_p),
+        .CE(1'b1),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(\character_index[0]_i_1_n_0 ),
-        .Q(Q[0]));
-  FDPE #(
+        .Q(\bound_x_min_addr[0] ));
+  FDCE #(
     .INIT(1'b0)) 
     \character_index_reg[1] 
        (.C(clk),
-        .CE(resize_interrupt_p),
+        .CE(1'b1),
+        .CLR(\character_index[2]_i_2_n_0 ),
         .D(\character_index[1]_i_1_n_0 ),
-        .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(Q[1]));
+        .Q(\bound_x_min_addr[1] ));
   FDCE #(
     .INIT(1'b0)) 
     \character_index_reg[2] 
        (.C(clk),
-        .CE(resize_interrupt_p),
+        .CE(1'b1),
         .CLR(\character_index[2]_i_2_n_0 ),
-        .D(character_index_n_0),
-        .Q(Q[2]));
+        .D(\character_index[2]_i_1_n_0 ),
+        .Q(\bound_x_min_addr[2] ));
+  LUT6 #(
+    .INIT(64'hDF00DF00DFFFDF00)) 
+    \fsm_state[0]_i_1 
+       (.I0(fsm_state2),
+        .I1(resize_interrupt_r0),
+        .I2(resize_interrupt),
+        .I3(fsm_state),
+        .I4(axis2ram_done),
+        .I5(axis2ram_done_delay),
+        .O(\fsm_state[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \fsm_state[0]_i_2 
+       (.I0(\bound_x_min_addr[0] ),
+        .I1(\bound_x_min_addr[2] ),
+        .I2(\bound_x_min_addr[1] ),
+        .O(fsm_state2));
+  FDCE \fsm_state_reg[0] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(\character_index[2]_i_2_n_0 ),
+        .D(\fsm_state[0]_i_1_n_0 ),
+        .Q(fsm_state));
   CARRY4 ram_i_pack_r1__7_carry
        (.CI(1'b0),
         .CO({ram_i_pack_r1__7_carry_n_0,ram_i_pack_r1__7_carry_n_1,ram_i_pack_r1__7_carry_n_2,ram_i_pack_r1__7_carry_n_3}),
@@ -502,391 +560,405 @@ module m3_for_arty_a7_resize_ctrl_0_0_resize_ctrl
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[0]),
-        .Q(\bound_x_min_o[15] [0]));
+        .Q(Q[0]));
   FDCE \ram_i_pack_r_reg[10] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[10]),
-        .Q(\bound_x_min_o[15] [10]));
+        .Q(Q[10]));
   FDCE \ram_i_pack_r_reg[11] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[11]),
-        .Q(\bound_x_min_o[15] [11]));
+        .Q(Q[11]));
   FDCE \ram_i_pack_r_reg[12] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[12]),
-        .Q(\bound_x_min_o[15] [12]));
+        .Q(Q[12]));
   FDCE \ram_i_pack_r_reg[13] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[13]),
-        .Q(\bound_x_min_o[15] [13]));
+        .Q(Q[13]));
   FDCE \ram_i_pack_r_reg[14] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[14]),
-        .Q(\bound_x_min_o[15] [14]));
+        .Q(Q[14]));
   FDCE \ram_i_pack_r_reg[15] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[15]),
-        .Q(\bound_x_min_o[15] [15]));
+        .Q(Q[15]));
   FDCE \ram_i_pack_r_reg[16] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[16]),
-        .Q(\bound_x_min_o[15] [16]));
+        .Q(Q[16]));
   FDCE \ram_i_pack_r_reg[17] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[17]),
-        .Q(\bound_x_min_o[15] [17]));
+        .Q(Q[17]));
   FDPE \ram_i_pack_r_reg[18] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[18]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [18]));
+        .Q(Q[18]));
   FDCE \ram_i_pack_r_reg[19] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[19]),
-        .Q(\bound_x_min_o[15] [19]));
+        .Q(Q[19]));
   FDCE \ram_i_pack_r_reg[1] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[1]),
-        .Q(\bound_x_min_o[15] [1]));
+        .Q(Q[1]));
   FDCE \ram_i_pack_r_reg[20] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[20]),
-        .Q(\bound_x_min_o[15] [20]));
+        .Q(Q[20]));
   FDPE \ram_i_pack_r_reg[21] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[21]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [21]));
+        .Q(Q[21]));
   FDPE \ram_i_pack_r_reg[22] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[22]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [22]));
+        .Q(Q[22]));
   FDCE \ram_i_pack_r_reg[23] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[23]),
-        .Q(\bound_x_min_o[15] [23]));
+        .Q(Q[23]));
   FDCE \ram_i_pack_r_reg[24] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[24]),
-        .Q(\bound_x_min_o[15] [24]));
+        .Q(Q[24]));
   FDCE \ram_i_pack_r_reg[25] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[25]),
-        .Q(\bound_x_min_o[15] [25]));
+        .Q(Q[25]));
   FDCE \ram_i_pack_r_reg[26] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[26]),
-        .Q(\bound_x_min_o[15] [26]));
+        .Q(Q[26]));
   FDCE \ram_i_pack_r_reg[27] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[27]),
-        .Q(\bound_x_min_o[15] [27]));
+        .Q(Q[27]));
   FDCE \ram_i_pack_r_reg[28] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[28]),
-        .Q(\bound_x_min_o[15] [28]));
+        .Q(Q[28]));
   FDCE \ram_i_pack_r_reg[29] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[29]),
-        .Q(\bound_x_min_o[15] [29]));
+        .Q(Q[29]));
   FDPE \ram_i_pack_r_reg[2] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[2]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [2]));
+        .Q(Q[2]));
   FDCE \ram_i_pack_r_reg[30] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[30]),
-        .Q(\bound_x_min_o[15] [30]));
+        .Q(Q[30]));
   FDCE \ram_i_pack_r_reg[31] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[31]),
-        .Q(\bound_x_min_o[15] [31]));
+        .Q(Q[31]));
   FDCE \ram_i_pack_r_reg[32] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[32]),
-        .Q(\bound_x_min_o[15] [32]));
+        .Q(Q[32]));
   FDCE \ram_i_pack_r_reg[33] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[33]),
-        .Q(\bound_x_min_o[15] [33]));
+        .Q(Q[33]));
   FDPE \ram_i_pack_r_reg[34] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[34]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [34]));
+        .Q(Q[34]));
   FDPE \ram_i_pack_r_reg[35] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[35]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [35]));
+        .Q(Q[35]));
   FDCE \ram_i_pack_r_reg[36] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[36]),
-        .Q(\bound_x_min_o[15] [36]));
+        .Q(Q[36]));
   FDPE \ram_i_pack_r_reg[37] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[37]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [37]));
+        .Q(Q[37]));
   FDCE \ram_i_pack_r_reg[38] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[38]),
-        .Q(\bound_x_min_o[15] [38]));
+        .Q(Q[38]));
   FDCE \ram_i_pack_r_reg[39] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[39]),
-        .Q(\bound_x_min_o[15] [39]));
+        .Q(Q[39]));
   FDPE \ram_i_pack_r_reg[3] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[3]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [3]));
+        .Q(Q[3]));
   FDPE \ram_i_pack_r_reg[40] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[40]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [40]));
+        .Q(Q[40]));
   FDCE \ram_i_pack_r_reg[41] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[41]),
-        .Q(\bound_x_min_o[15] [41]));
+        .Q(Q[41]));
   FDCE \ram_i_pack_r_reg[42] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[42]),
-        .Q(\bound_x_min_o[15] [42]));
+        .Q(Q[42]));
   FDCE \ram_i_pack_r_reg[43] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[43]),
-        .Q(\bound_x_min_o[15] [43]));
+        .Q(Q[43]));
   FDCE \ram_i_pack_r_reg[44] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[44]),
-        .Q(\bound_x_min_o[15] [44]));
+        .Q(Q[44]));
   FDCE \ram_i_pack_r_reg[45] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[45]),
-        .Q(\bound_x_min_o[15] [45]));
+        .Q(Q[45]));
   FDCE \ram_i_pack_r_reg[46] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[46]),
-        .Q(\bound_x_min_o[15] [46]));
+        .Q(Q[46]));
   FDCE \ram_i_pack_r_reg[47] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[47]),
-        .Q(\bound_x_min_o[15] [47]));
+        .Q(Q[47]));
   FDCE \ram_i_pack_r_reg[48] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[48]),
-        .Q(\bound_x_min_o[15] [48]));
+        .Q(Q[48]));
   FDCE \ram_i_pack_r_reg[49] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[49]),
-        .Q(\bound_x_min_o[15] [49]));
+        .Q(Q[49]));
   FDCE \ram_i_pack_r_reg[4] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[4]),
-        .Q(\bound_x_min_o[15] [4]));
+        .Q(Q[4]));
   FDPE \ram_i_pack_r_reg[50] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[50]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [50]));
+        .Q(Q[50]));
   FDCE \ram_i_pack_r_reg[51] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[51]),
-        .Q(\bound_x_min_o[15] [51]));
+        .Q(Q[51]));
   FDCE \ram_i_pack_r_reg[52] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[52]),
-        .Q(\bound_x_min_o[15] [52]));
+        .Q(Q[52]));
   FDPE \ram_i_pack_r_reg[53] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[53]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [53]));
+        .Q(Q[53]));
   FDPE \ram_i_pack_r_reg[54] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[54]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [54]));
+        .Q(Q[54]));
   FDCE \ram_i_pack_r_reg[55] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[55]),
-        .Q(\bound_x_min_o[15] [55]));
+        .Q(Q[55]));
   FDCE \ram_i_pack_r_reg[56] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[56]),
-        .Q(\bound_x_min_o[15] [56]));
+        .Q(Q[56]));
   FDCE \ram_i_pack_r_reg[57] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[57]),
-        .Q(\bound_x_min_o[15] [57]));
+        .Q(Q[57]));
   FDCE \ram_i_pack_r_reg[58] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[58]),
-        .Q(\bound_x_min_o[15] [58]));
+        .Q(Q[58]));
   FDCE \ram_i_pack_r_reg[59] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[59]),
-        .Q(\bound_x_min_o[15] [59]));
+        .Q(Q[59]));
   FDPE \ram_i_pack_r_reg[5] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[5]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [5]));
+        .Q(Q[5]));
   FDCE \ram_i_pack_r_reg[60] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[60]),
-        .Q(\bound_x_min_o[15] [60]));
+        .Q(Q[60]));
   FDCE \ram_i_pack_r_reg[61] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[61]),
-        .Q(\bound_x_min_o[15] [61]));
+        .Q(Q[61]));
   FDCE \ram_i_pack_r_reg[62] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[62]),
-        .Q(\bound_x_min_o[15] [62]));
+        .Q(Q[62]));
   FDCE \ram_i_pack_r_reg[63] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[63]),
-        .Q(\bound_x_min_o[15] [63]));
+        .Q(Q[63]));
   FDCE \ram_i_pack_r_reg[6] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[6]),
-        .Q(\bound_x_min_o[15] [6]));
+        .Q(Q[6]));
   FDCE \ram_i_pack_r_reg[7] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[7]),
-        .Q(\bound_x_min_o[15] [7]));
+        .Q(Q[7]));
   FDPE \ram_i_pack_r_reg[8] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .D(D[8]),
         .PRE(\character_index[2]_i_2_n_0 ),
-        .Q(\bound_x_min_o[15] [8]));
+        .Q(Q[8]));
   FDCE \ram_i_pack_r_reg[9] 
        (.C(clk),
         .CE(ram_i_pack_r),
         .CLR(\character_index[2]_i_2_n_0 ),
         .D(D[9]),
-        .Q(\bound_x_min_o[15] [9]));
+        .Q(Q[9]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h70)) 
+    resize_continue_INST_0
+       (.I0(\bound_x_min_addr[2] ),
+        .I1(\bound_x_min_addr[1] ),
+        .I2(fsm_state),
+        .O(resize_continue));
+  LUT2 #(
+    .INIT(4'h2)) 
+    resize_end_r1_i_1
+       (.I0(resize_interrupt),
+        .I1(resize_interrupt_r0),
+        .O(p_1_in));
   FDRE #(
     .INIT(1'b0)) 
     resize_end_r1_reg
        (.C(clk),
         .CE(1'b1),
-        .D(resize_interrupt_p),
+        .D(p_1_in),
         .Q(resize_end_r1),
         .R(1'b0));
   FDRE #(

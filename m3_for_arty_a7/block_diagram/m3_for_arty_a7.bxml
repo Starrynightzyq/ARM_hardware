@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="m3_for_arty_a7" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1563879241"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1563879241"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1563879241"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1563879241"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1566057581"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1566057581"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1566057581"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1566057581"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\m3_for_arty_a7_axi_gpio_0_0\m3_for_arty_a7_axi_gpio_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_0"/>
@@ -410,14 +410,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\m3_for_arty_a7_resize_hls_axis_0_0\m3_for_arty_a7_resize_hls_axis_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ov_cmos/Image_Process/resize/resize_hls_axis_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\m3_for_arty_a7_contrast_hls_rom_0_0\m3_for_arty_a7_contrast_hls_rom_0_0.xci" Type="IP">
         <Instance HierarchyPath="ov_cmos/Image_Process/contrast/contrast_hls_rom_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -498,14 +490,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\m3_for_arty_a7_combine_0_0\m3_for_arty_a7_combine_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ov_cmos/Image_Process/contrast/combine_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\m3_for_arty_a7_axis_subset_converter_0_1\m3_for_arty_a7_axis_subset_converter_0_1.xci" Type="IP">
         <Instance HierarchyPath="ov_cmos/display/RGB2RBG"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -578,24 +562,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\m3_for_arty_a7_axis_subset_converter_1_0\m3_for_arty_a7_axis_subset_converter_1_0.xci" Type="IP">
-        <Instance HierarchyPath="ov_cmos/Image_Process/resize/axis_subset_converter_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\m3_for_arty_a7_xlconstant_0_0\m3_for_arty_a7_xlconstant_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ov_cmos/Image_Process/resize/xlconstant_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\m3_for_arty_a7_system_ila_0_0\m3_for_arty_a7_system_ila_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ov_cmos/Image_Process/system_ila_0"/>
+        <Instance HierarchyPath="ov_cmos/Image_Process/resize/VCC"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -604,6 +572,62 @@
       </File>
       <File Name="ip\m3_for_arty_a7_judge_1_0\m3_for_arty_a7_judge_1_0.xci" Type="IP">
         <Instance HierarchyPath="ov_cmos/Image_Process/contrast/judge_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_reorder_resize_0_0\m3_for_arty_a7_reorder_resize_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/resize/reorder_resize_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_axis2ram_0_0\m3_for_arty_a7_axis2ram_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/resize/axis2ram_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_ping_pong_ram_0_0\m3_for_arty_a7_ping_pong_ram_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/resize/ping_pong_ram_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_xlconstant_0_3\m3_for_arty_a7_xlconstant_0_3.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/resize/GND"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_combine_addr_0_0\m3_for_arty_a7_combine_addr_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/contrast/combine_addr_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_axi_gpio_0_2\m3_for_arty_a7_axi_gpio_0_2.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/gpio_ap_ctrl"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_system_ila_0_0\m3_for_arty_a7_system_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/system_ila_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -626,7 +650,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\m3_for_arty_a7_auto_cc_8\m3_for_arty_a7_auto_cc_8.xci" Type="IP">
+      <File Name="ip\m3_for_arty_a7_auto_cc_9\m3_for_arty_a7_auto_cc_9.xci" Type="IP">
         <Instance HierarchyPath="ov_cmos/axi_interconnect_1/m03_couplers/auto_cc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -652,6 +676,14 @@
       </File>
       <File Name="ip\m3_for_arty_a7_auto_pc_8\m3_for_arty_a7_auto_pc_8.xci" Type="IP">
         <Instance HierarchyPath="ov_cmos/axi_interconnect_1/m00_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\m3_for_arty_a7_auto_cc_8\m3_for_arty_a7_auto_cc_8.xci" Type="IP">
+        <Instance HierarchyPath="ov_cmos/Image_Process/axi_interconnect_0/m08_couplers/auto_cc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

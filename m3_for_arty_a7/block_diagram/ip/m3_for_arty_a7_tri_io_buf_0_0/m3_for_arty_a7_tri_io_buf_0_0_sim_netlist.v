@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Jun  7 22:51:44 2019
+// Date        : Thu Aug 15 22:07:40 2019
 // Host        : desktopzyq running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               V:/hardware_t/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0_sim_netlist.v
+//               C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/block_diagram/ip/m3_for_arty_a7_tri_io_buf_0_0/m3_for_arty_a7_tri_io_buf_0_0_sim_netlist.v
 // Design      : m3_for_arty_a7_tri_io_buf_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

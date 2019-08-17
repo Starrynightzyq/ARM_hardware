@@ -52,12 +52,14 @@
 
 (* X_CORE_INFO = "resize_ctrl,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_resize_ctrl_0_0,resize_ctrl,{}" *)
-(* CORE_GENERATION_INFO = "m3_for_arty_a7_resize_ctrl_0_0,resize_ctrl,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=resize_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,ALL_CHAR=0,CHAR_NUM=7}" *)
+(* CORE_GENERATION_INFO = "m3_for_arty_a7_resize_ctrl_0_0,resize_ctrl,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=resize_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,ALL_CHAR=1,CHAR_NUM=7}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module m3_for_arty_a7_resize_ctrl_0_0 (
   clk,
   rst_n,
+  axis2ram_done,
+  resize_continue,
   bound_x_min_i,
   bound_x_max_i,
   bound_y_min_i,
@@ -77,6 +79,8 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst_n RST" *)
 input wire rst_n;
+input wire axis2ram_done;
+output wire resize_continue;
 input wire [15 : 0] bound_x_min_i;
 input wire [15 : 0] bound_x_max_i;
 input wire [15 : 0] bound_y_min_i;
@@ -92,11 +96,13 @@ output wire [15 : 0] bound_y_min_o;
 output wire [15 : 0] bound_y_max_o;
 
   resize_ctrl #(
-    .ALL_CHAR(0),
+    .ALL_CHAR(1),
     .CHAR_NUM(7)
   ) inst (
     .clk(clk),
     .rst_n(rst_n),
+    .axis2ram_done(axis2ram_done),
+    .resize_continue(resize_continue),
     .bound_x_min_i(bound_x_min_i),
     .bound_x_max_i(bound_x_max_i),
     .bound_y_min_i(bound_y_min_i),

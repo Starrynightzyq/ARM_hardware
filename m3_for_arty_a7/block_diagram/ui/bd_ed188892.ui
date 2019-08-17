@@ -2,74 +2,69 @@
    ExpandedHierarchyInLayout: "",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
-preplace port axis_clk -pg 1 -y 420 -defaultsOSRD
-preplace port S00_AXI -pg 1 -y 360 -defaultsOSRD
-preplace port resetn -pg 1 -y 1040 -defaultsOSRD
-preplace port S_AXIS -pg 1 -y 280 -defaultsOSRD
-preplace port axis_resetn -pg 1 -y 440 -defaultsOSRD
-preplace port char_valid_co -pg 1 -y 650 -defaultsOSRD
-preplace port axi_resetn -pg 1 -y 400 -defaultsOSRD
-preplace port SLOT_8_AXIS -pg 1 -y 980 -defaultsOSRD
-preplace port SLOT_7_AXIS -pg 1 -y 960 -defaultsOSRD
-preplace port clk -pg 1 -y 1000 -defaultsOSRD
-preplace port M_AXIS -pg 1 -y 390 -defaultsOSRD
-preplace port axi_clk -pg 1 -y 380 -defaultsOSRD
-preplace inst axis_broadcaster_0 -pg 1 -lvl 6 -y 510 -defaultsOSRD
-preplace inst threshold2_0 -pg 1 -lvl 2 -y 450 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -y 120 -defaultsOSRD
-preplace inst projection1 -pg 1 -lvl 3 -y 440 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 4 -y 450 -defaultsOSRD
-preplace inst contrast -pg 1 -lvl 8 -y 660 -defaultsOSRD
-preplace inst mask_0 -pg 1 -lvl 4 -y 170 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 8 -y 930 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 560 -defaultsOSRD
-preplace inst drawlines -pg 1 -lvl 8 -y 390 -defaultsOSRD
-preplace inst projection_mul_hls_0 -pg 1 -lvl 5 -y 390 -defaultsOSRD
-preplace inst resize -pg 1 -lvl 7 -y 220 -defaultsOSRD
+preplace port axis_clk -pg 1 -y 340 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 280 -defaultsOSRD
+preplace port S_AXIS -pg 1 -y 180 -defaultsOSRD
+preplace port axis_resetn -pg 1 -y 360 -defaultsOSRD
+preplace port char_valid_co -pg 1 -y 420 -defaultsOSRD
+preplace port axi_resetn -pg 1 -y 320 -defaultsOSRD
+preplace port M_AXIS -pg 1 -y 700 -defaultsOSRD
+preplace port axi_clk -pg 1 -y 300 -defaultsOSRD
+preplace portBus shift_0 -pg 1 -y 200 -defaultsOSRD
+preplace inst axis_broadcaster_0 -pg 1 -lvl 6 -y 250 -defaultsOSRD
+preplace inst gpio_ap_ctrl -pg 1 -lvl 2 -y 450 -defaultsOSRD
+preplace inst threshold2_0 -pg 1 -lvl 2 -y 190 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 60 -defaultsOSRD
+preplace inst projection1 -pg 1 -lvl 3 -y 220 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 4 -y 400 -defaultsOSRD
+preplace inst contrast -pg 1 -lvl 8 -y 420 -defaultsOSRD
+preplace inst mask_0 -pg 1 -lvl 4 -y 190 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 500 -defaultsOSRD
+preplace inst drawlines -pg 1 -lvl 8 -y 700 -defaultsOSRD
+preplace inst projection_mul_hls_0 -pg 1 -lvl 5 -y 320 -defaultsOSRD
+preplace inst resize -pg 1 -lvl 7 -y 310 -defaultsOSRD
 preplace netloc Conn1 1 0 1 NJ
-preplace netloc projection_mul_hls_0_output_r 1 5 3 2150 840 NJ 840 NJ
-preplace netloc projection1_bound_x_max_o 1 3 1 1210
-preplace netloc xlconstant_1_dout 1 4 1 1680
-preplace netloc projection_mul_hls_0_bound_min_address0 1 5 3 N 420 2630 490 3190J
+preplace netloc projection_mul_hls_0_output_r 1 5 1 N
+preplace netloc projection1_bound_x_max_o 1 3 1 1120
+preplace netloc xlconstant_1_dout 1 4 1 1550
+preplace netloc projection_mul_hls_0_bound_min_address0 1 5 3 2000 370 2350 810 NJ
 preplace netloc Conn2 1 8 1 NJ
-preplace netloc axis_broadcaster_0_M00_AXIS 1 6 2 N 500 3130
-preplace netloc threshold2_0_output_r 1 2 6 800 530 NJ 530 1650J 20 NJ 20 NJ 20 3120J
-preplace netloc Conn3 1 0 8 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ
-preplace netloc bound_fsm_0_bound_y_min_o 1 3 5 1230 390 1670J 230 NJ 230 2640 420 3150J
-preplace netloc Conn4 1 0 8 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ
-preplace netloc projection1_bound_x_min_o 1 3 1 1180
-preplace netloc ACLK_1 1 0 1 70
-preplace netloc axi_interconnect_0_M02_AXI 1 1 2 370 540 780J
-preplace netloc projection_mul_hls_0_bound_max_we0 1 5 3 N 380 2690 440 NJ
-preplace netloc ARESETN_1 1 0 1 50
-preplace netloc axis_broadcaster_0_M01_AXIS 1 6 2 2570 560 3090J
+preplace netloc axis_broadcaster_0_M00_AXIS 1 6 2 2360 110 2920J
+preplace netloc threshold2_0_output_r 1 2 1 740
+preplace netloc bound_fsm_0_bound_y_min_o 1 3 5 1100 490 NJ 490 NJ 490 2410 560 2840J
+preplace netloc projection1_bound_x_min_o 1 3 1 1140
+preplace netloc ACLK_1 1 0 1 50
+preplace netloc axi_interconnect_0_M02_AXI 1 1 2 370 100 760J
+preplace netloc projection_mul_hls_0_bound_max_we0 1 5 3 2010 350 2380 750 NJ
+preplace netloc ARESETN_1 1 0 1 30
+preplace netloc axis_broadcaster_0_M01_AXIS 1 6 1 2380
 preplace netloc contrast_char_valid_c_o_0 1 8 1 NJ
-preplace netloc projection_mul_hls_0_bound_min_d0 1 5 3 2170 410 2620 480 NJ
-preplace netloc axi_interconnect_0_M07_AXI 1 1 7 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 3100
-preplace netloc input_r_1 1 0 2 NJ 280 430J
-preplace netloc axi_interconnect_0_M04_AXI 1 1 7 430 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 3140J
-preplace netloc resetn_1 1 0 8 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ
-preplace netloc clk_1 1 0 8 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ
-preplace netloc xlconstant_0_dout 1 3 1 1240
-preplace netloc contrast_char_valid_co 1 7 2 3200 760 3580
-preplace netloc projection1_output_r 1 3 5 1160 360 1630J 240 NJ 240 2560J 900 NJ
-preplace netloc axi_interconnect_0_M05_AXI 1 1 6 420J 330 NJ 330 1170J 350 1620J 200 NJ 200 2560
-preplace netloc axi_interconnect_0_M00_AXI 1 1 1 390
-preplace netloc projection_mul_hls_0_bound_min_we0 1 5 3 N 340 2610 450 3180J
-preplace netloc axi_resetn_1 1 0 8 40 290 410 310 790 310 1220 370 1680 210 2190 210 2580 570 3200
-preplace netloc axi_interconnect_0_M01_AXI 1 1 3 370 60 NJ 60 NJ
-preplace netloc resize_ctrl_0_bound_x_min_addr 1 6 2 2690 10 3170
-preplace netloc projection_mul_hls_0_bound_max_ce0 1 5 3 N 360 2670 430 3160J
-preplace netloc projection_mul_hls_0_bound_max_address0 1 5 3 2160 400 2680 520 NJ
-preplace netloc clk_200M_1 1 0 8 60 300 400 340 770 340 1190 510 1690 540 2180 390 2590 580 3210
-preplace netloc resize_M_AXIS 1 7 1 3110
-preplace netloc axi_interconnect_0_M06_AXI 1 1 7 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 N
-preplace netloc projection_mul_hls_0_bound_min_ce0 1 5 3 N 320 2600 470 3190J
-preplace netloc axi_interconnect_0_M03_AXI 1 1 4 380 320 NJ 320 1200J 340 NJ
-preplace netloc mask_0_output_r 1 4 4 1640 820 NJ 820 NJ 820 NJ
-preplace netloc projection_mul_hls_0_bound_max_d0 1 5 3 2200 430 2660 460 NJ
-preplace netloc bound_fsm_0_bound_y_max_o 1 3 5 1240 380 1660J 220 NJ 220 2650 410 3090
-levelinfo -pg 1 0 220 610 1000 1450 1940 2410 2920 3430 3630 -top 0 -bot 1100
+preplace netloc projection_mul_hls_0_bound_min_d0 1 5 3 1990 400 2430 790 N
+preplace netloc axi_interconnect_0_M07_AXI 1 1 7 NJ 560 NJ 560 NJ 560 1530J 50 NJ 50 NJ 50 2960
+preplace netloc input_r_1 1 0 2 NJ 180 NJ
+preplace netloc axi_interconnect_0_M08_AXI 1 1 1 390
+preplace netloc axi_interconnect_0_M04_AXI 1 1 7 350J 570 NJ 570 NJ 570 NJ 570 NJ 570 NJ 570 2860
+preplace netloc axi_gpio_0_gpio_io_o 1 2 5 NJ 460 NJ 460 1510J 470 NJ 470 2400
+preplace netloc xlconstant_0_dout 1 3 1 1170
+preplace netloc axi_interconnect_0_M05_AXI 1 1 6 360J 530 NJ 530 NJ 530 NJ 530 NJ 530 2390
+preplace netloc projection1_output_r 1 3 1 1160
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 360
+preplace netloc shift_0_1 1 0 8 20J 80 NJ 80 750J 330 1090J 510 NJ 510 NJ 510 NJ 510 2910J
+preplace netloc projection_mul_hls_0_bound_min_we0 1 5 3 2040 330 2370 100 2870J
+preplace netloc axi_resetn_1 1 0 8 20 220 380 280 760 310 1130 10 1560 160 2050 160 2410 80 2930
+preplace netloc axi_interconnect_0_M01_AXI 1 1 3 350 90 770J 120 1140J
+preplace netloc resize_ctrl_0_bound_x_min_addr 1 7 1 2890
+preplace netloc projection_mul_hls_0_bound_max_ce0 1 5 3 2020J 340 2440 690 NJ
+preplace netloc projection_mul_hls_0_bound_max_address0 1 5 3 N 390 2400 60 2880J
+preplace netloc clk_200M_1 1 0 8 40 210 400 290 770 320 1150 20 1550 170 2040 170 2350 90 2900
+preplace netloc resize_M_AXIS 1 7 1 2940
+preplace netloc axi_interconnect_0_M06_AXI 1 1 7 NJ 540 NJ 540 NJ 540 1520J 70 NJ 70 NJ 70 2950
+preplace netloc projection_mul_hls_0_bound_min_ce0 1 5 3 2030 360 2450 730 NJ
+preplace netloc axi_interconnect_0_M03_AXI 1 1 4 370J 550 NJ 550 NJ 550 1570
+preplace netloc mask_0_output_r 1 4 1 1540
+preplace netloc projection_mul_hls_0_bound_max_d0 1 5 3 N 410 2420 770 NJ
+preplace netloc bound_fsm_0_bound_y_max_o 1 3 5 1110 480 NJ 480 NJ 480 2460 500 2850J
+levelinfo -pg 1 -20 200 580 930 1340 1780 2200 2670 3110 3300 -top 0 -bot 880
 ",
 }
 0

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: starrynightzyq.com:user:judge:1.0
-// IP Revision: 3
+// IP Revision: 7
 
 (* X_CORE_INFO = "judge_v1_0,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "m3_for_arty_a7_judge_1_0,judge_v1_0,{}" *)
@@ -81,8 +81,8 @@ module m3_for_arty_a7_judge_1_0 (
   s_axi_aresetn
 );
 
-input wire [31 : 0] char_index_c;
-input wire [127 : 0] char_diff_c;
+input wire [27 : 0] char_index_c;
+input wire [111 : 0] char_diff_c;
 input wire char_valid_c;
 output wire char_valid_co;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *)

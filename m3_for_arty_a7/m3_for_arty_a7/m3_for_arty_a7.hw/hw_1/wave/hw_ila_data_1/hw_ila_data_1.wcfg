@@ -3,613 +3,796 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="V:/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+      <db_ref path="C:/OneDriveLocal/ARM_CP/workspace/hardware/m3_for_arty_a7/m3_for_arty_a7/m3_for_arty_a7.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="581723fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="6711fs"></ZoomEndTime>
+      <Cursor1Time time="160000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="314"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="571"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
-      <obj_property name="label">slot_0 : mask_0_output_r : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_1_axis_tready</obj_property>
-      <obj_property name="label">slot_1 : projection_mul_hls_0_output_r : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_2_axis_tready</obj_property>
-      <obj_property name="label">slot_2 : axis_broadcaster_0_M01_AXIS : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_3_axis_tready</obj_property>
-      <obj_property name="label">slot_3 : resize_M_AXIS : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_4_axis_tready</obj_property>
-      <obj_property name="label">slot_4 : projection1_output_r : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_5_axis_tready</obj_property>
-      <obj_property name="label">slot_5 : threshold2_0_output_r : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_6_axis_tready</obj_property>
-      <obj_property name="label">slot_6 : axis_broadcaster_0_M01_AXIS : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tready" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_7_axis_tready</obj_property>
-      <obj_property name="label">slot_7 : Conn3 : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tready" type="logic">
+   <WVObjectSize size="7" />
+   <wvobject fp_name="group387" type="group">
+      <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : Interface</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">net_slot_8_axis_tready</obj_property>
-      <obj_property name="label">slot_8 : Conn4 : TREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="group10" type="group">
-      <obj_property name="label">slot_0 : mask_0_output_r : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group11" type="group">
-         <obj_property name="label">slot_0 : mask_0_output_r : T Channel</obj_property>
+      <wvobject fp_name="group388" type="group">
+         <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AR Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tkeep[3:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_0_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group19" type="group">
-      <obj_property name="label">slot_1 : projection_mul_hls_0_output_r : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group20" type="group">
-         <obj_property name="label">slot_1 : projection_mul_hls_0_output_r : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tkeep[3:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_1_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group28" type="group">
-      <obj_property name="label">slot_2 : axis_broadcaster_0_M01_AXIS : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group29" type="group">
-         <obj_property name="label">slot_2 : axis_broadcaster_0_M01_AXIS : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tkeep[3:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_2_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group37" type="group">
-      <obj_property name="label">slot_3 : resize_M_AXIS : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group38" type="group">
-         <obj_property name="label">slot_3 : resize_M_AXIS : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_3_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_3_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_3_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_3_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_3_axis_tdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_3_axis_tkeep[3:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_3_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_3_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group46" type="group">
-      <obj_property name="label">slot_4 : projection1_output_r : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group47" type="group">
-         <obj_property name="label">slot_4 : projection1_output_r : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_4_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_4_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_4_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_4_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_4_axis_tdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_4_axis_tkeep[3:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_4_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_4_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group55" type="group">
-      <obj_property name="label">slot_5 : threshold2_0_output_r : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group56" type="group">
-         <obj_property name="label">slot_5 : threshold2_0_output_r : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_5_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_5_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_5_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_5_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_5_axis_tdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_5_axis_tkeep[3:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_5_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_5_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group64" type="group">
-      <obj_property name="label">slot_6 : axis_broadcaster_0_M01_AXIS : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group65" type="group">
-         <obj_property name="label">slot_6 : axis_broadcaster_0_M01_AXIS : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_6_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_6_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_6_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_6_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_6_axis_tdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_6_axis_tkeep[3:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_6_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_6_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group73" type="group">
-      <obj_property name="label">slot_7 : Conn3 : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group74" type="group">
-         <obj_property name="label">slot_7 : Conn3 : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_7_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tready" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_7_axis_tready</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_7_axis_tlast</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tdata[23:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_7_axis_tdata[23:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tkeep[2:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_7_axis_tkeep[2:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_7_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_7_axis_tuser</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group81" type="group">
-      <obj_property name="label">slot_8 : Conn4 : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group82" type="group">
-         <obj_property name="label">slot_8 : Conn4 : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_8_axis_tvalid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tready" type="logic">
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arvalid" type="logic">
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_8_axis_tready</obj_property>
-            <obj_property name="label">slot_8 : Conn4 : TREADY</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_arvalid</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : ARVALID</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tlast" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_8_axis_tlast</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_arready</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : ARREADY</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tid" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_8_axis_tid</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tdata" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tdata[23:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_8_axis_tdata[23:0]</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_araddr" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_araddr[31:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_araddr[31:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : ARADDR</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tkeep" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tkeep[2:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_8_axis_tkeep[2:0]</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arlen" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arlen[7:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_arlen[7:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : ARLEN</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
-         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tuser" type="logic">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/Image_Process/system_ila_0/inst/net_slot_8_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">net_slot_8_axis_tuser</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arsize" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_arsize[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_arsize[2:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : ARSIZE</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_ar_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_ar_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_ar_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AR_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group395" type="group">
+         <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : R Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_rvalid</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : RVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_rready</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : RREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_rlast</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : RLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_rdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_rdata[63:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : RDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_r_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_r_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_r_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : R_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group401" type="group">
+         <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AW Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_awvalid</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AWVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_awready</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AWREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awaddr" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awaddr[31:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_awaddr[31:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AWADDR</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awlen" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awlen[7:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_awlen[7:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AWLEN</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awsize" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awsize[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_awsize[2:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AWSIZE</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_aw_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_aw_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_aw_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : AW_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group408" type="group">
+         <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : W Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wvalid</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : WVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wready</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : WREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wlast</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : WLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wdata[63:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : WDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wstrb" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_wstrb[7:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wstrb[7:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : WSTRB</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group414" type="group">
+         <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : B Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_bvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_bvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_bvalid</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : BVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_bready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_bready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_bready</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : BREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_bresp" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_bresp[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_bresp[1:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : BRESP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_b_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_b_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_b_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_0 : axi_vdma_0_M_AXI_S2MM : B_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group419" type="group">
+      <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group420" type="group">
+         <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AR Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_arvalid</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : ARVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_arready</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : ARREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_araddr" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_araddr[31:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_araddr[31:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : ARADDR</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arlen" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arlen[7:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_arlen[7:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : ARLEN</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arsize" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_arsize[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_arsize[2:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : ARSIZE</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_ar_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_ar_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_ar_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AR_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group427" type="group">
+         <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : R Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_rvalid</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : RVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_rready</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : RREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_rlast</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : RLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_rdata[63:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : RDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rresp" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_rresp[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_rresp[1:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : RRESP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_r_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_r_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_r_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : R_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group434" type="group">
+         <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AW Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_awvalid</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AWVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_awready</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AWREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awaddr" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awaddr[31:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_awaddr[31:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AWADDR</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awlen" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awlen[7:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_awlen[7:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AWLEN</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awsize" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_awsize[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_awsize[2:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AWSIZE</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_aw_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_aw_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_aw_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : AW_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group441" type="group">
+         <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : W Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_wvalid</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : WVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_wready</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : WREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_wlast</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : WLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_wdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_wdata[63:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : WDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group446" type="group">
+         <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : B Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_bvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_bvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_bvalid</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : BVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_bready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_bready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_bready</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : BREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_b_cnt" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axi_b_cnt[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axi_b_cnt[1:0]</obj_property>
+            <obj_property name="label">slot_1 : axi_vdma_0_M_AXI_MM2S : B_CNT</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group450" type="group">
+      <obj_property name="label">slot_2 : cmos2axis_video_out : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group451" type="group">
+         <obj_property name="label">slot_2 : cmos2axis_video_out : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tvalid</obj_property>
+            <obj_property name="label">slot_2 : cmos2axis_video_out : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tready</obj_property>
+            <obj_property name="label">slot_2 : cmos2axis_video_out : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tlast</obj_property>
+            <obj_property name="label">slot_2 : cmos2axis_video_out : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tdata[23:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tdata[23:0]</obj_property>
+            <obj_property name="label">slot_2 : cmos2axis_video_out : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tuser" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_2_axis_tuser</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tuser</obj_property>
+            <obj_property name="label">slot_2 : cmos2axis_video_out : TUSER</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group457" type="group">
+      <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group458" type="group">
+         <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tvalid</obj_property>
+            <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tready</obj_property>
+            <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tlast</obj_property>
+            <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tdata[23:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tdata[23:0]</obj_property>
+            <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tkeep" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tkeep[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tkeep[2:0]</obj_property>
+            <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : TKEEP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tuser" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_3_axis_tuser</obj_property>
+            <obj_property name="ObjectShortName">net_slot_3_axis_tuser</obj_property>
+            <obj_property name="label">slot_3 : axi_vdma_0_M_AXIS_MM2S : TUSER</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group465" type="group">
+      <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group466" type="group">
+         <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tvalid</obj_property>
+            <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tready</obj_property>
+            <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tlast</obj_property>
+            <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tid</obj_property>
+            <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : TID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tdata[23:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tdata[23:0]</obj_property>
+            <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tkeep" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tkeep[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tkeep[2:0]</obj_property>
+            <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : TKEEP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tuser" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_4_axis_tuser</obj_property>
+            <obj_property name="ObjectShortName">net_slot_4_axis_tuser</obj_property>
+            <obj_property name="label">slot_4 : axis_switch_0_M00_AXIS : TUSER</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group474" type="group">
+      <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group475" type="group">
+         <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tvalid</obj_property>
+            <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tready</obj_property>
+            <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tlast</obj_property>
+            <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tdata[23:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tdata[23:0]</obj_property>
+            <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tkeep" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tkeep[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tkeep[2:0]</obj_property>
+            <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : TKEEP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tuser" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_5_axis_tuser</obj_property>
+            <obj_property name="ObjectShortName">net_slot_5_axis_tuser</obj_property>
+            <obj_property name="label">slot_5 : axis_switch_1_M01_AXIS : TUSER</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group482" type="group">
+      <obj_property name="label">slot_6 : Image_Process_M_AXIS : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group483" type="group">
+         <obj_property name="label">slot_6 : Image_Process_M_AXIS : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_6_axis_tvalid</obj_property>
+            <obj_property name="label">slot_6 : Image_Process_M_AXIS : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_6_axis_tready</obj_property>
+            <obj_property name="label">slot_6 : Image_Process_M_AXIS : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_6_axis_tlast</obj_property>
+            <obj_property name="label">slot_6 : Image_Process_M_AXIS : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_6_axis_tid</obj_property>
+            <obj_property name="label">slot_6 : Image_Process_M_AXIS : TID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tdata[23:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_6_axis_tdata[23:0]</obj_property>
+            <obj_property name="label">slot_6 : Image_Process_M_AXIS : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tkeep" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tkeep[2:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_6_axis_tkeep[2:0]</obj_property>
+            <obj_property name="label">slot_6 : Image_Process_M_AXIS : TKEEP</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tuser" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_6_axis_tuser</obj_property>
+            <obj_property name="ObjectShortName">net_slot_6_axis_tuser</obj_property>
+            <obj_property name="label">slot_6 : Image_Process_M_AXIS : TUSER</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>

@@ -2,64 +2,66 @@
    ExpandedHierarchyInLayout: "",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
-preplace port s_axi_AXILiteS -pg 1 -y 50 -defaultsOSRD
-preplace port input_r -pg 1 -y 80 -defaultsOSRD
-preplace port ena -pg 1 -y 700 -defaultsOSRD
-preplace port aclk -pg 1 -y 200 -defaultsOSRD
-preplace port M_AXIS -pg 1 -y 210 -defaultsOSRD
-preplace port ena1 -pg 1 -y 800 -defaultsOSRD
-preplace port aresetn -pg 1 -y 220 -defaultsOSRD
-preplace portBus wea1 -pg 1 -y 720 -defaultsOSRD
-preplace portBus bound_y_min_i -pg 1 -y 560 -defaultsOSRD
-preplace portBus bound_x_min_addr -pg 1 -y 620 -defaultsOSRD
-preplace portBus dina -pg 1 -y 680 -defaultsOSRD
-preplace portBus addra -pg 1 -y 740 -defaultsOSRD
-preplace portBus bound_y_max_i -pg 1 -y 580 -defaultsOSRD
-preplace portBus dina1 -pg 1 -y 780 -defaultsOSRD
-preplace portBus addrb -pg 1 -y 860 -defaultsOSRD
-preplace portBus addra1 -pg 1 -y 370 -defaultsOSRD
-preplace portBus wea -pg 1 -y 820 -defaultsOSRD
-preplace inst resize_hls_axis_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -y 140 -defaultsOSRD
-preplace inst bound_x_max1 -pg 1 -lvl 4 -y 460 -defaultsOSRD
-preplace inst bound_x_min1 -pg 1 -lvl 4 -y 810 -defaultsOSRD
-preplace inst axis_subset_converter_1 -pg 1 -lvl 5 -y 220 -defaultsOSRD
-preplace inst resize_ctrl_0 -pg 1 -lvl 3 -y 540 -defaultsOSRD
-preplace netloc Conn1 1 0 2 NJ 80 NJ
-preplace netloc resize_hls_axis_0_output_r_TLAST 1 2 3 N 210 NJ 210 NJ
-preplace netloc resize_hls_axis_0_output_r_TSTRB 1 2 3 700 200 NJ 200 1400J
-preplace netloc axis_subset_converter_1_s_axis_tready 1 2 3 N 110 NJ 110 1420J
-preplace netloc resize_ctrl_0_bound_x_min_o 1 1 3 200 690 NJ 690 1130
-preplace netloc Conn2 1 0 2 NJ 50 180J
-preplace netloc bound_y_min_i_1 1 0 3 NJ 560 NJ 560 NJ
-preplace netloc resize_hls_axis_0_output_r_TKEEP 1 2 3 680 190 NJ 190 NJ
-preplace netloc Conn3 1 5 1 1800J
-preplace netloc addra_1 1 0 4 NJ 740 NJ 740 NJ 740 NJ
-preplace netloc addrb_1 1 0 4 NJ 860 NJ 860 NJ 860 NJ
-preplace netloc resize_ctrl_0_bound_x_max_o 1 1 3 220 670 NJ 670 1110
-preplace netloc resize_hls_axis_0_output_r_TUSER 1 2 3 670 270 NJ 270 NJ
-preplace netloc addra1_1 1 0 4 0J 390 NJ 390 NJ 390 NJ
-preplace netloc dina1_1 1 0 4 NJ 780 NJ 780 NJ 780 NJ
-preplace netloc dina_1 1 0 4 0J 400 NJ 400 NJ 400 1160J
-preplace netloc resize_hls_axis_0_output_r_TDEST 1 2 3 690 150 NJ 150 NJ
-preplace netloc resize_ctrl_0_bound_y_max_o 1 1 3 230 680 NJ 680 1100
-preplace netloc resize_hls_axis_0_output_r_TDATA 1 2 3 N 130 NJ 130 NJ
-preplace netloc bound_y_max_i_1 1 0 3 NJ 580 NJ 580 NJ
-preplace netloc xlconstant_0_dout 1 1 1 180
-preplace netloc resize_hls_axis_0_output_r_TID 1 2 3 710 170 NJ 170 NJ
-preplace netloc bound_x_max1_doutb 1 2 2 700 660 1160
-preplace netloc ena1_1 1 0 4 NJ 800 NJ 800 NJ 800 NJ
-preplace netloc bound_x_min1_doutb 1 2 2 680 900 NJ
-preplace netloc aresetn_1 1 0 5 NJ 220 190 340 700 300 NJ 300 1410
-preplace netloc resize_ctrl_0_bound_x_max_addr 1 3 1 N
-preplace netloc resize_ctrl_0_bound_x_min_addr 1 3 3 1140J 620 NJ 620 NJ
-preplace netloc aclk_1 1 0 5 NJ 200 180 350 680 350 1150 310 N
-preplace netloc resize_hls_axis_0_output_r_TVALID 1 2 3 N 90 NJ 90 1410J
-preplace netloc resize_ctrl_0_bound_y_min_o 1 1 3 210 700 NJ 700 1120
-preplace netloc wea1_1 1 0 4 20J 420 NJ 420 NJ 420 1130J
-preplace netloc wea_1 1 0 4 NJ 820 NJ 820 NJ 820 NJ
-preplace netloc ena_1 1 0 4 10J 410 NJ 410 NJ 410 1140J
-levelinfo -pg 1 -40 100 460 910 1300 1620 1860 -top 0 -bot 960
+preplace port ap_start -pg 1 -y 950 -defaultsOSRD
+preplace port s_axi_AXILiteS -pg 1 -y 60 -defaultsOSRD
+preplace port input_r -pg 1 -y 1180 -defaultsOSRD
+preplace port ena -pg 1 -y 200 -defaultsOSRD
+preplace port aclk -pg 1 -y 240 -defaultsOSRD
+preplace port M_AXIS -pg 1 -y 170 -defaultsOSRD
+preplace port ena1 -pg 1 -y 770 -defaultsOSRD
+preplace port aresetn -pg 1 -y 510 -defaultsOSRD
+preplace portBus wea1 -pg 1 -y 220 -defaultsOSRD
+preplace portBus bound_y_min_i -pg 1 -y 590 -defaultsOSRD
+preplace portBus bound_x_min_addr -pg 1 -y 930 -defaultsOSRD
+preplace portBus dina -pg 1 -y 180 -defaultsOSRD
+preplace portBus addra -pg 1 -y 710 -defaultsOSRD
+preplace portBus bound_y_max_i -pg 1 -y 610 -defaultsOSRD
+preplace portBus dina1 -pg 1 -y 750 -defaultsOSRD
+preplace portBus addra1 -pg 1 -y 140 -defaultsOSRD
+preplace portBus wea -pg 1 -y 790 -defaultsOSRD
+preplace inst ping_pong_ram_0 -pg 1 -lvl 2 -y 1070 -defaultsOSRD
+preplace inst GND -pg 1 -lvl 2 -y 1260 -defaultsOSRD
+preplace inst reorder_resize_0 -pg 1 -lvl 3 -y 210 -defaultsOSRD
+preplace inst bound_x_max1 -pg 1 -lvl 2 -y 210 -defaultsOSRD
+preplace inst axis2ram_0 -pg 1 -lvl 3 -y 1240 -defaultsOSRD
+preplace inst bound_x_min1 -pg 1 -lvl 3 -y 780 -defaultsOSRD
+preplace inst resize_ctrl_0 -pg 1 -lvl 1 -y 560 -defaultsOSRD
+preplace inst VCC -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace netloc Conn1 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc resize_ctrl_0_bound_x_min_o 1 1 2 NJ 560 840
+preplace netloc VCC_dout 1 2 1 800
+preplace netloc reorder_resize_0_ap_done 1 0 3 30 30 NJ 30 890
+preplace netloc axis2ram_0_output_r_we0 1 1 3 490 1190 910J 1120 1340
+preplace netloc bound_y_min_i_1 1 0 1 NJ
+preplace netloc resize_ctrl_0_bound_x_max_o 1 1 2 460J 40 870
+preplace netloc addra_1 1 0 3 NJ 710 NJ 710 NJ
+preplace netloc resize_ctrl_0_bound_y_max_o 1 1 2 500J 490 850
+preplace netloc addra1_1 1 0 2 NJ 140 NJ
+preplace netloc dina1_1 1 0 3 NJ 750 NJ 750 NJ
+preplace netloc dina_1 1 0 2 NJ 180 NJ
+preplace netloc reorder_resize_0_output_r 1 3 1 NJ
+preplace netloc ap_start_1 1 0 3 NJ 950 NJ 950 880
+preplace netloc axis2ram_0_output_r_d0 1 1 3 480 1370 NJ 1370 1330
+preplace netloc bound_y_max_i_1 1 0 1 NJ
+preplace netloc axis2ram_0_ap_done 1 0 3 40 1320 NJ 1320 910J
+preplace netloc input_r_1 1 0 3 NJ 1180 NJ 1180 NJ
+preplace netloc axis2ram_0_output_r_address0 1 1 3 460 1360 NJ 1360 1340
+preplace netloc bound_x_max1_doutb 1 0 2 50 300 NJ
+preplace netloc ena1_1 1 0 3 NJ 770 NJ 770 NJ
+preplace netloc bound_x_min1_doutb 1 0 3 60 870 NJ 870 N
+preplace netloc aresetn_1 1 0 3 20 430 470 460 890
+preplace netloc resize_ctrl_0_bound_x_max_addr 1 1 1 480
+preplace netloc resize_ctrl_0_bound_x_min_addr 1 1 3 NJ 520 830 930 NJ
+preplace netloc GND_dout 1 2 1 NJ
+preplace netloc resize_ctrl_0_bound_y_min_o 1 1 2 NJ 600 870
+preplace netloc ping_pong_ram_0_doutb 1 2 1 860
+preplace netloc aclk_1 1 0 3 10 240 490 50 820
+preplace netloc resize_ctrl_0_resize_continue 1 1 2 NJ 500 810
+preplace netloc reorder_resize_0_input_r_address0 1 1 3 500 1200 900J 1110 1340
+preplace netloc wea1_1 1 0 2 NJ 220 NJ
+preplace netloc wea_1 1 0 3 NJ 790 NJ 790 NJ
+preplace netloc ena_1 1 0 2 NJ 200 NJ
+levelinfo -pg 1 -10 270 680 1130 1420 -top 0 -bot 1390
 ",
 }
 0

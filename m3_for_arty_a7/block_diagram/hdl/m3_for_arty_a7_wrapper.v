@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Jul 23 18:53:35 2019
+//Date        : Sat Aug 17 23:36:12 2019
 //Host        : desktopzyq running 64-bit major release  (build 9200)
 //Command     : generate_target m3_for_arty_a7_wrapper.bd
 //Design      : m3_for_arty_a7_wrapper
@@ -40,6 +40,7 @@ module m3_for_arty_a7_wrapper
     led_16bits_tri_o,
     nSRST,
     reset,
+    shift_0,
     spi_rtl_io0_io,
     spi_rtl_io1_io,
     spi_rtl_sck_io,
@@ -86,6 +87,7 @@ module m3_for_arty_a7_wrapper
   output [15:0]led_16bits_tri_o;
   input nSRST;
   input reset;
+  input [2:0]shift_0;
   inout spi_rtl_io0_io;
   inout spi_rtl_io1_io;
   inout spi_rtl_sck_io;
@@ -139,6 +141,7 @@ module m3_for_arty_a7_wrapper
   wire [15:0]led_16bits_tri_o;
   wire nSRST;
   wire reset;
+  wire [2:0]shift_0;
   wire spi_rtl_io0_i;
   wire spi_rtl_io0_io;
   wire spi_rtl_io0_o;
@@ -216,6 +219,7 @@ module m3_for_arty_a7_wrapper
         .led_16bits_tri_o(led_16bits_tri_o),
         .nSRST(nSRST),
         .reset(reset),
+        .shift_0(shift_0),
         .spi_rtl_io0_i(spi_rtl_io0_i),
         .spi_rtl_io0_o(spi_rtl_io0_o),
         .spi_rtl_io0_t(spi_rtl_io0_t),

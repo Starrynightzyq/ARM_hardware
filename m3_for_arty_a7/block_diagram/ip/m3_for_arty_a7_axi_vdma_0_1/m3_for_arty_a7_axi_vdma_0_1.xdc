@@ -52,6 +52,6 @@ set_false_path -to [get_pins -leaf -of_objects [get_cells -hier *cdc_tig* -filte
 set_false_path -from [get_cells -hier *cdc_from* -filter {is_sequential && (PRIMITIVE_GROUP!=CLOCK && PRIMITIVE_GROUP!=CLK)}] -to [get_cells -hier *cdc_to* -filter {is_sequential && (PRIMITIVE_GROUP!=CLOCK && PRIMITIVE_GROUP!=CLK) }]
 
 ##################################################################################################################################
-##################################################################################################################################
-
-
+## INFO: No CDC present in axi-vdma
+## INFO: When C_PRMRY_IS_ACLK_ASYNC = 0, axi-vdma MANDATORY REQUIREMENT IS THAT ALL axi-vdma CLOCK PORTS MUST BE CONNECTED TO THE SAME CLOCK SOURCE HAVING SAME FREQUENCY i.e. THERE IS ONLY ONE CLOCK-DOMAIN IN THE ENTIRE axi-vdma DESIGN
+## INFO: PLEASE ENSURE THIS REQUIREMENT IS MET.
