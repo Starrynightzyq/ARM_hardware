@@ -8655,7 +8655,7 @@
         <net name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_ar_ctrl[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -8953,7 +8953,7 @@
         <net name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_awready"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
@@ -9070,7 +9070,7 @@
         <net name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_0_axi_bready"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
@@ -10742,7 +10742,7 @@
         <net name="m3_for_arty_a7_i/ov_cmos/system_ila_0/inst/net_slot_1_axis_tvalid"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq24&apos;hXX_XXXX"/>
